@@ -1,0 +1,45 @@
+---
+import IndexLayout from "../layouts/IndexLayout.astro";
+import { ViewTransitions } from "astro:transitions";
+---
+
+<IndexLayout title="Natios - It's Better To Be The Best">
+	<h1>Astroxxx</h1>
+	<a href="/test"
+		><img
+			src="/content/images/products/Ashwagandha_Extra_5000_90/front/Ashwagandha_5000_90_front_1200.webp"
+			alt=""
+			srcset=""
+			transition:name="slide"
+		/></a
+	>
+</IndexLayout>
+
+<style>
+	body {
+		.test {
+		}
+
+		h1 {
+			color: blue;
+			transform: scale(0.5);
+
+			h2 {
+				color: red;
+			}
+		}
+	}
+	body {
+		h1 {
+			color: red !important;
+		}
+		.foto {
+			width: 100px;
+			height: 100px;
+		}
+
+		h1 {
+			color: blue;
+		}
+	}
+</style>
