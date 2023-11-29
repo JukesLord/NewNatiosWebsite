@@ -1,48 +1,56 @@
 :root {
 	--ff-primary: stolzl, sans-serif;
+	--ff-secondary: gravesend-sans, sans-serif;
 	--ff-body: var(--ff-primary);
 	--ff-heading: var(--ff-primary);
+	--ff-product-heading: var(--ff-secondary);
 
 	--fw-thin: 100;
 	--fw-light: 200;
 	--fw-book: 300;
-	--fw-normal: 400;
+	--fw-regular: 400;
 	--fw-medium: 500;
 	--fw-bold: 700;
 
-	--fs-10: 0.625rem;
-	--fs-12: 0.75rem;
-	--fs-13: 0.813rem;
-	--fs-14: 0.875rem;
-	--fs-15: 0.938rem;
-	--fs-16: 1rem;
-	--fs-18: 1.125rem;
-	--fs-22: 1.375rem;
-	--fs-24: 1.5rem;
-	--fs-26: 1.625rem;
-	--fs-32: 2rem;
-	--fs-36: 2.25rem;
-	--fs-40: 2.5rem;
-	--fs-50: 3.125rem;
-	--fs-60: 3.75rem;
-	--fs-70: 4.375rem;
-	--fs-375: 19.5vw;
+	/* https://fluidtypography.com */
+	--fs-12-10: clamp(0.625rem, 0.13vw + 0.595rem, 0.75rem); /* 10 mobile */
+	--fs-13-12: clamp(0.75rem, 0.065vw + 0.735rem, 0.813rem);
+	--fs-13-13: 0.813rem;
+	--fs-14-12: clamp(0.75rem, 0.13vw + 0.72rem, 0.875rem); /* 12 mobile */
+	--fs-14-13: clamp(0.813rem, 0.065vw + 0.797rem, 0.875rem); /* 13 mobile */
+	--fs-14-14: 0.875rem;
+	--fs-16-12: clamp(0.75rem, 0.259vw + 0.689rem, 1rem); /* 12 mobile */
+	--fs-16-16: 1rem;
+	--fs-18-12: clamp(0.75rem, 0.389vw + 0.659rem, 1.125rem); /* 12 mobile */
+	--fs-22-12: clamp(0.75rem, 0.648vw + 0.598rem, 1.375rem); /* 12 mobile */
+	--fs-24-12: clamp(0.75rem, 0.777vw + 0.567rem, 1.5rem); /* 12 mobile */
+	--fs-26-14: clamp(0.875rem, 0.777vw + 0.692rem, 1.625rem); /* 14 mobile */
+	--fs-26-16: clamp(1rem, 0.648vw + 0.848rem, 1.625rem); /* 16 mobile */
+	--fs-26-20: clamp(1.25rem, 0.389vw + 1.159rem, 1.625rem); /* 20 mobile */
+	--fs-32-20: clamp(1.25rem, 0.777vw + 1.067rem, 2rem); /* 20 mobile */
+	--fs-36-14: clamp(0.875rem, 1.425vw + 0.54rem, 2.25rem); /* 14 mobile */
+	--fs-40-20: clamp(1.25rem, 1.295vw + 0.946rem, 2.5rem); /* 20 mobile */
+	--fs-60-24: clamp(1.75rem, 2.073vw + 1.263rem, 3.75rem); /* 24 mobile */
+	--fs-60-28: clamp(1.75rem, 2.073vw + 1.263rem, 3.75rem); /* 28 mobile */
+	--fs-375: clamp(6.25rem, 17.163vw + 2.217rem, 22.813rem);
 
-	--lh-15: 0.938rem;
-	--lh-17: 1.063rem;
-	--lh-19: 1.188rem;
-	--lh-22: 1.375rem;
-	--lh-24: 1.5rem;
-	--lh-26: 1.625rem;
-	--lh-28: 1.75rem;
-	--lh-32: 2rem;
-	--lh-36: 2.25rem;
-	--lh-38: 2.375rem;
-	--lh-43: 2.688rem;
-	--lh-48: 3rem;
-	--lh-72: 4.5rem;
+	--lh-1_2: 1.2;
+	--lh-1_25: 1.25;
+	--lh-1_5: 1.5;
+	--lh-1_85: 1.85;
 
 	/* Colors: */
+	--color-00000000: hsla(0, 0%, 0%, 0);
+	--color-00CBFF: hsl(192, 100%, 50%);
+	--color-0068FF: hsl(216, 100%, 50%);
+	--color-0057D5: hsl(215, 100%, 42%);
+	--color-00b2d2: hsl(189, 100%, 41%);
+	--color-27b9f5: hsl(197, 91%, 56%);
+	--color-27b9f55-50: hsla(197, 91%, 56%, 0.502);
+	--color-ffffff: hsl(0, 0%, 100%);
+	--color-ebebeb: hsl(0, 0%, 92%);
+	--color-060d55: hsl(235, 87%, 18%);
+	--color-060d55-50: hsla(235, 87%, 18%, 0.502);
 
 	--padding-side: clamp(40px, 3.125vw, 120px);
 	--header-height: clamp(70px, 7.407vh, 100px);
@@ -95,6 +103,10 @@ html {
 	background-size: 100% max(5658px, 130%);
 	position: relative;
 	overflow-x: hidden;
+}
+body {
+	font-family: var(--ff-body);
+	font-style: normal;
 }
 body::before,
 body::after {
