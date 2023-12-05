@@ -45,10 +45,6 @@ svg {
 	display: block;
 }
 
-body * {
-	-webkit-transform: translate3d(0, 0, 0);
-}
-
 a {
 	color: inherit; /* blue colors for links too */
 	text-decoration: inherit; /* no underline */

@@ -12,9 +12,11 @@
 	--fw-medium: 500;
 	--fw-bold: 700;
 
+	/* mobil 376px */
+
 	/* https://fluidtypography.com */
 	--fs-12-10: clamp(0.625rem, 0.13vw + 0.595rem, 0.75rem); /* 10 mobile */
-	--fs-13-12: clamp(0.75rem, 0.065vw + 0.735rem, 0.813rem);
+	--fs-13-12: clamp(0.75rem, 0.065vw + 0.735rem, 0.813rem); /* 12 mobile */
 	--fs-13-13: 0.813rem;
 	--fs-14-12: clamp(0.75rem, 0.13vw + 0.72rem, 0.875rem); /* 12 mobile */
 	--fs-14-13: clamp(0.813rem, 0.065vw + 0.797rem, 0.875rem); /* 13 mobile */
@@ -40,18 +42,20 @@
 	--lh-1_85: 1.85;
 
 	/* Colors: */
-	--color-00000000: hsla(0, 0%, 0%, 0);
-	--color-00CBFF: hsl(192, 100%, 50%);
-	--color-0068FF: hsl(216, 100%, 50%);
-	--color-0057D5: hsl(215, 100%, 42%);
-	--color-00b2d2: hsl(189, 100%, 41%);
-	--color-27b9f5: hsl(197, 91%, 56%);
-	--color-27b9f55-50: hsla(197, 91%, 56%, 0.502);
-	--color-ffffff: hsl(0, 0%, 100%);
-	--color-ebebeb: hsl(0, 0%, 92%);
-	--color-060d55: hsl(235, 87%, 18%);
-	--color-060d55-50: hsla(235, 87%, 18%, 0.502);
+	--color-blue-300: hsl(192, 100%, 50%); /*00CBFF*/
+	--color-blue-400: hsl(216, 100%, 50%); /*0068FF*/
+	--color-blue-600: hsl(215, 100%, 42%); /*0057D5*/
 
+	--color-primary-400: hsl(197, 91%, 56%); /*#27B9F5*/
+	--color-primary-400-50: hsla(197, 91%, 56%, 0.502);
+	--color-primary-800: hsl(235, 87%, 18%); /*#060D55*/
+	--color-primary-800-50: hsla(235, 87%, 18%, 0.502);
+	--color-logo: hsl(189, 100%, 41%); /*#00B2D2*/
+
+	--color-white: hsl(0, 0%, 100%);
+	--color-gray-400: hsl(0, 0%, 92%); /*#EBEBEB*/
+
+	--container-padding: clamp(30px, 22.345vw + -54px, 375px);
 	--padding-side: clamp(40px, 3.125vw, 120px);
 	--header-height: clamp(70px, 7.407vh, 100px);
 	--header-height: clamp(70px, 7.407svh, 100px);
@@ -92,7 +96,7 @@ h6 {
 /* firefox scroller */
 @supports (scrollbar-color: red blue) {
 	* {
-		scrollbar-color: var(--color-27b9f580) var(--color-060d55);
+		scrollbar-color: var(--color-primary80) var(--color-primary-800);
 		scrollbar-width: thin;
 	}
 }
@@ -136,4 +140,7 @@ body::after {
 
 	top: var(--top-dots-right-bg);
 	height: calc(100% - var(--top-dots-right-bg));
+}
+.container {
+	padding: 0 var(--container-padding);
 }
