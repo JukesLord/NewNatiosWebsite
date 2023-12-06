@@ -1,4 +1,41 @@
-<div class="arrow-right">
+<div class="arrow arrow-right">
+	<svg
+		class="hovered"
+		xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+		width="100"
+		height="90.582"
+		viewBox="0 0 100 90.582"
+	>
+		<defs>
+			<linearGradient
+				id="linear-gradient"
+				x1="0.732"
+				y1="0.021"
+				x2="0.269"
+				y2="0.964"
+				gradientUnits="objectBoundingBox"
+			>
+				<stop offset="0" stop-color="#0057d5"></stop>
+				<stop offset="1" stop-color="#27b9f5"></stop>
+			</linearGradient>
+			<filter id="Polygon_10" x="0" y="0" width="100" height="90.582" filterUnits="userSpaceOnUse">
+				<feGaussianBlur stdDeviation="5" result="blur"></feGaussianBlur>
+				<feFlood flood-color="#27b9f5"></feFlood>
+				<feComposite operator="in" in2="blur"></feComposite>
+				<feComposite in="SourceGraphic"></feComposite>
+			</filter>
+		</defs>
+		<g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Polygon_10)">
+			<path
+				id="Polygon_10-2"
+				data-name="Polygon 10"
+				d="M43.265,0A16,16,0,0,1,57.12,8l8.256,14.291a16,16,0,0,1,0,16.008L57.12,52.586a16,16,0,0,1-13.854,8H26.735a16,16,0,0,1-13.854-8L4.624,38.295a16,16,0,0,1,0-16.008L12.88,8A16,16,0,0,1,26.735,0Z"
+				transform="translate(15 15)"
+				fill="url(#linear-gradient)"></path>
+		</g>
+	</svg>
+
 	<svg id="prava" xmlns="http://www.w3.org/2000/svg" width="70" height="60.582" viewBox="0 0 70 60.582">
 		<g id="Polygon_9" data-name="Polygon 9" fill="none">
 			<path
@@ -17,3 +54,26 @@
 			fill="#fff"></path>
 	</svg>
 </div>
+
+<style>
+	.arrow {
+		cursor: pointer;
+	}
+	.arrow-right {
+		position: relative;
+	}
+	.hovered {
+		opacity: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 142.8571%;
+		z-index: -1;
+		transition: var(--transition-default);
+	}
+
+	.arrow-right:hover .hovered {
+		opacity: 1;
+	}
+</style>

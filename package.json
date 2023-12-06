@@ -12,9 +12,11 @@
   "dependencies": {
     "astro": "^3.6.0",
     "autoprefixer": "^10.4.16",
+    "jquery": "^3.7.1",
     "postcss-cli": "^10.1.0"
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.29",
     "cssnano": "^6.0.1",
     "postcss": "^8.4.31",
     "postcss-nested": "^6.0.1",

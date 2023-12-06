@@ -1,7 +1,7 @@
 ---
 import Slide1 from "./slides/slide1-bisglycinate.astro";
-import ArrowLeft from "@components/arrows/arrowLeft.astro";
-import ArrowRight from "@components/arrows/arrowRight.astro";
+import ArrowLeftEmpty from "@components/arrows/arrowLeftEmpty.astro";
+import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 ---
 
 <section class="hero">
@@ -11,8 +11,8 @@ import ArrowRight from "@components/arrows/arrowRight.astro";
 		</div>
 	</div>
 	<div class="hero-arrows">
-		<ArrowLeft />
-		<ArrowRight />
+		<ArrowLeftEmpty />
+		<ArrowRightEmpty />
 	</div>
 </section>
 
@@ -52,6 +52,15 @@ import ArrowRight from "@components/arrows/arrowRight.astro";
 		grid-row: 1;
 		grid-column: 1;
 		z-index: 2;
+	}
+
+	.hero-bg-animation {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: clamp(369px, 47.345vw + 191px, 1100px);
+		z-index: -1;
+		transform: translate(-13%, -14%) rotate(-15deg);
 	}
 
 	.hero-capsules {
@@ -112,14 +121,19 @@ import ArrowRight from "@components/arrows/arrowRight.astro";
 		opacity: 0.7;
 		font-size: var(--fs-40-20);
 		font-weight: var(--fw-regular);
+		padding-bottom: 0;
 	}
 	.hero-arrows {
 		display: flex;
-		gap: 10px;
+		gap: 7%;
 		justify-content: center;
-	}
-	.arrow-left,
-	.arrow-right {
-		max-width: 10vw;
+		width: clamp(96px, 3.238vw + 83.8px, 146px);
+		margin: 1.5rem auto auto auto;
 	}
 </style>
+
+<script>
+	$(".arrow").on("click", function () {
+		console.log("click");
+	});
+</script>
