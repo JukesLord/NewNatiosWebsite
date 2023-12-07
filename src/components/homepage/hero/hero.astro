@@ -9,6 +9,12 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 		<div class="hero-slide">
 			<Slide1 />
 		</div>
+		<div class="hero-slide">
+			<Slide1 />
+		</div>
+		<div class="hero-slide">
+			<Slide1 />
+		</div>
 	</div>
 	<div class="hero-arrows">
 		<ArrowLeftEmpty />
@@ -21,12 +27,20 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 		padding-top: 26px;
 	}
 	.hero-slider {
-		display: flex;
+		display: grid;
 	}
 	.hero-slide {
+		grid-column: 1;
+		grid-row: 1;
 		display: flex;
 		flex-direction: column-reverse;
 		width: 100%;
+		visibility: hidden;
+		pointer-events: none;
+	}
+	.hero-slide.active {
+		visibility: visible;
+		pointer-events: auto;
 	}
 	.hero-images {
 		display: grid;
@@ -36,9 +50,21 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 		justify-content: center;
 		max-width: clamp(215px, 21.308vw + 135px, 544px);
 		margin: auto;
-		animation: heroMainImageSlideIn 1.2s cubic-bezier(0.38, 0.27, 0.34, 1) forwards;
 	}
-	@keyframes heroMainImageSlideIn {
+
+	.hero-slider.next .hero-slide.active .hero-images {
+		animation: heroMainImageSlideInFromRight 1.2s cubic-bezier(0.38, 0.27, 0.34, 1) forwards;
+	}
+	.hero-slider.prev .hero-slide.active .hero-images {
+		animation: heroMainImageSlideInFromLeft 1.2s cubic-bezier(0.38, 0.27, 0.34, 1) forwards;
+	}
+	.hero-slider.next .hero-slide.deactive .hero-images {
+		animation: heroMainImageSlideOutToLeft 1.2s cubic-bezier(0.38, 0.27, 0.34, 1) forwards;
+	}
+	.hero-slider.prev .hero-slide.deactive .hero-images {
+		animation: heroMainImageSlideOutToRight 1.2s cubic-bezier(0.38, 0.27, 0.34, 1) forwards;
+	}
+	@keyframes heroMainImageSlideInFromRight {
 		0% {
 			rotate: 10deg;
 			transform: translateX(100vw);
@@ -48,19 +74,45 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 			transform: translateX(0);
 		}
 	}
+	@keyframes heroMainImageSlideInFromLeft {
+		0% {
+			rotate: 10deg;
+			transform: translateX(-100vw);
+		}
+		100% {
+			rotate: 0deg;
+			transform: translateX(0);
+		}
+	}
+	@keyframes heroMainImageSlideOutToLeft {
+		0% {
+			rotate: 0deg;
+			transform: translateX(0);
+			visibility: visible;
+		}
+		100% {
+			rotate: 10deg;
+			transform: translateX(-100vw);
+			visibility: none;
+		}
+	}
+	@keyframes heroMainImageSlideOutToRight {
+		0% {
+			rotate: 0deg;
+			transform: translateX(0);
+			visibility: visible;
+		}
+		100% {
+			rotate: 10deg;
+			transform: translateX(100vw);
+			visibility: none;
+		}
+	}
+
 	.hero-main-image {
 		grid-row: 1;
 		grid-column: 1;
 		z-index: 2;
-	}
-
-	.hero-bg-animation {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: clamp(369px, 47.345vw + 191px, 1100px);
-		z-index: -1;
-		transform: translate(-13%, -14%) rotate(-15deg);
 	}
 
 	.hero-capsules {
@@ -69,9 +121,21 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 		height: 100%;
 		grid-row: 1;
 		grid-column: 1;
-		animation: heroCapsulesSlideIn 1.2s cubic-bezier(0.38, 0.27, 0.34, 1) forwards;
 	}
-	@keyframes heroCapsulesSlideIn {
+
+	.hero-slider.next .hero-slide.active .hero-capsules {
+		animation: heroCapsulesSlideInFromRight 1.2s cubic-bezier(0.38, 0.27, 0.34, 1) forwards;
+	}
+	.hero-slider.prev .hero-slide.active .hero-capsules {
+		animation: heroCapsulesSlideInFromLeft 1.2s cubic-bezier(0.38, 0.27, 0.34, 1) forwards;
+	}
+	.hero-slider.next .hero-slide.deactive .hero-capsules {
+		animation: heroCapsulesSlideOutToLeft 1.2s cubic-bezier(0.38, 0.27, 0.34, 1) forwards;
+	}
+	.hero-slider.prev .hero-slide.deactive .hero-capsules {
+		animation: heroCapsulesSlideOutToRight 1.2s cubic-bezier(0.38, 0.27, 0.34, 1) forwards;
+	}
+	@keyframes heroCapsulesSlideInFromRight {
 		0% {
 			rotate: 10deg;
 			transform: scale(0.6);
@@ -79,6 +143,36 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 		100% {
 			rotate: 0deg;
 			transform: scale(1);
+		}
+	}
+	@keyframes heroCapsulesSlideInFromLeft {
+		0% {
+			rotate: 10deg;
+			transform: scale(0.6);
+		}
+		100% {
+			rotate: 0deg;
+			transform: scale(1);
+		}
+	}
+	@keyframes heroCapsulesSlideOutToLeft {
+		0% {
+			rotate: 0deg;
+			transform: scale(1);
+		}
+		100% {
+			rotate: 10deg;
+			transform: scale(0.6);
+		}
+	}
+	@keyframes heroCapsulesSlideOutToRight {
+		0% {
+			rotate: 0deg;
+			transform: scale(1);
+		}
+		100% {
+			rotate: 10deg;
+			transform: scale(0.6);
 		}
 	}
 	.hero-capsules > * {
@@ -104,6 +198,59 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 		top: 50%;
 		rotate: 10deg;
 		transform: translate(35%, -100%);
+	}
+
+	.hero-bg-animation {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: clamp(369px, 47.345vw + 191px, 1100px);
+		z-index: -1;
+	}
+
+	.hero-slider.next .hero-slide.active .hero-bg-animation {
+		animation: heroBgAnimationSlideInFromRight 1.2s cubic-bezier(0.38, 0.27, 0.34, 1) forwards;
+	}
+	.hero-slider.prev .hero-slide.active .hero-bg-animation {
+		animation: heroBgAnimationSlideInFromLeft 1.2s cubic-bezier(0.38, 0.27, 0.34, 1) forwards;
+	}
+	.hero-slider.next .hero-slide.deactive .hero-bg-animation {
+		animation: heroBgAnimationSlideOutToLeft 1.2s cubic-bezier(0.38, 0.27, 0.34, 1) forwards;
+	}
+	.hero-slider.prev .hero-slide.deactive .hero-bg-animation {
+		animation: heroBgAnimationSlideOutToRight 1.2s cubic-bezier(0.38, 0.27, 0.34, 1) forwards;
+	}
+	@keyframes heroBgAnimationSlideInFromRight {
+		0% {
+			transform: translate(-13%, -20%) rotate(0deg);
+		}
+		100% {
+			transform: translate(-13%, -14%) rotate(-15deg);
+		}
+	}
+	@keyframes heroBgAnimationSlideInFromLeft {
+		0% {
+			transform: translate(-18%, -20%) rotate(-40deg);
+		}
+		100% {
+			transform: translate(-13%, -14%) rotate(-15deg);
+		}
+	}
+	@keyframes heroBgAnimationSlideOutToLeft {
+		0% {
+			transform: translate(-13%, -14%) rotate(-15deg);
+		}
+		100% {
+			transform: translate(-18%, -16%) rotate(-20deg);
+		}
+	}
+	@keyframes heroBgAnimationSlideOutToRight {
+		0% {
+			transform: translate(-13%, -14%) rotate(-15deg);
+		}
+		100% {
+			transform: translate(-13%, -20%) rotate(0deg);
+		}
 	}
 	.hero-text {
 		padding-top: 30px;
@@ -133,7 +280,71 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 </style>
 
 <script>
-	$(".arrow").on("click", function () {
-		console.log("click");
+	const animationDuration = 1200;
+	let hero = $(".hero");
+	let heroSlidePosition = 0;
+	let heroSlideCount = $(".hero-slide").length;
+	let heroSlides = $(".hero-slide");
+	let heroSlider = $(".hero-slider");
+
+	function heroSlideNext() {
+		if (hero.hasClass("animating")) {
+			return;
+		}
+
+		heroSlider.removeClass("prev").addClass("next");
+		heroSlides.removeClass("deactive");
+		heroSlidePosition = (heroSlidePosition + 1) % heroSlideCount;
+		heroSlides
+			.eq((heroSlidePosition - 1 + heroSlideCount) % heroSlideCount)
+			.removeClass("active")
+			.addClass("deactive");
+		heroSlides.eq(heroSlidePosition).addClass("active");
+	}
+
+	let heroArrows = $(".hero-arrow");
+
+	function heroSlidePrev() {
+		if (hero.hasClass("animating")) {
+			return;
+		}
+
+		heroSlider.removeClass("next").addClass("prev");
+		heroSlides.removeClass("deactive");
+		heroSlidePosition = (heroSlidePosition - 1 + heroSlideCount) % heroSlideCount;
+		heroSlides
+			.eq((heroSlidePosition + 1) % heroSlideCount)
+			.removeClass("active")
+			.addClass("deactive");
+		heroSlides.eq(heroSlidePosition).addClass("active");
+	}
+
+	$(".hero-arrows .arrow-left").on("click", function () {
+		heroSlidePrev();
+	});
+
+	$(".hero-arrows .arrow-right").on("click", function () {
+		heroSlideNext();
+	});
+
+	$(".hero-arrows > *").on("click", function () {
+		heroAnimation();
+	});
+
+	function heroAnimation() {
+		if (hero.hasClass("animating")) {
+			return;
+		}
+
+		hero.addClass("animating");
+
+		setTimeout(function () {
+			hero.removeClass("animating");
+		}, animationDuration);
+	}
+
+	document.addEventListener("DOMContentLoaded", function () {
+		heroSlides.first().addClass("active");
+		heroSlider.addClass("next");
 	});
 </script>
