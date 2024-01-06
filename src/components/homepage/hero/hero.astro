@@ -1,5 +1,7 @@
 ---
 import Slide1 from "./slides/slide1-bisglycinate.astro";
+import Slide2 from "./slides/slide2-bisglycinate copy.astro";
+
 import ArrowLeftEmpty from "@components/arrows/arrowLeftEmpty.astro";
 import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 ---
@@ -10,10 +12,10 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 			<Slide1 />
 		</div>
 		<div class="hero-slide">
-			<Slide1 />
+			<Slide2 />
 		</div>
 		<div class="hero-slide">
-			<Slide1 />
+			<Slide2 />
 		</div>
 	</div>
 	<div class="hero-arrows">
@@ -48,7 +50,7 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 		grid-template-columns: 1fr;
 		position: relative;
 		justify-content: center;
-		max-width: clamp(215px, 21.308vw + 135px, 544px);
+		width: clamp(215px, 21.308vw + 135px, 544px);
 		margin: auto;
 	}
 
@@ -202,10 +204,10 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 
 	.hero-bg-animation {
 		position: absolute;
-		top: 0;
-		left: 0;
 		width: clamp(369px, 47.345vw + 191px, 1100px);
 		z-index: -1;
+		left: -9%;
+		top: 6%;
 	}
 
 	.hero-slider.next .hero-slide.active .hero-bg-animation {
@@ -256,6 +258,63 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 		padding-top: 30px;
 		color: var(--color-white);
 		line-height: var(--lh-1_2);
+		z-index: 1;
+	}
+	.hero-slider.next .hero-slide.active .hero-text {
+		animation: heroTextAnimationSlideInFromRight 1s cubic-bezier(0.38, 0.27, 0.34, 1) forwards;
+		animation-delay: 0.2s;
+		opacity: 0;
+	}
+	.hero-slider.prev .hero-slide.active .hero-text {
+		animation: heroTextAnimationSlideInFromLeft 1.2s cubic-bezier(0.38, 0.27, 0.34, 1) forwards;
+	}
+	.hero-slider.next .hero-slide.deactive .hero-text {
+		animation: heroTextAnimationSlideOutToLeft 1.2s cubic-bezier(0.38, 0.27, 0.34, 1) forwards;
+	}
+	.hero-slider.prev .hero-slide.deactive .hero-text {
+		animation: heroTextAnimationSlideOutToRight 0.4s cubic-bezier(0.38, 0.27, 0.34, 1) forwards;
+	}
+	@keyframes heroTextAnimationSlideInFromRight {
+		0% {
+			transform: translateX(40vw);
+			opacity: 0;
+		}
+		100% {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+	@keyframes heroTextAnimationSlideInFromLeft {
+		0% {
+			transform: translateX(-100vw);
+			opacity: 0;
+		}
+		100% {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+	@keyframes heroTextAnimationSlideOutToLeft {
+		0% {
+			transform: translateX(0);
+			opacity: 1;
+			visibility: visible;
+		}
+		100% {
+			transform: translateX(-100vw);
+			opacity: 0;
+		}
+	}
+	@keyframes heroTextAnimationSlideOutToRight {
+		0% {
+			transform: translateX(0);
+			opacity: 1;
+			visibility: visible;
+		}
+		100% {
+			transform: translateX(5vw);
+			opacity: 0;
+		}
 	}
 	.hero-slide h2,
 	.hero-slider > .hero-slide:first-child h1 {
@@ -276,6 +335,37 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 		justify-content: center;
 		width: clamp(96px, 3.238vw + 83.8px, 146px);
 		margin: 1.5rem auto auto auto;
+	}
+
+	@media only screen and (min-width: 768px) {
+		.hero {
+			padding-top: 0;
+			min-height: calc(90vh - var(--header-height));
+			min-height: calc(100svh - var(--header-height));
+			display: flex;
+			flex-direction: column;
+		}
+		.hero-slide {
+			flex-direction: row;
+			align-items: center;
+			position: relative;
+		}
+		.hero-slider {
+			flex: 0.95;
+		}
+		.hero-text {
+			max-width: 60%;
+			padding-top: 0;
+			margin-bottom: 0%;
+		}
+		.hero-images {
+			position: absolute;
+			left: 60%;
+		}
+		.hero-bg-animation {
+			left: -23%;
+			top: -5%;
+		}
 	}
 </style>
 
@@ -301,8 +391,6 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 			.addClass("deactive");
 		heroSlides.eq(heroSlidePosition).addClass("active");
 	}
-
-	let heroArrows = $(".hero-arrow");
 
 	function heroSlidePrev() {
 		if (hero.hasClass("animating")) {
@@ -335,9 +423,7 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 		if (hero.hasClass("animating")) {
 			return;
 		}
-
 		hero.addClass("animating");
-
 		setTimeout(function () {
 			hero.removeClass("animating");
 		}, animationDuration);
