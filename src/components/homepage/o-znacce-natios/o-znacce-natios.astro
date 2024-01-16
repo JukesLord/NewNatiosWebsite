@@ -1,0 +1,560 @@
+---
+import SectionHeader from "@components/section-header.astro";
+import { Image } from "astro:assets";
+import aboutUsImage1 from "@assets/images/about-us/About us image 1.png";
+const loading = "lazy";
+const aboutUsImageWidths = [100, 200, 291, 582, 873, aboutUsImage1.width];
+const quality = 100;
+import HexagonEmptyWithHover from "@components/hexagons/hexagonEmptyWithHover-5.astro";
+import HexagonSmall from "@components/hexagons/natios-about-us/hexagon-small.astro";
+import HexagonMedium from "@components/hexagons/natios-about-us/hexagon-medium.astro";
+import HexagonLarge from "@components/hexagons/natios-about-us/hexagon-large.astro";
+import MobileHexagonSmall from "@components/hexagons/natios-about-us/mobile-hexagon-small.astro";
+import MobileHexagonMedium from "@components/hexagons/natios-about-us/mobile-hexagon-medium.astro";
+import MobileHexagonLarge from "@components/hexagons/natios-about-us/mobile-hexagon-large.astro";
+---
+
+<section id="about-us" class="about-us">
+	<SectionHeader
+		headerText="O značce"
+		marginTopMOB="1.85em"
+		marginTopPC="3.25em"
+		paddingTopMOB="1em"
+		paddingTopPC="2em"
+		paddingBottomMOB="0"
+		paddingBottomPC="0"
+	/>
+	<div class="about-us-content">
+		<div class="about-us-years-select">
+			<div class="about-us-year">
+				<HexagonEmptyWithHover />
+				<span>2017</span>
+			</div>
+			<div class="about-us-year">
+				<HexagonEmptyWithHover />
+				<span>2018</span>
+			</div>
+			<div class="about-us-year">
+				<HexagonEmptyWithHover />
+				<span>2019</span>
+			</div>
+			<div class="about-us-year">
+				<HexagonEmptyWithHover />
+				<span>2020</span>
+			</div>
+			<div class="about-us-year">
+				<HexagonEmptyWithHover />
+				<span>2021</span>
+			</div>
+			<div class="about-us-year">
+				<HexagonEmptyWithHover />
+				<span>2022</span>
+			</div>
+			<div class="about-us-year">
+				<HexagonEmptyWithHover />
+				<span>2023</span>
+			</div>
+			<div class="about-us-year">
+				<HexagonEmptyWithHover />
+				<span>2024</span>
+			</div>
+		</div>
+		<div class="about-us-images">
+			<div class="about-us-hexagon large pc">
+				<HexagonLarge />
+			</div>
+			<div class="about-us-hexagon medium pc">
+				<HexagonMedium />
+			</div>
+			<div class="about-us-hexagon small pc">
+				<HexagonSmall />
+			</div>
+			<div class="about-us-hexagon large mobile">
+				<MobileHexagonLarge />
+			</div>
+			<div class="about-us-hexagon medium mobile">
+				<MobileHexagonMedium />
+			</div>
+			<div class="about-us-hexagon small mobile">
+				<MobileHexagonSmall />
+			</div>
+			<div class="about-us-image">
+				<Image
+					src={aboutUsImage1}
+					widths={aboutUsImageWidths}
+					alt={"Natios o nás"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="about-us-image">
+				<Image
+					src={aboutUsImage1}
+					widths={aboutUsImageWidths}
+					alt={"Natios o nás"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="about-us-image">
+				<Image
+					src={aboutUsImage1}
+					widths={aboutUsImageWidths}
+					alt={"Natios o nás"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="about-us-image">
+				<Image
+					src={aboutUsImage1}
+					widths={aboutUsImageWidths}
+					alt={"Natios o nás"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="about-us-image">
+				<Image
+					src={aboutUsImage1}
+					widths={aboutUsImageWidths}
+					alt={"Natios o nás"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="about-us-image">
+				<Image
+					src={aboutUsImage1}
+					widths={aboutUsImageWidths}
+					alt={"Natios o nás"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="about-us-image">
+				<Image
+					src={aboutUsImage1}
+					widths={aboutUsImageWidths}
+					alt={"Natios o nás"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="about-us-image">
+				<Image
+					src={aboutUsImage1}
+					widths={aboutUsImageWidths}
+					alt={"Natios o nás"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+		</div>
+		<div class="about-us-texts">
+			<div class="about-us-text">
+				<div class="text-animation-wrapper">
+					<h3>Hledáme tu nejčistší a nejvstřebatelnější formu Magnesia po celé Evropě</h3>
+					<p>
+						Natios je česká značka, která se zaměřuje na výrobu kvalitních doplňků stravy s čistým složením bez
+						zbytečných příměsí, konzervantů a éček. Mimo jiné má v nabídce také produkty ze zdravé výživy jako jsou
+						superpotraviny v BIO kvalitě, oříšky, ořechová másla, sušené plody a mnoho dalšího.
+					</p>
+				</div>
+			</div>
+			<div class="about-us-text">
+				<div class="text-animation-wrapper">
+					<h3>2018</h3>
+					<p>
+						Natios je česká značka, která se zaměřuje na výrobu kvalitních doplňků stravy s čistým složením bez
+						zbytečných příměsí, konzervantů a éček. Mimo jiné má v nabídce také produkty ze zdravé výživy jako jsou
+						superpotraviny v BIO kvalitě, oříšky, ořechová másla, sušené plody a mnoho dalšího.
+					</p>
+				</div>
+			</div>
+			<div class="about-us-text">
+				<div class="text-animation-wrapper">
+					<h3>2019</h3>
+					<p>
+						Natios je česká značka, která se zaměřuje na výrobu kvalitních doplňků stravy s čistým složením bez
+						zbytečných příměsí, konzervantů a éček. Mimo jiné má v nabídce také produkty ze zdravé výživy jako jsou
+						superpotraviny v BIO kvalitě, oříšky, ořechová másla, sušené plody a mnoho dalšího.
+					</p>
+				</div>
+			</div>
+			<div class="about-us-text">
+				<div class="text-animation-wrapper">
+					<h3>2020</h3>
+					<p>
+						Natios je česká značka, která se zaměřuje na výrobu kvalitních doplňků stravy s čistým složením bez
+						zbytečných příměsí, konzervantů a éček. Mimo jiné má v nabídce také produkty ze zdravé výživy jako jsou
+						superpotraviny v BIO kvalitě, oříšky, ořechová másla, sušené plody a mnoho dalšího.
+					</p>
+				</div>
+			</div>
+			<div class="about-us-text">
+				<div class="text-animation-wrapper">
+					<h3>2021</h3>
+					<p>
+						Natios je česká značka, která se zaměřuje na výrobu kvalitních doplňků stravy s čistým složením bez
+						zbytečných příměsí, konzervantů a éček. Mimo jiné má v nabídce také produkty ze zdravé výživy jako jsou
+						superpotraviny v BIO kvalitě, oříšky, ořechová másla, sušené plody a mnoho dalšího.
+					</p>
+				</div>
+			</div>
+			<div class="about-us-text">
+				<div class="text-animation-wrapper">
+					<h3>2022</h3>
+					<p>
+						Natios je česká značka, která se zaměřuje na výrobu kvalitních doplňků stravy s čistým složením bez
+						zbytečných příměsí, konzervantů a éček. Mimo jiné má v nabídce také produkty ze zdravé výživy jako jsou
+						superpotraviny v BIO kvalitě, oříšky, ořechová másla, sušené plody a mnoho dalšího.
+					</p>
+				</div>
+			</div>
+			<div class="about-us-text">
+				<div class="text-animation-wrapper">
+					<h3>2023</h3>
+					<p>
+						Natios je česká značka, která se zaměřuje na výrobu kvalitních doplňků stravy s čistým složením bez
+						zbytečných příměsí, konzervantů a éček. Mimo jiné má v nabídce také produkty ze zdravé výživy jako jsou
+						superpotraviny v BIO kvalitě, oříšky, ořechová másla, sušené plody a mnoho dalšího.
+					</p>
+				</div>
+			</div>
+			<div class="about-us-text">
+				<div class="text-animation-wrapper">
+					<h3>2024</h3>
+					<p>
+						Natios je česká značka, která se zaměřuje na výrobu kvalitních doplňků stravy s čistým složením bez
+						zbytečných příměsí, konzervantů a éček. Mimo jiné má v nabídce také produkty ze zdravé výživy jako jsou
+						superpotraviny v BIO kvalitě, oříšky, ořechová másla, sušené plody a mnoho dalšího.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.about-us {
+		padding-bottom: 2em;
+		font-size: var(--fs-60-28);
+	}
+	.about-us-years-select {
+		display: flex;
+		justify-content: flex-start;
+		font-size: var(--fs-18-12);
+		color: var(--color-white);
+		font-weight: var(--fw-light);
+		padding-bottom: 1em;
+		padding-top: 1.5em;
+		margin-bottom: 1.5em;
+		overflow-y: visible;
+		overflow-x: scroll;
+		--line-width: clamp(16px, 0.518vw + 14.048px, 24px);
+		max-width: calc(100% + var(--line-width) * 2);
+		padding-left: calc(var(--line-width) * 1.5);
+		margin-left: calc(var(--line-width) * -1.5);
+	}
+	.about-us-years-select::-webkit-scrollbar {
+		height: 1px;
+	}
+	.about-us-years-select {
+		scrollbar-width: thin;
+	}
+	/*.about-us-years-select::-webkit-scrollbar {
+        display: none;
+    }
+
+    .about-us-years-select {
+        scrollbar-width: none;
+    } */
+
+	.about-us-year {
+		display: grid;
+		align-items: center;
+		justify-items: center;
+		position: relative;
+		padding-right: calc(var(--line-width) - 4px);
+	}
+	.about-us-year > * {
+		grid-row: 1;
+		grid-column: 1;
+	}
+	.about-us-year span {
+		padding-top: 4px;
+	}
+	.about-us-year::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: calc(100% -2px);
+		width: var(--line-width);
+		height: 1px;
+		background-color: var(--color-primary-400);
+	}
+
+	.about-us-year:first-child::before {
+		width: calc(var(--line-width) * 1.5);
+		right: calc(100% -2px);
+		background: rgb(39, 185, 245);
+		background: -moz-linear-gradient(270deg, var(--color-primary-400) 0%, transparent 100%);
+		background: -webkit-linear-gradient(270deg, var(--color-primary-400) 0%, transparent 100%);
+		background: linear-gradient(270deg, var(--color-primary-400) 0%, transparent 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--color-primary)",endColorstr="var(--color-primary)",GradientType=1);
+	}
+	.about-us-year:last-child {
+		padding-right: 0;
+	}
+	.about-us-year:last-child::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: calc(100% - 2px);
+		width: calc(var(--line-width) * 1.5);
+		height: 1px;
+		background: rgb(39, 185, 245);
+		background: -moz-linear-gradient(90deg, var(--color-primary-400) 0%, transparent 100%);
+		background: -webkit-linear-gradient(90deg, var(--color-primary-400) 0%, transparent 100%);
+		background: linear-gradient(90deg, var(--color-primary-400) 0%, transparent 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--color-primary)",endColorstr="var(--color-primary)",GradientType=1);
+	}
+
+	.about-us-images {
+		display: grid;
+		align-items: center;
+		justify-items: center;
+		padding-right: 20px;
+	}
+	.about-us-images > * {
+		grid-row: 1;
+		grid-column: 1;
+	}
+	.about-us-image {
+		opacity: 0;
+		transition:
+			transform 1.2s ease-in-out,
+			opacity 1.2s ease-in-out;
+		width: clamp(162px, 17.45vw + 96.568px, 432px);
+		transform: scale(0);
+	}
+	.about-us-image.active {
+		opacity: 1;
+		transform: scale(1);
+		transition-delay: 1s;
+	}
+	.about-us-image.deactivating {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	.about-us-hexagon.small {
+		width: clamp(37px, 3.674vw + 23.488px, 94px);
+		transform: translate(55%, 260%) rotate(120deg) scale(0);
+		transition: transform 1.2s ease-in-out;
+	}
+
+	.about-us-hexagon.medium {
+		width: clamp(60px, 5.924vw + 37.872px, 152px);
+		transform: translate(115%, 135%) rotate(-120deg) scale(0);
+		transition: transform 1.2s ease-in-out;
+	}
+	.about-us-hexagon.large {
+		width: clamp(177px, 17.45vw + 111.568px, 447px);
+		transform: rotate(-60deg) scale(0);
+		transition: transform 1.2s ease-in-out;
+	}
+	.about-us-content.active .about-us-hexagon.small {
+		transform: translate(55%, 260%) rotate(120deg) scale(1);
+	}
+	.about-us-content.active .about-us-hexagon.medium {
+		transform: translate(115%, 135%) rotate(-120deg) scale(1);
+	}
+	.about-us-content.active .about-us-hexagon.large {
+		transform: rotate(-60deg) scale(1);
+	}
+
+	.about-us-texts {
+		display: grid;
+	}
+	.about-us-text {
+		grid-row: 1;
+		grid-column: 1;
+		opacity: 0;
+		display: grid;
+		grid-template-rows: 1fr;
+		user-select: none;
+		pointer-events: none;
+	}
+	.text-animation-wrapper {
+		overflow: hidden;
+	}
+	.about-us-text.deactivating {
+		animation: textGridAnimationOut 1.2s ease-in-out forwards;
+	}
+	.about-us-text.active {
+		animation: textGridAnimationIn 1.6s ease-in-out forwards;
+		animation-delay: 1s;
+		user-select: auto;
+		pointer-events: auto;
+	}
+
+	@keyframes textGridAnimationOut {
+		0% {
+			grid-template-rows: 1fr;
+			opacity: 1;
+		}
+		100% {
+			grid-template-rows: 0fr;
+			opacity: 0;
+		}
+	}
+	@keyframes textGridAnimationIn {
+		0% {
+			grid-template-rows: 0fr;
+			opacity: 0;
+		}
+		100% {
+			grid-template-rows: 1fr;
+			opacity: 1;
+		}
+	}
+	h3 {
+		font-size: var(--fs-26-20);
+		color: var(--color-primary-400);
+		line-height: var(--lh-1_2);
+		font-weight: var(--fw-regular);
+		padding-bottom: 0.9em;
+		padding-top: 2em;
+	}
+	p {
+		font-size: var(--fs-16-12);
+		color: var(--color-white);
+		line-height: var(--lh-1_25);
+		font-weight: var(--fw-book);
+		padding-bottom: 1.5em;
+	}
+	@media only screen and (max-width: 768px) {
+		.pc {
+			display: none;
+		}
+	}
+
+	@media only screen and (min-width: 768px) {
+		.about-us {
+			padding-bottom: 4em;
+		}
+		.about-us-content {
+			display: grid;
+			grid-template-rows: auto;
+			grid-template-columns: 45% 55%;
+		}
+		.about-us-years-select {
+			grid-row: 1;
+			grid-column: 1/3;
+			justify-content: center;
+			padding-top: 5.25em;
+			margin-bottom: 0;
+			padding-bottom: 6.25em;
+			overflow: visible;
+		}
+		.about-us-images {
+			grid-row: 2;
+			grid-column: 1;
+			position: relative;
+			top: -10%;
+		}
+
+		.about-us-texts {
+			padding-left: 12%;
+			grid-row: 2;
+			grid-column: 2;
+		}
+		.mobile {
+			display: none;
+		}
+
+		h3 {
+			padding-bottom: 1.15em;
+			padding-top: 0;
+		}
+		p {
+			line-height: var(--lh-1_5);
+		}
+	}
+</style>
+
+<script>
+	let aboutUsAnimationDuration = 2000;
+	let aboutUs = $(".about-us");
+	let aboutUsContent = $(".about-us-content");
+	let aboutUsTexts = $(".about-us-text");
+	let aboutUsYears = $(".about-us-year");
+	let aboutUsImages = $(".about-us-image");
+
+	let activeYear = 0;
+	let previousYear;
+
+	aboutUsYears.on("click", function () {
+		if (aboutUs.hasClass("animating")) {
+			return;
+		}
+
+		previousYear = activeYear;
+		activeYear = $(this).index();
+
+		if (activeYear === previousYear) {
+			return;
+		}
+
+		aboutUs.addClass("animating");
+
+		aboutUsTexts.removeClass("deactivating");
+		aboutUsYears.removeClass("deactivating");
+		aboutUsImages.removeClass("deactivating");
+
+		aboutUsTexts.eq(previousYear).removeClass("active").addClass("deactivating");
+		aboutUsYears.eq(previousYear).removeClass("active").addClass("deactivating");
+		aboutUsImages.eq(previousYear).removeClass("active").addClass("deactivating");
+		aboutUsTexts.eq(activeYear).addClass("active");
+		aboutUsYears.eq(activeYear).addClass("active");
+		aboutUsImages.eq(activeYear).addClass("active");
+
+		setTimeout(function () {
+			aboutUsTexts.eq(previousYear).removeClass("deactivating");
+			aboutUsYears.eq(previousYear).removeClass("deactivating");
+			aboutUsImages.eq(previousYear).removeClass("deactivating");
+			aboutUs.removeClass("animating");
+		}, aboutUsAnimationDuration);
+	});
+
+	let aboutUsTextsHeight;
+	document.addEventListener("DOMContentLoaded", function () {
+		aboutUsTextsHeight = aboutUsTexts.height();
+		aboutUsTexts.css("min-height", aboutUsTextsHeight);
+	});
+	window.addEventListener("resize", function () {
+		aboutUsTexts.css("min-height", "0px");
+		aboutUsTextsHeight = aboutUsTexts.height();
+		aboutUsTexts.css("min-height", aboutUsTextsHeight);
+	});
+
+	let observer = new IntersectionObserver(function (entries) {
+		// Loop over the entries
+		entries.forEach(function (entry) {
+			// If the element is visible
+			if (entry.isIntersecting) {
+				aboutUsTexts.first().addClass("active");
+				aboutUsYears.first().addClass("active");
+				aboutUsImages.first().addClass("active");
+				aboutUsContent.addClass("active");
+				// Stop observing the element
+				observer.unobserve(entry.target);
+			}
+		});
+	});
+	// Start observing
+
+	observer.observe(document.querySelector(".about-us-content"));
+</script>

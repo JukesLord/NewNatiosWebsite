@@ -35,14 +35,21 @@ body {
 body {
 	text-wrap: balance;
 }
+body,
+.container {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
 
 /* Make images easier to work with */
 img,
 picture,
 svg {
 	max-width: 100%;
+	width: 100%;
 	height: auto;
 	display: block;
+	user-select: none;
 }
 
 a {

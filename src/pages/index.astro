@@ -1,17 +1,32 @@
 ---
 import IndexLayout from "../layouts/IndexLayout.astro";
-import Hero from "../components/homepage/hero/hero.astro";
-import { Image } from "astro:assets";
-import myImage from "@assets/images/products/Ashwagandha_Extra_5000_90/front/Ashwagandha_5000_90_front_1200.webp"; // Image is 1600x900
+import Hero from "@components/homepage/hero/hero.astro";
+import VyhodyZnacky from "@components/homepage/vyhody-znacky/vyhody-znacky.astro";
+import NaseProdukty from "@components/nase-produkty/nase-produkty.astro";
+import NovinkyNatios from "@components/homepage/novinky-natios/novinky-natios.astro";
+import OZnacceNatios from "@components/homepage/o-znacce-natios/o-znacce-natios.astro";
 ---
 
 <IndexLayout title="Natios - It's Better To Be The Best">
 	<Hero />
-	<div class="test"></div>
+	<VyhodyZnacky />
+	<NaseProdukty />
+	<NovinkyNatios />
+	<OZnacceNatios />
 </IndexLayout>
 
-<style>
-	.test {
-		min-height: 100vh;
-	}
-</style>
+<style></style>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		$("body").addClass("homepage");
+	});
+	document.querySelector(".header-logo").addEventListener("click", function (event) {
+		event.preventDefault();
+		$(window).scrollTop(0);
+	});
+	document.querySelector(".footer-logo").addEventListener("click", function (event) {
+		event.preventDefault();
+		$(window).scrollTop(0);
+	});
+</script>

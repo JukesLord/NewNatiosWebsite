@@ -1,0 +1,392 @@
+---
+import SectionHeader from "@components/section-header.astro";
+import HexagonLarge from "@components/hexagons/natios-new-products/hexagon-large.astro";
+import HexagonMedium from "@components/hexagons/natios-new-products/hexagon-medium.astro";
+import HexagonSmall from "@components/hexagons/natios-new-products/hexagon-small.astro";
+import HexagonLargeMobile from "@components/hexagons/natios-new-products/mobile-hexagon-large.astro";
+import HexagonMediumMobile from "@components/hexagons/natios-new-products/mobile-hexagon-medium.astro";
+import HexagonSmallMobile from "@components/hexagons/natios-new-products/mobile-hexagon-small.astro";
+import ArrowLeftEmpty from "@components/arrows/arrowLeftEmpty.astro";
+import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
+import { Image } from "astro:assets";
+import productImage1 from "@assets/images/hero/magnesiumBisglycinate/Magnesium_Bisglycinate.webp";
+const loading = "lazy";
+const productImageWidths = [100, 200, 291, 582, 873, productImage1.width];
+const quality = 100;
+---
+
+<section id="brand-news" class="brand-news">
+	<SectionHeader
+		headerText="Novinky"
+		marginTopMOB="3em"
+		marginTopPC=".25em"
+		paddingTopMOB="1em"
+		paddingTopPC="2em"
+		paddingBottomMOB="1.4em"
+		paddingBottomPC="3.15em"
+	/>
+	<div class="brand-news-content">
+		<div class="brand-new-product-assets">
+			<div class="hexagon hexagon-large pc">
+				<HexagonLarge />
+			</div>
+			<div class="hexagon hexagon-medium pc">
+				<HexagonMedium />
+			</div>
+			<div class="hexagon hexagon-small pc">
+				<HexagonSmall />
+			</div>
+			<div class="hexagon hexagon-large mobile">
+				<HexagonLargeMobile />
+			</div>
+			<div class="hexagon hexagon-medium mobile">
+				<HexagonMediumMobile />
+			</div>
+			<div class="hexagon hexagon-small mobile">
+				<HexagonSmallMobile />
+			</div>
+			<div class="brand-new-product-images">
+				<div class="brand-new-product-image">
+					<Image
+						src={productImage1}
+						widths={productImageWidths}
+						alt={"Natios Fenugreek"}
+						quality={quality}
+						loading={loading}
+					/>
+				</div>
+				<div class="brand-new-product-image">
+					<Image
+						src={productImage1}
+						widths={productImageWidths}
+						alt={"Natios Fenugreek"}
+						quality={quality}
+						loading={loading}
+					/>
+				</div>
+				<div class="brand-new-product-image">
+					<Image
+						src={productImage1}
+						widths={productImageWidths}
+						alt={"Natios Fenugreek"}
+						quality={quality}
+						loading={loading}
+					/>
+				</div>
+			</div>
+		</div>
+		<div class="brand-new-product-texts">
+			<div class="brand-new-product-text">
+				<div class="text-animation-wrapper">
+					<h3 class="brand-new-product-heading">NATIOS Shijajit Extract</h3>
+					<p class="brand-new-product-description">
+						S Natios Fenugreek & Blessed Thistle již nemusíte mít strach, že svému dítěti nedopřáváte dostatečné
+						množství kvalitního mateřského mléka. Pískavice řecké seno je velmi často užíváno při poporodní péči.
+						Pískavice s Benediktem lékařským je účinná kombinace bylin, které jsou známe především pro své schopnosti
+						podporovat tvorbu mateřského mléka.
+					</p>
+				</div>
+			</div>
+			<div class="brand-new-product-text">
+				<div class="text-animation-wrapper">
+					<h3 class="brand-new-product-heading">NATIOS Acerola Extract</h3>
+					<p class="brand-new-product-description">
+						S Natios Fenugreek & Blessed Thistle již nemusíte mít strach, že svému dítěti nedopřáváte dostatečné
+						množství kvalitního mateřského mléka. Pískavice řecké seno je velmi často užíváno při poporodní péči.
+						Pískavice s Benediktem lékařským je účinná kombinace bylin, které jsou známe především pro své schopnosti
+						podporovat tvorbu mateřského mléka.
+					</p>
+				</div>
+			</div>
+			<div class="brand-new-product-text">
+				<div class="text-animation-wrapper">
+					<h3 class="brand-new-product-heading">NATIOS Activated B-Complex</h3>
+					<p class="brand-new-product-description">
+						S Natios Fenugreek & Blessed Thistle již nemusíte mít strach, že svému dítěti nedopřáváte dostatečné
+						množství kvalitního mateřského mléka. Pískavice řecké seno je velmi často užíváno při poporodní péči.
+						Pískavice s Benediktem lékařským je účinná kombinace bylin, které jsou známe především pro své schopnosti
+						podporovat tvorbu mateřského mléka.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="brand-new-product-arrows">
+			<ArrowLeftEmpty />
+			<ArrowRightEmpty />
+		</div>
+	</div>
+</section>
+
+<style>
+	.brand-new-product-assets {
+		display: grid;
+		align-items: center;
+		justify-items: center;
+	}
+	.brand-new-product-assets > * {
+		grid-row: 1;
+		grid-column: 1;
+	}
+
+	.hexagon-large {
+		width: clamp(181px, 24.173vw + 90.064px, 554px);
+	}
+	.hexagon-medium {
+		width: clamp(141px, 18.859vw + 70.272px, 432px);
+	}
+	.hexagon-small {
+		width: clamp(34px, 4.584vw + 17.072px, 105px);
+	}
+	.hexagon-large,
+	.hexagon-medium {
+		transform: rotate(-15deg);
+	}
+	.hexagon-small {
+		transform: translate(200%, -260%) rotate(225deg);
+	}
+	.brand-new-product-images {
+		display: grid;
+		align-items: center;
+		justify-items: center;
+		z-index: 1;
+	}
+
+	.brand-new-product-image {
+		width: clamp(100px, 12.37vw + 53.488px, 291px);
+		grid-row: 1;
+		grid-column: 1;
+		opacity: 0;
+	}
+	.brand-new-product-image.active {
+		opacity: 1;
+	}
+
+	.brand-new-product-texts {
+		display: grid;
+		align-items: start;
+		justify-items: center;
+	}
+	.brand-new-product-text {
+		grid-row: 1;
+		grid-column: 1;
+		opacity: 0;
+		user-select: none;
+		pointer-events: none;
+	}
+	.brand-new-product-text.active {
+		user-select: auto;
+		pointer-events: auto;
+	}
+
+	h3 {
+		font-size: var(--fs-26-20);
+		color: var(--color-primary-400);
+		line-height: var(--lh-1_2);
+		font-weight: var(--fw-regular);
+		padding-bottom: 0.9em;
+		padding-top: 2em;
+	}
+	p {
+		font-size: var(--fs-16-12);
+		color: var(--color-white);
+		line-height: var(--lh-1_25);
+		font-weight: var(--fw-book);
+		padding-bottom: 1.5em;
+	}
+
+	.brand-new-product-arrows {
+		display: flex;
+		gap: 7%;
+		justify-content: center;
+		width: clamp(96px, 3.238vw + 83.8px, 146px);
+		margin: 0 auto 0 auto;
+	}
+
+	@media only screen and (max-width: 356px) {
+	}
+	@media only screen and (max-width: 768px) {
+		.pc {
+			display: none;
+		}
+	}
+
+	@media only screen and (min-width: 768px) {
+		.brand-news-content {
+			display: grid;
+			grid-template-rows: auto auto;
+			grid-template-columns: 55% 45%;
+		}
+		.brand-new-product-assets {
+			grid-column: 2;
+			grid-row: 1/3;
+			margin-bottom: 20px;
+			opacity: 0;
+			transition: opacity 1.5s;
+			transition-delay: 0.3s;
+		}
+		.brand-news-content.active .brand-new-product-assets {
+			opacity: 1;
+		}
+		.brand-new-product-texts {
+			padding-right: 12%;
+		}
+		h3 {
+			padding-bottom: 1.15em;
+			padding-top: 0;
+		}
+		p {
+			line-height: var(--lh-1_5);
+			padding-bottom: 6.25em;
+		}
+		.mobile {
+			display: none;
+		}
+
+		.brand-new-product-arrows {
+			margin: 0 auto auto 0;
+			padding-left: 4px;
+		}
+	}
+
+	/*animace*/
+	.brand-new-product-image {
+		transition:
+			transform 2s ease-in-out,
+			opacity 1s ease-in-out;
+	}
+	.hexagon {
+		transition: transform 1.1s ease-in-out;
+	}
+	.brand-news-content .brand-new-product-image {
+		transform: translate(200vw, 0);
+	}
+	@media only screen and (min-width: 768px) {
+		.brand-news-content .brand-new-product-image {
+			transform: translate(100vw, 0);
+		}
+	}
+
+	.brand-news-content .brand-new-product-image.active {
+		transform: translate(0, 0);
+	}
+	.brand-new-product-assets.animating .hexagon-large {
+		transform: rotate(-35deg) scale(0.9);
+	}
+	.brand-new-product-assets.animating .hexagon-medium {
+		transform: rotate(25deg) scale(0.9);
+	}
+	.brand-new-product-assets.animating .hexagon-small {
+		transform: translate(180%, -280%) rotate(250deg) scale(0.8);
+	}
+	.brand-new-product-text {
+		display: grid;
+		grid-template-rows: 1fr;
+	}
+	.brand-new-product-text.deactivating {
+		animation: textGridAnimationOut 1.4s ease-in-out forwards;
+	}
+	.brand-new-product-text.active {
+		animation: textGridAnimationIn 2s ease-in-out forwards;
+		animation-delay: 0.5s;
+	}
+	.text-animation-wrapper {
+		overflow: hidden;
+	}
+	@keyframes textGridAnimationOut {
+		0% {
+			grid-template-rows: 1fr;
+			opacity: 1;
+		}
+		100% {
+			grid-template-rows: 0fr;
+			opacity: 0;
+		}
+	}
+	@keyframes textGridAnimationIn {
+		0% {
+			grid-template-rows: 0fr;
+			opacity: 0;
+		}
+		100% {
+			grid-template-rows: 1fr;
+			opacity: 1;
+		}
+	}
+</style>
+
+<script>
+	const animationDurationNews = 2000;
+	const animationDurationNewsSmaller = 1150;
+	let brandNews = $(".brand-news-content");
+	let brandNewsProductPosition = 0;
+	let brandNewsProductCount = $(".brand-new-product-image").length;
+	let brandNewsProductsImages = $(".brand-new-product-image");
+	let brandNewsProductsTexts = $(".brand-new-product-text");
+	let brandNewsProductsAssets = $(".brand-new-product-assets");
+
+	$(".brand-new-product-arrows .arrow-left").on("click", function () {
+		if (brandNews.hasClass("animating")) {
+			return;
+		}
+		brandNewsProductsImages.eq(brandNewsProductPosition).removeClass("active");
+		brandNewsProductsTexts.eq(brandNewsProductPosition).removeClass("active").addClass("deactivating");
+		brandNewsProductPosition = (brandNewsProductPosition - 1 + brandNewsProductCount) % brandNewsProductCount;
+		brandNewsProductsImages.eq(brandNewsProductPosition).addClass("active");
+		brandNewsProductsTexts.eq(brandNewsProductPosition).addClass("active");
+	});
+
+	$(".brand-new-product-arrows .arrow-right").on("click", function () {
+		if (brandNews.hasClass("animating")) {
+			return;
+		}
+		brandNewsProductsImages.eq(brandNewsProductPosition).removeClass("active");
+		brandNewsProductsTexts.eq(brandNewsProductPosition).removeClass("active").addClass("deactivating");
+		brandNewsProductPosition = (brandNewsProductPosition + 1) % brandNewsProductCount;
+		brandNewsProductsImages.eq(brandNewsProductPosition).addClass("active");
+		brandNewsProductsTexts.eq(brandNewsProductPosition).addClass("active");
+	});
+
+	$(".brand-new-product-arrows > *").on("click", function () {
+		if (brandNews.hasClass("animating")) {
+			return;
+		}
+		brandNews.addClass("animating");
+		brandNewsProductsAssets.addClass("animating");
+		setTimeout(function () {
+			brandNews.removeClass("animating");
+		}, animationDurationNews);
+		setTimeout(function () {
+			brandNewsProductsTexts.removeClass("deactivating");
+			brandNewsProductsAssets.removeClass("animating");
+		}, animationDurationNewsSmaller);
+	});
+
+	let brandNewProductTexts = $(".brand-new-product-texts");
+	let brandNewProductTextsHeight;
+	document.addEventListener("DOMContentLoaded", function () {
+		brandNewProductTextsHeight = brandNewProductTexts.height();
+		brandNewProductTexts.css("min-height", brandNewProductTextsHeight);
+	});
+	window.addEventListener("resize", function () {
+		brandNewProductTexts.css("min-height", "0px");
+		brandNewProductTextsHeight = brandNewProductTexts.height();
+		brandNewProductTexts.css("min-height", brandNewProductTextsHeight);
+	});
+
+	let observer = new IntersectionObserver(function (entries) {
+		// Loop over the entries
+		entries.forEach(function (entry) {
+			// If the element is visible
+			if (entry.isIntersecting) {
+				brandNewsProductsImages.first().addClass("active");
+				brandNewsProductsTexts.first().addClass("active");
+				brandNews.addClass("active");
+				// Stop observing the element
+				observer.unobserve(entry.target);
+			}
+		});
+	});
+	// Start observing
+	observer.observe(document.querySelector(".brand-news-content"));
+</script>

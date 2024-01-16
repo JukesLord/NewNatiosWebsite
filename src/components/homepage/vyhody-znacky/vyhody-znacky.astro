@@ -1,0 +1,291 @@
+---
+import SectionHeader from "@components/section-header.astro";
+import NatiosLogo from "@components/natiosLogo.astro";
+import LottieHexagonBg from "@components/animations/lottieHexagonBg.astro";
+import HexagonFilledWithHover from "@components/hexagons/hexagonFilledWithHover.astro";
+import IconCisteSlozeni from "@components/homepage/vyhody-znacky/iconCisteSlozeni.astro";
+import IconVeganKapsle from "@components/homepage/vyhody-znacky/iconVeganKapsle.astro";
+import IconVysokaVstrebatelnost from "@components/homepage/vyhody-znacky/iconVysokaVstrebatelnost.astro";
+import IconVedeckyOverene from "@components/homepage/vyhody-znacky/iconVedeckyOverene.astro";
+import BrandDescriptionBG from "@components/homepage/vyhody-znacky/brandDescriptionBG.astro";
+---
+
+<section id="benefits-of-natios" class="brand-benefits">
+	<SectionHeader
+		headerText="Výhody značky Natios"
+		marginTopMOB="3em"
+		marginTopPC=".25em"
+		paddingTopMOB="1em"
+		paddingTopPC="2em"
+		paddingBottomMOB="0"
+		paddingBottomPC="0"
+	/>
+
+	<div class="brand-benefits-content">
+		<div class="brand-benefits-logo">
+			<NatiosLogo />
+		</div>
+		<div class="brand-benefits-tiles">
+			<div class="brand-benefits-tile">
+				<div class="brand-benefit-icon">
+					<IconCisteSlozeni />
+					<HexagonFilledWithHover />
+				</div>
+				<h3 class="brand-benefit-text">Čisté složení bez éček</h3>
+			</div>
+			<div class="brand-benefits-tile">
+				<div class="brand-benefit-icon">
+					<IconVeganKapsle />
+					<HexagonFilledWithHover />
+				</div>
+				<h3 class="brand-benefit-text">Veganské kapsle</h3>
+			</div>
+			<div class="brand-benefits-tile">
+				<div class="brand-benefit-icon">
+					<IconVysokaVstrebatelnost />
+					<HexagonFilledWithHover />
+				</div>
+				<h3 class="brand-benefit-text">Vysoká vstřebatelnost</h3>
+			</div>
+			<div class="brand-benefits-tile">
+				<div class="brand-benefit-icon">
+					<IconVedeckyOverene />
+					<HexagonFilledWithHover />
+				</div>
+				<h3 class="brand-benefit-text">Vědecky ověřené složení</h3>
+			</div>
+		</div>
+		<div class="brand-benefits-descriptions">
+			<div class="brand-benefits-description">
+				<span
+					>1. V doplňcích stravy Nations využíváme pouze ty nejúčinnější formy minerálů a vitamínů, které vaše tělo
+					dokáže snadno zpracovat a využít.</span
+				>
+			</div>
+			<div class="brand-benefits-description">
+				<span
+					>2. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus dignissimos quidem, delectus sint quos.</span
+				>
+			</div>
+			<div class="brand-benefits-description">
+				<span
+					>3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo excepturi illum voluptates hic, suscipit
+					eligendi sunt repellendus.</span
+				>
+			</div>
+			<div class="brand-benefits-description">
+				<span
+					>4. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam non nobis atque, velit voluptatum
+					ducimus porro modi.</span
+				>
+			</div>
+		</div>
+		<div class="brand-benefits-bg-animation">
+			<LottieHexagonBg />
+			<div class="brand-benefits-description-bg">
+				<BrandDescriptionBG />
+			</div>
+		</div>
+	</div>
+</section>
+
+<style is:global>
+	.brand-benefits-content {
+		display: grid;
+		grid-template-rows: auto;
+		grid-template-columns: 1fr;
+		align-items: center;
+		justify-items: center;
+		width: clamp(311px, 31.671vw + 191.92px, 800px);
+		max-width: 98%;
+		margin: auto;
+		margin-top: clamp(2rem, 1.554vw + 1.635rem, 3.5rem);
+	}
+	.brand-benefits-content > * {
+		grid-column: 1;
+		grid-row: 1;
+	}
+	.brand-benefits-content .brand-benefits-tiles {
+		grid-row: 2;
+	}
+	.brand-benefits-logo {
+		width: clamp(146px, 14.821vw + 89.968px, 375px);
+		margin-bottom: 3%;
+	}
+
+	.brand-benefits-tile {
+		display: flex;
+		align-items: center;
+		color: var(--color-white);
+		font-size: var(--fs-36-14);
+		line-height: var(--lh-1_2);
+		font-weight: var(--fw-book);
+		margin-bottom: 1em;
+	}
+	.brand-benefits-tile:last-child {
+		margin-bottom: 0;
+	}
+	.brand-benefit-icon {
+		display: grid;
+		align-items: center;
+		justify-items: center;
+		width: clamp(42px, 3.951vw + 27.152px, 103px);
+		transition: transform 0.2s ease-in-out;
+	}
+	.brand-benefits-tile.active .brand-benefit-icon {
+		transform: scale(1.1);
+	}
+	.brand-benefit-icon > * {
+		grid-column: 1;
+		grid-row: 1;
+	}
+	.brand-benefit-text {
+		--padding-text: 0.75em;
+		padding-left: var(--padding-text);
+		transition: padding 0.2s ease-in-out;
+	}
+	.brand-benefits-tile.active .brand-benefit-text {
+		--padding-text: 0.9em;
+	}
+
+	.brand-benefits-descriptions {
+		display: grid;
+		align-items: center;
+		justify-items: center;
+		color: var(--color-white);
+		font-weight: var(--fw-book);
+		font-size: var(--fs-26-14);
+		line-height: var(--lh-1_38);
+		width: 70%;
+
+		padding: 5% 10%;
+		text-align: center;
+		text-wrap: initial;
+	}
+	.brand-benefits-descriptions > * {
+		grid-column: 1;
+		grid-row: 1;
+	}
+	.brand-benefits-description {
+		max-height: 9.5em;
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
+	.brand-benefits-description-bg {
+		width: 70%;
+		opacity: 0;
+		transform: rotateY(90deg);
+		transition:
+			opacity 0.5s ease-in-out,
+			transform 0.5s ease-in-out;
+	}
+	.brand-benefits-description-bg.active {
+		opacity: 1;
+		z-index: 1;
+		transform: rotateY(0deg);
+	}
+	.brand-benefits-description {
+		opacity: 0;
+		user-select: none;
+	}
+	.brand-benefits-description.active {
+		user-select: auto;
+		opacity: 1;
+		transition: opacity 0.5s ease-in-out;
+		z-index: 2;
+	}
+	.brand-benefits-bg-animation {
+		display: grid;
+		align-items: center;
+		justify-items: center;
+	}
+	.brand-benefits-bg-animation > * {
+		grid-column: 1;
+		grid-row: 1;
+	}
+	@media only screen and (min-width: 1024px) {
+		.brand-benefits-content .brand-benefits-tiles {
+			grid-row: 1;
+		}
+		.brand-benefits-tiles {
+			display: grid;
+			width: 100%;
+			z-index: 1;
+		}
+		.brand-benefits-tile {
+			grid-column: 1;
+			grid-row: 1;
+			align-items: center;
+			justify-items: center;
+			margin: 0;
+			width: 100%;
+			position: relative;
+			--vert-large: 250%;
+			--vert-small: 130%;
+			--horiz-large: 76%;
+			--horiz-small: 84%;
+		}
+
+		.brand-benefits-tile:nth-child(1) {
+			bottom: var(--vert-large);
+			right: var(--horiz-large);
+		}
+		.brand-benefits-tile:nth-child(2) {
+			bottom: var(--vert-small);
+			left: var(--horiz-small);
+		}
+		.brand-benefits-tile:nth-child(3) {
+			top: var(--vert-small);
+			right: var(--horiz-small);
+		}
+		.brand-benefits-tile:nth-child(4) {
+			top: var(--vert-large);
+			left: var(--horiz-large);
+		}
+		.brand-benefits-tile:nth-child(odd) {
+			flex-direction: row-reverse;
+			text-align: right;
+		}
+		.brand-benefits-tile:nth-child(odd) .brand-benefit-text {
+			padding-left: 0;
+			padding-right: var(--padding-text);
+		}
+		.brand-benefit-text {
+			max-width: 50%;
+		}
+	}
+</style>
+
+<script>
+	let previousBenefit;
+	let activatedBenefit;
+	let brandBenefitsTiles = $(".brand-benefits-tile");
+	let brandBenefitsIcons = $(".brand-benefit-icon");
+	let brandBenefitsDescriptions = $(".brand-benefits-description");
+	let brandBenefitsDescriptionBg = $(".brand-benefits-description-bg");
+
+	brandBenefitsIcons.on("mouseenter click", function () {
+		previousBenefit = activatedBenefit;
+		activatedBenefit = $(this).parent().index();
+		brandBenefitActivated();
+	});
+
+	function brandBenefitActivated() {
+		brandBenefitsTiles.eq(previousBenefit).removeClass("active");
+		brandBenefitsTiles.eq(activatedBenefit).addClass("active");
+		brandBenefitsDescriptions.eq(previousBenefit).removeClass("active");
+		brandBenefitsDescriptions.eq(activatedBenefit).addClass("active");
+		brandBenefitsDescriptionBg.addClass("active");
+	}
+
+	$(document).on("click", function (event) {
+		console.log(event.target);
+		if (
+			!$(event.target).closest(
+				".brand-benefits-tile.active, .brand-benefits-description.active, .brand-benefits-description-bg"
+			).length
+		) {
+			$(".brand-benefits-content .active").removeClass("active");
+		}
+	});
+</script>

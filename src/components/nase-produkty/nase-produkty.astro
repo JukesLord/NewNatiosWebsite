@@ -1,0 +1,145 @@
+---
+import SectionHeader from "@components/section-header.astro";
+import { Image } from "astro:assets";
+import magnesiumBisglycinate from "@assets/images/products/Magnesium_Bisglycinate_1000_90/Magnesium_Bisglycinate_1000_90_front.webp";
+const loading = "lazy";
+const heroImageWidths = [116, 148, 232, 296, 500, 1000, magnesiumBisglycinate.width];
+const quality = 100;
+---
+
+<section id="our-products" class="our-products">
+	<SectionHeader
+		headerText="Naše produkty"
+		marginTopMOB="3em"
+		marginTopPC=".25em"
+		paddingTopMOB="1em"
+		paddingTopPC="2em"
+		paddingBottomMOB="1.4em"
+		paddingBottomPC="3.15em"
+	/>
+	<div class="our-products-content">
+		<div class="our-products-filters">
+			<div class="our-products-filter" id="all">
+				<span>Vše</span>
+			</div>
+			<div class="our-products-filter" id="mineral">
+				<span>Minerály</span>
+			</div>
+			<div class="our-products-filter" id="vitamin">
+				<span>Vitamíny</span>
+			</div>
+			<div class="our-products-filter" id="extract">
+				<span>Extrakty</span>
+			</div>
+			<div class="our-products-filter" id="other">
+				<span>Ostatní</span>
+			</div>
+		</div>
+		<div class="our-products-list">
+			<a href="/magnesium-bisglycinate" class="our-product">
+				<div class="product-image">
+					<Image
+						src={magnesiumBisglycinate}
+						widths={heroImageWidths}
+						alt={"NATIOS Magnesium Bisglycinate"}
+						quality={quality}
+						loading={loading}
+					/>
+				</div>
+				<div class="product-name">Magnesium Bisglycinate</div>
+			</a>
+			<a href="/magnesium-bisglycinate" class="our-product">
+				<div class="product-image">
+					<Image
+						src={magnesiumBisglycinate}
+						widths={heroImageWidths}
+						alt={"NATIOS Magnesium Bisglycinate"}
+						quality={quality}
+						loading={loading}
+					/>
+				</div>
+				<div class="product-name">Magnesium Bisglycinate</div>
+			</a>
+			<a href="/magnesium-bisglycinate" class="our-product">
+				<div class="product-image">
+					<Image
+						src={magnesiumBisglycinate}
+						widths={heroImageWidths}
+						alt={"NATIOS Magnesium Bisglycinate"}
+						quality={quality}
+						loading={loading}
+					/>
+				</div>
+				<div class="product-name">Magnesium Bisglycinate</div>
+			</a>
+			<a href="/magnesium-bisglycinate" class="our-product">
+				<div class="product-image">
+					<Image
+						src={magnesiumBisglycinate}
+						widths={heroImageWidths}
+						alt={"NATIOS Magnesium Bisglycinate"}
+						quality={quality}
+						loading={loading}
+					/>
+				</div>
+				<div class="product-name">Magnesium Bisglycinate</div>
+			</a>
+			<a href="/magnesium-bisglycinate" class="our-product">
+				<div class="product-image">
+					<Image
+						src={magnesiumBisglycinate}
+						widths={heroImageWidths}
+						alt={"NATIOS Magnesium Bisglycinate"}
+						quality={quality}
+						loading={loading}
+					/>
+				</div>
+				<div class="product-name">Magnesium Bisglycinate</div>
+			</a>
+		</div>
+	</div>
+</section>
+
+<style>
+	.our-products-list {
+		display: grid;
+		justify-items: center;
+		grid-template-columns: 1fr 1fr;
+		color: var(--color-white);
+		font-size: var(--fs-16-12);
+		font-weight: var(--fw-light);
+		line-height: var(--lh-1_2);
+		text-align: center;
+		row-gap: 1.75em;
+	}
+	.our-product {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		width: 100%;
+	}
+	.product-image {
+		width: clamp(58px, 5.795vw + 35.856px, 148px);
+	}
+	.product-name {
+		padding-top: 1em;
+		max-width: 95%;
+		margin: auto;
+	}
+
+	@media only screen and (min-width: 768px) {
+		.our-products-list {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+
+	@media only screen and (min-width: 1024px) {
+		.our-products-list {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+		.product-name {
+			padding-top: 1.5em;
+		}
+	}
+</style>

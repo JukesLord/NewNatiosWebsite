@@ -1,0 +1,38 @@
+---
+const { headerText } = Astro.props;
+const { marginTopMOB } = Astro.props;
+const { marginTopPC } = Astro.props;
+const { paddingTopMOB } = Astro.props;
+const { paddingTopPC } = Astro.props;
+const { paddingBottomMOB } = Astro.props;
+const { paddingBottomPC } = Astro.props;
+---
+
+<div>
+	<h2>{headerText}</h2>
+</div>
+
+<style define:vars={{ marginTopMOB, marginTopPC, paddingTopMOB, paddingTopPC, paddingBottomMOB, paddingBottomPC }}>
+	div {
+		font-size: var(--fs-60-28);
+		margin-top: var(--marginTopMOB);
+		padding-top: var(--paddingTopMOB);
+		padding-bottom: var(--paddingBottomMOB);
+	}
+	h2 {
+		font-weight: var(--fw-bold);
+		line-height: var(--lh-1_2);
+		background-image: linear-gradient(180deg, var(--color-blue-300) 20%, var(--color-blue-400) 95%);
+		background-clip: text;
+		color: transparent;
+		text-align: center;
+	}
+
+	@media only screen and (min-width: 768px) {
+		div {
+			margin-top: var(--margin-TopPC);
+			padding-top: var(--paddingTopPC);
+			padding-bottom: var(--paddingBottomPC);
+		}
+	}
+</style>
