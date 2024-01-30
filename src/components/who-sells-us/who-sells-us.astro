@@ -1,0 +1,260 @@
+<div class="who-sells-us">
+	<h3>Kdo nás prodává</h3>
+	<div class="sellers">
+		<a href="https://www.natima.cz" target="_blank" class="seller natima"></a>
+		<a href="https://cukrfreeshop.cz" target="_blank" class="seller cukrfree"></a>
+		<a href="https://vitalpoint.cz" target="_blank" class="seller vitalpoint"></a>
+		<a href="https://www.alpik.cz" target="_blank" class="seller alpik"></a>
+		<a href="https://www.notino.cz" target="_blank" class="seller notino"></a>
+
+		<a href="https://www.netoxickadomacnost.cz" target="_blank" class="seller netoxicka-domacnost"></a>
+		<a href="https://www.wereco.store" target="_blank" class="seller wereco"></a>
+		<a href="https://www.vivabeauty.cz" target="_blank" class="seller viva-beauty"></a>
+		<a href="https://www.holybaby.cz" target="_blank" class="seller holy-baby"></a>
+		<a href="https://www.fitness007.cz" target="_blank" class="seller fitness007"></a>
+
+		<a href="https://www.lekarnaave.cz" target="_blank" class="seller lekarna-ave"></a>
+		<a href="https://www.kralvitamin.cz" target="_blank" class="seller kral-vitamin"></a>
+	</div>
+	<div class="also-here">
+		<span>Produkty NATIOS můžete koupit také zde.</span>
+	</div>
+</div>
+
+<style>
+	/*overwrite vždy tam kde je použito*/
+	:root {
+		--sellers-width: 100%;
+		--sellers-columns: 2;
+		--sellers-rows-showed: 3;
+		--sellers-rows-hidden: 3;
+		--sellers-gap: clamp(20px, 0.648vw + 15.68px, 30px);
+	}
+
+	@media only screen and (min-width: 768px) {
+		:root {
+			--sellers-width: 100%;
+			--sellers-columns: 3;
+			--sellers-rows-showed: 2;
+			--sellers-rows-hidden: 2;
+			--sellers-row-fr: 1fr;
+		}
+	}
+	h3 {
+		font-size: var(--fs-16-16);
+		font-weight: var(--fw-book);
+		color: var(--color-primary-400);
+		line-height: var(--lh-1_2);
+		padding-bottom: 0.75em;
+	}
+
+	.sellers {
+		overflow: hidden;
+		display: grid;
+		width: var(--sellers-width);
+		grid-template-columns: repeat(var(--sellers-columns), 1fr);
+		grid-template-rows: repeat(var(--sellers-rows-showed), 1fr) repeat(var(--sellers-rows-hidden), 1fr);
+		gap: var(--sellers-gap);
+		padding: 0px 4px;
+		height: 50%;
+		overflow: hidden;
+		height: 0px;
+		transition: height 0.2s ease-out;
+		will-change: height;
+	}
+
+	.seller {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-style: solid;
+		border-width: 1px;
+		border-color: var(--color-primary-400);
+		border-radius: var(--border-radius-12);
+		cursor: pointer;
+		aspect-ratio: 3.4/1;
+		max-height: 50px;
+		width: 100%;
+	}
+
+	.seller:hover .seller-content {
+		background-color: var(--color-primary-400);
+	}
+
+	.also-here {
+		margin: auto;
+		margin-top: var(--sellers-gap);
+		width: 70%;
+		max-width: 360px;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-style: solid;
+		border-width: 1px;
+		border-color: var(--color-primary-400);
+		border-radius: 12px;
+		font-size: var(--fs-14-12);
+		font-weight: var(--fw-book);
+		color: var(--color-white);
+		line-height: var(--lh-1_5);
+		padding: 0.5em 0;
+		cursor: pointer;
+	}
+
+	.also-here,
+	.seller {
+		position: relative;
+	}
+	.also-here::before,
+	.seller::before {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		z-index: -1;
+		border-radius: 11px;
+		background: var(--color-blue-600);
+		background: -moz-linear-gradient(180deg, var(--color-blue-600) 0%, var(--color-primary-400) 100%);
+		background: -webkit-linear-gradient(180deg, var(--color-blue-600) 0%, var(--color-primary-400) 100%);
+		background: linear-gradient(180deg, var(--color-blue-600) 0%, var(--color-primary-400) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--color-blue-600)",endColorstr="var(--color-primary-400)",GradientType=1);
+		transition:
+			opacity 0.3s ease-in-out,
+			filter 0.3s ease-in-out;
+	}
+	.also-here:hover::before,
+	.seller:hover::before {
+		opacity: 1;
+		filter: drop-shadow(0px 0px 2px var(--color-primary-400-50));
+	}
+
+	.seller::after {
+		position: absolute;
+		content: "";
+		width: 80%;
+		height: 80%;
+		top: 10%;
+		left: 10%;
+		z-index: 1;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+	.alpik::after {
+		background-image: url(/content/sellers-icons/Alpik-logo.svg);
+	}
+	.cukrfree::after {
+		background-image: url(/content/sellers-icons/Cukrfree-logo.svg);
+		height: 65%;
+		top: 22.5%;
+	}
+	.fitness007::after {
+		background-image: url(/content/sellers-icons/Fitness007-logo.svg);
+		height: 70%;
+		top: 15%;
+	}
+	.holy-baby::after {
+		background-image: url(/content/sellers-icons/HolyBaby-logo.svg);
+	}
+	.natima::after {
+		background-image: url(/content/sellers-icons/Natima-logo.svg);
+		width: 75%;
+		left: 12.5%;
+	}
+	.netoxicka-domacnost::after {
+		background-image: url(/content/sellers-icons/NetoxickaDomacnost-logo.svg);
+		height: 75%;
+		top: 7.5%;
+	}
+	.notino::after {
+		background-image: url(/content/sellers-icons/Notino-logo.svg);
+		width: 60%;
+		left: 20%;
+	}
+
+	.vitalpoint::after {
+		background-image: url(/content/sellers-icons/Vitalpoint-logo.svg);
+		width: 70%;
+		left: 15%;
+	}
+	.lekarna-ave::after {
+		background-image: url(/content/sellers-icons/LekarnaAve-logo.svg);
+		height: 90%;
+		top: 4%;
+	}
+	.wereco::after {
+		background-image: url(/content/sellers-icons/Wereco-logo.svg);
+	}
+	.kral-vitamin::after {
+		background-image: url(/content/sellers-icons/KralVitamin-logo.svg);
+		height: 80%;
+		top: 10%;
+	}
+	.viva-beauty::after {
+		background-image: url(/content/sellers-icons/VivaBeauty-logo.svg);
+		height: 90%;
+		top: 10%;
+	}
+</style>
+
+<script is:inline>
+	document.addEventListener("astro:page-load", function () {
+		let sellersRolleldOut = false;
+		let rootStyles = getComputedStyle(document.documentElement);
+		let sellersRowsShowed = parseInt(rootStyles.getPropertyValue("--sellers-rows-showed").trim());
+		let sellersRowsHidden = parseInt(rootStyles.getPropertyValue("--sellers-rows-hidden").trim());
+		let sellers = $(".sellers");
+		let sellerHeight = $(".seller").outerHeight();
+		let sellersElement = document.querySelector(".sellers");
+		let styles = getComputedStyle(sellersElement);
+		let gapValue = parseFloat(styles.getPropertyValue("gap"));
+		let totalHeight = sellerHeight * sellersRowsShowed + (sellersRowsShowed - 1) * gapValue;
+		let totalHeightAll =
+			sellerHeight * (sellersRowsShowed + sellersRowsHidden) + (sellersRowsShowed + sellersRowsHidden - 1) * gapValue;
+
+		let windowWidth = window.innerWidth;
+		window.addEventListener("resize", function () {
+			if (window.innerWidth !== windowWidth) {
+				windowWidth = window.innerWidth;
+
+				rootStyles = getComputedStyle(document.documentElement);
+				sellersRowsShowed = parseInt(rootStyles.getPropertyValue("--sellers-rows-showed").trim());
+				sellersRowsHidden = parseInt(rootStyles.getPropertyValue("--sellers-rows-hidden").trim());
+				sellerHeight = $(".seller").outerHeight();
+				styles = getComputedStyle(sellersElement);
+				gapValue = parseFloat(styles.getPropertyValue("gap"));
+				totalHeight = sellerHeight * sellersRowsShowed + (sellersRowsShowed - 1) * gapValue;
+				totalHeightAll =
+					sellerHeight * (sellersRowsShowed + sellersRowsHidden) +
+					(sellersRowsShowed + sellersRowsHidden - 1) * gapValue;
+
+				sellerHeightHidden();
+			}
+		});
+
+		sellerHeightHidden();
+
+		$(".also-here").on("click", function () {
+			if (!sellersRolleldOut) {
+				sellersRolleldOut = true;
+				sellerHeightShowed();
+				return;
+			} else {
+				sellersRolleldOut = false;
+				sellerHeightHidden();
+			}
+			$(".who-sells-us").toggleClass("active");
+		});
+
+		function sellerHeightHidden() {
+			sellers.css("height", totalHeight + "px");
+		}
+		function sellerHeightShowed() {
+			sellers.css("height", totalHeightAll + "px");
+		}
+	});
+</script>

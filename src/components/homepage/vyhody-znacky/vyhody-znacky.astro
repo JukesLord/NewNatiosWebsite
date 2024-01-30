@@ -1,5 +1,6 @@
 ---
 import SectionHeader from "@components/section-header.astro";
+import SectionBackgroundText from "@components/section-background-text.astro";
 import NatiosLogo from "@components/natiosLogo.astro";
 import LottieHexagonBg from "@components/animations/lottieHexagonBg.astro";
 import HexagonFilledWithHover from "@components/hexagons/hexagonFilledWithHover.astro";
@@ -20,6 +21,7 @@ import BrandDescriptionBG from "@components/homepage/vyhody-znacky/brandDescript
 		paddingBottomMOB="0"
 		paddingBottomPC="0"
 	/>
+	<SectionBackgroundText backgroundText="Výhody" top="30%" left="-10%" translateX="0" translateY="0" opacity="0.08" />
 
 	<div class="brand-benefits-content">
 		<div class="brand-benefits-logo">
@@ -57,26 +59,21 @@ import BrandDescriptionBG from "@components/homepage/vyhody-znacky/brandDescript
 		</div>
 		<div class="brand-benefits-descriptions">
 			<div class="brand-benefits-description">
+				<span>Naše doplňky stravy jsou vyráběny bez jakýchkoliv příměsí, plnidel, konzervantů a éček.</span>
+			</div>
+			<div class="brand-benefits-description">
+				<span>Při výrobě Natios doplňků je vždy upřednostňováno dodávání ve formě veganských kapslí.</span>
+			</div>
+			<div class="brand-benefits-description">
 				<span
-					>1. V doplňcích stravy Nations využíváme pouze ty nejúčinnější formy minerálů a vitamínů, které vaše tělo
-					dokáže snadno zpracovat a využít.</span
+					>Při navrhování složení je myšleno na maximální využitelnost látek. Proto jsou používány pouze ty nejúčinnější
+					formy a kombinace.</span
 				>
 			</div>
 			<div class="brand-benefits-description">
 				<span
-					>2. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus dignissimos quidem, delectus sint quos.</span
-				>
-			</div>
-			<div class="brand-benefits-description">
-				<span
-					>3. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo excepturi illum voluptates hic, suscipit
-					eligendi sunt repellendus.</span
-				>
-			</div>
-			<div class="brand-benefits-description">
-				<span
-					>4. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam non nobis atque, velit voluptatum
-					ducimus porro modi.</span
+					>Všechny procesy výroby jsou přísně monitorovány a i přes to necháváme složení ověřit v nezávyslích
+					laboratořích.</span
 				>
 			</div>
 		</div>
@@ -90,6 +87,9 @@ import BrandDescriptionBG from "@components/homepage/vyhody-znacky/brandDescript
 </section>
 
 <style is:global>
+	.brand-benefits {
+		overflow: visible;
+	}
 	.brand-benefits-content {
 		display: grid;
 		grid-template-rows: auto;
@@ -97,6 +97,7 @@ import BrandDescriptionBG from "@components/homepage/vyhody-znacky/brandDescript
 		align-items: center;
 		justify-items: center;
 		width: clamp(311px, 31.671vw + 191.92px, 800px);
+		min-height: clamp(311px, 31.671vw + 191.92px, 800px);
 		max-width: 98%;
 		margin: auto;
 		margin-top: clamp(2rem, 1.554vw + 1.635rem, 3.5rem);
@@ -157,7 +158,7 @@ import BrandDescriptionBG from "@components/homepage/vyhody-znacky/brandDescript
 		font-size: var(--fs-26-14);
 		line-height: var(--lh-1_38);
 		width: 70%;
-
+		z-index: 1;
 		padding: 5% 10%;
 		text-align: center;
 		text-wrap: initial;
@@ -179,6 +180,17 @@ import BrandDescriptionBG from "@components/homepage/vyhody-znacky/brandDescript
 			opacity 0.5s ease-in-out,
 			transform 0.5s ease-in-out;
 	}
+
+	@media only screen and (max-width: 768px) {
+		.brand-benefits-description-bg {
+			width: 93%;
+		}
+		.brand-benefits-descriptions {
+			width: 90%;
+			padding: 0% 12%;
+		}
+	}
+
 	.brand-benefits-description-bg.active {
 		opacity: 1;
 		z-index: 1;
@@ -198,6 +210,8 @@ import BrandDescriptionBG from "@components/homepage/vyhody-znacky/brandDescript
 		display: grid;
 		align-items: center;
 		justify-items: center;
+		width: 100%;
+		height: 100%;
 	}
 	.brand-benefits-bg-animation > * {
 		grid-column: 1;
@@ -256,36 +270,45 @@ import BrandDescriptionBG from "@components/homepage/vyhody-znacky/brandDescript
 	}
 </style>
 
-<script>
-	let previousBenefit;
-	let activatedBenefit;
-	let brandBenefitsTiles = $(".brand-benefits-tile");
-	let brandBenefitsIcons = $(".brand-benefit-icon");
-	let brandBenefitsDescriptions = $(".brand-benefits-description");
-	let brandBenefitsDescriptionBg = $(".brand-benefits-description-bg");
+<script is:inline>
+	document.addEventListener(
+		"astro:page-load",
+		function () {
+			benefitsF();
+		},
+		{ once: true }
+	);
 
-	brandBenefitsIcons.on("mouseenter click", function () {
-		previousBenefit = activatedBenefit;
-		activatedBenefit = $(this).parent().index();
-		brandBenefitActivated();
-	});
+	function benefitsF() {
+		let previousBenefit;
+		let activatedBenefit;
+		let brandBenefitsTiles = $(".brand-benefits-tile");
+		let brandBenefitsIcons = $(".brand-benefit-icon");
+		let brandBenefitsDescriptions = $(".brand-benefits-description");
+		let brandBenefitsDescriptionBg = $(".brand-benefits-description-bg");
 
-	function brandBenefitActivated() {
-		brandBenefitsTiles.eq(previousBenefit).removeClass("active");
-		brandBenefitsTiles.eq(activatedBenefit).addClass("active");
-		brandBenefitsDescriptions.eq(previousBenefit).removeClass("active");
-		brandBenefitsDescriptions.eq(activatedBenefit).addClass("active");
-		brandBenefitsDescriptionBg.addClass("active");
-	}
+		brandBenefitsIcons.on("mouseenter click", function () {
+			previousBenefit = activatedBenefit;
+			activatedBenefit = $(this).parent().index();
+			brandBenefitActivated();
+		});
 
-	$(document).on("click", function (event) {
-		console.log(event.target);
-		if (
-			!$(event.target).closest(
-				".brand-benefits-tile.active, .brand-benefits-description.active, .brand-benefits-description-bg"
-			).length
-		) {
-			$(".brand-benefits-content .active").removeClass("active");
+		function brandBenefitActivated() {
+			brandBenefitsTiles.eq(previousBenefit).removeClass("active");
+			brandBenefitsTiles.eq(activatedBenefit).addClass("active");
+			brandBenefitsDescriptions.eq(previousBenefit).removeClass("active");
+			brandBenefitsDescriptions.eq(activatedBenefit).addClass("active");
+			brandBenefitsDescriptionBg.addClass("active");
 		}
-	});
+
+		$(document).on("click", function (event) {
+			if (
+				!$(event.target).closest(
+					".brand-benefits-tile.active, .brand-benefits-description.active, .brand-benefits-description-bg"
+				).length
+			) {
+				$(".brand-benefits-content .active").removeClass("active");
+			}
+		});
+	}
 </script>

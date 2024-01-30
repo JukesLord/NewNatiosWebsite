@@ -1,23 +1,34 @@
 ---
 import { Image } from "astro:assets";
-import mainImage from "@assets/images/hero/magnesiumBisglycinate/Magnesium_Bisglycinate.webp";
+/* import mainImage from "@assets/images/hero/magnesiumBisglycinate/Magnesium_Bisglycinate.webp"; */
+import mainImage from "@assets/images/hero/magnesiumBisglycinate/test.webp";
+
 import capsule1 from "@assets/images/hero/magnesiumBisglycinate/pill_1.webp";
 import capsule2 from "@assets/images/hero/magnesiumBisglycinate/pill_2.webp";
 import capsule3 from "@assets/images/hero/magnesiumBisglycinate/pill_3.webp";
 import LottieHexagonBg from "@components/animations/lottieHexagonBg.astro";
 const alt = "Natios Magnesium Bisglycinate";
-const loading = "lazy";
-const heroImageWidths = [272, mainImage.width];
-const quality = 100;
+const loading = "eager";
+const heroImageWidth = 544;
+const pixelDensities = [1, 1.25, 1.5, 2, 2.5, 3];
+const quality = 90;
 ---
 
 <div class="hero-text">
-	<h1 class="hero-heading">Zvolte to nejlepší pro vaše zdarví</h1>
-	<h2 class="hero-sub-heading">Hero H2 - text</h2>
+	<h1 class="hero-heading">Doplňky stravy pro vaše zdraví</h1>
+	<h2 class="hero-sub-heading">Nejlépe vstřebatelná forma hořčíku</h2>
 </div>
 <div class="hero-images">
 	<div class="hero-main-image">
-		<Image src={mainImage} widths={heroImageWidths} alt={alt} quality={quality} loading={loading} />
+		<Image
+			fetchpriority="high"
+			src={mainImage}
+			width={heroImageWidth}
+			densities={pixelDensities}
+			alt={alt}
+			quality={quality}
+			loading={loading}
+		/>
 	</div>
 	<div class="hero-capsules">
 		<div class="hero-capsule-1">

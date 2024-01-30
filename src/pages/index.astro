@@ -2,31 +2,30 @@
 import IndexLayout from "../layouts/IndexLayout.astro";
 import Hero from "@components/homepage/hero/hero.astro";
 import VyhodyZnacky from "@components/homepage/vyhody-znacky/vyhody-znacky.astro";
-import NaseProdukty from "@components/nase-produkty/nase-produkty.astro";
+import NaseProduktyHome from "@components/nase-produkty/nase-produkty-home.astro";
 import NovinkyNatios from "@components/homepage/novinky-natios/novinky-natios.astro";
 import OZnacceNatios from "@components/homepage/o-znacce-natios/o-znacce-natios.astro";
+import AsideNavigation from "@components/aside-navigation.astro";
 ---
 
 <IndexLayout title="Natios - It's Better To Be The Best">
 	<Hero />
 	<VyhodyZnacky />
-	<NaseProdukty />
+	<NaseProduktyHome />
 	<NovinkyNatios />
 	<OZnacceNatios />
+	<AsideNavigation />
 </IndexLayout>
 
 <style></style>
 
-<script>
-	document.addEventListener("DOMContentLoaded", function () {
-		$("body").addClass("homepage");
-	});
-	document.querySelector(".header-logo").addEventListener("click", function (event) {
-		event.preventDefault();
-		$(window).scrollTop(0);
-	});
-	document.querySelector(".footer-logo").addEventListener("click", function (event) {
-		event.preventDefault();
-		$(window).scrollTop(0);
-	});
+<script is:inline>
+	document.addEventListener(
+		"astro:page-load",
+		function () {
+			$("body").removeClass();
+			$("body").addClass("homepage");
+		},
+		{ once: true }
+	);
 </script>

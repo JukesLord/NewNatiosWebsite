@@ -1,0 +1,238 @@
+---
+import IndexLayout from "../../../layouts/IndexLayout.astro";
+import ProductTemplate from "@components/product/product-template.astro";
+
+import { Image } from "astro:assets";
+import productImage1 from "@assets/images/products/Zinc_Complex_25_100/Zinc_Complex_25_100_fwc.webp";
+import productImage2 from "@assets/images/products/Zinc_Complex_25_100/Zinc_Complex_25_100_bws.webp";
+
+const alt = "NATIOS Zinc Complex";
+const loading = "lazy";
+const productImageWidth = 1000;
+const pixelDensities = [1, 1.5, 2, 2.5, 3];
+const quality = 90;
+---
+
+<IndexLayout title="Natios Zinc Complex">
+	<ProductTemplate>
+		<!-- _____________________________________________ -->
+		<!-- ____________________NÁZEV____________________ -->
+		<!-- _____________________________________________ -->
+		<h1 slot="product-name-h1">Zinc Chelated Complex with selen & copper</h1>
+		<h2 slot="product-name-h2">25 mg, 100 veganských kapslí</h2>
+
+		<!-- ________________________________________________________ -->
+		<!-- ____________________FOTKY VELKÉ DO 6____________________ -->
+		<!-- ________________________________________________________ -->
+		<div slot="large-image-1" class="large-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="large-image-2" class="large-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading={loading}
+			/>
+		</div>
+
+		<!-- ____________________________________________________________ -->
+		<!-- ____________________FOTKY NÁHLEDOVÉ DO 6____________________ -->
+		<!-- ____________________________________________________________ -->
+		<div slot="preview-image-1" class="preview-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="preview-image-2" class="preview-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<!-- ___________________________________________________________________________________ -->
+		<!-- ____________________SELECT MOŽNOSTI (možnost video a orher 1 2)____________________ -->
+		<!-- ___________________________________________________________________________________ -->
+		<span slot="select-description" class="select-description">Popis</span>
+		<span slot="select-ingredients" class="select-ingredients">Složení</span>
+		<span slot="select-dosage" class="select-dosage">Dávkování a upozornění</span>
+
+		<!-- ____________________________________________________________________________________ -->
+		<!-- ____________________DESCRIPTION DIVY (možnost video a orher 1 2)____________________ -->
+		<!-- ____________________________________________________________________________________ -->
+		<div slot="description-description" class="description-description active">
+			<p>
+				Natios Chelated Zinc Complex obsahuje synergickou kombinaci tří důležitých stopových prvků pro lidský
+				organismus. Zinek, selen i měď jsou nejčastěji vyzdvihovány pro jejich antioxidační vlastnosti, podporu
+				imunitního systému a podporu normálního metabolismu. Každá veganská kapsle tohoto doplňku stravy bez problému
+				pokryje váš doporučený denní příjem každého ze tří obsažených minerálů.
+			</p>
+
+			<ul>
+				<li>Účinný komplex zinku, selenu a mědi</li>
+				<li>250 % denní dávky zinku v 1 kapsli</li>
+				<li>Nejlépe vstřebatelné formy minerálů</li>
+				<li>Neobsahuje žádné příměsi, nestravitelné látky ani éčka</li>
+				<li>Vegan a GMO-free</li>
+			</ul>
+
+			<p>
+				O živinách se často hovoří v souvislosti s jejich jednotlivými přínosy. Pravdou však je, že základní vitaminy a
+				minerály ve skutečnosti fungují jako součást vzájemně propojené sítě. Zinek se selenem mají velmi podobné účinky
+				a při jejich současném doplňování se tak jejich účinky posilují. Vztah mezi zinkem a mědí je mírně odlišný.
+				Zinek a měď pracují v mnoha procesech ruku v ruce, ale zároveň jsou také antagonisty. To znamená, že pokud je
+				hladina jednoho příliš vysoká, tak může snížit hladinu druhého. Je tedy vhodné dbát na udržení poměru zinku a
+				mědi a jedním s nejlepších způsobů, jak toho docílit, je užívání doplňku stravy, který tyto minerály kombinuje
+				ve správném poměru.
+			</p>
+			<p class="no-padding">
+				<b>Benefity Zinku</b>
+			</p><p class="small-padding">
+				Zinek je v produktu Natios Zinc Chelated Complex obsažen ve formě zinku bisglycinátu. Zinek se v doplňcích
+				stravy vyskytuje především ve dvou formách: pikolinát a bisglycinát. Tyto dvě formy se řadí mezi dvě TOP formy
+				zinku v ohledu na jejich účinnost a vstřebatelnost. Pikolinát zinečnatý má jednoznačně delší historii používání
+				v doplňcích stravy, je tedy předmětem více klinických studií, avšak v současné době se začíná uplatňovat
+				především forma zinku bisglycinátu, která se momentálně jeví jako nejlepší forma zinku.
+			</p>
+			<p>
+				Zinek bisglycinát je chelátová forma zinku, která vzniká pomocí procesu zvaným chelatace. Chelatace je výsledkem
+				chemického navázání minerálů na dvě aminokyseliny velmi specifickým způsobem. Tato speciální organická podoba
+				minerálů se v přírodě objevuje například v listech rostlin, jedná se tedy o přirozený proces, který především
+				umožňuje usnadnění transportu minerálů přes střevní stěnu. Pro tělo je vstřebávání aminokyselin zcela přirozené,
+				a tak i vstřebávání chelátů probíhá naprosto bezproblémově. Chelátové minerály navíc při trávení nedráždí
+				sliznici žaludku a střeva.
+			</p>
+
+			<p class="no-padding">
+				<b>Benefity Mědi</b>
+			</p><p>
+				Měď je do této kombinace přidána nejen díky svým pozitivním účinkům, ale také z toho důvodu, že hladina zinku a
+				mědi se navzájem ovlivňují. Pokud by byl příjem zinku příliš vysoký a příjem mědi nízký (či naopak), mohlo by
+				docházet k nežádoucím účinkům. S mědí je možné se setkat opět ve dvou hlavních variantách a to v její citrátové
+				a chelátové formě, přičemž vstřebatelnost těchto forem je srovnatelná. V tomto produktu je využita její
+				citrátová forma, tedy citrát měďnatý. Díky této formě se do jisté míry zamezí soupeření zinku s mědí při
+				vstřebávání, jelikož citráty a cheláty jsou vstřebávány mírně odlišnými způsoby.
+			</p>
+			<ul>
+				<li>Přispívá k normální funkci imunitního systému</li>
+				<li>Přispívá k ochraně buněk před oxidativním stresem (antioxidant)</li>
+				<li>Přispívá k normálnímu přenosu železa v těle</li>
+				<li>Přispívá k normálnímu energetickému metabolismu</li>
+				<li>Přispívá k normální činnosti nervové soustavy</li>
+				<li>Přispívá k udržení normálního stavu pojivových tkání</li>
+				<li>Přispívá k normální pigmentaci vlasů a pokožky</li>
+			</ul>
+			<p class="no-padding">
+				<b>Benefity Selenu</b>
+			</p><p>
+				Selen je v tomto komplexu navázaný na aminokyselinu methionin, čímž vzniká seleno-methionin. Tato forma selenu
+				je v lidském těla až z 90 % vstřebána, jedná se tedy o velice dobře vstřebatelnou formu. Seleno-methionin se
+				vyskytuje ještě ve dvou formách: L-selenomethionin a D-selenomethionin. Právě L-selenomethionin je biologicky
+				aktivnější varianta a z toho důvodu je využívána v doplňcích stravy. Existují také další formy selenu, avšak ty
+				se v doplňcích stravy prakticky nevyužívají kvůli jejich nízké vstřebatelnosti v porovnání s
+				L-selenomethioninem.
+			</p>
+			<ul>
+				<li>Přispívá k ochraně buněk před oxidativním stresem (antioxidant)</li>
+				<li>Přispívá k normální spermatogenezi</li>
+				<li>Přispívá k udržení normálního stavu vlasů a nehtů</li>
+				<li>Přispívá k normální funkci imunitního systému</li>
+				<li>Přispívá k normální činnosti štítné žlázy</li>
+			</ul>
+		</div>
+
+		<!-- ____________________TABULKA____________________ -->
+		<div slot="description-ingredients" class="description-ingredients">
+			<table>
+				<thead>
+					<tr>
+						<th
+							><div class="dosage">
+								<span
+									><b>Velikost dávky:</b> 1&nbsp;veganská kapsle<br />
+									<b>Balení obsahuje:</b> 100&nbsp;dávek</span
+								>
+							</div></th
+						>
+						<th>Množství v 1 dávce</th>
+						<th>%&nbsp;RHP*</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><b>Zinek</b> (z bisglycinátu zinečnatého)</td>
+						<td>25&nbsp;mg</td>
+						<td>250&nbsp;%</td>
+					</tr>
+					<tr>
+						<td><b>Selen</b> (z L-seleno-methioninu)</td>
+						<td>100&nbsp;mcg</td>
+						<td>182&nbsp;%</td>
+					</tr>
+					<tr>
+						<td><b>Měď</b> (z citrátu měďnatého)</td>
+						<td>1&nbsp;mg</td>
+						<td>100&nbsp;%</td>
+					</tr>
+					<tr>
+						<td colspan="3"
+							><div class="rhp">
+								<span>* referenční hodnota příjmu u průměrné dospělé osoby</span>
+							</div></td
+						>
+					</tr>
+				</tbody>
+			</table>
+			<p><b>Další složky:</b> Veganská kapsle. Výrobek neobsahuje žádné další přidané látky (éčka).</p>
+		</div>
+		<!-- ____________________DÁVKOVÁNÍ A UPOZORNĚNÍ____________________ -->
+		<div slot="description-dosage" class="description-dosage">
+			<p>
+				<b>Doporučené dávkování:</b><br />
+				Jako doplněk stravy užívejte 1 veganskou kapsli denně s vodou. Doporučujme užívat současně s jídlem nebo těsně po
+				něm.
+			</p>
+
+			<p>
+				<b>Upozornění:</b><br />
+				Pouze pro dospělé. Trpíte-li onemocněním, jste těhotná, kojíte, snažíte se otěhotnět nebo užíváte léky, poraďte se
+				před užitím tohoto přípravku s lékařem. Uchovávejte mimo dosah dětí. Není náhradou pestré stravy. Doplněk stravy.
+				Nepřekračujte doporučené denní dávkování. Skladujte na chladném a suchém místě.
+			</p>
+			<p>
+				<b>Skladování:</b><br />
+				Skladujte na chladném a suchém místě.
+			</p>
+			<p>
+				<b>Vyrobeno v EU</b>
+			</p>
+		</div>
+	</ProductTemplate>
+</IndexLayout>
+
+<style is:global>
+	:root {
+		--number-of-photos: 2;
+	}
+</style>

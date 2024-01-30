@@ -11,6 +11,12 @@
 	padding: 0;
 	font: inherit;
 }
+*:not(svg, svg *, aside, aside *, .container, body, html, .header) {
+	will-change: transform;
+}
+.header {
+	will-change: auto;
+}
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
@@ -40,6 +46,11 @@ body,
 	overflow-x: hidden;
 	overflow-y: auto;
 }
+section {
+	position: relative;
+	overflow: visible;
+	overflow-y: clip;
+}
 
 /* Make images easier to work with */
 img,
@@ -47,7 +58,7 @@ picture,
 svg {
 	max-width: 100%;
 	width: 100%;
-	height: auto;
+	height: 100%;
 	display: block;
 	user-select: none;
 }

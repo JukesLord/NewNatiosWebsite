@@ -1,0 +1,234 @@
+---
+import IndexLayout from "../../../layouts/IndexLayout.astro";
+import ProductTemplate from "@components/product/product-template.astro";
+
+import { Image } from "astro:assets";
+import productImage1 from "@assets/images/products/Omega_Premium_1000_100/Omega_Premium_1000_100_fwc.webp";
+import productImage2 from "@assets/images/products/Omega_Premium_1000_100/Omega_Premium_1000_100_bws.webp";
+
+const alt = "NATIOS Omega-3 Premium Fish Anchovies";
+const loading = "lazy";
+const productImageWidth = 1000;
+const pixelDensities = [1, 1.5, 2, 2.5, 3];
+const quality = 90;
+---
+
+<IndexLayout title="NATIOS Omega-3 Premium Anchovies">
+	<ProductTemplate>
+		<!-- _____________________________________________ -->
+		<!-- ____________________NÁZEV____________________ -->
+		<!-- _____________________________________________ -->
+		<h1 slot="product-name-h1">Omega-3 Premium Anchovies</h1>
+		<h2 slot="product-name-h2">1000 mg, 100 softgel kapslí</h2>
+
+		<!-- ________________________________________________________ -->
+		<!-- ____________________FOTKY VELKÉ DO 6____________________ -->
+		<!-- ________________________________________________________ -->
+		<div slot="large-image-1" class="large-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="large-image-2" class="large-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading={loading}
+			/>
+		</div>
+
+		<!-- ____________________________________________________________ -->
+		<!-- ____________________FOTKY NÁHLEDOVÉ DO 6____________________ -->
+		<!-- ____________________________________________________________ -->
+		<div slot="preview-image-1" class="preview-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="preview-image-2" class="preview-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<!-- ___________________________________________________________________________________ -->
+		<!-- ____________________SELECT MOŽNOSTI (možnost video a orher 1 2)____________________ -->
+		<!-- ___________________________________________________________________________________ -->
+		<span slot="select-description" class="select-description">Popis</span>
+		<span slot="select-ingredients" class="select-ingredients">Složení</span>
+		<span slot="select-dosage" class="select-dosage">Dávkování a upozornění</span>
+		<span slot="select-video" class="select-video">Video</span>
+
+		<!-- ____________________________________________________________________________________ -->
+		<!-- ____________________DESCRIPTION DIVY (možnost video a orher 1 2)____________________ -->
+		<!-- ____________________________________________________________________________________ -->
+		<div slot="description-description" class="description-description active">
+			<p>
+				Natios Omega 3 obsahuje ve dvou softgelových kapslích 2000 mg rybího oleje, přičemž nejdůležitější esenciální
+				mastné kyseliny EPA (kyselina eikosapentaenová) a DHA (kyselina dokosahexaenová) jsou zastoupeny o koncentraci
+				360/240 mg. Omega-3 mastné kyseliny jsou spojovány s mnoha zdraví prospěšnými účinky. přičemž mezi nejznámější
+				patří především podpora zdraví mozku a srdce.
+			</p>
+			<p>
+				Rybí olej v Natios Omega 3 je získáván z prémiových peruánských ančoviček. Peru je lídrem ve výrobě prémiových
+				rybích olejů a klade velký důraz na udržitelnost rybolovu. Od roku 2008 peruánská vláda zavedla kvóty, které
+				omezují maximální odlov na plavidlo a také omezují maximální celkový výlov na 25 % ověřené biomasy. Tento
+				zodpovědný přístup zajišťuje udržitelnou úroveň rybolovu i pro budoucí generace.
+			</p>
+			<ul>
+				<li>S extra vitamínem E pro navýšení stability</li>
+				<li>GMO free bez dalších příměsí, nestravitelných látek a éček</li>
+				<li>Pochází z peruánského rybolovu s důrazem na udržitelnost</li>
+				<li>Prémiové ančovičky lovené v otevřených vodách</li>
+			</ul>
+			<p class="no-padding">
+				<b>Benefity Omega-3</b>
+			</p><p class="small-padding">
+				EPA a DHA jsou mastné kyseliny, které mají při dostatečném příjmu pozitivní účinky především na celkové zdraví
+				srdce a mozku. DHA je mimo jiné spojována také s udržováním zdravého zraku. Omega 3 mastné kyseliny mohou mít
+				nepřeberné množství další pozitivních účinků, které ovšem z legislativních důvodů nesmíme uvádět.
+			</p>
+			<ul>
+				<li>Při příjmu 250 mg kombinace EPA a DHA přispívají k normální činnosti srdce</li>
+				<li>Při příjmu 250 mg DHA přispívá k udržení normální činnosti mozku</li>
+				<li>Při příjmu 250 mg DHA přispívá k udržení normálního stavu zraku</li>
+				<li>Při příjmu 2 g kombinace EPA a DHA přispívají k udržení normální hladiny triglyceridů v krvi</li>
+				<li>Při příjmu 3 g kombinace EPA a DHA přispívají k udržení normálního krevního tlaku</li>
+				<li>
+					U matek dodatečný příjem 200 mg DHA přispívá k normálnímu vývoji očí plodu v těle matky a kojenců vyživovaných
+					mateřským mlékem
+				</li>
+			</ul>
+			<p class="no-padding"><b>Kombinace s vitamínem E</b></p>
+			<p>
+				Omega 3 mastné kyseliny jsou náchylné k oxidaci, což může vést ke žluknutí a snížení jejich výživové hodnoty. Z
+				tohoto důvodu je Natios Omega 3 zkombinován s vitaminem E, který působí jako přírodní antioxidant a pomáhá tak
+				tyto mastné kyseliny stabilizovat, čímž zabraňuje jejich oxidaci a udržuje jejich čerstvost a účinnost. Vitamin
+				E také pomáhá navyšovat vstřebatelnost a využitelnost omega 3 mastných kyselin v organismu.
+			</p>
+			<p>
+				Mimo toho vitamín E jako takový pomáhá díky svým antioxidačním vlastnostem bojovat s oxidačním stresem a chránit
+				tak buňky před poškozením volnými radikály.
+			</p>
+		</div>
+		<!-- ____________________TABULKA____________________ -->
+		<div slot="description-ingredients" class="description-ingredients">
+			<table>
+				<thead>
+					<tr>
+						<th
+							><div class="dosage">
+								<span
+									><b>Velikost dávky:</b> 2&nbsp;sofgtgel kapsle<br />
+									<b>Balení obsahuje:</b> 50&nbsp;dávek</span
+								>
+							</div></th
+						>
+						<th>Množství v 1 dávce</th>
+						<th>%&nbsp;RHP*</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><b>Omega 3 rybí olej</b></td>
+						<td>2000&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td class="padding-left"><b>z toho EPA (kyselina eikosapentaenová)</b></td>
+						<td>360&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td class="padding-left"><b>z toho DHA (kyselina dokosahexaenová)</b></td>
+						<td>240&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td
+							><b>Vitamín E</b> (D-alfa tokoferol)<br />
+							- v denní dávce</td
+						>
+						<td>10&nbsp;mg</td>
+						<td>83&nbsp;%</td>
+					</tr>
+
+					<tr>
+						<td colspan="3"
+							><div class="rhp">
+								<span>* referenční hodnota příjmu u průměrné dospělé osoby</span>
+							</div></td
+						>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				<b>Další složky:</b> Softgel kapsle (hovězí želatina, glycerol, voda). Výrobek neobsahuje žádné další přidané látky.
+				Obsahuje <b>ryby</b> (ančovičky/sardel)
+			</p>
+		</div>
+		<!-- ____________________DÁVKOVÁNÍ A UPOZORNĚNÍ____________________ -->
+		<div slot="description-dosage" class="description-dosage">
+			<p class="no-padding">
+				<b>Doporučené dávkování:</b>
+			</p>
+
+			<p>Jako doplněk stravy užívejte 1 softgelovou kapsli dvakrát denně s jídlem a vodou.</p>
+			<p class="no-padding">
+				<b>Upozornění:</b>
+			</p>
+			<p>
+				Pouze pro dospělé. Trpíte-li onemocněním, jste těhotná, kojíte, snažíte se otěhotnět nebo užíváte léky, poraďte
+				se před užitím tohoto přípravku s lékařem. Uchovávejte mimo dosah dětí. Doplněk stravy. Není náhradou pestré
+				stravy. Nepřekračujte doporučené denní dávkování.
+			</p>
+			<p class="no-padding">
+				<b>Skladování:</b>
+			</p>
+			<p>Skladujte na chladném a suchém místě. Neuchovávejte v lednici.</p>
+			<p>
+				<b>Vyrobeno v EU</b>
+			</p>
+		</div>
+		<!-- ____________________VIDEO____________________ -->
+		<div slot="description-video" class="description-video">
+			<iframe
+				width="100%"
+				height="auto"
+				style="aspect-ratio: 16/9;"
+				src="https://www.youtube-nocookie.com/embed/yHTItaGlYYg?modestbranding=1&rel=0&"
+				title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				allowfullscreen="allowfullscreen"></iframe>
+		</div>
+	</ProductTemplate>
+</IndexLayout>
+
+<style is:global>
+	:root {
+		--number-of-photos: 2;
+	}
+</style>

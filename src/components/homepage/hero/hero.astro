@@ -1,21 +1,26 @@
 ---
 import Slide1 from "./slides/slide1-bisglycinate.astro";
-import Slide2 from "./slides/slide2-bisglycinate copy.astro";
+import Slide2 from "./slides/slide2-malate.astro";
+import Slide3 from "./slides/slide3-fenugreek.astro";
+import Slide4 from "./slides/slide4-omega.astro";
 
 import ArrowLeftEmpty from "@components/arrows/arrowLeftEmpty.astro";
 import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 ---
 
-<section class="hero">
-	<div class="hero-slider">
-		<div class="hero-slide">
+<section id="hero" class="hero">
+	<div class="hero-slider initial">
+		<div class="hero-slide active">
 			<Slide1 />
 		</div>
 		<div class="hero-slide">
 			<Slide2 />
 		</div>
 		<div class="hero-slide">
-			<Slide2 />
+			<Slide3 />
+		</div>
+		<div class="hero-slide">
+			<Slide4 />
 		</div>
 	</div>
 	<div class="hero-arrows">
@@ -27,6 +32,7 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 <style is:global>
 	.hero {
 		padding-top: 26px;
+		overflow: visible;
 	}
 	.hero-slider {
 		display: grid;
@@ -66,47 +72,40 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 	.hero-slider.prev .hero-slide.deactive .hero-images {
 		animation: heroMainImageSlideOutToRight 1.2s cubic-bezier(0.38, 0.27, 0.34, 1) forwards;
 	}
+
 	@keyframes heroMainImageSlideInFromRight {
 		0% {
-			rotate: 10deg;
-			transform: translateX(100vw);
+			transform: rotate(10deg) translateX(100vw);
 		}
 		100% {
-			rotate: 0deg;
-			transform: translateX(0);
+			transform: rotate(0deg) translateX(0);
 		}
 	}
 	@keyframes heroMainImageSlideInFromLeft {
 		0% {
-			rotate: 10deg;
-			transform: translateX(-100vw);
+			transform: rotate(10deg) translateX(-100vw);
 		}
 		100% {
-			rotate: 0deg;
-			transform: translateX(0);
+			transform: rotate(0deg) translateX(0);
 		}
 	}
 	@keyframes heroMainImageSlideOutToLeft {
 		0% {
-			rotate: 0deg;
-			transform: translateX(0);
+			transform: rotate(0deg) translateX(0);
 			visibility: visible;
 		}
 		100% {
-			rotate: 10deg;
-			transform: translateX(-100vw);
+			transform: rotate(10deg) translateX(-100vw);
 			visibility: none;
 		}
 	}
 	@keyframes heroMainImageSlideOutToRight {
 		0% {
-			rotate: 0deg;
-			transform: translateX(0);
+			transform: rotate(0deg) translateX(0);
 			visibility: visible;
 		}
 		100% {
-			rotate: 10deg;
-			transform: translateX(100vw);
+			transform: rotate(10deg) translateX(100vw);
 			visibility: none;
 		}
 	}
@@ -139,42 +138,34 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 	}
 	@keyframes heroCapsulesSlideInFromRight {
 		0% {
-			rotate: 10deg;
-			transform: scale(0.6);
+			transform: rotate(10deg) scale(0.6);
 		}
 		100% {
-			rotate: 0deg;
-			transform: scale(1);
+			transform: rotate(0deg) scale(1);
 		}
 	}
 	@keyframes heroCapsulesSlideInFromLeft {
 		0% {
-			rotate: 10deg;
-			transform: scale(0.6);
+			transform: rotate(10deg) scale(0.6);
 		}
 		100% {
-			rotate: 0deg;
-			transform: scale(1);
+			transform: rotate(0deg) scale(1);
 		}
 	}
 	@keyframes heroCapsulesSlideOutToLeft {
 		0% {
-			rotate: 0deg;
-			transform: scale(1);
+			transform: rotate(0deg) scale(1);
 		}
 		100% {
-			rotate: 10deg;
-			transform: scale(0.6);
+			transform: rotate(10deg) scale(0.6);
 		}
 	}
 	@keyframes heroCapsulesSlideOutToRight {
 		0% {
-			rotate: 0deg;
-			transform: scale(1);
+			transform: rotate(0deg) scale(1);
 		}
 		100% {
-			rotate: 10deg;
-			transform: scale(0.6);
+			transform: rotate(10deg) scale(0.6);
 		}
 	}
 	.hero-capsules > * {
@@ -187,8 +178,7 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 		max-width: clamp(38px, 2.915vw + 27px, 83px);
 		left: 0px;
 		bottom: 0;
-		rotate: -6deg;
-		transform: translate(-30%, -70%);
+		transform: rotate(-6deg) translate(-30%, -70%);
 	}
 	.hero-capsule-2 {
 		max-width: clamp(44px, 5.117vw + 24px, 123px);
@@ -198,13 +188,14 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 		max-width: clamp(42px, 5.376vw + 21.8px, 125px);
 		right: 0;
 		top: 50%;
-		rotate: 10deg;
-		transform: translate(35%, -100%);
+		transform: rotate(10deg) translate(35%, -100%);
 	}
 
 	.hero-bg-animation {
 		position: absolute;
 		width: clamp(369px, 47.345vw + 191px, 1100px);
+		height: clamp(369px, 47.345vw + 191px, 1100px);
+		transform: rotate(-15deg) translate(-13%, -14%);
 		z-index: -1;
 		left: -9%;
 		top: 6%;
@@ -224,34 +215,34 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 	}
 	@keyframes heroBgAnimationSlideInFromRight {
 		0% {
-			transform: translate(-13%, -20%) rotate(0deg);
+			transform: rotate(0deg) translate(-13%, -20%);
 		}
 		100% {
-			transform: translate(-13%, -14%) rotate(-15deg);
+			transform: rotate(-15deg) translate(-13%, -14%);
 		}
 	}
 	@keyframes heroBgAnimationSlideInFromLeft {
 		0% {
-			transform: translate(-18%, -20%) rotate(-40deg);
+			transform: rotate(-40deg) translate(-18%, -20%);
 		}
 		100% {
-			transform: translate(-13%, -14%) rotate(-15deg);
+			transform: rotate(-15deg) translate(-13%, -14%);
 		}
 	}
 	@keyframes heroBgAnimationSlideOutToLeft {
 		0% {
-			transform: translate(-13%, -14%) rotate(-15deg);
+			transform: rotate(-15deg) translate(-13%, -14%);
 		}
 		100% {
-			transform: translate(-18%, -16%) rotate(-20deg);
+			transform: rotate(-20deg) translate(-18%, -16%);
 		}
 	}
 	@keyframes heroBgAnimationSlideOutToRight {
 		0% {
-			transform: translate(-13%, -14%) rotate(-15deg);
+			transform: rotate(-15deg) translate(-13%, -14%);
 		}
 		100% {
-			transform: translate(-13%, -20%) rotate(0deg);
+			transform: rotate(0deg) translate(-13%, -20%);
 		}
 	}
 	.hero-text {
@@ -369,68 +360,73 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 	}
 </style>
 
-<script>
-	const animationDuration = 1200;
-	let hero = $(".hero");
-	let heroSlidePosition = 0;
-	let heroSlideCount = $(".hero-slide").length;
-	let heroSlides = $(".hero-slide");
-	let heroSlider = $(".hero-slider");
+<script is:inline>
+	document.addEventListener(
+		"astro:page-load",
+		function () {
+			heroF();
+		},
+		{ once: true }
+	);
 
-	function heroSlideNext() {
-		if (hero.hasClass("animating")) {
-			return;
+	function heroF() {
+		const animationDuration = 1200;
+		let hero = $(".hero");
+		let heroSlidePosition = 0;
+		let heroSlideCount = $(".hero-slide").length;
+		let heroSlides = $(".hero-slide");
+		let heroSlider = $(".hero-slider");
+
+		function heroSlideNext() {
+			if (hero.hasClass("animating")) {
+				return;
+			}
+
+			heroSlider.removeClass("prev").addClass("next");
+			heroSlides.removeClass("deactive");
+			heroSlidePosition = (heroSlidePosition + 1) % heroSlideCount;
+			heroSlides
+				.eq((heroSlidePosition - 1 + heroSlideCount) % heroSlideCount)
+				.removeClass("active")
+				.addClass("deactive");
+			heroSlides.eq(heroSlidePosition).addClass("active");
 		}
 
-		heroSlider.removeClass("prev").addClass("next");
-		heroSlides.removeClass("deactive");
-		heroSlidePosition = (heroSlidePosition + 1) % heroSlideCount;
-		heroSlides
-			.eq((heroSlidePosition - 1 + heroSlideCount) % heroSlideCount)
-			.removeClass("active")
-			.addClass("deactive");
-		heroSlides.eq(heroSlidePosition).addClass("active");
-	}
+		function heroSlidePrev() {
+			if (hero.hasClass("animating")) {
+				return;
+			}
 
-	function heroSlidePrev() {
-		if (hero.hasClass("animating")) {
-			return;
+			heroSlider.removeClass("next").addClass("prev");
+			heroSlides.removeClass("deactive");
+			heroSlidePosition = (heroSlidePosition - 1 + heroSlideCount) % heroSlideCount;
+			heroSlides
+				.eq((heroSlidePosition + 1) % heroSlideCount)
+				.removeClass("active")
+				.addClass("deactive");
+			heroSlides.eq(heroSlidePosition).addClass("active");
 		}
 
-		heroSlider.removeClass("next").addClass("prev");
-		heroSlides.removeClass("deactive");
-		heroSlidePosition = (heroSlidePosition - 1 + heroSlideCount) % heroSlideCount;
-		heroSlides
-			.eq((heroSlidePosition + 1) % heroSlideCount)
-			.removeClass("active")
-			.addClass("deactive");
-		heroSlides.eq(heroSlidePosition).addClass("active");
-	}
+		$(".hero-arrows .arrow-left").on("click", function () {
+			heroSlidePrev();
+		});
 
-	$(".hero-arrows .arrow-left").on("click", function () {
-		heroSlidePrev();
-	});
+		$(".hero-arrows .arrow-right").on("click", function () {
+			heroSlideNext();
+		});
 
-	$(".hero-arrows .arrow-right").on("click", function () {
-		heroSlideNext();
-	});
+		$(".hero-arrows > *").on("click", function () {
+			heroAnimation();
+		});
 
-	$(".hero-arrows > *").on("click", function () {
-		heroAnimation();
-	});
-
-	function heroAnimation() {
-		if (hero.hasClass("animating")) {
-			return;
+		function heroAnimation() {
+			if (hero.hasClass("animating")) {
+				return;
+			}
+			hero.addClass("animating");
+			setTimeout(function () {
+				hero.removeClass("animating");
+			}, animationDuration);
 		}
-		hero.addClass("animating");
-		setTimeout(function () {
-			hero.removeClass("animating");
-		}, animationDuration);
 	}
-
-	document.addEventListener("DOMContentLoaded", function () {
-		heroSlides.first().addClass("active");
-		heroSlider.addClass("next");
-	});
 </script>

@@ -7,17 +7,17 @@ import HeaderMenuIcon from "@components/header-menu-icon.astro";
 	<div class="header-content">
 		<div class="header-logo"><a href="/#"><NatiosLogo /></a></div>
 		<div class="header-menu">
-			<a href="#benefits-of-natios">Výhody značky Natios</a>
-			<a href="#our-products">Naše produkty</a>
-			<a href="#brand-news">Novinky</a>
-			<a href="#about-us">O společnosti</a>
+			<a href="/#benefits-of-natios">Výhody značky Natios</a>
+			<a href="/nase-produkty">Naše produkty</a>
+			<a href="/#brand-news">Novinky</a>
+			<a href="/#about-us">O společnosti</a>
 			<a href="/kontakt">Kontakt</a>
 		</div>
 		<HeaderMenuIcon />
 	</div>
 </div>
 
-<style>
+<style is:global>
 	.header {
 		height: var(--header-height);
 		color: var(--color-white);
@@ -74,6 +74,12 @@ import HeaderMenuIcon from "@components/header-menu-icon.astro";
 	.menu-opener {
 		display: none;
 	}
+
+	@media only screen and (max-width: 1024px) {
+		.header-menu a {
+			padding: 1em calc(var(--padding-links) / 2);
+		}
+	}
 	@media only screen and (max-width: 768px) {
 		.header {
 			overflow-x: clip;
@@ -91,7 +97,7 @@ import HeaderMenuIcon from "@components/header-menu-icon.astro";
 			right: 0;
 			flex-direction: column;
 			height: calc(100vh);
-			height: calc(100svh);
+
 			overflow-x: hidden;
 			overflow-y: scroll;
 			background: var(--color-primary-800);
@@ -113,3 +119,40 @@ import HeaderMenuIcon from "@components/header-menu-icon.astro";
 		}
 	}
 </style>
+
+<script is:inline>
+	document.addEventListener("astro:page-load", function () {
+		document.querySelectorAll('a[href^="/#"]').forEach((anchor) => {
+			anchor.addEventListener("click", function (e) {
+				let href = this.getAttribute("href");
+				let cleanedHref = href.replace("/#", "");
+
+				document.getElementById(cleanedHref).scrollIntoView({
+					behavior: "smooth",
+				});
+			});
+		});
+		setTimeout(function () {
+			if ($("body").hasClass("homepage")) {
+				document.querySelector(".header-logo").addEventListener("click", function (event) {
+					event.preventDefault();
+					$(window).scrollTop(0);
+				});
+				document.querySelector(".footer-logo").addEventListener("click", function (event) {
+					event.preventDefault();
+					$(window).scrollTop(0);
+				});
+			}
+		}, 100);
+
+		let hash = window.location.hash;
+		if (hash) {
+			let element = document.querySelector(hash);
+			setTimeout(function () {
+				if (element && window.scrollY === 0) {
+					element.scrollIntoView({ behavior: "smooth" });
+				}
+			}, 100);
+		}
+	});
+</script>

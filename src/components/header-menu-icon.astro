@@ -97,25 +97,29 @@
 	}
 </style>
 
-<script>
-	document.addEventListener("DOMContentLoaded", function () {
+<script is:inline>
+	document.addEventListener("astro:page-load", function () {
+		headerMenuIconF();
+	});
+
+	function headerMenuIconF() {
 		$(".header-menu").addClass("deactive");
-	});
 
-	let menuOpener = document.getElementById("menu-opener");
-	menuOpener.addEventListener(
-		"click",
-		function () {
-			menuOpener.classList.remove("initial");
-		},
-		{ once: true }
-	);
+		let menuOpener = document.getElementById("menu-opener");
+		menuOpener.addEventListener(
+			"click",
+			function () {
+				menuOpener.classList.remove("initial");
+			},
+			{ once: true }
+		);
 
-	$("#menu-opener").on("click", function () {
-		$("#menu-opener").toggleClass("active");
-		$("#menu-opener").toggleClass("deactive");
-		$(".header").toggleClass("active");
-		$(".header-menu").toggleClass("active");
-		$(".header-menu").toggleClass("deactive");
-	});
+		$("#menu-opener").on("click", function () {
+			$("#menu-opener").toggleClass("active");
+			$("#menu-opener").toggleClass("deactive");
+			$(".header").toggleClass("active");
+			$(".header-menu").toggleClass("active");
+			$(".header-menu").toggleClass("deactive");
+		});
+	}
 </script>

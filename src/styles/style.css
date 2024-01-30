@@ -51,6 +51,7 @@
 
 	--color-primary-400: hsl(197, 91%, 56%); /*#27B9F5*/
 	--color-primary-400-50: hsla(197, 91%, 56%, 0.502);
+	--color-primary-400-14: hsla(197, 91%, 56%, 0.14);
 	--color-primary-800: hsl(235, 87%, 18%); /*#060D55*/
 	--color-primary-800-backdrop: hsla(235, 87%, 18%, 0.85);
 	--color-primary-800-50: hsla(235, 87%, 18%, 0.502);
@@ -66,8 +67,24 @@
 	--footer-height: clamp(110px, 11.29vh, 150px);
 	--footer-height: clamp(110px, 11.29svh, 150px);
 
+	--border-radius-12: 12px;
+
 	/*default animation*/
 	--transition-default: 0.3s ease-in-out;
+
+	/*default padding top of page*/
+	--padding-top-section: 40px;
+}
+@media only screen and (min-width: 768px) {
+	:root {
+		--padding-top-section: 80px;
+	}
+}
+
+@media only screen and (min-width: 2000px) {
+	:root {
+		--container-padding: calc((100vw - 1920px) / 2 + 200px);
+	}
 }
 
 h1,
@@ -115,6 +132,9 @@ body {
 	font-family: var(--ff-body);
 	font-style: normal;
 }
+main {
+	min-height: 100vh;
+}
 @media only screen and (min-width: 768px) {
 	body::before,
 	body::after {
@@ -148,6 +168,24 @@ body::after {
 }
 .container {
 	padding: 0 var(--container-padding);
+}
+li {
+	list-style: none;
+	position: relative;
+	padding-left: 1em;
+	text-wrap: wrap;
+	line-height: var(--lh-1_85);
+}
+
+ul li::before {
+	content: "";
+	width: 0.3em;
+	height: 0.3em;
+	background: white;
+	position: absolute;
+	border-radius: 50%;
+	left: 2px;
+	top: 0.8em;
 }
 
 /*media q*/

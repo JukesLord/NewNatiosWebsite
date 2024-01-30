@@ -15,12 +15,12 @@ import IconLinkedin from "@components/contact/icon-socials-linkedin.astro";
 		<div class="footer-menu">
 			<div class="top-row">
 				<div class="contact">
-					<div class="mobile">
+					<!-- 					<div class="mobile">
 						<a href="tel:+420731327327"
 							><div class="icon"><IconMobile /></div>
 							<span>+420 731 327 327</span>
 						</a>
-					</div>
+					</div> -->
 					<div class="email">
 						<a href="mailto:info@natios.cz">
 							<div class="icon"><IconEmail /></div>
@@ -48,7 +48,6 @@ import IconLinkedin from "@components/contact/icon-socials-linkedin.astro";
 				<div class="languagues">
 					<a class="active" href="/#">CZ</a>
 					<a href="/#">EN</a>
-					<a href="/#">DE</a>
 				</div>
 			</div>
 			<div class="bottom-row">
@@ -56,14 +55,14 @@ import IconLinkedin from "@components/contact/icon-socials-linkedin.astro";
 					<span>© 2024 NATIOS Všechna práva vyhrazena.</span>
 				</div>
 				<div class="gdpr">
-					<a href="/gdpr.pdf" target="_blank">Zásady ochrany soukromí</a>
+					<a href="/zasady-ochrany-soukromi">Zásady ochrany soukromí</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </footer>
 
-<style>
+<style is:global>
 	footer {
 		color: var(--color-white);
 		font-size: var(--fs-12-12);
@@ -198,9 +197,7 @@ import IconLinkedin from "@components/contact/icon-socials-linkedin.astro";
 			text-align: center;
 		}
 	}
-</style>
 
-<style is:global>
 	.footer-menu svg {
 		fill: var(--color-white);
 		transition: fill 0.2s ease-in-out;

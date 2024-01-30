@@ -1,10 +1,17 @@
 ---
 import SectionHeader from "@components/section-header.astro";
+import SectionBackgroundText from "@components/section-background-text.astro";
 import { Image } from "astro:assets";
-import aboutUsImage1 from "@assets/images/about-us/About us image 1.png";
+/* import aboutUsImage1 from "@assets/images/about-us/About us image 1.png"; */
+import aboutUsImage2020 from "@assets/images/about-us/2020 - BeginningOfNatios.webp";
+import aboutUsImage2021 from "@assets/images/about-us/2021 - FirstNatiosProduct.webp";
+import aboutUsImage2022 from "@assets/images/about-us/2022 - Feedback.webp";
+import aboutUsImage2023 from "@assets/images/about-us/2023 - CharityAndFamily.webp";
+import aboutUsImage2024 from "@assets/images/about-us/2024 - ExpansionToEU.webp";
 const loading = "lazy";
-const aboutUsImageWidths = [100, 200, 291, 582, 873, aboutUsImage1.width];
-const quality = 100;
+const aboutUsImageWidth = 432;
+const aboutUsImageDensities = [1, 1.25, 1.5, 2, 2.5, 3];
+const quality = 90;
 import HexagonEmptyWithHover from "@components/hexagons/hexagonEmptyWithHover-5.astro";
 import HexagonSmall from "@components/hexagons/natios-about-us/hexagon-small.astro";
 import HexagonMedium from "@components/hexagons/natios-about-us/hexagon-medium.astro";
@@ -24,20 +31,9 @@ import MobileHexagonLarge from "@components/hexagons/natios-about-us/mobile-hexa
 		paddingBottomMOB="0"
 		paddingBottomPC="0"
 	/>
+	<SectionBackgroundText backgroundText="2020" top="0" left="20%" translateX="0" translateY="80%" opacity="0.5" />
 	<div class="about-us-content">
 		<div class="about-us-years-select">
-			<div class="about-us-year">
-				<HexagonEmptyWithHover />
-				<span>2017</span>
-			</div>
-			<div class="about-us-year">
-				<HexagonEmptyWithHover />
-				<span>2018</span>
-			</div>
-			<div class="about-us-year">
-				<HexagonEmptyWithHover />
-				<span>2019</span>
-			</div>
 			<div class="about-us-year">
 				<HexagonEmptyWithHover />
 				<span>2020</span>
@@ -80,72 +76,50 @@ import MobileHexagonLarge from "@components/hexagons/natios-about-us/mobile-hexa
 			</div>
 			<div class="about-us-image">
 				<Image
-					src={aboutUsImage1}
-					widths={aboutUsImageWidths}
-					alt={"Natios o nás"}
+					src={aboutUsImage2020}
+					width={aboutUsImageWidth}
+					densities={aboutUsImageDensities}
+					alt={"Začátky značky Natios"}
 					quality={quality}
 					loading={loading}
 				/>
 			</div>
 			<div class="about-us-image">
 				<Image
-					src={aboutUsImage1}
-					widths={aboutUsImageWidths}
-					alt={"Natios o nás"}
+					src={aboutUsImage2021}
+					width={aboutUsImageWidth}
+					densities={aboutUsImageDensities}
+					alt={"První produkty Natios"}
 					quality={quality}
 					loading={loading}
 				/>
 			</div>
 			<div class="about-us-image">
 				<Image
-					src={aboutUsImage1}
-					widths={aboutUsImageWidths}
-					alt={"Natios o nás"}
+					src={aboutUsImage2022}
+					width={aboutUsImageWidth}
+					densities={aboutUsImageDensities}
+					alt={"Pozitivní feedback zákazníků"}
 					quality={quality}
 					loading={loading}
 				/>
 			</div>
 			<div class="about-us-image">
 				<Image
-					src={aboutUsImage1}
-					widths={aboutUsImageWidths}
-					alt={"Natios o nás"}
+					src={aboutUsImage2023}
+					width={aboutUsImageWidth}
+					densities={aboutUsImageDensities}
+					alt={"Zaměření se na charitu a rozšíření nabídky produktů"}
 					quality={quality}
 					loading={loading}
 				/>
 			</div>
 			<div class="about-us-image">
 				<Image
-					src={aboutUsImage1}
-					widths={aboutUsImageWidths}
-					alt={"Natios o nás"}
-					quality={quality}
-					loading={loading}
-				/>
-			</div>
-			<div class="about-us-image">
-				<Image
-					src={aboutUsImage1}
-					widths={aboutUsImageWidths}
-					alt={"Natios o nás"}
-					quality={quality}
-					loading={loading}
-				/>
-			</div>
-			<div class="about-us-image">
-				<Image
-					src={aboutUsImage1}
-					widths={aboutUsImageWidths}
-					alt={"Natios o nás"}
-					quality={quality}
-					loading={loading}
-				/>
-			</div>
-			<div class="about-us-image">
-				<Image
-					src={aboutUsImage1}
-					widths={aboutUsImageWidths}
-					alt={"Natios o nás"}
+					src={aboutUsImage2024}
+					width={aboutUsImageWidth}
+					densities={aboutUsImageDensities}
+					alt={"Plánovaná celková expanze značky Natios"}
 					quality={quality}
 					loading={loading}
 				/>
@@ -154,81 +128,81 @@ import MobileHexagonLarge from "@components/hexagons/natios-about-us/mobile-hexa
 		<div class="about-us-texts">
 			<div class="about-us-text">
 				<div class="text-animation-wrapper">
-					<h3>Hledáme tu nejčistší a nejvstřebatelnější formu Magnesia po celé Evropě</h3>
+					<h3>Prvotní myšlenky založení značky Natios</h3>
 					<p>
-						Natios je česká značka, která se zaměřuje na výrobu kvalitních doplňků stravy s čistým složením bez
-						zbytečných příměsí, konzervantů a éček. Mimo jiné má v nabídce také produkty ze zdravé výživy jako jsou
-						superpotraviny v BIO kvalitě, oříšky, ořechová másla, sušené plody a mnoho dalšího.
+						Prvotní myšlenka na vybudování značky Natios vznikla začátkem roku 2020. V té době se zakladatelé Adam a
+						Michal, jako dlouholetí přátelé a nadšenci do zdravého životního stylu, začali zajímat o nedostatek vitamínů
+						a minerálů v každodenní stravě.
+					</p>
+					<p>
+						Na podkladě zjištění, že až 90&nbsp;% populace trpí deficitem hořčíku, se rozhodli najít ten nejlepší možný
+						způsob, jak tento důležitý minerál doplňovat. K jejich překvapení bylo velmi těžké najít kvalitní doplněk,
+						který by splňoval jejich kritéria.
+					</p>
+					<p>
+						Právě v tento moment se rozhodli založit značku Natios, která bude nabízet pouze ty nejkvalitnější a
+						nejčistší produkty.
 					</p>
 				</div>
 			</div>
 			<div class="about-us-text">
 				<div class="text-animation-wrapper">
-					<h3>2018</h3>
+					<h3>Návrhy složení a produkce prvních doplňků stravy</h3>
 					<p>
-						Natios je česká značka, která se zaměřuje na výrobu kvalitních doplňků stravy s čistým složením bez
-						zbytečných příměsí, konzervantů a éček. Mimo jiné má v nabídce také produkty ze zdravé výživy jako jsou
-						superpotraviny v BIO kvalitě, oříšky, ořechová másla, sušené plody a mnoho dalšího.
+						V roce 2021 se zrodily první produkty Natios: Magnesium Bisglycinate, Magnesium Malate a Vitamín D3. Tyto
+						produkty téměř ihned oslovily zákazníky, kteří hledali kvalitu a čistotu.
+					</p>
+					<p>
+						Ještě ten samý rok začali produkty Natios poptávát různí velkoobchodní odběratelé, mezi kterými se
+						vyskytovaly nejen e-shopy, ale také lékarny.
 					</p>
 				</div>
 			</div>
 			<div class="about-us-text">
 				<div class="text-animation-wrapper">
-					<h3>2019</h3>
+					<h3>Zaměření se na zpětnou vazbu našich zákazníků</h3>
 					<p>
-						Natios je česká značka, která se zaměřuje na výrobu kvalitních doplňků stravy s čistým složením bez
-						zbytečných příměsí, konzervantů a éček. Mimo jiné má v nabídce také produkty ze zdravé výživy jako jsou
-						superpotraviny v BIO kvalitě, oříšky, ořechová másla, sušené plody a mnoho dalšího.
+						Během roku 2022 bylo naším cílem jediné. Získat stoprocentně autentickou a pravdivou zpětnou vazbu od našich
+						zákazníků.
+					</p>
+					<p>
+						V průběhu celého roku jsme byli mile překvapování, když se k nám prvotně od desítek, později stovek až
+						ticísů zákazníků dostávalo, že si produkty Natios zamilovaly. Avšak jedna negativní zpětná vazba zde byla:
+						Malý výběr produktů
 					</p>
 				</div>
 			</div>
 			<div class="about-us-text">
 				<div class="text-animation-wrapper">
-					<h3>2020</h3>
+					<h3>Navázání charitativní spolupráce a růst rodiny produktů Natios</h3>
 					<p>
-						Natios je česká značka, která se zaměřuje na výrobu kvalitních doplňků stravy s čistým složením bez
-						zbytečných příměsí, konzervantů a éček. Mimo jiné má v nabídce také produkty ze zdravé výživy jako jsou
-						superpotraviny v BIO kvalitě, oříšky, ořechová másla, sušené plody a mnoho dalšího.
+						Jelikož je Natios značka zaměřená na podporu zdraví, rozhodli jsme se zdraví v určité formě také darovat.
+						Vznikla tak spolupráce s dětskou hematoonkologií v Ostravě, kdy z každého prodaného produktu je darována
+						část na podporu uhrázení nákladů na léčbu dětských pacientů.
 					</p>
+					<p>
+						Zároveň na základě vysokého zájmu jsme se v roce 2023 zaměřili na rozšíření nabídky produktů Natios. Naše
+						rodina se tak rozrostla hned o několik produktů, mezi které patří například:
+					</p>
+					<ul>
+						<li>Zinc Complex</li>
+						<li>Liposomal Vitamin C</li>
+						<li>Fenugreek & Blessed Thistle</li>
+						<li>Omega-3 Premium Anchovies</li>
+						<li>Extrakty z rostlin a hub</li>
+					</ul>
 				</div>
 			</div>
 			<div class="about-us-text">
 				<div class="text-animation-wrapper">
-					<h3>2021</h3>
+					<h3>Expanze produkce a rozšíření sítě odběratelů i mimo Česko a Slovensko</h3>
 					<p>
-						Natios je česká značka, která se zaměřuje na výrobu kvalitních doplňků stravy s čistým složením bez
-						zbytečných příměsí, konzervantů a éček. Mimo jiné má v nabídce také produkty ze zdravé výživy jako jsou
-						superpotraviny v BIO kvalitě, oříšky, ořechová másla, sušené plody a mnoho dalšího.
+						Rok 2024 je teprve v počátcích, avšak již nyní můžeme říci, že značka Natios má v plánu posouvat se pořád
+						dále.
 					</p>
-				</div>
-			</div>
-			<div class="about-us-text">
-				<div class="text-animation-wrapper">
-					<h3>2022</h3>
 					<p>
-						Natios je česká značka, která se zaměřuje na výrobu kvalitních doplňků stravy s čistým složením bez
-						zbytečných příměsí, konzervantů a éček. Mimo jiné má v nabídce také produkty ze zdravé výživy jako jsou
-						superpotraviny v BIO kvalitě, oříšky, ořechová másla, sušené plody a mnoho dalšího.
-					</p>
-				</div>
-			</div>
-			<div class="about-us-text">
-				<div class="text-animation-wrapper">
-					<h3>2023</h3>
-					<p>
-						Natios je česká značka, která se zaměřuje na výrobu kvalitních doplňků stravy s čistým složením bez
-						zbytečných příměsí, konzervantů a éček. Mimo jiné má v nabídce také produkty ze zdravé výživy jako jsou
-						superpotraviny v BIO kvalitě, oříšky, ořechová másla, sušené plody a mnoho dalšího.
-					</p>
-				</div>
-			</div>
-			<div class="about-us-text">
-				<div class="text-animation-wrapper">
-					<h3>2024</h3>
-					<p>
-						Natios je česká značka, která se zaměřuje na výrobu kvalitních doplňků stravy s čistým složením bez
-						zbytečných příměsí, konzervantů a éček. Mimo jiné má v nabídce také produkty ze zdravé výživy jako jsou
-						superpotraviny v BIO kvalitě, oříšky, ořechová másla, sušené plody a mnoho dalšího.
+						Jedním z kroků do předu je například několikanásobné navýšení produkce, příprava produktů pro expanzi do
+						většiny států Evropské unie a v neposlední řadě rozšíření působnosti v oblasti charitativní pomoci.
 					</p>
 				</div>
 			</div>
@@ -254,14 +228,16 @@ import MobileHexagonLarge from "@components/hexagons/natios-about-us/mobile-hexa
 		overflow-x: scroll;
 		--line-width: clamp(16px, 0.518vw + 14.048px, 24px);
 		max-width: calc(100% + var(--line-width) * 2);
-		padding-left: calc(var(--line-width) * 1.5);
-		margin-left: calc(var(--line-width) * -1.5);
+		justify-content: center;
+		/* 		padding-left: calc(var(--line-width) * 1.5);
+		margin-left: calc(var(--line-width) * -1.5); */
 	}
 	.about-us-years-select::-webkit-scrollbar {
-		height: 1px;
+		height: 0px;
+		display: none;
 	}
 	.about-us-years-select {
-		scrollbar-width: thin;
+		scrollbar-width: none;
 	}
 	/*.about-us-years-select::-webkit-scrollbar {
         display: none;
@@ -283,7 +259,8 @@ import MobileHexagonLarge from "@components/hexagons/natios-about-us/mobile-hexa
 		grid-column: 1;
 	}
 	.about-us-year span {
-		padding-top: 4px;
+		padding-top: 3px;
+		pointer-events: none;
 	}
 	.about-us-year::before {
 		content: "";
@@ -336,7 +313,11 @@ import MobileHexagonLarge from "@components/hexagons/natios-about-us/mobile-hexa
 		transition:
 			transform 1.2s ease-in-out,
 			opacity 1.2s ease-in-out;
-		width: clamp(162px, 17.45vw + 96.568px, 432px);
+		/* width: clamp(162px, 17.45vw + 96.568px, 432px); */
+		width: clamp(162px, 17.45vw + 90.568px, 432px);
+		position: relative;
+		top: 2px;
+
 		transform: scale(0);
 	}
 	.about-us-image.active {
@@ -429,11 +410,14 @@ import MobileHexagonLarge from "@components/hexagons/natios-about-us/mobile-hexa
 		padding-top: 2em;
 	}
 	p {
+		line-height: var(--lh-1_25);
+	}
+	p,
+	ul {
 		font-size: var(--fs-16-12);
 		color: var(--color-white);
-		line-height: var(--lh-1_25);
 		font-weight: var(--fw-book);
-		padding-bottom: 1.5em;
+		padding-bottom: 1em;
 	}
 	@media only screen and (max-width: 768px) {
 		.pc {
@@ -485,76 +469,110 @@ import MobileHexagonLarge from "@components/hexagons/natios-about-us/mobile-hexa
 	}
 </style>
 
-<script>
-	let aboutUsAnimationDuration = 2000;
-	let aboutUs = $(".about-us");
-	let aboutUsContent = $(".about-us-content");
-	let aboutUsTexts = $(".about-us-text");
-	let aboutUsYears = $(".about-us-year");
-	let aboutUsImages = $(".about-us-image");
+<script is:inline>
+	document.addEventListener(
+		"astro:page-load",
+		function () {
+			aboutUsF();
+		},
+		{ once: true }
+	);
 
-	let activeYear = 0;
-	let previousYear;
+	function aboutUsF() {
+		let aboutUsAnimationDuration = 2000;
+		let aboutUs = $(".about-us");
+		let aboutUsContent = $(".about-us-content");
+		let aboutUsTexts = $(".about-us-text");
+		let aboutUsYears = $(".about-us-year");
+		let aboutUsImages = $(".about-us-image");
+		let bgTextYear = $(".about-us .section-bg-text span");
+		let aboutUsYearSelect = $(".about-us-years-select");
 
-	aboutUsYears.on("click", function () {
-		if (aboutUs.hasClass("animating")) {
-			return;
-		}
+		let activeYear = 0;
+		let previousYear;
 
-		previousYear = activeYear;
-		activeYear = $(this).index();
+		aboutUsYears.on("click", function () {
+			if (aboutUs.hasClass("animating")) {
+				return;
+			}
 
-		if (activeYear === previousYear) {
-			return;
-		}
+			previousYear = activeYear;
+			activeYear = $(this).index();
 
-		aboutUs.addClass("animating");
+			if (activeYear === previousYear) {
+				return;
+			}
 
-		aboutUsTexts.removeClass("deactivating");
-		aboutUsYears.removeClass("deactivating");
-		aboutUsImages.removeClass("deactivating");
+			aboutUs.addClass("animating");
 
-		aboutUsTexts.eq(previousYear).removeClass("active").addClass("deactivating");
-		aboutUsYears.eq(previousYear).removeClass("active").addClass("deactivating");
-		aboutUsImages.eq(previousYear).removeClass("active").addClass("deactivating");
-		aboutUsTexts.eq(activeYear).addClass("active");
-		aboutUsYears.eq(activeYear).addClass("active");
-		aboutUsImages.eq(activeYear).addClass("active");
+			aboutUsTexts.removeClass("deactivating");
+			aboutUsYears.removeClass("deactivating");
+			aboutUsImages.removeClass("deactivating");
 
-		setTimeout(function () {
-			aboutUsTexts.eq(previousYear).removeClass("deactivating");
-			aboutUsYears.eq(previousYear).removeClass("deactivating");
-			aboutUsImages.eq(previousYear).removeClass("deactivating");
-			aboutUs.removeClass("animating");
-		}, aboutUsAnimationDuration);
-	});
+			aboutUsTexts.eq(previousYear).removeClass("active").addClass("deactivating");
+			aboutUsYears.eq(previousYear).removeClass("active").addClass("deactivating");
+			aboutUsImages.eq(previousYear).removeClass("active").addClass("deactivating");
+			aboutUsTexts.eq(activeYear).addClass("active");
+			aboutUsYears.eq(activeYear).addClass("active");
+			aboutUsImages.eq(activeYear).addClass("active");
 
-	let aboutUsTextsHeight;
-	document.addEventListener("DOMContentLoaded", function () {
+			bgTextYear.addClass("animating");
+
+			setTimeout(function () {
+				aboutUsTexts.eq(previousYear).removeClass("deactivating");
+				aboutUsYears.eq(previousYear).removeClass("deactivating");
+				aboutUsImages.eq(previousYear).removeClass("deactivating");
+				aboutUs.removeClass("animating");
+			}, aboutUsAnimationDuration);
+
+			setTimeout(function () {
+				bgTextYear.text($(".about-us-year.active span").text());
+				bgTextYear.removeClass("animating");
+			}, aboutUsAnimationDuration / 2);
+		});
+
+		let aboutUsTextsHeight;
+
 		aboutUsTextsHeight = aboutUsTexts.height();
 		aboutUsTexts.css("min-height", aboutUsTextsHeight);
-	});
-	window.addEventListener("resize", function () {
-		aboutUsTexts.css("min-height", "0px");
-		aboutUsTextsHeight = aboutUsTexts.height();
-		aboutUsTexts.css("min-height", aboutUsTextsHeight);
-	});
 
-	let observer = new IntersectionObserver(function (entries) {
-		// Loop over the entries
-		entries.forEach(function (entry) {
-			// If the element is visible
-			if (entry.isIntersecting) {
-				aboutUsTexts.first().addClass("active");
-				aboutUsYears.first().addClass("active");
-				aboutUsImages.first().addClass("active");
-				aboutUsContent.addClass("active");
-				// Stop observing the element
-				observer.unobserve(entry.target);
+		window.addEventListener("resize", function () {
+			aboutUsTexts.css("min-height", "0px");
+			aboutUsTextsHeight = aboutUsTexts.height();
+			aboutUsTexts.css("min-height", aboutUsTextsHeight);
+		});
+
+		let observer = new IntersectionObserver(function (entries) {
+			// Loop over the entries
+			entries.forEach(function (entry) {
+				// If the element is visible
+				if (entry.isIntersecting) {
+					aboutUsTexts.first().addClass("active");
+					aboutUsYears.first().addClass("active");
+					aboutUsImages.first().addClass("active");
+					aboutUsContent.addClass("active");
+					// Stop observing the element
+					observer.unobserve(entry.target);
+				}
+			});
+		});
+		// Start observing
+
+		observer.observe(document.querySelector(".about-us-content"));
+
+		/*horizontal scrolling on select scrolling*/
+		aboutUsYearSelect.on("mousewheel", function (e) {
+			if (this.scrollWidth > this.clientWidth) {
+				e.preventDefault();
+				$(this)
+					.stop()
+					.animate(
+						{
+							scrollLeft: $(this).scrollLeft() - e.originalEvent.wheelDelta,
+						},
+						"slow"
+					);
 			}
 		});
-	});
-	// Start observing
-
-	observer.observe(document.querySelector(".about-us-content"));
+	}
 </script>

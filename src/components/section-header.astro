@@ -8,7 +8,7 @@ const { paddingBottomMOB } = Astro.props;
 const { paddingBottomPC } = Astro.props;
 ---
 
-<div>
+<div class="section-header">
 	<h2>{headerText}</h2>
 </div>
 
@@ -30,7 +30,7 @@ const { paddingBottomPC } = Astro.props;
 
 	@media only screen and (min-width: 768px) {
 		div {
-			margin-top: var(--margin-TopPC);
+			margin-top: var(--marginTopPC);
 			padding-top: var(--paddingTopPC);
 			padding-bottom: var(--paddingBottomPC);
 		}
