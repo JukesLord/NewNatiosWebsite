@@ -54,6 +54,7 @@
 	--color-primary-400-14: hsla(197, 91%, 56%, 0.14);
 	--color-primary-800: hsl(235, 87%, 18%); /*#060D55*/
 	--color-primary-800-backdrop: hsla(235, 87%, 18%, 0.85);
+	--color-primary-800-backdrop-popup: hsla(235, 87%, 18%, 0.7);
 	--color-primary-800-50: hsla(235, 87%, 18%, 0.502);
 	--color-logo: hsl(189, 100%, 41%); /*#00B2D2*/
 

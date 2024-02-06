@@ -1,10 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import mainImage from "@assets/images/hero/omega/Omega_Premium.webp";
+import mainImage from "@assets/images/hero/omega/Hero_Omega 3.webp";
 import capsule1 from "@assets/images/hero/omega/pill_1.webp";
 import capsule2 from "@assets/images/hero/omega/pill_2.webp";
 import capsule3 from "@assets/images/hero/omega/pill_3.webp";
 import LottieHexagonBg from "@components/animations/lottieHexagonBg.astro";
+import MoreInfo from "@components/more-info.astro";
 const alt = "Natios Omega 3 Premium Anchovies";
 const loading = "lazy";
 const heroImageWidth = 527;
@@ -15,6 +16,7 @@ const quality = 90;
 <div class="hero-text">
 	<h2 class="hero-heading">Prémiový zdroj Omega-3</h2>
 	<h3 class="hero-sub-heading">Získávano z přísně kontrolovaného peruánského rybolovu</h3>
+	<MoreInfo href="/product/omega-premium-1000-100" />
 </div>
 <div class="hero-images">
 	<div class="hero-main-image">

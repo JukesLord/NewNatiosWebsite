@@ -1,13 +1,16 @@
 ---
 import { Image } from "astro:assets";
-import mainImage from "@assets/images/hero/magnesiumMalate/Magnesium_Malate.webp";
+import mainImage from "@assets/images/hero/magnesiumMalate/Hero_Magnesium Malate.webp";
+
 import capsule1 from "@assets/images/hero/magnesiumMalate/pill_1.webp";
 import capsule2 from "@assets/images/hero/magnesiumMalate/pill_2.webp";
 import capsule3 from "@assets/images/hero/magnesiumMalate/pill_3.webp";
 import LottieHexagonBg from "@components/animations/lottieHexagonBg.astro";
+import MoreInfo from "@components/more-info.astro";
 const alt = "Natios Magnesium Malate";
 const loading = "lazy";
 const heroImageWidth = 544;
+/* const heroImageWidths = [215, 223, 335, 446, 544, 768, 1024, 1280]; */
 const pixelDensities = [1, 1.25, 1.5, 2, 2.5, 3];
 const quality = 90;
 ---
@@ -15,6 +18,7 @@ const quality = 90;
 <div class="hero-text">
 	<h2 class="hero-heading">Magnesium Malate s vitamínem B6</h2>
 	<h3 class="hero-sub-heading">Vhodný pro navýšení energie nejen při sportu</h3>
+	<MoreInfo href="/product/magnesium-malate-1000-90" />
 </div>
 <div class="hero-images">
 	<div class="hero-main-image">

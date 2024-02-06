@@ -16,6 +16,7 @@ import productImage3 from "@assets/images/products/Cordyceps_Extract_500_90/Cord
 const alt1 = "Natios Liposomal Vitamin C";
 const alt2 = "Natios Maca Extract Extra Strength";
 const alt3 = "Natios Cordyceps Mushroom Extract";
+import MoreInfo from "@components/more-info.astro";
 
 const loading = "lazy";
 const productImageWidth = 291;
@@ -102,6 +103,7 @@ const quality = 90;
 						rutin a růži šípkovou. Díky této kombinaci je dosaženo maximální účinnosti a vstřebatelnosti, jedná se tedy
 						o skvěle biologicky dostupný doplněk vitaminu C.
 					</p>
+					<MoreInfo href="/product/vitamin-c-liposomal-500-60" marginBottom="2em" />
 				</div>
 			</div>
 			<div class="brand-new-product-text">
@@ -116,6 +118,7 @@ const quality = 90;
 						Maca má prokazatelné účinky na fyzickou i psychickou výkonnost, funkci hormonálního systému a v neposlední
 						řadě podporuje vitalitu a libido. Každá veganská kapsle obsahuje ekvivalent 5000 mg surové byliny.
 					</p>
+					<MoreInfo href="/product/maca-extract-5000-90" marginBottom="2em" />
 				</div>
 			</div>
 			<div class="brand-new-product-text">
@@ -132,6 +135,7 @@ const quality = 90;
 						0,5‒3&nbsp;% polysacharidů, v tomto extraktu se jich nachází 40&nbsp;%. Tento extrakt je tedy až 40x
 						koncentrovanější než samotný houbový prášek.
 					</p>
+					<MoreInfo href="/product/cordyceps-extract-500-90" marginBottom="2em" />
 				</div>
 			</div>
 		</div>
@@ -222,10 +226,9 @@ const quality = 90;
 		font-weight: var(--fw-book);
 		padding-bottom: 1em;
 	}
-	.brand-new-product-description:last-child {
+	.brand-new-product-description:last-of-type {
 		padding-bottom: 1.5em;
 	}
-
 	.brand-new-product-arrows {
 		display: flex;
 		gap: 7%;
@@ -328,6 +331,7 @@ const quality = 90;
 	.text-animation-wrapper {
 		overflow: hidden;
 	}
+
 	@keyframes textGridAnimationOut {
 		0% {
 			grid-template-rows: 1fr;

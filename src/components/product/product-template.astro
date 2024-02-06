@@ -164,13 +164,13 @@ import KdeKoupit from "@components/who-sells-us/who-sells-us.astro";
 		width: 100%;
 		height: 2px;
 		background-color: var(--color-primary-400);
-		transform: scale(0);
+		transform: scaleX(0);
 		transition: transform 0.3s ease-in-out;
 		transform-origin: right;
 	}
 	.preview-image.active::after,
 	.preview-image:hover::after {
-		transform: scale(1);
+		transform: scaleX(1);
 		transform-origin: left;
 	}
 	.product-content {
@@ -226,13 +226,13 @@ import KdeKoupit from "@components/who-sells-us/who-sells-us.astro";
 		width: 100%;
 		height: 2px;
 		background-color: var(--color-primary-400);
-		transform: scale(0);
+		transform: scaleX(0);
 		transition: transform 0.3s ease-in-out;
 		transform-origin: right;
 	}
 	.detail-select > span.active::after,
 	.detail-select > span:hover::after {
-		transform: scale(1);
+		transform: scaleX(1);
 		transform-origin: left;
 	}
 	.product-descriptions {

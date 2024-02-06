@@ -307,19 +307,18 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 			opacity: 0;
 		}
 	}
-	.hero-slide h2,
-	.hero-slider > .hero-slide:first-child h1 {
+	.hero-heading {
 		font-size: var(--fs-60-28);
 		font-weight: var(--fw-bold);
 		padding-bottom: 0.65em;
 	}
-	.hero-slide h3,
-	.hero-slider > .hero-slide:first-child h2 {
+	.hero-sub-heading {
 		opacity: 0.7;
-		font-size: var(--fs-40-20);
+		font-size: var(--fs-32-20);
 		font-weight: var(--fw-regular);
-		padding-bottom: 0;
+		padding-bottom: 1.15em;
 	}
+
 	.hero-arrows {
 		display: flex;
 		gap: 7%;
@@ -349,13 +348,23 @@ import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 			padding-top: 0;
 			margin-bottom: 0%;
 		}
+		.hero-sub-heading {
+			max-width: 80%;
+		}
 		.hero-images {
 			position: absolute;
 			left: 60%;
 		}
+		.hero-main-image {
+			max-height: 75vh;
+		}
+		.hero-main-image img {
+			width: auto;
+		}
 		.hero-bg-animation {
 			left: -23%;
 			top: -5%;
+			max-height: 110vh;
 		}
 	}
 </style>
