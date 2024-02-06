@@ -1,0 +1,191 @@
+<aside>
+	<div class="arrow top">
+		<svg xmlns="http://www.w3.org/2000/svg" width="28" height="15" viewBox="0 0 28 15">
+			<path
+				id="nahoru"
+				d="M35.955-105.778a1,1,0,0,0-.7.307L22.964-93.177,10.671-105.47a1,1,0,0,0-.717-.3,1,1,0,0,0-1,1,1,1,0,0,0,.3.717l13,13a1,1,0,0,0,1.414,0l13-13a1,1,0,0,0,.308-.722,1,1,0,0,0-1-1Z"
+				transform="translate(-8.954 105.778) "
+				opacity="0.7"></path>
+		</svg>
+	</div>
+	<div class="dots">
+		<a href="" class="dot"></a>
+	</div>
+
+	<div class="arrow bottom">
+		<svg xmlns="http://www.w3.org/2000/svg" width="28" height="15" viewBox="0 0 28 15">
+			<g id="dolu" transform="translate(-1.99 135.506)">
+				<path
+					id="dolu-2"
+					data-name="dolu"
+					d="M35.955-105.778a1,1,0,0,0-.7.307L22.964-93.177,10.671-105.47a1,1,0,0,0-.717-.3,1,1,0,0,0-1,1,1,1,0,0,0,.3.717l13,13a1,1,0,0,0,1.414,0l13-13a1,1,0,0,0,.308-.722,1,1,0,0,0-1-1Z"
+					transform="translate(-6.964 -29.728)"
+					opacity="0.9"></path>
+			</g>
+		</svg>
+	</div>
+</aside>
+
+<style>
+	aside {
+		position: fixed;
+		top: 50%;
+		transform: translateY(-50%);
+		right: clamp(20px, 4.464vw + -25.712px, 60px);
+		font-size: var(--fs-12-10);
+		z-index: 999;
+		max-width: 28px;
+	}
+	.arrow {
+		cursor: pointer;
+		transition:
+			fill 0.2s ease-in-out,
+			opacity 0.2s ease-in-out;
+	}
+	.arrow:hover {
+		fill: var(--color-white);
+		opacity: 1;
+	}
+	.arrow.top {
+		transform: rotate(180deg);
+		margin-bottom: 0.25em;
+	}
+	.arrow.bottom {
+		margin-top: 0.25em;
+	}
+	.dots {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.dot {
+		display: block;
+		width: 1em;
+		height: 1em;
+		background-color: var(--color-white);
+		border-radius: 50%;
+		margin: 1.5em 0;
+		transition:
+			background-color 0.3s ease-in-out,
+			transform 0.3s ease-in-out;
+	}
+	.dot.active,
+	.dot:hover {
+		background-color: var(--color-primary-400);
+	}
+	.dot.active {
+		transform: scaleY(2);
+	}
+</style>
+
+<style is:global>
+	aside {
+		display: none;
+	}
+	.homepage aside {
+		display: block;
+	}
+	@media only screen and (max-width: 1024px) {
+		aside {
+			display: none !important;
+		}
+	}
+</style>
+
+<script is:inline>
+	document.addEventListener(
+		"astro:page-load",
+		function () {
+			asideF();
+		},
+		{ once: true }
+	);
+
+	function asideF() {
+		let sections = document.querySelectorAll("section");
+
+		/*arrowBottom*/
+		let arrowBottom = document.querySelector(".arrow.bottom");
+		arrowBottom.addEventListener("click", function () {
+			let scrollPosition = Math.round(window.scrollY);
+
+			for (let i = 0; i < sections.length; i++) {
+				let sectionPosition = Math.round(sections[i].getBoundingClientRect().top + scrollPosition);
+
+				if (sectionPosition > scrollPosition) {
+					window.scrollTo({ top: sectionPosition, behavior: "smooth" });
+					break;
+				}
+				if (sectionPosition === scrollPosition && i < sections.length - 1) {
+					sectionPosition = sections[i + 1].getBoundingClientRect().top + scrollPosition;
+					window.scrollTo({ top: sectionPosition, behavior: "smooth" });
+					break;
+				}
+			}
+		});
+
+		/*arrowTop*/
+		let arrowTop = document.querySelector(".arrow.top");
+		arrowTop.addEventListener("click", function () {
+			let scrollPosition = Math.round(window.scrollY);
+
+			for (let i = sections.length - 1; i >= 0; i--) {
+				let sectionPosition = Math.round(sections[i].getBoundingClientRect().top + scrollPosition);
+
+				if (sectionPosition < scrollPosition) {
+					window.scrollTo({ top: sectionPosition, behavior: "smooth" });
+					break;
+				}
+			}
+		});
+
+		/*dots*/
+		sections.forEach(function (section, index) {
+			let dot = $(".dot").eq(0).clone();
+			dot.appendTo(".dots");
+
+			$(".dot")
+				.eq(index)
+				.attr("href", "#" + section.id);
+		});
+		$(".dot")
+			.eq($(".dot").length - 1)
+			.remove();
+
+		document.querySelectorAll('aside a[href^="#"]').forEach((anchor) => {
+			anchor.addEventListener("click", function (e) {
+				let href = this.getAttribute("href");
+				let cleanedHref = href.replace("#", "");
+
+				document.getElementById(cleanedHref).scrollIntoView({
+					behavior: "smooth",
+				});
+			});
+		});
+
+		$(".dot")
+			.eq(0)
+			.on("click", function (e) {
+				e.preventDefault();
+				window.scrollTo({ top: 0, behavior: "smooth" });
+			});
+
+		/*observer*/
+
+		let observer = new IntersectionObserver(
+			function (entries) {
+				entries.forEach(function (entry) {
+					if (entry.isIntersecting) {
+						$(".dot").removeClass("active");
+						$('.dot[href="#' + entry.target.id + '"]').addClass("active");
+					}
+				});
+			},
+			{ threshold: 0.5 }
+		);
+
+		sections.forEach(function (section) {
+			observer.observe(section);
+		});
+	}
+</script>

@@ -1,0 +1,222 @@
+---
+import IndexLayout from "../../../layouts/IndexLayout.astro";
+import ProductTemplate from "@components/product/product-template.astro";
+
+import { Image } from "astro:assets";
+import productImage1 from "@assets/images/products/Fenugreek_Blessed_2000_120/Fenugreek_Blessed_2000_120_fwc.webp";
+import productImage2 from "@assets/images/products/Fenugreek_Blessed_2000_120/Fenugreek_Blessed_2000_120_bws.webp";
+
+const alt = "NATIOS Fenugreek & Blessed Thistle Extract";
+const loading = "lazy";
+const productImageWidth = 1000;
+const pixelDensities = [1, 1.5, 2, 2.5, 3];
+const quality = 90;
+---
+
+<IndexLayout title="NATIOS Fenugreek & Blessed Thistle Extract">
+	<ProductTemplate>
+		<!-- _____________________________________________ -->
+		<!-- ____________________NÁZEV____________________ -->
+		<!-- _____________________________________________ -->
+		<h1 slot="product-name-h1">Fenugreek & Blessed Thistle Extract</h1>
+		<h2 slot="product-name-h2">2000 mg, 120 veganských kapslí</h2>
+
+		<!-- ________________________________________________________ -->
+		<!-- ____________________FOTKY VELKÉ DO 6____________________ -->
+		<!-- ________________________________________________________ -->
+		<div slot="large-image-1" class="large-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="large-image-2" class="large-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading={loading}
+			/>
+		</div>
+
+		<!-- ____________________________________________________________ -->
+		<!-- ____________________FOTKY NÁHLEDOVÉ DO 6____________________ -->
+		<!-- ____________________________________________________________ -->
+		<div slot="preview-image-1" class="preview-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="preview-image-2" class="preview-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<!-- ___________________________________________________________________________________ -->
+		<!-- ____________________SELECT MOŽNOSTI (možnost video a orher 1 2)____________________ -->
+		<!-- ___________________________________________________________________________________ -->
+		<span slot="select-description" class="select-description">Popis</span>
+		<span slot="select-ingredients" class="select-ingredients">Složení</span>
+		<span slot="select-dosage" class="select-dosage">Dávkování a upozornění</span>
+
+		<!-- ____________________________________________________________________________________ -->
+		<!-- ____________________DESCRIPTION DIVY (možnost video a orher 1 2)____________________ -->
+		<!-- ____________________________________________________________________________________ -->
+		<div slot="description-description" class="description-description active">
+			<p>
+				S Natios Fenugreek & Blessed Thistle již nemusíte mít strach, že svému dítěti nedopřáváte dostatečné množství
+				kvalitního mateřského mléka. Pískavice řecké seno je velmi často užíváno při poporodní péči. Pískavice s
+				Benediktem lékařským je účinná kombinace bylin, které jsou známe především pro své schopnosti podporovat tvorbu
+				mateřského mléka. Krom navýšení laktace tato kombinace způsobuje také zkvalitnění mateřského mléka.
+			</p>
+			<p>
+				Kombinace Fenugreek & Blessed Thistle značky Natios je vyráběna bez jakýchkoliv přídavných látek, konzervantů či
+				éček a je dodávána ve formě veganských kapslí. Obsahuje pouze 100% čisté extrakty z pískavice řeckého sena a
+				benediktu lékařského. Můžete si být tedy jisti, že sobě i dítěti dopřáváte tu největší možnou kvalitu.
+			</p>
+
+			<ul>
+				<li>Silné složení s bylinnými extrakty</li>
+				<li>Účinná dávka obsažena v 1 kapsli</li>
+				<li>Snadné a pohodlné užívání díky menším kapslím</li>
+				<li>Neobsahuje žádné příměsi, nestravitelné látky ani éčka</li>
+				<li>Vegan a GMO-free</li>
+			</ul>
+
+			<p class="small-padding">
+				<b>Benefity Fenugreeku:</b><br />
+				Téměř po celém světe se tato bylina tradičně užívá na podporu laktace kojících žen. Dnes se pískavice řecké seno
+				užívá také jako doplněk stravy podporu kontroly hladiny cukru a cholesterolu v krvi.
+			</p>
+			<ul>
+				<li>Podporuje zotavení po porodu</li>
+				<li>Podporuje produkci mateřského mléka</li>
+				<li>Díky tomu podporuje rychlost přibývání na váze novorozenců</li>
+				<li>Podporuje normální hladinu cukru v krvi</li>
+				<li>Pomáhá snižovat hladinu cholesterolu</li>
+				<li>Udržuje pH rovnováhu žaludku</li>
+				<li>Podporuje imunitní systém</li>
+				<li>Působí jako antioxidant</li>
+			</ul>
+
+			<p class="small-padding">
+				<b>Benefity Blessed Thistle:</b><br />
+				Tradičně se tato bylina používala především k podpoře zdraví zažívacího traktu a dýchacího systému. Dnes se benedikt
+				nejčastěji používá v kombinaci s pískavicí.
+				<ul>
+					<li>Nejčastěji se užívá v kombinaci s pískavicí</li>
+					<li>Podporuje normální trávení</li>
+					<li>Podporuje normální funkce dýchacího systému</li>
+				</ul>
+			</p>
+		</div>
+
+		<!-- ____________________TABULKA____________________ -->
+		<div slot="description-ingredients" class="description-ingredients">
+			<table>
+				<thead>
+					<tr>
+						<th
+							><div class="dosage">
+								<span
+									><b>Velikost dávky:</b> 1&nbsp;veganská kapsle<br />
+									<b>Balení obsahuje:</b> 120&nbsp;dávek</span
+								>
+							</div></th
+						>
+						<th>Množství v 1 dávce</th>
+						<th>%&nbsp;RHP*</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td
+							><b>Fenugreek 4:1 extrakt</b> (pískavice řecké seno / <i>Trigonella foenum-graecum</i>) (semeno)
+							<br />
+							- ekvivalent 1000 mg surové byliny
+						</td>
+						<td>250&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td
+							><b>Blessed thistle 10:1 extract</b> (benedikt lékařský / <i>Cnicus benedictus L.</i>) (nadzemní části
+							rostliny)
+							<br />
+							- ekvivalent 1000 mg surové byliny
+						</td>
+						<td>100&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td colspan="3"
+							><div class="rhp">
+								<span>* referenční hodnota příjmu u průměrné dospělé osoby</span>
+								<span>** denní referenční hodnota příjmu není stanovena</span>
+							</div></td
+						>
+					</tr>
+				</tbody>
+			</table>
+			<p><b>Další složky:</b> Veganská kapsle. Výrobek neobsahuje žádné další přidané látky (éčka).</p>
+		</div>
+		<!-- ____________________DÁVKOVÁNÍ A UPOZORNĚNÍ____________________ -->
+		<div slot="description-dosage" class="description-dosage">
+			<p>
+				<b>Doporučené dávkování:</b><br />
+				Jako doplněk stravy užívejte 1-2 veganské kapsle dvakrát denně s vodou.<br />
+
+				Možné také užívat 1 veganskou kapsli třikrát až čtyřikrát denně s vodou.<br />
+
+				Každá kapsle obsahuje velké množství silných bylinných extraktů, proto doporučujeme začít s užíváním 1 kapsle 2x
+				denně a dávkování postupně po pár dnech navyšovat.<br />
+
+				Pro vyšší dávkování doporučujeme poradit se s kvalifikovaným lékařem či laktační poradkyní.<br />
+			</p>
+			<p>
+				<b>Upozornění:</b><br />
+				Pouze pro dospělé. Trpíte-li onemocněním, kojíte, snažíte se otěhotnět nebo užíváte léky, poraďte se před užitím
+				tohoto přípravku s lékařem. Trpíte-li alergií na rostliny z čeledi Fabaceae (bobovité), rostliny z čeledi Asteraceae
+				(hvězdnicovité), neužívejte tento produkt.
+
+				<b>Neužívejte pokud jste těhotná!</b>
+
+				Uchovávejte mimo dosah dětí. Není náhradou pestré stravy. Doplněk stravy. Nepřekračujte doporučené denní
+				dávkování.
+			</p>
+			<p>
+				<b>Skladování:</b><br />
+				Skladujte na chladném a suchém místě.
+			</p>
+			<p>
+				<b>Vyrobeno v EU</b>
+			</p>
+		</div>
+	</ProductTemplate>
+</IndexLayout>
+
+<style is:global>
+	:root {
+		--number-of-photos: 2;
+	}
+</style>

@@ -1,0 +1,181 @@
+---
+import IndexLayout from "../../../layouts/IndexLayout.astro";
+import ProductTemplate from "@components/product/product-template.astro";
+import { Image } from "astro:assets";
+import productImage1 from "@assets/images/products/Maca_Extract_5000_90/Maca_Extract_5000_90_fwc.webp";
+import productImage2 from "@assets/images/products/Maca_Extract_5000_90/Maca_Extract_5000_90_bws.webp";
+
+const alt = "NATIOS Maca Extra Strenght Extract";
+const loading = "lazy";
+const productImageWidth = 1000;
+const pixelDensities = [1, 1.5, 2, 2.5, 3];
+const quality = 90;
+---
+
+<IndexLayout title="NATIOS Maca Extract">
+	<ProductTemplate>
+		<!-- _____________________________________________ -->
+		<!-- ____________________NÁZEV____________________ -->
+		<!-- _____________________________________________ -->
+		<h1 slot="product-name-h1">Maca Extra Strenght Extract</h1>
+		<h2 slot="product-name-h2">5000 mg, 90 veganských kapslí</h2>
+
+		<!-- ________________________________________________________ -->
+		<!-- ____________________FOTKY VELKÉ DO 6____________________ -->
+		<!-- ________________________________________________________ -->
+		<div slot="large-image-1" class="large-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="large-image-2" class="large-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading={loading}
+			/>
+		</div>
+
+		<!-- ____________________________________________________________ -->
+		<!-- ____________________FOTKY NÁHLEDOVÉ DO 6____________________ -->
+		<!-- ____________________________________________________________ -->
+		<div slot="preview-image-1" class="preview-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="preview-image-2" class="preview-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<!-- ___________________________________________________________________________________ -->
+		<!-- ____________________SELECT MOŽNOSTI (možnost video a orher 1 2)____________________ -->
+		<!-- ___________________________________________________________________________________ -->
+		<span slot="select-description" class="select-description">Popis</span>
+		<span slot="select-ingredients" class="select-ingredients">Složení</span>
+		<span slot="select-dosage" class="select-dosage">Dávkování a upozornění</span>
+
+		<!-- ____________________________________________________________________________________ -->
+		<!-- ____________________DESCRIPTION DIVY (možnost video a orher 1 2)____________________ -->
+		<!-- ____________________________________________________________________________________ -->
+		<div slot="description-description" class="description-description active">
+			<p>
+				Extra síla jedné kapsle Natios Macy je vhodná pro všechny. Její účinky ocení maminky malých a neposedných dětí,
+				studenti před zkouškovým obdobím, ale i vysoce postavení manažeři zažívající každodenní stres. Maca má
+				prokazatelné účinky na fyzickou i psychickou výkonnost, funkci hormonálního systému a v neposlední řadě
+				podporuje vitalitu a libido.
+			</p>
+
+			<p class="small-padding">Maca je to pravé pro vás, pokud si kladně odpovíte na některou z uvedených otázek:</p>
+			<ul>
+				<li>Máte problémy s vašim libidem, ať jste žena nebo muž?</li>
+				<li>Pociťujete dlouhodobě pocity vyčerpání?</li>
+				<li>Máte nechuť do života nebo práce?</li>
+				<li>Nemůžete ráno vstát z postele?</li>
+			</ul>
+
+			<p>
+				Maca od značky Natios poskytuje extra silnou porci účinných látek bez dalších plnidel a éček, jde tak o produkt
+				s vysokou čistotou a zároveň velkou účinností. Obsahuje pouze 100% čistý extrakt kořene Macy. Díky silnému
+				extraktu už nemusíte užívat několik kapslí denně a myslet na to, jestli už jste si užili pravidelnou denní
+				dávku. V jedné kapsli máte veškerou sílu, kterou Maca nabízí.
+			</p>
+
+			<ul>
+				<li>Účinná dávka obsažena v 1 kapsli</li>
+				<li>Snadné a pohodlné užívání díky menším kapslím</li>
+				<li>Neobsahuje žádné příměsi, nestravitelné látky ani éčka</li>
+				<li>Vegan a GMO-free</li>
+			</ul>
+		</div>
+		<!-- ____________________TABULKA____________________ -->
+		<div slot="description-ingredients" class="description-ingredients">
+			<table>
+				<thead>
+					<tr>
+						<th
+							><div class="dosage">
+								<span
+									><b>Velikost dávky:</b> 1&nbsp;veganská kapsle<br />
+									<b>Balení obsahuje:</b> 90&nbsp;dávek</span
+								>
+							</div></th
+						>
+						<th>Množství v 1 dávce</th>
+						<th>%&nbsp;RHP*</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td
+							><b>Maca 10:1 extrakt</b> (<i>Lepidium meyenii</i>) (kořen)
+							<br />
+							- ekvivalent 5 000 mg surové byliny</td
+						>
+						<td>500&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td colspan="3"
+							><div class="rhp">
+								<span>* referenční hodnota příjmu u průměrné dospělé osoby</span>
+								<span>** denní referenční hodnota příjmu není stanovena</span>
+							</div></td
+						>
+					</tr>
+				</tbody>
+			</table>
+			<p><b>Další složky:</b> Veganská kapsle. Výrobek neobsahuje žádné další přidané látky (éčka).</p>
+		</div>
+		<!-- ____________________DÁVKOVÁNÍ A UPOZORNĚNÍ____________________ -->
+		<div slot="description-dosage" class="description-dosage">
+			<p>
+				<b>Doporučené dávkování:</b><br />
+				Jako doplněk stravy užívejte 1 veganskou kapsli denně s vodou.
+			</p>
+
+			<p>
+				<b>Upozornění:</b><br />
+				Pouze pro dospělé. Trpíte-li onemocněním, jste těhotná, kojíte, snažíte se otěhotnět nebo užíváte léky, poraďte se
+				před užitím tohoto přípravku s lékařem. Uchovávejte mimo dosah dětí. Doplněk stravy. Není náhradou pestré stravy.
+				Nepřekračujte doporučené denní dávkování.
+			</p>
+			<p>
+				<b>Skladování:</b><br />
+				Skladujte na chladném a suchém místě.
+			</p>
+			<p>
+				<b>Vyrobeno v EU</b>
+			</p>
+		</div>
+	</ProductTemplate>
+</IndexLayout>
+
+<style is:global>
+	:root {
+		--number-of-photos: 2;
+	}
+</style>

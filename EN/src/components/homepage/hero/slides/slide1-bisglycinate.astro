@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+import mainImage from "@assets/images/hero/magnesiumBisglycinate/Hero_Magnesium Bisglycinate.webp";
+
+import capsule1 from "@assets/images/hero/magnesiumBisglycinate/pill_1.webp";
+import capsule2 from "@assets/images/hero/magnesiumBisglycinate/pill_2.webp";
+import capsule3 from "@assets/images/hero/magnesiumBisglycinate/pill_3.webp";
+import LottieHexagonBg from "@components/animations/lottieHexagonBg.astro";
+import MoreInfo from "@components/more-info.astro";
+const alt = "Natios Magnesium Bisglycinate";
+const loading = "eager";
+const heroImageWidth = 544;
+/* const heroImageWidths = [215, 223, 335, 446, 544, 768, 1024, 1280]; */
+const pixelDensities = [1, 1.25, 1.5, 2, 2.5, 3];
+const quality = 90;
+---
+
+<div class="hero-text">
+	<h1 class="hero-heading">Doplňky stravy pro vaše zdraví</h1>
+	<h2 class="hero-sub-heading">Nejlépe vstřebatelná forma hořčíku</h2>
+	<MoreInfo href="/product/magnesium-bisglycinate-1000-90" />
+</div>
+<div class="hero-images">
+	<div class="hero-main-image">
+		<Image
+			src={mainImage}
+			width={heroImageWidth}
+			densities={pixelDensities}
+			alt={alt}
+			quality={quality}
+			loading={loading}
+		/>
+	</div>
+	<div class="hero-capsules">
+		<div class="hero-capsule-1">
+			<Image src={capsule1} alt={alt + " kapsle"} quality={quality} loading={loading} />
+		</div>
+		<div class="hero-capsule-2">
+			<Image src={capsule2} alt={alt + " kapsle"} quality={quality} loading={loading} />
+		</div>
+		<div class="hero-capsule-3">
+			<Image src={capsule3} alt={alt + " kapsle"} quality={quality} loading={loading} />
+		</div>
+	</div>
+	<div class="hero-bg-animation">
+		<LottieHexagonBg />
+	</div>
+</div>

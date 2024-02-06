@@ -1,0 +1,51 @@
+---
+import IndexLayout from "../../layouts/IndexLayout.astro";
+import NaseProdukty from "@components/nase-produkty/nase-produkty.astro";
+import AsideNavigation from "@components/aside-navigation.astro";
+import SectionHeader from "@components/section-header.astro";
+---
+
+<IndexLayout title="Natios produkty">
+	<section id="our-products" class="our-products">
+		<div class="section-header">
+			<h1>Naše produkty</h1>
+		</div>
+		<NaseProdukty />
+	</section>
+</IndexLayout>
+
+<style>
+	div {
+		font-size: var(--fs-60-28);
+		margin-top: 2.3em;
+		padding-top: 1em;
+		padding-bottom: 1.5em;
+	}
+	h1 {
+		font-weight: var(--fw-bold);
+		line-height: var(--lh-1_2);
+		background-image: linear-gradient(180deg, var(--color-blue-300) 20%, var(--color-blue-400) 95%);
+		background-clip: text;
+		color: transparent;
+		text-align: center;
+	}
+
+	@media only screen and (min-width: 768px) {
+		div {
+			margin-top: 0.65em;
+			padding-top: 2em;
+			padding-bottom: 1.25em;
+		}
+	}
+</style>
+
+<script is:inline>
+	document.addEventListener(
+		"astro:page-load",
+		function () {
+			$("body").removeClass();
+			$("body").addClass("our-products-page");
+		},
+		{ once: true }
+	);
+</script>

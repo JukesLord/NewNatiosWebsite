@@ -1,0 +1,158 @@
+---
+import NatiosLogo from "@components/natiosLogo.astro";
+import HeaderMenuIcon from "@components/header-menu-icon.astro";
+---
+
+<div class="header">
+	<div class="header-content">
+		<div class="header-logo"><a href="/#"><NatiosLogo /></a></div>
+		<div class="header-menu">
+			<a href="/#benefits-of-natios">Výhody značky Natios</a>
+			<a href="/#our-products">Naše produkty</a>
+			<a href="/#brand-news">Novinky</a>
+			<a href="/#about-us">O společnosti</a>
+			<a href="/contact">Kontakt</a>
+		</div>
+		<HeaderMenuIcon />
+	</div>
+</div>
+
+<style is:global>
+	.header {
+		height: var(--header-height);
+		color: var(--color-white);
+		font-size: var(--fs-12-12);
+		font-weight: var(--fw-book);
+		background: var(--color-primary-800-backdrop);
+		backdrop-filter: blur(20px);
+		filter: drop-shadow(0 0 20px hsla(0, 0%, 0%, 16%));
+		padding: 0 var(--header-padding);
+		position: sticky;
+		top: 0;
+		z-index: 100;
+	}
+	.header-content {
+		display: flex;
+		height: 100%;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.header-logo {
+		width: 149px;
+		transition: filter 0.3s ease-in-out;
+	}
+	.header-logo:hover {
+		filter: brightness(1.35) drop-shadow(0px 0px 10px hsla(0, 0%, 0%, 50%));
+	}
+	.header-menu {
+		--padding-links: 1.75em;
+		margin-right: calc(var(--padding-links) / -1);
+	}
+	.header-menu a {
+		padding: 1em var(--padding-links);
+		position: relative;
+	}
+	.header-menu a::before {
+		display: block;
+		content: "";
+		width: calc(100% - var(--padding-links) * 2 + 4px);
+		height: 1px;
+		background: var(--color-white);
+		position: absolute;
+		left: calc(var(--padding-links) - 2px);
+		bottom: 0.65em;
+		transform: scale(0);
+		transform-origin: right;
+		transition: transform 0.3s ease-in-out;
+	}
+	.header-menu a:hover::before,
+	.header-menu a:focus-within::before {
+		transform: scale(1);
+		transform-origin: left;
+	}
+
+	.menu-opener {
+		display: none;
+	}
+
+	@media only screen and (max-width: 1024px) {
+		.header-menu a {
+			padding: 1em calc(var(--padding-links) / 2);
+		}
+	}
+	@media only screen and (max-width: 768px) {
+		.header {
+			overflow-x: clip;
+			overflow-y: visible;
+		}
+
+		.header-menu {
+			display: flex;
+			opacity: 0;
+			position: fixed;
+			top: 0;
+			padding-top: var(--header-height);
+			max-width: 100%;
+			padding-right: 2rem;
+			right: 0;
+			flex-direction: column;
+			height: calc(100vh);
+
+			overflow-x: hidden;
+			overflow-y: scroll;
+			background: var(--color-primary-800);
+			filter: drop-shadow(0 0 20px hsla(0, 0%, 0%, 45%));
+			transform: translateX(100%);
+			transition:
+				transform 0.3s ease-in-out,
+				opacity 0.3s ease-in-out;
+		}
+		.header-menu.active {
+			opacity: 1;
+			transform: translateX(0);
+		}
+		.header-menu a {
+			padding: 0.75em 1rem;
+		}
+		.header-menu a::before {
+			display: none;
+		}
+	}
+</style>
+
+<script is:inline>
+	document.addEventListener("astro:page-load", function () {
+		document.querySelectorAll('a[href^="/#"]').forEach((anchor) => {
+			anchor.addEventListener("click", function (e) {
+				let href = this.getAttribute("href");
+				let cleanedHref = href.replace("/#", "");
+
+				document.getElementById(cleanedHref).scrollIntoView({
+					behavior: "smooth",
+				});
+			});
+		});
+		setTimeout(function () {
+			if ($("body").hasClass("homepage")) {
+				document.querySelector(".header-logo").addEventListener("click", function (event) {
+					event.preventDefault();
+					$(window).scrollTop(0);
+				});
+				document.querySelector(".footer-logo").addEventListener("click", function (event) {
+					event.preventDefault();
+					$(window).scrollTop(0);
+				});
+			}
+		}, 100);
+
+		let hash = window.location.hash;
+		if (hash) {
+			let element = document.querySelector(hash);
+			setTimeout(function () {
+				if (element && window.scrollY === 0) {
+					element.scrollIntoView({ behavior: "smooth" });
+				}
+			}, 100);
+		}
+	});
+</script>

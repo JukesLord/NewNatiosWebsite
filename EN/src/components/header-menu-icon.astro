@@ -1,0 +1,125 @@
+<div id="menu-opener" class="initial deactive">
+	<div class="lines">
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+</div>
+
+<style>
+	@media only screen and (min-width: 768px) {
+		#menu-opener {
+			display: none;
+		}
+	}
+	#menu-opener {
+		cursor: pointer;
+		padding: 1rem;
+		margin-right: -1rem;
+	}
+	.lines {
+		width: 16px;
+		--height: 8px;
+		height: var(--height);
+		position: relative;
+	}
+	#menu-opener.initial .line {
+		animation: none !important;
+	}
+	.line {
+		position: absolute;
+		width: 16px;
+		height: 1px;
+		border-radius: 50%;
+		background: var(--color-white);
+	}
+	.line:nth-child(1) {
+		top: 0;
+	}
+	.line:nth-child(2) {
+		bottom: 0;
+	}
+	#menu-opener.active .line:nth-child(1) {
+		animation: line-top 0.6s ease-in-out forwards;
+	}
+	#menu-opener.active .line:nth-child(2) {
+		animation: line-bottom 0.6s ease-in-out forwards;
+	}
+	#menu-opener.deactive .line:nth-child(1) {
+		animation: line-top-reverse 0.6s ease-in-out forwards;
+	}
+	#menu-opener.deactive .line:nth-child(2) {
+		animation: line-bottom-reverse 0.6s ease-in-out forwards;
+	}
+
+	@keyframes line-top {
+		0% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(calc(var(--height) / 2 - 1px));
+		}
+		100% {
+			transform: translateY(calc(var(--height) / 2 - 1px)) rotate(45deg);
+		}
+	}
+	@keyframes line-bottom {
+		0% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(calc(var(--height) / -2));
+		}
+		100% {
+			transform: translateY(calc(var(--height) / -2)) rotate(-45deg);
+		}
+	}
+	@keyframes line-top-reverse {
+		0% {
+			transform: translateY(calc(var(--height) / 2 - 1px)) rotate(45deg);
+		}
+		50% {
+			transform: translateY(calc(var(--height) / 2 - 1px));
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+	@keyframes line-bottom-reverse {
+		0% {
+			transform: translateY(calc(var(--height) / -2)) rotate(-45deg);
+		}
+		50% {
+			transform: translateY(calc(var(--height) / -2));
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+</style>
+
+<script is:inline>
+	document.addEventListener("astro:page-load", function () {
+		headerMenuIconF();
+	});
+
+	function headerMenuIconF() {
+		$(".header-menu").addClass("deactive");
+
+		let menuOpener = document.getElementById("menu-opener");
+		menuOpener.addEventListener(
+			"click",
+			function () {
+				menuOpener.classList.remove("initial");
+			},
+			{ once: true }
+		);
+
+		$("#menu-opener").on("click", function () {
+			$("#menu-opener").toggleClass("active");
+			$("#menu-opener").toggleClass("deactive");
+			$(".header").toggleClass("active");
+			$(".header-menu").toggleClass("active");
+			$(".header-menu").toggleClass("deactive");
+		});
+	}
+</script>

@@ -1,0 +1,249 @@
+---
+import IndexLayout from "../../../layouts/IndexLayout.astro";
+import ProductTemplate from "@components/product/product-template.astro";
+
+import { Image } from "astro:assets";
+import productImage1 from "@assets/images/products/Vitamin_C_Lipo_500_60/Vitamin_C_Lipo_500_60_fwc.webp";
+import productImage2 from "@assets/images/products/Vitamin_C_Lipo_500_60/Vitamin_C_Lipo_500_60_bws.webp";
+
+const alt = "NATIOS Vitamin C Liposomal";
+const loading = "lazy";
+const productImageWidth = 1000;
+const pixelDensities = [1, 1.5, 2, 2.5, 3];
+const quality = 90;
+---
+
+<IndexLayout title="NATIOS Vitamin C Liposomal">
+	<ProductTemplate>
+		<!-- _____________________________________________ -->
+		<!-- ____________________NÁZEV____________________ -->
+		<!-- _____________________________________________ -->
+		<h1 slot="product-name-h1">Vitamin C, Liposomal</h1>
+		<h2 slot="product-name-h2">500 mg, 60 veganských kapslí</h2>
+
+		<!-- ________________________________________________________ -->
+		<!-- ____________________FOTKY VELKÉ DO 6____________________ -->
+		<!-- ________________________________________________________ -->
+		<div slot="large-image-1" class="large-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="large-image-2" class="large-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading={loading}
+			/>
+		</div>
+
+		<!-- ____________________________________________________________ -->
+		<!-- ____________________FOTKY NÁHLEDOVÉ DO 6____________________ -->
+		<!-- ____________________________________________________________ -->
+		<div slot="preview-image-1" class="preview-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="preview-image-2" class="preview-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<!-- ___________________________________________________________________________________ -->
+		<!-- ____________________SELECT MOŽNOSTI (možnost video a orher 1 2)____________________ -->
+		<!-- ___________________________________________________________________________________ -->
+		<span slot="select-description" class="select-description">Popis</span>
+		<span slot="select-ingredients" class="select-ingredients">Složení</span>
+		<span slot="select-dosage" class="select-dosage">Dávkování a upozornění</span>
+
+		<!-- ____________________________________________________________________________________ -->
+		<!-- ____________________DESCRIPTION DIVY (možnost video a orher 1 2)____________________ -->
+		<!-- ____________________________________________________________________________________ -->
+		<div slot="description-description" class="description-description active">
+			<p>
+				Vysoce účinný vitamin C v liposomální (lipozomální) formě, který vám s jistotou pomůže nejen s podporou
+				imunitního systému, ale také s podporou tvorby kolagenu a díky svým antioxidačním schopnostem také pomůže
+				chránit vaše buňky před volnými radikály. Natios Vitamin C je vyráběn v liposomální formě a krom vitaminu C
+				obsahuje také citrusové bioflavonoidy, rutin a růži šípkovou. Díky této kombinaci je dosaženo maximální
+				účinnosti a vstřebatelnosti, jedná se tedy o skvěle biologicky dostupný doplněk vitaminu C.
+			</p>
+			<ul>
+				<li>Vysoce vstřebatelná liposomální forma</li>
+				<li>625 % doporučené denní dávky v jedné kapsli</li>
+				<li>Doplněno o citrusové bioflavonoidy, rutin a růži šípkovou</li>
+				<li>Neobsahuje žádné další příměsi, nestravitelné látky ani éčka</li>
+				<li>Vegan a GMO-free</li>
+			</ul>
+			<p>
+				Vitamin C je esenciální vitamin, což znamená, že si ho vaše tělo nedokáže vyrobit. Je ve vodě rozpustný a
+				přirozeně se nachází v mnoha druzích ovoce a zeleniny, včetně pomerančů, jahod, kiwi, paprik, brokolice, kapusty
+				a špenátu. Na rozdíl od vitaminů rozpustných v tucích se vitamin C v těle neukládá. Z tohoto důvodu je zapotřebí
+				vitamin C denně doplňovat.
+			</p>
+			<ul>
+				<li>Podporuje funkci imunitního systému</li>
+				<li>Působí jako antioxidant</li>
+				<li>Přispívá tak k ochraně buněk před oxidativním stresem</li>
+				<li>Přispívá ke správné tvorbě kolagenu</li>
+				<li>Podporuje tak funkci krevních cév, kostí, chrupavek, dásní, kůže a zubů</li>
+				<li>Přispívá k normálnímu energetickému metabolismu</li>
+				<li>Přispívá k normální nervové a psychické činnosti</li>
+				<li>Přispívá ke snížení míry únavy a vyčerpání</li>
+				<li>Zvyšuje vstřebávání železa</li>
+			</ul>
+			<p class="no-padding"><b>Co je to liposomální forma?</b></p>
+			<p>
+				Jednou z hlavních výhod liposomální formy vitaminu C je téměř 100% vstřebatelnost. U obyčejného vitaminu C
+				(čisté kyseliny askorbové) se u malých dávek do 100 mg pohybuje kolem 80 %, avšak se zvyšujícími dávkami rapidně
+				klesá a přebytečný příjem je vylučován močí. Právě tomuto zamezuje liposomální forma vitaminu C, která si svou
+				perfektní vstřebatelnost udržuje i u vyšších dávek.
+			</p>
+			<p>
+				Liposomy (lipozomy) jsou submikroskopické bubliny s vnější membránou tvořenou dvojitou vrstvou fosfolipidů.
+				Liposomy jsou schopny zapouzdřit živiny, jako je právě vitamin C, které pak jsou rychle a efektivně přenášeny do
+				krevního oběhu, přičemž je chrání před oxidací a degradací, čímž zvyšují jejich stabilitu.
+			</p>
+			<ul>
+				<li>Nejúčinnější forma vitaminu C, dokonce účinnější než intravenózní podávání</li>
+				<li>Chrání vitamín před degradací a oxidací</li>
+				<li>Umožňuje rychlé a účinné vstřebávání</li>
+				<li>Nedráždí žaludek a nezatěžuje trávicí systém</li>
+				<li>Liposomy jsou získávány z geneticky nemodifikovaného slunečnicového lecitinu</li>
+				<li>Na rozdíl od tekutých forem jsou kapsle trvanlivé a nejsou náchylné na změny teploty</li>
+			</ul>
+
+			<p class="no-padding"><b>Obsahuje citrusové bioflavonoidy, rutin a růži šípkovou</b></p>
+			<p>
+				Každá potravina, která obsahuje vitamin C, obsahuje také bioflavonoidy. Bioflavonoidy mají antioxidační účinky a
+				jsou nezbytné pro vstřebávání vitaminu C, se kterým navíc v těle působí synergicky. Právě z tohoto důvodu je v
+				Natios Liposomálním vitaminu C celkem 50 mg bioflavonoidů a to hned ve dvou formách. Prvních 25 mg bioflavonoidů
+				se skládá z citrusových bioflavonoidů, které jsou obsaženy výhradně v citrusových plodech. Dalších 25 mg je
+				obsaženo ve formě čistého bioflavonoidu zvaného rutin. Tento bioflavonoid se také nachází v citrusech, ale je
+				možné jej najít také v jiném ovoci, zelenině a bylinkách, které obsahují vitamin C. Přestože bioflavonoidy
+				nejsou považovány za vitamin, někdy jsou označovány jako vitamin P.
+			</p>
+			<p>
+				Šípky přirozeně obsahují velké množství vitaminu C. To však není vše. Krom bioflavonoidů obsahují také fenoly,
+				kyselinu elagovou, lykopen a vitamin E. Díky těmto složkám působí šípky jako skvělý antioxidant a společně s
+				vitaminem C tak chrání buňky před oxidativním stresem a podporují imunitní systém.
+			</p>
+		</div>
+		<!-- ____________________TABULKA____________________ -->
+		<div slot="description-ingredients" class="description-ingredients">
+			<table>
+				<thead>
+					<tr>
+						<th
+							><div class="dosage">
+								<span
+									><b>Velikost dávky:</b> 1&nbsp;veganská kapsle<br />
+									<b>Balení obsahuje:</b> 100&nbsp;dávek</span
+								>
+							</div></th
+						>
+						<th>Množství v 1 dávce</th>
+						<th>%&nbsp;RHP*</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><b>Vitamin C</b> (kyselina askorbová)</td>
+						<td>500&nbsp;mg</td>
+						<td>625&nbsp;%</td>
+					</tr>
+
+					<tr>
+						<td>Liposomalní Komplex (Fosfolipidová směs kyseliny palmitové a olejové)</td>
+						<td>214&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td>Komplex citrusových bioflavonoidů</td>
+						<td>25&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td>Rutinový prášek</td>
+						<td>25&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td>Prášek z plodů růže šípkové</td>
+						<td>25&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td colspan="3"
+							><div class="rhp">
+								<span>* referenční hodnota příjmu u průměrné dospělé osoby</span>
+								<span>** denní referenční hodnota příjmu není stanovena</span>
+							</div></td
+						>
+					</tr>
+				</tbody>
+			</table>
+			<p><b>Další složky:</b> Veganská kapsle. Výrobek neobsahuje žádné další přidané látky (éčka).</p>
+		</div>
+		<!-- ____________________DÁVKOVÁNÍ A UPOZORNĚNÍ____________________ -->
+		<div slot="description-dosage" class="description-dosage">
+			<p class="no-padding">
+				<b>Doporučené dávkování:</b>
+			</p>
+			<p class="no-padding">
+				Jako doplněk stravy užívejte 1 kapsli denně a zapijte vodou. Pokud jste nemocní a potřebujete posílit imunitu,
+				doporučujeme 3 kapsle denně.
+			</p>
+			<p>
+				Přebytečné množství vitaminu C je z těla přirozeně odváděno. U vyšších dávek však doporučujeme poradit se s
+				kvalifikovaným lékařem.
+			</p>
+			<p class="no-padding">
+				<b>Upozornění:</b>
+			</p>
+			<p>
+				Pouze pro dospělé. Trpíte-li onemocněním, jste těhotná, kojíte, snažíte se otěhotnět nebo užíváte léky, poraďte
+				se před užitím tohoto přípravku s lékařem. Uchovávejte mimo dosah dětí. Není náhradou pestré stravy. Doplněk
+				stravy. Nepřekračujte doporučené denní dávkování.
+			</p>
+			<p class="no-padding">
+				<b>Skladování:</b>
+			</p>
+			<p>Skladujte na chladném a suchém místě.</p>
+			<p>
+				<b>Vyrobeno v EU</b>
+			</p>
+		</div>
+	</ProductTemplate>
+</IndexLayout>
+
+<style is:global>
+	:root {
+		--number-of-photos: 2;
+	}
+</style>

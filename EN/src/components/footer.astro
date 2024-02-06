@@ -1,0 +1,219 @@
+---
+import NatiosLogo from "@components/natiosLogo.astro";
+import IconMobile from "@components/contact/icon-mobile.astro";
+import IconEmail from "@components/contact/icon-email.astro";
+import IconInstagram from "@components/contact/icon-socials-instagram.astro";
+import IconFacebook from "@components/contact/icon-socials-facebook.astro";
+import IconLinkedin from "@components/contact/icon-socials-linkedin.astro";
+---
+
+<footer>
+	<div class="footer-content">
+		<div class="footer-logo">
+			<a href="/#"><NatiosLogo /></a>
+		</div>
+		<div class="footer-menu">
+			<div class="top-row">
+				<div class="contact">
+					<!-- 					<div class="mobile">
+						<a href="tel:+420731327327"
+							><div class="icon"><IconMobile /></div>
+							<span>+420 731 327 327</span>
+						</a>
+					</div> -->
+					<div class="email">
+						<a href="mailto:info@natios.cz">
+							<div class="icon"><IconEmail /></div>
+							<span>info@natios.cz</span>
+						</a>
+					</div>
+				</div>
+				<div class="socials">
+					<div class="instagram">
+						<a href="https://www.instagram.com/natios_health/" target="_blank">
+							<IconInstagram />
+						</a>
+					</div>
+					<div class="facebook">
+						<a href="https://www.facebook.com/natioshealth" target="_blank">
+							<IconFacebook />
+						</a>
+					</div>
+					<div class="linkedin">
+						<a href="https://www.linkedin.com/company/natios-health-cz" target="_blank">
+							<IconLinkedin />
+						</a>
+					</div>
+				</div>
+				<div class="languagues">
+					<a class="active" href="/#">CZ</a>
+					<a href="https://www.natios.eu">EN</a>
+				</div>
+			</div>
+			<div class="bottom-row">
+				<div class="copyright">
+					<span>© 2024 NATIOS Všechna práva vyhrazena.</span>
+				</div>
+				<div class="gdpr">
+					<a href="/privacy">Zásady ochrany soukromí</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<style is:global>
+	footer {
+		color: var(--color-white);
+		font-size: var(--fs-12-12);
+		font-weight: var(--fw-book);
+		background: var(--color-primary-800-backdrop);
+		backdrop-filter: blur(20px);
+		filter: drop-shadow(0 0 20px hsla(0, 0%, 0%, 35%));
+		padding: 2em var(--header-padding) 2.5em var(--header-padding);
+	}
+	.footer-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	.footer-logo {
+		width: 149px;
+		transition: filter 0.3s ease-in-out;
+	}
+	.footer-logo:hover {
+		filter: brightness(1.35) drop-shadow(0px 0px 10px hsla(0, 0%, 0%, 50%));
+	}
+	.footer-menu {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		row-gap: 2em;
+	}
+	.top-row {
+		display: flex;
+		gap: 6.25em;
+	}
+	.bottom-row {
+		display: flex;
+		gap: 12.5em;
+	}
+	.contact {
+		display: flex;
+		gap: 2em;
+	}
+	.contact > div > a {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+	.socials {
+		display: flex;
+		gap: 1em;
+	}
+	.languagues {
+		display: flex;
+		gap: 1em;
+		font-weight: var(--fw-regular);
+	}
+	.languagues > * {
+		transition: color 0.2s ease-in-out;
+		position: relative;
+	}
+	.languagues .active,
+	.languagues > *:hover {
+		color: var(--color-primary-400);
+	}
+	.languagues > a::before {
+		display: block;
+		content: "";
+		width: 2px;
+		height: 70%;
+		background: var(--color-white);
+		position: absolute;
+		top: 15%;
+		left: calc(-0.5em - 1px);
+	}
+	.languagues > a:first-child::before {
+		display: none;
+	}
+	.copyright,
+	.gdpr {
+		color: var(--color-primary-400);
+		font-size: var(--fs-10-10);
+	}
+
+	.gdpr {
+		position: relative;
+	}
+	.gdpr::before {
+		display: block;
+		content: "";
+		height: 1px;
+		width: 100%;
+		background: var(--color-primary-400);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		transform: scale(0);
+		transform-origin: right;
+		transition: transform 0.3s ease-in-out;
+	}
+	.gdpr:hover::before {
+		transform: scale(1);
+		transform-origin: left;
+	}
+	@media only screen and (max-width: 768px) {
+		.footer-content {
+			flex-direction: column;
+			align-items: center;
+			row-gap: 2.5em;
+		}
+		.footer-menu {
+			align-items: center;
+			row-gap: 2.5em;
+		}
+		.footer-menu .top-row {
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			column-gap: 0;
+			row-gap: 2.5em;
+		}
+		.contact {
+			width: 100%;
+			justify-content: space-evenly;
+		}
+
+		.socials,
+		.languagues {
+			width: 50%;
+			justify-content: center;
+		}
+		.bottom-row {
+			gap: 1em;
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+
+	.footer-menu svg {
+		fill: var(--color-white);
+		transition: fill 0.2s ease-in-out;
+	}
+
+	.contact > div:hover svg {
+		fill: var(--color-primary-400);
+	}
+	.contact > div {
+		transition: color 0.2s ease-in-out;
+	}
+	.contact > div:hover {
+		color: var(--color-primary-400);
+	}
+	.socials > div:hover svg {
+		fill: var(--color-primary-400);
+		filter: drop-shadow(0px 0px 5px var(--color-primary-400-50));
+	}
+</style>

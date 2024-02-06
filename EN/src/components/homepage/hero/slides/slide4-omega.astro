@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import mainImage from "@assets/images/hero/omega/Hero_Omega 3.webp";
+import capsule1 from "@assets/images/hero/omega/pill_1.webp";
+import capsule2 from "@assets/images/hero/omega/pill_2.webp";
+import capsule3 from "@assets/images/hero/omega/pill_3.webp";
+import LottieHexagonBg from "@components/animations/lottieHexagonBg.astro";
+import MoreInfo from "@components/more-info.astro";
+const alt = "Natios Omega 3 Premium Anchovies";
+const loading = "lazy";
+const heroImageWidth = 527;
+const pixelDensities = [1, 1.25, 1.5, 2, 2.5, 3];
+const quality = 90;
+---
+
+<div class="hero-text">
+	<h2 class="hero-heading">Prémiový zdroj Omega-3</h2>
+	<h3 class="hero-sub-heading">Získávano z přísně kontrolovaného peruánského rybolovu</h3>
+	<MoreInfo href="/product/omega-premium-1000-100" />
+</div>
+<div class="hero-images">
+	<div class="hero-main-image">
+		<Image
+			src={mainImage}
+			width={heroImageWidth}
+			densities={pixelDensities}
+			alt={alt}
+			quality={quality}
+			loading={loading}
+		/>
+	</div>
+	<div class="hero-capsules">
+		<div class="hero-capsule-1">
+			<Image src={capsule1} alt={alt + " kapsle"} quality={quality} loading={loading} />
+		</div>
+		<div class="hero-capsule-2">
+			<Image src={capsule2} alt={alt + " kapsle"} quality={quality} loading={loading} />
+		</div>
+		<div class="hero-capsule-3">
+			<Image src={capsule3} alt={alt + " kapsle"} quality={quality} loading={loading} />
+		</div>
+	</div>
+	<div class="hero-bg-animation">
+		<LottieHexagonBg />
+	</div>
+</div>

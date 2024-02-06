@@ -1,0 +1,42 @@
+---
+const { backgroundText } = Astro.props;
+const { top } = Astro.props;
+const { left } = Astro.props;
+const { translateX } = Astro.props;
+const { translateY } = Astro.props;
+const { opacity } = Astro.props;
+---
+
+<div class="section-bg-text">
+	<span>
+		{backgroundText}
+	</span>
+</div>
+
+<style define:vars={{ top, left, translateX, translateY, opacity }}>
+	.section-bg-text {
+		position: absolute;
+		top: var(--top);
+		left: var(--left);
+		width: 100%;
+		height: 100%;
+		display: grid;
+		align-items: center;
+		justify-items: center;
+		font-size: var(--fs-375);
+		color: var(--color-primary-800);
+		font-weight: var(--fw-bold);
+		z-index: -1;
+		overflow: visible;
+		opacity: var(--opacity);
+		user-select: none;
+	}
+
+	span {
+		transform: translate(var(--translateX), var(--translateY));
+		transition: transform 0.7s ease-in-out;
+	}
+	span.animating {
+		transform: translate(100vw, var(--translateY));
+	}
+</style>

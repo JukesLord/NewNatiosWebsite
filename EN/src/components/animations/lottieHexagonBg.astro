@@ -1,0 +1,26 @@
+<lottie-player src="/content/animations/AnimationHexagon.json" background="transparent" speed="1" loop autoplay>
+</lottie-player>
+
+<style>
+	lottie-player {
+		width: 100%;
+		min-height: 100%;
+		aspect-ratio: 1/1;
+		pointer-events: none;
+	}
+</style>
+
+<script>
+	/*detekce safari*/
+	let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+	let isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+	if (isSafari || isIOS) {
+		console.log("The user is using Safari or iOS Safari");
+		$("body").addClass("safari");
+	} else {
+		/* 		let script = document.createElement("script");
+		script.src = "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js";
+		document.head.appendChild(script); */
+	}
+</script>
