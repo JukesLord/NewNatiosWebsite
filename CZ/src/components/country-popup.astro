@@ -116,15 +116,77 @@
 	document.addEventListener("DOMContentLoaded", function () {
 		let popup = document.getElementById("popup");
 		setTimeout(() => {
+			/* 			
 			// Check if we've already asked this session
 			if (!sessionStorage.getItem("asked")) {
 				// Get the first language from the navigator.languages array
-				var language = navigator.languages ? navigator.languages[0] : navigator.language;
+				let language = navigator.languages ? navigator.languages[0] : navigator.language;
 
 				// Check if the language is Czech or Slovak
 				if (language !== "cs" && language !== "sk") {
 					// Show the popup
 					popup.classList.add("visible");
+				}
+			} */
+
+			/* 			if (!sessionStorage.getItem("asked")) {
+				// Get the first language from the navigator.languages array
+				let language =
+					navigator.languages && navigator.languages.length > 0 ? navigator.languages[0] : navigator.language;
+
+				// Fetch the geolocation data of the IP address
+				fetch("http://ip-api.com/json")
+					.then((response) => response.json())
+					.then((data) => {
+						// Check if the language is Czech or Slovak and the country of the IP address is not Czech Republic or Slovakia
+						if (language !== "cs" && language !== "sk" && data.countryCode !== "CZ" && data.countryCode !== "SK") {
+							// Show the popup
+							popup.classList.add("visible");
+						}
+					})
+					.catch(() => {
+						console.log("Error fetching the country data");
+					});
+			} */
+
+			/* 				fetch("https://ipinfo.io/json")
+					.then((response) => response.json())
+					.then((data) => {
+						// Check if the language is Czech or Slovak and the country of the IP address is not Czech Republic or Slovakia
+						if (language !== "cs" && language !== "sk" && data.country !== "CZ" && data.country !== "SK") {
+							// Show the popup
+							popup.classList.add("visible");
+						}
+					})
+					.catch(() => {
+						console.log("Error fetching the country data");
+					}); */
+			let countryCode = "";
+			if (!sessionStorage.getItem("asked")) {
+				// Get the first language from the navigator.languages array
+				let language =
+					navigator.languages && navigator.languages.length > 0 ? navigator.languages[0] : navigator.language;
+
+				if (language === "cs" || language === "sk") {
+					sessionStorage.setItem("asked", "true");
+				} else {
+					// Fetch the geolocation data of the IP address
+					fetch("https://api.ipregistry.co/?key=lv2b53fq5jebigr6")
+						.then(function (response) {
+							return response.json();
+						})
+						.then(function (payload) {
+							countryCode = payload.location.country.code;
+
+							if (countryCode === "CZ" || countryCode === "SK") {
+								sessionStorage.setItem("asked", "true");
+							} else {
+								popup.classList.add("visible");
+							}
+						})
+						.catch(() => {
+							console.log("Error fetching the country data");
+						});
 				}
 			}
 

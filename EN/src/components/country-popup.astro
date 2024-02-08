@@ -1,9 +1,9 @@
 <div id="popup">
 	<div class="popup-content">
-		<p>You seem to be visiting from a different country. Would you like to visit english version of our page?</p>
+		<p>Vypadá to, že se nacházíte v Česku nebo na Slovensku. Chcete přesměrovat na českou verzi stránek?</p>
 		<div class="buttons">
-			<button id="close">Close</button>
-			<a href="https://www.natios.eu"><button id="redirect">Visit natios.eu</button></a>
+			<button id="close">Zavřít</button>
+			<a href="https://www.natios.cz"><button id="redirect">Přejít na natios.cz</button></a>
 		</div>
 		<div id="cross-close-popup" class="close-popup"></div>
 	</div>
@@ -116,15 +116,32 @@
 	document.addEventListener("DOMContentLoaded", function () {
 		let popup = document.getElementById("popup");
 		setTimeout(() => {
-			// Check if we've already asked this session
+			let countryCode = "";
 			if (!sessionStorage.getItem("asked")) {
 				// Get the first language from the navigator.languages array
-				var language = navigator.languages ? navigator.languages[0] : navigator.language;
+				let language =
+					navigator.languages && navigator.languages.length > 0 ? navigator.languages[0] : navigator.language;
 
-				// Check if the language is Czech or Slovak
-				if (language !== "cs" && language !== "sk") {
-					// Show the popup
+				if (language === "cs" || language === "sk") {
 					popup.classList.add("visible");
+				} else {
+					// Fetch the geolocation data of the IP address
+					fetch("https://api.ipregistry.co/?key=lv2b53fq5jebigr6")
+						.then(function (response) {
+							return response.json();
+						})
+						.then(function (payload) {
+							countryCode = payload.location.country.code;
+
+							if (countryCode === "CZ" || countryCode === "SK") {
+								popup.classList.add("visible");
+							} else {
+								sessionStorage.setItem("asked", "true");
+							}
+						})
+						.catch(() => {
+							console.log("Error fetching the country data");
+						});
 				}
 			}
 

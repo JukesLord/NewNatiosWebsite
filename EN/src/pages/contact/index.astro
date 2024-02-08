@@ -6,15 +6,15 @@ import IconEmail from "@components/contact/icon-email.astro";
 import KdeKoupit from "@components/who-sells-us/who-sells-us.astro";
 ---
 
-<IndexLayout title="NATIOS Kontakt">
+<IndexLayout title="NATIOS Contact">
 	<div class="page-header">
-		<h1>Kontakt</h1>
-		<p>Pro velkoobchodní odběr nás kontaktujte skrze formulář níže nebo přes e-mail.</p>
+		<h1>Contact</h1>
+		<p>For wholesale orders, please contact us via the form below or via e-mail.</p>
 	</div>
 
 	<div class="contact-content">
 		<div class="contact-info">
-			<h2>Adresa</h2>
+			<h2>Address</h2>
 			<div class="contact-details">
 				<div class="adress">
 					<div class="icon"><IconAdress /></div>
@@ -22,8 +22,9 @@ import KdeKoupit from "@components/who-sells-us/who-sells-us.astro";
 						<p>Natios Health, s.r.o.</p>
 						<p>Daliborova 423/3</p>
 						<p>709 00, Ostrava</p>
-						<p>IČ: 28582292</p>
-						<p>DIČ: CZ28582292</p>
+						<p>Czech republic</p>
+						<p>Reg. No.: 28582292</p>
+						<p>VAT No.: CZ28582292</p>
 					</div>
 				</div>
 				<!-- 				<div class="mobile">
@@ -42,30 +43,31 @@ import KdeKoupit from "@components/who-sells-us/who-sells-us.astro";
 		</div>
 
 		<div class="contact-form">
-			<h2>Napište nám</h2>
+			<h2>Contact us</h2>
 			<form action="https://api.web3forms.com/submit" method="POST" id="form">
 				<input type="hidden" name="access_key" value="1d43ca5a-3828-4688-8ac4-5bea1cf62df6" />
-				<input type="hidden" name="subject" value="New Submission from Web3Forms" />
+				<input type="hidden" name="subject" value="Contact form on website Natios.eu" />
 				<input type="checkbox" name="botcheck" id="" style="display: none;" />
 
 				<div class="field">
-					<label for="name">Jméno a příjmení*</label>
-					<input type="text" name="name" id="name" placeholder="Jméno příjmení" required />
+					<label for="name">Name and surname*</label>
+					<input type="text" name="name" id="name" placeholder="Name and surname" required />
 				</div>
 				<div class="field">
 					<label for="email">E-mail*</label>
-					<input type="email" name="email" id="email" placeholder="email@domena.cz" required />
+					<input type="email" name="email" id="email" placeholder="email@domain.com" required />
 				</div>
 				<div class="field">
-					<label for="phone">Telefonní číslo</label>
+					<label for="phone">Phone number</label>
 					<input type="text" name="phone" id="phone" placeholder="+420 777 777 777" />
 				</div>
 				<div class="field textarea">
-					<label for="message">Text vzkazu*</label>
-					<textarea rows="8" name="message" id="message" placeholder="Vaše zpráva" required></textarea>
+					<label for="message">Message text*</label>
+					<textarea rows="8" name="message" id="message" placeholder="Your message
+					" required></textarea>
 				</div>
 
-				<button type="submit">Odeslat</button>
+				<button type="submit">Send</button>
 
 				<p id="result"></p>
 			</form>
@@ -191,6 +193,7 @@ import KdeKoupit from "@components/who-sells-us/who-sells-us.astro";
 		-webkit-font-smoothing: inherit;
 		-moz-osx-font-smoothing: inherit;
 		-webkit-appearance: none;
+		text-align: center;
 	}
 	button:hover,
 	button:focus-within {
@@ -336,7 +339,7 @@ import KdeKoupit from "@components/who-sells-us/who-sells-us.astro";
 			});
 			var json = JSON.stringify(object);
 			result.classList.add("block");
-			result.innerHTML = "Odesílání...";
+			result.innerHTML = "Sending...";
 
 			fetch("https://api.web3forms.com/submit", {
 				method: "POST",
@@ -349,15 +352,15 @@ import KdeKoupit from "@components/who-sells-us/who-sells-us.astro";
 				.then(async (response) => {
 					let json = await response.json();
 					if (response.status == 200) {
-						result.innerHTML = "Zpráva byla úspěšně odeslána. Děkujeme za Váš zájem.";
+						result.innerHTML = "Message was successfully sent. Thank you for your interest.";
 					} else {
 						console.log(response);
-						result.innerHTML = "Ooop! Něco se pokazilo. Zkuste to znova nebo nás kontaktujte přímo na e-mailu.";
+						result.innerHTML = "Ooops! Something went wrong. Please try again or contact us directly by email.";
 					}
 				})
 				.catch((error) => {
 					console.log(error);
-					result.innerHTML = "Ooop! Něco se pokazilo. Zkuste to znova nebo nás kontaktujte přímo na e-mailu.";
+					result.innerHTML = "Ooops! Something went wrong. Please try again or contact us directly by email.";
 				})
 				.then(function () {
 					form.reset();
