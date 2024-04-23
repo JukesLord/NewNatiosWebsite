@@ -20,6 +20,17 @@ import omegaPremium from "@assets/images/products/Omega_Premium_1000_100/Omega_P
 import vitaminCLipo from "@assets/images/products/Vitamin_C_Lipo_500_60/Vitamin_C_Lipo_500_60_front.webp";
 import vitaminD5000 from "@assets/images/products/Vitamin_D_5000_250/Vitamin_D_5000_250_front.webp";
 import zincComplex from "@assets/images/products/Zinc_Complex_25_100/Zinc_Complex_25_100_front.webp";
+
+import acerolaComplex from "@assets/images/products/acerola-500-90/acerola-500-90-front.webp";
+import shilajitExtract from "@assets/images/products/shilajit-500-90/shilajit-500-90-front.webp";
+import milkThistleExtract from "@assets/images/products/milk-thistle-extract-5000-90/milk-thistle-extract-5000-90-front.webp";
+import reishiExtract from "@assets/images/products/reishi-extract-500-90/reishi-extract-500-90-front.webp";
+import chagaExtract from "@assets/images/products/chaga-extract-500-90/chaga-extract-500-90-front.webp";
+import mindFocus from "@assets/images/products/mind-focus-60/mind-focus-60-front.webp";
+import activatedBComplex from "@assets/images/products/activated-b-complex-100/activated-b-complex-100-front.webp";
+import vitaminD3K2_5000 from "@assets/images/products/vitamin-d3-k2-5000-100/vitamin-d3-k2-5000-100-front.webp";
+import vitaminD3K2_2000 from "@assets/images/products/vitamin-d3-k2-2000-100/vitamin-d3-k2-2000-100-front.webp";
+
 const loading = "lazy";
 const productImageWidth = 148;
 const pixelDensities = [1, 1.5, 2, 2.5, 3];
@@ -265,6 +276,132 @@ const quality = 90;
 			<div class="product-name">Electrolyte Complex Malina</div>
 		</a>
 
+		<a href="/product/acerola-500-90" class="our-product vitamin extract">
+			<div class="product-image">
+				<Image
+					src={acerolaComplex}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Acerola Complex"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Acerola Complex</div>
+		</a>
+
+		<a href="/product/shilajit-500-90" class="our-product extract">
+			<div class="product-image">
+				<Image
+					src={shilajitExtract}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Shilajit Extract"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Shilajit Extract</div>
+		</a>
+
+		<a href="/product/milk-thistle-extract-5000-90" class="our-product extract">
+			<div class="product-image">
+				<Image
+					src={milkThistleExtract}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Milk Thistle Extract"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Milk Thistle Extract</div>
+		</a>
+
+		<a href="/product/reishi-extract-500-90" class="our-product extract">
+			<div class="product-image">
+				<Image
+					src={reishiExtract}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Reishi Extract"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Reishi Extract</div>
+		</a>
+
+		<a href="/product/chaga-extract-500-90" class="our-product extract">
+			<div class="product-image">
+				<Image
+					src={chagaExtract}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Chaga Extract"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Chaga Extract</div>
+		</a>
+
+		<a href="/product/mind-focus-60" class="our-product other">
+			<div class="product-image">
+				<Image
+					src={mindFocus}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Mind Focus"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Mind Focus</div>
+		</a>
+
+		<a href="/product/activated-b-complex-100" class="our-product vitamin">
+			<div class="product-image">
+				<Image
+					src={activatedBComplex}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Activated B-Complex"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Activated B-Complex</div>
+		</a>
+
+		<a href="/product/vitamin-d3-k2-5000-100" class="our-product vitamin">
+			<div class="product-image">
+				<Image
+					src={vitaminD3K2_5000}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Vitamin D3 + K2 5000 IU & 200 mcg"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Vitamin D3 & K2 (5000&nbsp;& 200&nbsp;mcg)</div>
+		</a>
+
+		<a href="/product/vitamin-d3-k2-2000-100" class="our-product vitamin">
+			<div class="product-image">
+				<Image
+					src={vitaminD3K2_2000}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Vitamin D3 + K2 2000 IU & 75 mcg"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Vitamin D3 + K2 (2000&nbsp;IU & 75&nbsp;mcg)</div>
+		</a>
+
 		<div class="show-all-products">
 			<a href="/our-products">
 				<div class="show-all-products-images">
@@ -471,8 +608,8 @@ const quality = 90;
 		--rows-of-productsPC: 2; /*krat 4 pocet produktu*/
 	}
 	.our-products-page .our-products {
-		--rows-of-productsMOB: 8; /*krat 2 pocet produktu*/
-		--rows-of-productsPC: 4; /*krat 4 pocet produktu*/
+		--rows-of-productsMOB: 13; /*krat 2 pocet produktu*/
+		--rows-of-productsPC: 7; /*krat 4 pocet produktu*/
 	}
 
 	.homepage .our-products-list {

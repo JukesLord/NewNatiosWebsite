@@ -188,6 +188,9 @@ ul li::before {
 	left: 2px;
 	top: 0.8em;
 }
+b {
+	font-weight: var(--fw-bold);
+}
 
 /*media q*/
 @media only screen and (min-width: 768px) {

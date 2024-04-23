@@ -1,0 +1,336 @@
+---
+import IndexLayout from "../../../layouts/IndexLayout.astro";
+import ProductTemplate from "@components/product/product-template.astro";
+
+import { Image } from "astro:assets";
+import productImage1 from "@assets/images/products/activated-b-complex-100/activated-b-complex-100-fwc.webp";
+import productImage2 from "@assets/images/products/activated-b-complex-100/activated-b-complex-100-bws.webp";
+
+const alt = "NATIOS Activated B-Complex";
+const loading = "lazy";
+const productImageWidth = 1000;
+const pixelDensities = [1, 1.5, 2, 2.5, 3];
+const quality = 90;
+---
+
+<IndexLayout title="NATIOS Activated B-Complex">
+	<ProductTemplate>
+		<!-- _____________________________________________ -->
+		<!-- ____________________NÁZEV____________________ -->
+		<!-- _____________________________________________ -->
+		<h1 slot="product-name-h1">Activated B-Complex</h1>
+		<h2 slot="product-name-h2">100 veganských kapslí</h2>
+
+		<!-- ________________________________________________________ -->
+		<!-- ____________________FOTKY VELKÉ DO 6____________________ -->
+		<!-- ________________________________________________________ -->
+		<div slot="large-image-1" class="large-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="large-image-2" class="large-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading={loading}
+			/>
+		</div>
+
+		<!-- ____________________________________________________________ -->
+		<!-- ____________________FOTKY NÁHLEDOVÉ DO 6____________________ -->
+		<!-- ____________________________________________________________ -->
+		<div slot="preview-image-1" class="preview-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="preview-image-2" class="preview-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<!-- ___________________________________________________________________________________ -->
+		<!-- ____________________SELECT MOŽNOSTI (možnost video a orher 1 2)____________________ -->
+		<!-- ___________________________________________________________________________________ -->
+		<span slot="select-description" class="select-description">Popis</span>
+		<span slot="select-ingredients" class="select-ingredients">Složení</span>
+		<span slot="select-dosage" class="select-dosage">Dávkování a upozornění</span>
+
+		<!-- ____________________________________________________________________________________ -->
+		<!-- ____________________DESCRIPTION DIVY (možnost video a orher 1 2)____________________ -->
+		<!-- ____________________________________________________________________________________ -->
+		<div slot="description-description" class="description-description active">
+			<p>
+				Natios Activated B-Complex představuje ideální způsob, jak doplňovat vitamíny skupiny B. Obsahuje <b
+					>pouze aktivní a účinné formy vitamínů</b
+				>. Aktivní formy jsou pro tělo mnohem snadněji využitelné a vstřebatelné, jelikož v těle nemusí procházet
+				procesem přeměny z neaktivní formy na aktivní, jsou tedy „předpřipraveny“ pro absorpci. Tento komplex obsahuje <b
+					>synergickou směs 16 složek</b
+				>. Krom běžných vitamínů B je doplněn také o kyselinu alfa-lipoovou, betain, vitamín C, hořčík, PABA a koezym
+				Q10. Díky těmto složkám jsou účinky B-komplexu ještě posíleny.
+			</p>
+			<p>
+				Jedná se o ideální doplněk pro každého, kdo chce posílit imunitní systém, nakopnout energetický metabolismus,
+				posílit zdraví nervového systému nebo jen navýšit hladinu vitamínů B v organismu. To vše v nejlepší možné formě,
+				bez příměsí a plnidel a v rostlinné kapsli vhodné také pro vegany.
+			</p>
+
+			<ul>
+				<li>Pouze aktivní, účinné a dobře využitelné formy</li>
+				<li>Vysoké dávky několikanásobně přesahující nízké denní doporučené dávkování</li>
+				<li>Neobsahuje žádné příměsi, nestravitelné látky ani éčka</li>
+				<li>Vegan a GMO-free</li>
+			</ul>
+
+			<p class="no-padding"><b>Ověřené aktivní formy</b></p>
+			<p>V Natios Activated B-Complex najdete pouze ty nejúčinnější a dobře vstřebatelné aktivní formy vitamínů B.</p>
+			<p class="no-padding"><b>Celkové zdraví organismu</b></p>
+			<p>Podporuje nejen imunitní systém, ale také správné fungování nervového systému a energetického metabolismu.</p>
+			<p class="no-padding"><b>Vhodný pro každého</b></p>
+			<p>Natios Activated B-Complex je vhodný pro každého. Obsahuje také vitamíny velmi důležité pro vegany.</p>
+
+			<table class="compare">
+				<thead>
+					<tr>
+						<th colspan="2"><b>ROZDÍLY MEZI BĚŽNÝM B KOMPLEXEM A NATIOS ACTIVATED B-COMPLEX</b></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><b>Natios Activated B-complex</b></td>
+						<td><b>Běžný B komplex</b></td>
+					</tr>
+					<tr>
+						<td>Niacin z aktivního inositol hexanikotinátu</td>
+						<td>Niacin z kyseliny nikotinové nebo niacinamidu</td>
+					</tr>
+					<tr>
+						<td>Liposomální vitamín C</td>
+						<td>Kyselina askorbová bez liposomální vazby</td>
+					</tr>
+					<tr>
+						<td>B1 jako aktivní thiamin difosfát chlorid</td>
+						<td>B1 jako thiamin hydrochlorid nebo mononitrát</td>
+					</tr>
+					<tr>
+						<td>B2 jako aktivní riboflavin 5-fosfát</td>
+						<td>B2 jako obyčejný riboflavin</td>
+					</tr>
+					<tr>
+						<td>Kyselina pantothenová z aktivního 50% pantethinu</td>
+						<td>Kyselina pantothenová z pantothenanu vápenatého</td>
+					</tr>
+					<tr>
+						<td>Inositol z aktivního myo-inositolu</td>
+						<td>Inositol hexanikotinát - zavádějící název, ale jedná se primárně o zdroj niacinu</td>
+					</tr>
+					<tr>
+						<td>Cholin z aktivního dihydrogen citrátu</td>
+						<td>Cholin z cholin bitartátu</td>
+					</tr>
+					<tr>
+						<td>B6 z aktivního P-5-P</td>
+						<td>B6 z pyridoxinu HCl</td>
+					</tr>
+					<tr>
+						<td>Hořčík z bisglycinátu hořečnatého</td>
+						<td>Bez hořčíku nebo s oxidem hořečnatým</td>
+					</tr>
+					<tr>
+						<td>B12 jako aktivní methylcobalamin</td>
+						<td>B12 jako kyanokobalamin</td>
+					</tr>
+					<tr>
+						<td>Folát jako aktivní 5-MTHF</td>
+						<td>Kyselina listová nebo folát jako THF </td>
+					</tr>
+					<tr>
+						<td>Doplněno o kyselinu alfa lipoovou, koenzym Q10, PABA a biotin </td>
+						<td>Doplněno o konzervanty, plnidla a leštidla</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p class="no-padding"><b>Proč užívat B-komplex</b></p>
+			<p>
+				Vitamíny skupiny B hrají zásadní roli při udržování dobrého zdraví a pohody. Jako stavební kameny zdravého těla
+				mají vitaminy skupiny B přímý vliv na hladinu energie, funkci mozku a buněčný metabolismus. V dnešní době je
+				naprosto <b>běžný jejich nedostatek</b>, hlavně pokud držíte vegetariánskou či veganskou stravu, jelikož spousta
+				vitamínů B je obsažena hlavně (ale ne pouze) v živočišných produktech.
+			</p>
+			<p>
+				Až na vitamín B12 jsou všechny ostatní vitamíny skupiny B rozpustné ve vodě. To v první řadě znamená, že si je
+				tělo ve větší míře <b>neukládá do zásoby</b> a je tedy vhodné je doplňovat na denní bázi. V druhé řadě to pak způsobuje,
+				že je prakticky nemožné se vitamíny B předávkovat, jelikož tělo jejich nadbytek tělo přirozeně vyloučí močí. To platí
+				také při několikanásobných doporučených denních dávkách, které naleznete právě v Natios Activated B-Complex.
+			</p>
+			<ul>
+				<li>Podpora energetického metabolizmu</li>
+				<li>Posílení imunitního systému</li>
+				<li>Nervová soustava a nervové impulzy</li>
+				<li>Snížení únavy a vyčerpání</li>
+				<li>Psychická činnost, paměť</li>
+				<li>Tvorba červených krvinek</li>
+			</ul>
+		</div>
+		<!-- ____________________TABULKA____________________ -->
+		<div slot="description-ingredients" class="description-ingredients">
+			<table>
+				<thead>
+					<tr>
+						<th
+							><div class="dosage">
+								<span
+									><b>Velikost dávky:</b> 2&nbsp;veganské kapsle<br />
+									<b>Balení obsahuje:</b> 50&nbsp;dávek</span
+								>
+							</div></th
+						>
+						<th>Množství v 1 dávce</th>
+						<th>%&nbsp;RHP*</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Niacin (vitamín B3 z inositol hexanikotinátu)</td>
+						<td>100&nbsp;mg</td>
+						<td>625&nbsp;%</td>
+					</tr>
+					<tr>
+						<td>Kyselina alfa lipoová</td>
+						<td>80&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td>Vitamin C (z lipozomálního komplexu kyseliny askorbové)</td>
+						<td>80&nbsp;mg</td>
+						<td>100&nbsp;%</td>
+					</tr>
+					<tr>
+						<td>Betain (trimethylglycin)</td>
+						<td>50&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td>Vitamin B1 (jako thiamindifosfát chlorid)</td>
+						<td>50&nbsp;mg</td>
+						<td>4&nbsp;545 %</td>
+					</tr>
+					<tr>
+						<td>Vitamín B2 (jako riboflavin 5-fosfát)</td>
+						<td>50&nbsp;mg</td>
+						<td>3&nbsp;571 %</td>
+					</tr>
+					<tr>
+						<td>Kyselina pantotenová (vitamín B5 z pantethinu 50%)</td>
+						<td>50&nbsp;mg</td>
+						<td>833&nbsp;%</td>
+					</tr>
+					<tr>
+						<td>Inositol (z inositol hexanikotinátu a myo-inositolu)</td>
+						<td>50&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td>PABA (kyselina aminobenzoová)</td>
+						<td>50&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td>Cholin (z cholin dihydrogen citrátu)</td>
+						<td>50&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td>Vitamin B6 (jako pyridoxal 5-fosfát [P-5-P])</td>
+						<td>25&nbsp;mg</td>
+						<td>1&nbsp;786 %</td>
+					</tr>
+					<tr>
+						<td>Hořčík (z bisglycinátu hořečnatého)</td>
+						<td>20&nbsp;mg</td>
+						<td>5&nbsp;%</td>
+					</tr>
+					<tr>
+						<td>Koenzym Q10</td>
+						<td>20&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td>Biotin</td>
+						<td>1&nbsp;000 mcg</td>
+						<td>2&nbsp;000 %</td>
+					</tr>
+					<tr>
+						<td>Vitamín B12 (jako methylkobalamin)</td>
+						<td>500&nbsp;mcg</td>
+						<td>20&nbsp;000 %</td>
+					</tr>
+					<tr>
+						<td>Folát (jako 5-methyltetrahydrofolát)</td>
+						<td>400&nbsp;mcg</td>
+						<td>200&nbsp;%</td>
+					</tr>
+
+					<tr>
+						<td colspan="3"
+							><div class="rhp">
+								<span>* referenční hodnota příjmu u průměrné dospělé osoby</span>
+								<span>** denní referenční hodnota příjmu není stanovena</span>
+							</div></td
+						>
+					</tr>
+				</tbody>
+			</table>
+			<p><b>Další složky:</b> Veganská kapsle. Výrobek neobsahuje žádné další přidané látky (éčka).</p>
+		</div>
+		<!-- ____________________DÁVKOVÁNÍ A UPOZORNĚNÍ____________________ -->
+		<div slot="description-dosage" class="description-dosage">
+			<p>
+				<b>Doporučené dávkování:</b><br />
+				Jako doplněk stravy užívejte 2 veganské kapsle denně s jídlem a vodou.
+			</p>
+			<p>
+				<b>Upozornění:</b><br />
+				Pouze pro dospělé. Trpíte-li onemocněním, jste těhotná, kojíte, snažíte se otěhotnět nebo užíváte léky, poraďte se
+				před užitím tohoto přípravku s lékařem. Uchovávejte mimo dosah dětí. Není náhradou pestré stravy. Doplněk stravy.
+				Nepřekračujte doporučené denní dávkování.
+			</p>
+			<p>
+				<b>Skladování:</b><br />
+				Skladujte na chladném a suchém místě.
+			</p>
+			<p>
+				<b>Vyrobeno v EU</b>
+			</p>
+		</div>
+	</ProductTemplate>
+</IndexLayout>
+
+<style is:global>
+	:root {
+		--number-of-photos: 2;
+	}
+</style>

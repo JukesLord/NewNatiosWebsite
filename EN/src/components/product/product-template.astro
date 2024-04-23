@@ -191,7 +191,7 @@ import KdeKoupit from "@components/who-sells-us/who-sells-us.astro";
 		height: 0px;
 	}
 	.detail-select {
-		scrollbar-width: hidden;
+		scrollbar-width: none;
 	}
 
 	.detail-select > span {
@@ -306,6 +306,7 @@ import KdeKoupit from "@components/who-sells-us/who-sells-us.astro";
 		overflow-y: hidden;
 		line-height: var(--lh-1_25);
 		text-wrap: wrap;
+		scrollbar-width: none;
 	}
 	table {
 		border-collapse: collapse;
@@ -327,6 +328,9 @@ import KdeKoupit from "@components/who-sells-us/who-sells-us.astro";
 	}
 	td.padding-left {
 		padding-left: 1.75em;
+	}
+	table.compare td {
+		text-align: center;
 	}
 	.product-descriptions table b {
 		font-weight: var(--fw-medium);

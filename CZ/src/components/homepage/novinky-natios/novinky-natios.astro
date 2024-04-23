@@ -10,12 +10,16 @@ import HexagonSmallMobile from "@components/hexagons/natios-new-products/mobile-
 import ArrowLeftEmpty from "@components/arrows/arrowLeftEmpty.astro";
 import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 import { Image } from "astro:assets";
-import productImage1 from "@assets/images/products/Vitamin_C_Lipo_500_60/Vitamin_C_Lipo_500_60_front.webp";
-import productImage2 from "@assets/images/products/Maca_Extract_5000_90/Maca_Extract_5000_90_front.webp";
-import productImage3 from "@assets/images/products/Cordyceps_Extract_500_90/Cordyceps_Extract_500_90_front.webp";
-const alt1 = "Natios Liposomal Vitamin C";
-const alt2 = "Natios Maca Extract Extra Strength";
-const alt3 = "Natios Cordyceps Mushroom Extract";
+import productImage1 from "@assets/images/products/mind-focus-60/mind-focus-60-front.webp";
+import productImage2 from "@assets/images/products/activated-b-complex-100/activated-b-complex-100-front.webp";
+import productImage3 from "@assets/images/products/vitamin-d3-k2-5000-100/vitamin-d3-k2-5000-100-front.webp";
+import productImage4 from "@assets/images/products/acerola-500-90/acerola-500-90-front.webp";
+import productImage5 from "@assets/images/products/shilajit-500-90/shilajit-500-90-front.webp";
+const alt1 = "Natios Mind Focus";
+const alt2 = "Natios Activated B-Complex";
+const alt3 = "Natios Vitamin D3 & K2 (5000 IU & 200 mcg)";
+const alt4 = "Natios Acerola Komplex";
+const alt5 = "Natios Shilajit Extract";
 import MoreInfo from "@components/more-info.astro";
 
 const loading = "lazy";
@@ -87,55 +91,102 @@ const quality = 90;
 						loading={loading}
 					/>
 				</div>
+				<div class="brand-new-product-image">
+					<Image
+						src={productImage4}
+						width={productImageWidth}
+						densities={productDensities}
+						alt={alt4}
+						quality={quality}
+						loading={loading}
+					/>
+				</div>
+				<div class="brand-new-product-image">
+					<Image
+						src={productImage5}
+						width={productImageWidth}
+						densities={productDensities}
+						alt={alt5}
+						quality={quality}
+						loading={loading}
+					/>
+				</div>
 			</div>
 		</div>
 		<div class="brand-new-product-texts">
 			<div class="brand-new-product-text">
 				<div class="text-animation-wrapper">
-					<h3 class="brand-new-product-heading">NATIOS Liposomální Vitamín C</h3>
+					<h3 class="brand-new-product-heading">NATIOS Mind Focus</h3>
 					<p class="brand-new-product-description">
-						Vysoce účinný vitamin C v liposomální formě, který vám s jistotou pomůže nejen s podporou imunitního
-						systému, ale také s podporou tvorby kolagenu a díky svým antioxidačním schopnostem také pomůže chránit vaše
-						buňky před volnými radikály.
+						Potřebujete se připravit na těžkou zkoušku nebo chcete podpořit své <b
+							>myšlení, kreativitu nebo kognitivní funkce</b
+						> pro správný pracovní výkon, eventuálně jen toužíte mít paměť jako dříve? Mind focus představuje nebývalou kombinaci
+						aminokyselin, bylin a dalších důležitých složek využívaných pro podporu mozkové a nervové činnosti. Efektivní
+						<b>kombinace 6 bylinných extraktů a 4 složek</b>, u kterých výzkumy potvrzují pozitivní účinky na paměť,
+						koncentraci, soustředění zajistí vašemu mozku vše, co potřebuje.
 					</p>
-					<p class="brand-new-product-description">
-						Natios Vitamin C je vyráběn v liposomální formě a krom vitaminu C obsahuje také citrusové bioflavonoidy,
-						rutin a růži šípkovou. Díky této kombinaci je dosaženo maximální účinnosti a vstřebatelnosti, jedná se tedy
-						o skvěle biologicky dostupný doplněk vitaminu C.
-					</p>
-					<MoreInfo href="/product/vitamin-c-liposomal-500-60" marginBottom="2em" />
+					<p class="brand-new-product-description">Vhodný do práce, ke studiu nebo pro hráče.</p>
+					<MoreInfo href="/product/mind-focus-60" marginBottom="2em" />
 				</div>
 			</div>
 			<div class="brand-new-product-text">
 				<div class="text-animation-wrapper">
-					<h3 class="brand-new-product-heading">NATIOS Maca Extra Strength Extract</h3>
+					<h3 class="brand-new-product-heading">NATIOS Activated B-Complex</h3>
 					<p class="brand-new-product-description">
-						Natios Maca, aneb extra síla pro vaši vitalitu a zdraví v jediné kapsli. Účinky Macy ocení maminky malých a
-						neposedných dětí, studenti před zkouškovým obdobím, ale i vysoce postavení manažeři zažívající každodenní
-						stres.
+						Natios Activated B-Complex představuje ideální způsob, jak doplňovat vitamíny skupiny B. Obsahuje <b
+							>pouze aktivní a účinné formy vitamínů</b
+						>. Aktivní formy jsou pro tělo mnohem snadněji využitelné a vstřebatelné, jelikož v těle nemusí procházet
+						procesem přeměny z neaktivní formy na aktivní, jsou tedy „předpřipraveny“ pro absorpci. Tento komplex
+						obsahuje <b>synergickou směs 16 složek</b>. Krom běžných vitamínů B je doplněn také o kyselinu
+						alfa-lipoovou, betain, vitamín C, hořčík, PABA a koezym Q10. Díky těmto složkám jsou účinky B-komplexu ještě
+						posíleny.
 					</p>
-					<p class="brand-new-product-description">
-						Maca má prokazatelné účinky na fyzickou i psychickou výkonnost, funkci hormonálního systému a v neposlední
-						řadě podporuje vitalitu a libido. Každá veganská kapsle obsahuje ekvivalent 5000 mg surové byliny.
-					</p>
-					<MoreInfo href="/product/maca-extract-5000-90" marginBottom="2em" />
+					<MoreInfo href="/product/activated-b-complex-100" marginBottom="2em" />
 				</div>
 			</div>
 			<div class="brand-new-product-text">
 				<div class="text-animation-wrapper">
-					<h3 class="brand-new-product-heading">NATIOS Cordyceps Mushroom Extract</h3>
+					<h3 class="brand-new-product-heading">NATIOS Vitamin D3 & K2 (5000&nbsp;IU & 200&nbsp;mcg)</h3>
 					<p class="brand-new-product-description">
-						Cordyceps sinensis je parazitická houba, která se již po staletí využívá v tradiční čínské medicíně jako
-						dobíječ energie. Tento Cordyceps nabízí velmi silný extrakt z mycelia. Extrakce představuje nejoptimálnější
-						způsob zpracování hub pro zdravotní účely. I z toho důvodu se naprostá většina studií uskutečňuje s
-						extrakty, a ne s houbovým práškem.
+						Natios Vitamin D3 & K2 nabízí silnou kombinaci dvou důležitých vitamínů, které jsou klíčové nejen pro
+						udržení <b>zdraví kostí</b>, ale také pro posílení funkce <b>imunitního systému</b>. Tento doplněk obsahuje
+						5000&nbsp;IU vitamínu D3 v každé kapsli a zajišťuje tak uspokojení každodenní potřeby vašeho těla. Díky
+						obsahu vitamínu K2 vzniká <b>synergická kombinace</b>, která výrazně navyšuje účinnost. Vitamin K2 hraje
+						roli v metabolismu vápníku, díky čemuž pomáhá směrovat vápník do částí těla, které ho opravdu potřebují.
+					</p>
+					<MoreInfo href="/product/vitamin-d3-k2-5000-100" marginBottom="2em" />
+				</div>
+			</div>
+			<div class="brand-new-product-text">
+				<div class="text-animation-wrapper">
+					<h3 class="brand-new-product-heading">NATIOS Acerola Komplex</h3>
+					<p class="brand-new-product-description">
+						Acerola je jedním z <b>nejlepších zdrojů přírodního vitamínu C</b>. Vitamin C je ve vodě rozpustná
+						mikroživina, která je velmi dobře známá pro své pozitivní účinky na imunitní systém a ochranu buněk před
+						oxidativním stresem. Vitamín C si tělo neumí vytvořit samo, proto je jeho suplementace velmi důležitá, a to
+						nejen v zimním období. Acerola komplex obsahuje <b
+							>silný 25% extrakt doplněný o růži šípkovou a citrusové bioflavonoidy</b
+						>, díky čemuž je posíleno vstřebávání a celková účinnost.
+					</p>
+					<MoreInfo href="/product/acerola-500-90" marginBottom="2em" />
+				</div>
+			</div>
+			<div class="brand-new-product-text">
+				<div class="text-animation-wrapper">
+					<h3 class="brand-new-product-heading">NATIOS Shilajit Extract</h3>
+					<p class="brand-new-product-description">
+						Shilajit představuje přírodní substanci tmavé barvy, která je v ájurvédě používána více než 3 000 let a dnes
+						je považována za superpotravinu. Shilajit (mumio) je látka, která v sanskrtu (starověkém indickém jazyku)
+						znamená „<b>horský dobyvatel a zabíječ bolesti</b>". Shilajit obsahuje více než 40 minerálů a látek, za
+						nejvýznamnější se považuje <b>kyselina fulvová</b>. Díky obsaženým látkám jde o produkt, která pomáhá
+						zajistit nejen normální funkci reprodukčního systému, ale působí pozitivně i na imunitu, duševní činnost aj.
 					</p>
 					<p class="brand-new-product-description">
-						Hlavními účinnými látkami vitálních hub jsou polysacharidy. Zatímco v sušeném prášku se nachází zhruba mezi
-						0,5‒3&nbsp;% polysacharidů, v tomto extraktu se jich nachází 40&nbsp;%. Tento extrakt je tedy až 40x
-						koncentrovanější než samotný houbový prášek.
+						Natios Shilajit je obsažen ve formě <b>50% standardizovaného extraktu</b>. Díky tomu si můžete být
+						stoprocentně jisti, že s každou kapslí dodáváte svému tělu účinné množství kyseliny fulvové.
 					</p>
-					<MoreInfo href="/product/cordyceps-extract-500-90" marginBottom="2em" />
+
+					<MoreInfo href="/product/shilajit-500-90" marginBottom="2em" />
 				</div>
 			</div>
 		</div>

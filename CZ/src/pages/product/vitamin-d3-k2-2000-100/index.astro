@@ -1,0 +1,298 @@
+---
+import IndexLayout from "../../../layouts/IndexLayout.astro";
+import ProductTemplate from "@components/product/product-template.astro";
+
+import { Image } from "astro:assets";
+import productImage1 from "@assets/images/products/vitamin-d3-k2-2000-100/vitamin-d3-k2-2000-100-fwc.webp";
+import productImage2 from "@assets/images/products/vitamin-d3-k2-2000-100/vitamin-d3-k2-2000-100-bws.webp";
+
+const alt = "NATIOS Vitamin D3 & K2 MK-7 2000 IU";
+const loading = "lazy";
+const productImageWidth = 1000;
+const pixelDensities = [1, 1.5, 2, 2.5, 3];
+const quality = 90;
+---
+
+<IndexLayout title="NATIOS Vitamin D3 & K2 MK-7 2000 IU">
+	<ProductTemplate>
+		<!-- _____________________________________________ -->
+		<!-- ____________________NÁZEV____________________ -->
+		<!-- _____________________________________________ -->
+		<h1 slot="product-name-h1">NATIOS Vitamin D3 & K2 MK-7</h1>
+		<h2 slot="product-name-h2">2000 IU & 75 mcg, 100 kapslí</h2>
+
+		<!-- ________________________________________________________ -->
+		<!-- ____________________FOTKY VELKÉ DO 6____________________ -->
+		<!-- ________________________________________________________ -->
+		<div slot="large-image-1" class="large-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="large-image-2" class="large-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading={loading}
+			/>
+		</div>
+
+		<!-- ____________________________________________________________ -->
+		<!-- ____________________FOTKY NÁHLEDOVÉ DO 6____________________ -->
+		<!-- ____________________________________________________________ -->
+		<div slot="preview-image-1" class="preview-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="preview-image-2" class="preview-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<!-- ___________________________________________________________________________________ -->
+		<!-- ____________________SELECT MOŽNOSTI (možnost video a orher 1 2)____________________ -->
+		<!-- ___________________________________________________________________________________ -->
+		<span slot="select-description" class="select-description">Popis</span>
+		<span slot="select-ingredients" class="select-ingredients">Složení</span>
+		<span slot="select-dosage" class="select-dosage">Dávkování a upozornění</span>
+
+		<!-- ____________________________________________________________________________________ -->
+		<!-- ____________________DESCRIPTION DIVY (možnost video a orher 1 2)____________________ -->
+		<!-- ____________________________________________________________________________________ -->
+		<div slot="description-description" class="description-description active">
+			<p>
+				Natios Vitamin D3 & K2 nabízí silnou kombinaci dvou důležitých vitamínů, které jsou klíčové nejen pro udržení
+				<b>zdraví kostí</b>, ale také pro posílení funkce <b>imunitního systému</b>. Tento doplněk obsahuje 2000&nbsp;IU
+				vitamínu D3 v každé kapsli a zajišťuje tak uspokojení každodenní potřeby vašeho těla. Díky obsahu vitamínu K2
+				vzniká
+				<b>synergická kombinace</b>, která výrazně navyšuje účinnost. Vitamin K2 hraje roli v metabolismu vápníku, díky
+				čemuž pomáhá směrovat vápník do částí těla, které ho opravdu potřebují.
+			</p>
+			<p>
+				Vitamín K2 je obsažen v patentované formě <b>MenaQ7® MK-7</b>, která zaručuje maximální kvalitu a účinnost.
+				Kromě toho je doplněk <b>obohacen o MCT olej</b>, který je bohatým zdrojem nasycených mastných kyselin, pomáhá
+				tak optimalizovat vstřebávání vitaminu D3, čímž maximalizuje jeho biologickou dostupnost a účinek. Natios
+				Vitamin D3 & K2 dosahuje všech těchto výhod bez použití konzervačních látek, plniv či jiných éček. Upřednostňuje
+				kvalitu, čistotu a účinnost nade vše.
+			</p>
+
+			<ul>
+				<li>2000 IU vitamínu D3 v každé kapsli</li>
+				<li>75 mcg vitamínu K2 v každé kapsli</li>
+				<li>Vitamín K2 obsažen jako účinný MenaQ7® MK-7</li>
+				<li>Obohacen o MCT olej pro podporu vstřebávání</li>
+				<li>Neobsahuje plnidla, konzervanty ani jiná éčka</li>
+				<li>Bez GMO</li>
+			</ul>
+
+			<p class="no-padding"><b>Podpora imunity</b></p>
+			<p>
+				Vitamín D je jediný vitamín, který si lidský organismus dokáže vyrobit sám. Mimo to, téměř všechny buňky v těle
+				jsou vybaveny receptory na tento vitamín. To vše vypovídá, jak je vitamín D pro nás organismu důležitý.
+			</p>
+			<p class="no-padding"><b>Zdravý stav kostí</b></p>
+			<p>
+				Vitamíny D3 a K2 mají významný vliv na zdraví kostí. Bohužel je však naprosto běžný chronický nedostatek
+				vitamínu D. Ten je pak nejvíce znatelný u starších osob, u kterých je omezena tvorba vlastního vitamínu D.
+			</p>
+			<p class="no-padding"><b>Účinná kombinace D3 a K2</b></p>
+			<p>
+				Vitamín D3 navyšuje vstřebávání a koncentraci vápníku v krvi. Díky vitamínu K2 je tento vápník v těle nasměrován
+				tam, kde je zapotřebí (kosti, zuby) a odebírán z cév, kde jeho přebytek způsobuje kalcifikaci.
+			</p>
+
+			<table class="compare">
+				<thead>
+					<tr>
+						<th colspan="2"><b>ROZDÍLY MEZI BĚŽNÝM VITAMÍNEM D A NATIOS VITAMIN D3 & K2 </b></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><b>Natios Vitamin D3 & K2</b></td>
+						<td><b>Běžný Vitamín D</b></td>
+					</tr>
+					<tr>
+						<td>2000 IU vitamínu D3 na kapsli</td>
+						<td>400 - 1000 IU vitamínu D3 na kapsli</td>
+					</tr>
+					<tr>
+						<td>Doplněno o 75 mcg vitamínu K na kapsli</td>
+						<td>Bez vitamínu K nebo nízké dávky kolem 25 mcg</td>
+					</tr>
+					<tr>
+						<td>Patentovaná a účinná forma vitamínu K2 - MenaQ7® MK7</td>
+						<td>Pokud obsahuje vitamín K, často se jedná pouze o méně efektivní K1 nebo K2 jako MK4</td>
+					</tr>
+					<tr>
+						<td>Přidaný MCT olej pro navýšení vstřebatelnosti</td>
+						<td>Přidané plnidla, leštidla a konzervanty pro usnadnění výroby</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p class="no-padding"><b>Vitamín D3</b></p>
+			<p>
+				Vitamín D3, často přezdívaný jako „<b>sluneční vitamín</b>“, je klíčovou živinou, která hraje zásadní roli při
+				udržování celkového zdraví a pohody. Na rozdíl od jiných vitamínů funguje vitamín D spíše jako hormon, který
+				ovlivňuje různé tělesné procesy, nejen zdraví kostí.
+			</p>
+			<p>
+				Primárním zdrojem vitaminu D3 je sluneční záření. Když ultrafialové paprsky (UVB) ze slunečního záření dopadnou
+				na pokožku, derivát cholesterolu v kůži se přemění na vitamín D3. Tento proces usnadňují játra a ledviny, kde
+				vitamín D3 prochází dalšími přeměnami, aby se stal biologicky aktivní.
+			</p>
+
+			<>
+				Výzkumy ukazují, že <b>10-30 minut na slunci</b> je ekvivalentem užívání <b>až několika desítek tisíc IU</b> vitamínu
+				D3. V našich podnebných podmínkách je však po většinu roku obtížné si tolika slunce dopřát. Proto je vhodné vitamín
+				D do těla dodávat prostřednictvím stravy (losos, tuňák, játra, vaječné žloutky) nebo doplňků stravy, jako je právě
+				Natios Vitamin D3 & K2.
+			</>
+			<ul>
+				<li>D3 pomáhá vstřebávání vápníku a fosforu a udržování hladiny vápníku</li>
+				<li>D3 posíluje imunitního systému</li>
+				<li>D3 a K2 podporují zdravý stav kostí</li>
+				<li>D3 podporuje zdravý stav zubů</li>
+				<li>D3 podporuje správnou činnost svalů</li>
+				<li>K2 pomáhá udržovat normální srážlivost krve</li>
+			</ul>
+		</div>
+		<!-- ____________________TABULKA____________________ -->
+		<div slot="description-ingredients" class="description-ingredients">
+			<table>
+				<thead>
+					<tr>
+						<th
+							><div class="dosage">
+								<span
+									><b>Velikost dávky:</b> 1&nbsp;kapsle co 2 dny<br />
+									<b>Balení obsahuje:</b> 100&nbsp;dávek</span
+								>
+							</div></th
+						>
+						<th>Množství</th>
+						<th>%&nbsp;RHP*</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td
+							><b>Vitamin D3</b> (z lanolinu) (jako cholekalciferol)<br />
+							- v 1 kapsli</td
+						>
+						<td>2000&nbsp;IU (50&nbsp;mcg)</td>
+						<td>1000&nbsp;%</td>
+					</tr>
+
+					<tr>
+						<td
+							><b>Vitamin D3</b> (z lanolinu) (jako cholekalciferol)<br />
+							- v denní dávce</td
+						>
+						<td>1000&nbsp;IU (25&nbsp;mcg)</td>
+						<td>500&nbsp;%</td>
+					</tr>
+
+					<tr><td colspan="3"> </td></tr>
+
+					<tr>
+						<td
+							><b>Vitamin K2</b> (jako Menaquinonin-7) (MK-7) (MenaQ7®) (z cizrny)<br />
+							- v 1 kapsli</td
+						>
+						<td>75&nbsp;mcg</td>
+						<td>100&nbsp;%</td>
+					</tr>
+					<tr>
+						<td
+							><b>Vitamin K2</b> (jako Menaquinonin-7) (MK-7) (MenaQ7®) (z cizrny)<br />
+							- v denní dávce</td
+						>
+						<td>37,5&nbsp;mcg</td>
+						<td>50&nbsp;%</td>
+					</tr>
+
+					<tr><td colspan="3"> </td></tr>
+
+					<tr>
+						<td
+							>Prášek z MCT oleje<br />
+							- v 1 kapsli</td
+						>
+						<td>90&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td
+							>Prášek z MCT oleje<br />
+							- v denní dávce</td
+						>
+						<td>45&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td colspan="3"
+							><div class="rhp">
+								<span>* referenční hodnota příjmu u průměrné dospělé osoby</span>
+								<span>** denní referenční hodnota příjmu není stanovena</span>
+							</div></td
+						>
+					</tr>
+				</tbody>
+			</table>
+			<p><b>Další složky:</b> Rostlinná kapsle (HPMC). Výrobek neobsahuje žádné další přidané složky (éčka)</p>
+			<p><b>Není určeno pro vegany</b></p>
+		</div>
+		<!-- ____________________DÁVKOVÁNÍ A UPOZORNĚNÍ____________________ -->
+		<div slot="description-dosage" class="description-dosage">
+			<p>
+				<b>Doporučené dávkování:</b><br />
+				Jako doplněk stravy užívejte 1 kapsli co 2 dny. Užívejte ideálně s jídlem obsahující tuky.
+			</p>
+			<p>
+				<b>Upozornění:</b><br />
+				Pouze pro dospělé. Trpíte-li onemocněním, jste těhotná, kojíte, snažíte se otěhotnět nebo užíváte léky, poraďte se
+				před užitím tohoto přípravku s lékařem. Uchovávejte mimo dosah dětí. Není náhradou pestré stravy. Doplněk stravy.
+				Nepřekračujte doporučené denní dávkování.
+			</p>
+			<p>
+				<b>Skladování:</b><br />
+				Skladujte na chladném a suchém místě.
+			</p>
+			<p>
+				<b>Vyrobeno v EU</b>
+			</p>
+		</div>
+	</ProductTemplate>
+</IndexLayout>
+
+<style is:global>
+	:root {
+		--number-of-photos: 2;
+	}
+</style>

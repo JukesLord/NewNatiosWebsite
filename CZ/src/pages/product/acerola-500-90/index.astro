@@ -1,0 +1,229 @@
+---
+import IndexLayout from "../../../layouts/IndexLayout.astro";
+import ProductTemplate from "@components/product/product-template.astro";
+
+import { Image } from "astro:assets";
+import productImage1 from "@assets/images/products/acerola-500-90/acerola-500-90-fwc.webp";
+import productImage2 from "@assets/images/products/acerola-500-90/acerola-500-90-bws.webp";
+
+const alt = "NATIOS Acerola Komplex";
+const loading = "lazy";
+const productImageWidth = 1000;
+const pixelDensities = [1, 1.5, 2, 2.5, 3];
+const quality = 90;
+---
+
+<IndexLayout title="NATIOS Acerola Komplex">
+	<ProductTemplate>
+		<!-- _____________________________________________ -->
+		<!-- ____________________NÁZEV____________________ -->
+		<!-- _____________________________________________ -->
+		<h1 slot="product-name-h1">Acerola Complex</h1>
+		<h2 slot="product-name-h2">500 mg, 90 veganských kapslí</h2>
+
+		<!-- ________________________________________________________ -->
+		<!-- ____________________FOTKY VELKÉ DO 6____________________ -->
+		<!-- ________________________________________________________ -->
+		<div slot="large-image-1" class="large-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="large-image-2" class="large-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading={loading}
+			/>
+		</div>
+
+		<!-- ____________________________________________________________ -->
+		<!-- ____________________FOTKY NÁHLEDOVÉ DO 6____________________ -->
+		<!-- ____________________________________________________________ -->
+		<div slot="preview-image-1" class="preview-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="preview-image-2" class="preview-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<!-- ___________________________________________________________________________________ -->
+		<!-- ____________________SELECT MOŽNOSTI (možnost video a orher 1 2)____________________ -->
+		<!-- ___________________________________________________________________________________ -->
+		<span slot="select-description" class="select-description">Popis</span>
+		<span slot="select-ingredients" class="select-ingredients">Složení</span>
+		<span slot="select-dosage" class="select-dosage">Dávkování a upozornění</span>
+
+		<!-- ____________________________________________________________________________________ -->
+		<!-- ____________________DESCRIPTION DIVY (možnost video a orher 1 2)____________________ -->
+		<!-- ____________________________________________________________________________________ -->
+		<div slot="description-description" class="description-description active">
+			<p>
+				Acerola je jedním z nejlepších zdrojů přírodního vitamínu C. Vitamin C je ve vodě rozpustná mikroživina, která
+				je velmi dobře známá pro své pozitivní účinky na imunitní systém a ochranu buněk před oxidativním stresem.
+				Vitamín C si tělo neumí vytvořit samo, proto je jeho suplementace velmi důležitá, a to nejen v zimním období.
+				Acerola komplex obsahuje silný 25% extrakt doplněný o růži šípkovou a citrusové bioflavonoidy, díky čemuž je
+				posíleno vstřebávání a celková účinnost.
+			</p>
+			<p>
+				Natios Acerola komplex obsahuje standardizovaný extrakt z plodu aceroly. Díky tomu si můžete být stoprocentně
+				jisti, že s každou kapslí dodáváte svému tělu účinné množství vitamínu C. Značka Natios si zakládá nejen na
+				účinnosti, ale také čistotě. Krom účinných látek a veganské kapsle nejsou obsažené žádné plnidla, příměsi,
+				leštidla nebo konzervanty.
+			</p>
+			<ul>
+				<li>125 mg vitamínu C</li>
+				<li>25 mg růže šípkové</li>
+				<li>25 mg bioflavonoidů</li>
+				<li>Standardizovaný extrakt</li>
+				<li>Bez plnidel</li>
+				<li>Bez konzervantů a éček</li>
+				<li>Vegan a GMO-free</li>
+			</ul>
+			<p>
+				Každá veganská kapsle obsahuje 25% extrakt z plodu aceroly, který dodává 125 mg vitamínu C (156 % doporučené
+				denní dávky). K tomu je ale navíc doplněn o 25 mg bioflavonoidů a 25 mg růže šípkové. Díky této kombinaci je
+				doplněk mnohem účinnější než klasické čisté vitamíny C, přičemž tělu přináší více benefitů pro celkové zdraví.
+			</p>
+			<ul>
+				<li>Vitamin C a růže podporují funkci imunitního systému</li>
+				<li>Vitamin C a růže působí jako antioxidanty</li>
+				<li>Vitamin C přispívá tak k ochraně buněk před oxidativním stresem</li>
+				<li>Vitamin C přispívá ke správné tvorbě kolagenu</li>
+				<li>Vitamin C podporuje tak funkci krevních cév, kostí, chrupavek, dásní, kůže a zubů</li>
+				<li>Vitamin C přispívá k normálnímu energetickému metabolismu</li>
+				<li>Vitamin C přispívá k normální nervové a psychické činnosti</li>
+				<li>Vitamin C přispívá ke snížení míry únavy a vyčerpání</li>
+				<li>Vitamin C zvyšuje vstřebávání železa</li>
+				<li>Růže šípková podporuje normální činnost močového měchýře, ledvin a dýchací soustavy</li>
+			</ul>
+			<p class="no-padding"><b>Acerola</b></p>
+			<p>
+				Acerola je rostlina, která pochází z tropických oblastí západní polokoule. Acerola vytváří plody podobné
+				třešním, které mají příjemnou chuť a používají se v moderním i lidovém léčitelství. Zdraví prospěšné účinky
+				aceroly jsou dány především vysokým obsahem vitaminu C. Acerola obsahem vitamínu C dokonce převyšuje i pomeranče
+				a jahody, více jej mají jen šípky. Další důležitou látkou aceroly jsou polyfenoly, které v těle působí jako
+				antioxidanty.
+			</p>
+			<p class="no-padding"><b>Citrusové bioflavonoidy</b></p>
+			<p>
+				Každá potravina, která obsahuje vitamin C, obsahuje také bioflavonoidy. Bioflavonoidy mají antioxidační účinky a
+				jsou nezbytné pro vstřebávání vitaminu C, se kterým navíc v těle působí synergicky. Přestože bioflavonoidy
+				nejsou považovány za vitamin, někdy jsou označovány jako vitamin P.
+			</p>
+			<p class="no-padding"><b>Růže šípková</b></p>
+			<p>
+				Plody růže šípkové (Rosa canina L.), tedy šípky, jsou malé plody, které obsahují až 15× více vitamínu C než
+				pomeranče. Plody šípku lze sbírat libovolně v přírodě, jejich výskyt je poměrně častý. Zužitkovat je lze k
+				výrobě čaje, sirupu či extraktu.
+			</p>
+		</div>
+		<!-- ____________________TABULKA____________________ -->
+		<div slot="description-ingredients" class="description-ingredients">
+			<table>
+				<thead>
+					<tr>
+						<th
+							><div class="dosage">
+								<span
+									><b>Velikost dávky:</b> 1&nbsp;veganská kapsle<br />
+									<b>Balení obsahuje:</b> 90&nbsp;dávek</span
+								>
+							</div></th
+						>
+						<th>Množství v 1 dávce</th>
+						<th>%&nbsp;RHP*</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Extrakt z plodů aceroly 25% (Malpighia glabra)</td>
+						<td>500&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td class="padding-left">Vitamín C</td>
+						<td>125&nbsp;mg</td>
+						<td>156%</td>
+					</tr>
+
+					<tr>
+						<td>Prášek z plodů růže šípkové</td>
+						<td>25&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td>Komplex citrusových bioflavonoidů </td>
+						<td>25&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td colspan="3"
+							><div class="rhp">
+								<span>* referenční hodnota příjmu u průměrné dospělé osoby</span>
+								<span>** denní referenční hodnota příjmu není stanovena</span>
+							</div></td
+						>
+					</tr>
+				</tbody>
+			</table>
+			<p><b>Další složky:</b> Veganská kapsle (HPMC). Výrobek neobsahuje žádné další přidané složky (éčka)</p>
+		</div>
+		<!-- ____________________DÁVKOVÁNÍ A UPOZORNĚNÍ____________________ -->
+		<div slot="description-dosage" class="description-dosage">
+			<p class="no-padding">
+				<b>Doporučené dávkování:</b>
+			</p>
+			<p>Jako doplněk stravy užívejte 1 veganskou kapsli denně a zapijte vodou.</p>
+
+			<p class="no-padding">
+				<b>Upozornění:</b>
+			</p>
+			<p>
+				Pouze pro dospělé. Trpíte-li onemocněním, jste těhotná, kojíte, snažíte se otěhotnět nebo užíváte léky, poraďte
+				se před užitím tohoto přípravku s lékařem. Uchovávejte mimo dosah dětí. Není náhradou pestré stravy. Doplněk
+				stravy. Nepřekračujte doporučené denní dávkování.
+			</p>
+			<p class="no-padding">
+				<b>Skladování:</b>
+			</p>
+			<p>Skladujte na chladném a suchém místě.</p>
+			<p>
+				<b>Vyrobeno v EU</b>
+			</p>
+		</div>
+	</ProductTemplate>
+</IndexLayout>
+
+<style is:global>
+	:root {
+		--number-of-photos: 2;
+	}
+</style>
