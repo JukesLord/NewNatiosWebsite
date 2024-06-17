@@ -1,0 +1,299 @@
+---
+import IndexLayout from "../../../layouts/IndexLayout.astro";
+import ProductTemplate from "@components/product/product-template.astro";
+
+import { Image } from "astro:assets";
+import productImage1 from "@assets/images/products/vitamin-d3-k2-5000-100/vitamin-d3-k2-5000-100-fwc.webp";
+import productImage2 from "@assets/images/products/vitamin-d3-k2-5000-100/vitamin-d3-k2-5000-100-bws.webp";
+
+const alt = "NATIOS Vitamin D3 & K2 MK-7 5000 IU";
+const loading = "lazy";
+const productImageWidth = 1000;
+const pixelDensities = [1, 1.5, 2, 2.5, 3];
+const quality = 90;
+---
+
+<IndexLayout title="NATIOS Vitamin D3 & K2 MK-7 5000 IU">
+	<ProductTemplate>
+		<!-- _____________________________________________ -->
+		<!-- ____________________NÁZEV____________________ -->
+		<!-- _____________________________________________ -->
+		<h1 slot="product-name-h1">NATIOS Vitamin D3 & K2 MK-7</h1>
+		<h2 slot="product-name-h2">5000 IU & 200 mcg, 100 capsules</h2>
+
+		<!-- ________________________________________________________ -->
+		<!-- ____________________FOTKY VELKÉ DO 6____________________ -->
+		<!-- ________________________________________________________ -->
+		<div slot="large-image-1" class="large-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="large-image-2" class="large-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading={loading}
+			/>
+		</div>
+
+		<!-- ____________________________________________________________ -->
+		<!-- ____________________FOTKY NÁHLEDOVÉ DO 6____________________ -->
+		<!-- ____________________________________________________________ -->
+		<div slot="preview-image-1" class="preview-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="preview-image-2" class="preview-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<!-- ___________________________________________________________________________________ -->
+		<!-- ____________________SELECT MOŽNOSTI (možnost video a orher 1 2)____________________ -->
+		<!-- ___________________________________________________________________________________ -->
+		<span slot="select-description" class="select-description">Description</span>
+		<span slot="select-ingredients" class="select-ingredients">Ingredients</span>
+		<span slot="select-dosage" class="select-dosage">Dosage and warnings</span>
+
+		<!-- ____________________________________________________________________________________ -->
+		<!-- ____________________DESCRIPTION DIVY (možnost video a orher 1 2)____________________ -->
+		<!-- ____________________________________________________________________________________ -->
+		<div slot="description-description" class="description-description active">
+			<p>
+				Natios Vitamin D3 & K2 provides a powerful combination of two essential vitamins that are key to maintaining
+				<b>bone health</b> and boosting <b>immune function</b>. This supplement contains 5000&nbsp;IU of vitamin D3 in
+				each capsule, ensuring your body's daily requirement is met. The vitamin K2 content creates a <b
+					>synergistic combination</b
+				> that greatly enhances effectiveness. Vitamin K2 plays a role in calcium metabolism, helping to direct calcium to
+				the parts of the body that really need it.
+			</p>
+			<p>
+				Vitamin K2 is present in a patented form <b>MenaQ7® MK-7</b> that guarantees maximum quality and efficacy. The supplement
+				is also <b>enriched with MCT oil</b>, a rich source of saturated fatty acids, which helps to optimise the
+				absorption of vitamin D3, maximising its bioavailability and effectiveness. Natios Vitamin D3 & K2 achieves all
+				these benefits without using preservatives, fillers or other ethers. It prioritises quality, purity and potency
+				above all else.
+			</p>
+
+			<ul>
+				<li>5000 IU of vitamin D3 in each capsule</li>
+				<li>200 mcg of vitamin K2 per capsule</li>
+				<li>Vitamin K2 provided as potent MenaQ7® MK-7</li>
+				<li>Enriched with MCT oil to aid absorption</li>
+				<li>Contains no fillers, preservatives or other potentially harmful substances</li>
+				<li>GMO-free</li>
+			</ul>
+
+			<p class="no-padding"><b>Immunity support</b></p>
+			<p>
+				Vitamin D is the only vitamin that the human body can make itself. In addition, almost all cells in the body are
+				equipped with receptors for this vitamin. This speaks volumes about how important vitamin D is to our bodies.
+			</p>
+			<p class="no-padding"><b>Healthy bones</b></p>
+			<p>
+				Vitamins D3 and K2 are essential for bone health. Unfortunately, chronic vitamin D deficiency is common. This is
+				most common in older people who cannot make their own vitamin D.
+			</p>
+			<p class="no-padding"><b>A powerful combination of D3 and K2</b></p>
+			<p>
+				Vitamin D3 increases the absorption and concentration of calcium in the blood. Thanks to vitamin K2, this
+				calcium is transported in the body to where it is needed (bones, teeth) and removed from the blood vessels,
+				where excess calcium causes calcification.
+			</p>
+
+			<table class="compare">
+				<thead>
+					<tr>
+						<th colspan="2"><b>DIFFERENCES BETWEEN REGULAR VITAMIN D AND NATIOS VITAMIN D3 & K2</b></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><b>Natios Vitamin D3 & K2</b></td>
+						<td><b>Regular Vitamin D</b></td>
+					</tr>
+					<tr>
+						<td>5000 IU vitamin D3 per capsule </td>
+						<td>400 - 1000 IU vitamin D3 per capsule</td>
+					</tr>
+					<tr>
+						<td>Supplemented with 200 mcg vitamin K per capsule</td>
+						<td>No vitamin K or low doses of around 25 mcg</td>
+					</tr>
+					<tr>
+						<td>A patented and effective form of vitamin K2 - MenaQ7® MK7</td>
+						<td>When vitamin K is present, it is often a less effective K1 or K2 such as MK4</td>
+					</tr>
+					<tr>
+						<td>MCT oil was added to enhance absorption</td>
+						<td>Fillers, polishes and preservatives are added to facilitate manufacture</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p class="no-padding"><b>Vitamin D3</b></p>
+			<p>
+				Vitamin D3, often called the "<b>sunshine vitamin</b>", is a key nutrient important in maintaining overall
+				health and well-being. Unlike other vitamins, vitamin D acts more like a hormone, influencing many body
+				processes, not just bone health.
+			</p>
+			<p>
+				The primary source of vitamin D3 is sunlight. When ultraviolet (UVB) rays from sunlight hit the skin, a
+				cholesterol derivative in the skin is converted to vitamin D3. This process is facilitated by the liver and
+				kidneys, where vitamin D3 undergoes further transformations to become biologically active.
+			</p>
+
+			<p>
+				Research shows that <b>10-30 minutes in the sun</b> equals up to <b>tens of thousands of IU of vitamin D3</b>.
+				However, in our climate, getting that much sun for most of the year is challenging. It is therefore advisable to
+				supply the body with vitamin D through food (salmon, tuna, liver, egg yolks) or supplements such as Natios
+				Vitamin D3 & K2.
+			</p>
+			<ul>
+				<li>D3 helps the body absorb calcium and phosphorus and maintain calcium levels.</li>
+				<li>D3 boosts the immune system</li>
+				<li>D3 and K2 support healthy bones</li>
+				<li>D3 supports healthy teeth</li>
+				<li>D3 supports proper muscle function</li>
+				<li>K2 helps maintain normal blood clotting</li>
+			</ul>
+		</div>
+		<!-- ____________________TABULKA____________________ -->
+		<div slot="description-ingredients" class="description-ingredients">
+			<table>
+				<thead>
+					<tr>
+						<th
+							><div class="dosage">
+								<span
+									><b>Serving size::</b> 1&nbsp;capsule every 5 days<br />
+									<b>Contains:</b> 100&nbsp;servings</span
+								>
+							</div></th
+						>
+						<th>Amount Per Serving</th>
+						<th>%NRV*</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td
+							><b>Vitamin D3</b> (from Lanolin) (as Cholecalciferol)<br />
+							- in 1 capsule</td
+						>
+						<td>5000&nbsp;IU (125&nbsp;mcg)</td>
+						<td>2500&nbsp;%</td>
+					</tr>
+
+					<tr>
+						<td
+							><b>Vitamin D3</b> (from Lanolin) (as Cholecalciferol)<br />
+							- in daily dose</td
+						>
+						<td>1000&nbsp;IU (25&nbsp;mcg)</td>
+						<td>500&nbsp;%</td>
+					</tr>
+
+					<tr><td colspan="3"> </td></tr>
+
+					<tr>
+						<td
+							><b>Vitamin K2</b> (as Menaquinonine-7) (MK-7) (MenaQ7®) (from chickpea)<br />
+							- in 1 capsule</td
+						>
+						<td>200&nbsp;mcg</td>
+						<td>267&nbsp;%</td>
+					</tr>
+					<tr>
+						<td
+							><b>Vitamin K2</b> (as Menaquinonine-7) (MK-7) (MenaQ7®) (from chickpea)<br />
+							- in daily dose</td
+						>
+						<td>40&nbsp;mcg</td>
+						<td>53&nbsp;%</td>
+					</tr>
+
+					<tr><td colspan="3"> </td></tr>
+
+					<tr>
+						<td
+							>MCT Oil Powder<br />
+							- in 1 capsule</td
+						>
+						<td>100&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td
+							>MCT Oil Powder<br />
+							- in daily dose</td
+						>
+						<td>25&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td colspan="3"
+							><div class="rhp">
+								<span>* Nutritional Reference Value</span>
+								<span>** Nutritional Reference Value is not established</span>
+							</div></td
+						>
+					</tr>
+				</tbody>
+			</table>
+			<p><b>Other ingredients:</b> Veg Capsule (HPMC). The product does not contain any other added substances.</p>
+			<p><b>Not suitable for vegans</b></p>
+		</div>
+		<!-- ____________________DÁVKOVÁNÍ A UPOZORNĚNÍ____________________ -->
+		<div slot="description-dosage" class="description-dosage">
+			<p>
+				<b>Recommended dosage:</b><br />
+				Take 1 capsule per 5 days with a fat-containing meal, or as directed by your healthcare practitioner.
+			</p>
+			<p>
+				<b>Warning:</b><br />
+				For adults only. If you have a medical condition, are pregnant, nursing or trying to conceive, or are taking medication,
+				consult with a physician before taking this product! Keep out of reach of children. Dietary supplement. It is not
+				a substitute for a varied diet. Do not exceed the recommended daily dosage.
+			</p>
+			<p>
+				<b>Storage:</b><br />
+				Store in a cool, dry place.
+			</p>
+			<p>
+				<b>Made in EU</b>
+			</p>
+		</div>
+	</ProductTemplate>
+</IndexLayout>
+
+<style is:global>
+	:root {
+		--number-of-photos: 2;
+	}
+</style>

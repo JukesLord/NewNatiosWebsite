@@ -1,0 +1,342 @@
+---
+import IndexLayout from "../../../layouts/IndexLayout.astro";
+import ProductTemplate from "@components/product/product-template.astro";
+
+import { Image } from "astro:assets";
+import productImage1 from "@assets/images/products/activated-b-complex-100/activated-b-complex-100-fwc.webp";
+import productImage2 from "@assets/images/products/activated-b-complex-100/activated-b-complex-100-bws.webp";
+
+const alt = "NATIOS Activated B-Complex";
+const loading = "lazy";
+const productImageWidth = 1000;
+const pixelDensities = [1, 1.5, 2, 2.5, 3];
+const quality = 90;
+---
+
+<IndexLayout title="NATIOS Activated B-Complex">
+	<ProductTemplate>
+		<!-- _____________________________________________ -->
+		<!-- ____________________NÁZEV____________________ -->
+		<!-- _____________________________________________ -->
+		<h1 slot="product-name-h1">Activated B-Complex</h1>
+		<h2 slot="product-name-h2">100 vegan capsules</h2>
+
+		<!-- ________________________________________________________ -->
+		<!-- ____________________FOTKY VELKÉ DO 6____________________ -->
+		<!-- ________________________________________________________ -->
+		<div slot="large-image-1" class="large-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="large-image-2" class="large-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading={loading}
+			/>
+		</div>
+
+		<!-- ____________________________________________________________ -->
+		<!-- ____________________FOTKY NÁHLEDOVÉ DO 6____________________ -->
+		<!-- ____________________________________________________________ -->
+		<div slot="preview-image-1" class="preview-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="preview-image-2" class="preview-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<!-- ___________________________________________________________________________________ -->
+		<!-- ____________________SELECT MOŽNOSTI (možnost video a orher 1 2)____________________ -->
+		<!-- ___________________________________________________________________________________ -->
+		<span slot="select-description" class="select-description">Description</span>
+		<span slot="select-ingredients" class="select-ingredients">Ingredients</span>
+		<span slot="select-dosage" class="select-dosage">Dosage and warnings</span>
+
+		<!-- ____________________________________________________________________________________ -->
+		<!-- ____________________DESCRIPTION DIVY (možnost video a orher 1 2)____________________ -->
+		<!-- ____________________________________________________________________________________ -->
+		<div slot="description-description" class="description-description active">
+			<p>
+				Natios Activated B-Complex is an ideal way to supplement B vitamins. It <b
+					>contains only the active and effective forms of the vitamins</b
+				>. The active forms are much easier for the body to use and absorb as they do not have to go through the
+				conversion process from inactive to active in the body, so they are 'pre-prepared' for absorption. The complex
+				contains a <b>synergistic blend of 16 ingredients</b>, including B vitamins, alpha-lipoic acid, betaine, vitamin
+				C, magnesium, PABA and coenzyme Q10. These ingredients enhance the effects of the B-complex.
+			</p>
+
+			<p>
+				It is an ideal supplement for anyone who wants to boost their immune system, increase energy metabolism, improve
+				nerve health or increase the levels of B vitamins in the body. All ingredients are the best available, with no
+				impurities or fillers, and in a vegan-friendly vegetarian capsule.
+			</p>
+
+			<ul>
+				<li>Only active, effective and well-established forms</li>
+				<li>High doses, many times higher than the low recommended daily allowance</li>
+				<li>Contains no additives, indigestible or other potentially harmful substances</li>
+				<li>Vegan and GMO-free</li>
+			</ul>
+
+			<p class="no-padding"><b>Proven active forms</b></p>
+			<p>Natios Activated B-Complex contains only the most potent and highly absorbable active forms of B vitamins.</p>
+			<p class="no-padding"><b>Total body health</b></p>
+			<p>It supports the immune system, the proper functioning of the central nervous system, and energy metabolism.</p>
+			<p class="no-padding"><b>Suitable for everyone</b></p>
+			<p>
+				Natios Activated B-Complex is suitable for everyone. It also contains vitamins that are very important for
+				vegans.
+			</p>
+
+			<table class="compare">
+				<thead>
+					<tr>
+						<th colspan="2"><b>DIFFERENCES BETWEEN REGULAR B-COMPLEX AND NATIOS ACTIVATED B-COMPLEX</b></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><b>Natios Activated B-complex</b></td>
+						<td><b>Regular B-Complex</b></td>
+					</tr>
+					<tr>
+						<td>Niacin from active inositol hexanicotinate</td>
+						<td>Niacin from nicotinic acid or niacinamide</td>
+					</tr>
+					<tr>
+						<td>Liposomal vitamin C</td>
+						<td>Non-liposomal ascorbic acid</td>
+					</tr>
+					<tr>
+						<td>B1 as active thiamine diphosphate chloride</td>
+						<td>B1 as thiamine hydrochloride or mononitrate</td>
+					</tr>
+					<tr>
+						<td>B2 as active riboflavin-5-phosphate</td>
+						<td>B2 as normal riboflavin</td>
+					</tr>
+					<tr>
+						<td>Pantothenic acid from active 50% pantethine</td>
+						<td>Pantothenic acid from calcium pantothenate</td>
+					</tr>
+					<tr>
+						<td>Inositol from active myo-inositol</td>
+						<td>Inositol hexanicotinate - misleading name, but primarily a source of niacin</td>
+					</tr>
+					<tr>
+						<td>Choline from active dihydrogen citrate</td>
+						<td>Choline from choline bitartrate</td>
+					</tr>
+					<tr>
+						<td>B6 from active P-5-P</td>
+						<td>B6 from pyridoxine HCl</td>
+					</tr>
+					<tr>
+						<td>Magnesium from magnesium bisglycinate</td>
+						<td>Without magnesium or with magnesium oxide</td>
+					</tr>
+					<tr>
+						<td>B12 as active methylcobalamin</td>
+						<td>B12 as cyanocobalamin</td>
+					</tr>
+					<tr>
+						<td>Folate as active 5-MTHF</td>
+						<td>Folic acid or folate as THF</td>
+					</tr>
+					<tr>
+						<td>Supplemented with alpha-lipoic acid, coenzyme Q10, PABA and biotin</td>
+						<td>Supplemented with preservatives, fillers and polishing agents</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p class="no-padding"><b>Why take B-Complex?</b></p>
+
+			<p>
+				B vitamins play a vital role in maintaining good health and well-being. As the building blocks of a healthy
+				body, B vitamins directly affect energy levels, brain function and cellular metabolism. <b
+					>Deficiencies are quite common nowadays</b
+				>, especially if you follow a vegetarian or vegan diet, as many B vitamins are mainly (but not only) found in
+				animal products.
+			</p>
+
+			<p>
+				Except for vitamin B12, all B vitamins are water-soluble. First, the <b>body does not store them</b> to any great
+				extent, so it is advisable to take a daily supplement. Secondly, this makes it virtually impossible to overdose on
+				B vitamins, as the body naturally excretes excess in the urine. This also applies to multiple recommended daily doses,
+				such as those found in Natios Activated B-Complex.
+			</p>
+			<ul>
+				<li>Energy metabolism support</li>
+				<li>Strengthens the immune system</li>
+				<li>Nervous system and nerve impulses</li>
+				<li>Reduces fatigue and exhaustion</li>
+				<li>Mental activity, memory</li>
+				<li>Formation of red blood cells</li>
+			</ul>
+		</div>
+		<!-- ____________________TABULKA____________________ -->
+		<div slot="description-ingredients" class="description-ingredients">
+			<table>
+				<thead>
+					<tr>
+						<th
+							><div class="dosage">
+								<span
+									><b>Serving size:</b> 2&nbsp;veg capsules<br />
+									<b>Contains:</b> 50&nbsp;servings</span
+								>
+							</div></th
+						>
+						<th>Amount Per Serving</th>
+						<th>%NRV*</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Niacine (vitamin B3 from inositol hexanicotinate)</td>
+						<td>100&nbsp;mg</td>
+						<td>625&nbsp;%</td>
+					</tr>
+					<tr>
+						<td>Alpha lipoic acid</td>
+						<td>80&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td>Vitamin C (from liposomal complex of ascorbic acid)</td>
+						<td>80&nbsp;mg</td>
+						<td>100&nbsp;%</td>
+					</tr>
+					<tr>
+						<td>Betain (trimethylglycine)</td>
+						<td>50&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td>Vitamin B1 (as thiamine diphosphate chloride)</td>
+						<td>50&nbsp;mg</td>
+						<td>4&nbsp;545 %</td>
+					</tr>
+					<tr>
+						<td>Vitamin B2 (as riboflavin 5-phosphate)</td>
+						<td>50&nbsp;mg</td>
+						<td>3&nbsp;571 %</td>
+					</tr>
+					<tr>
+						<td>Pantothenic acid (vitamin B5 from pantethine 50%)</td>
+						<td>50&nbsp;mg</td>
+						<td>833&nbsp;%</td>
+					</tr>
+					<tr>
+						<td>Inositol (from inositol hexanicotinate and myo-inositol)</td>
+						<td>50&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td>PABA (para-aminobenzoic acid)</td>
+						<td>50&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td>Choline (from choline dihydrogen citrate)</td>
+						<td>50&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td>Vitamin B6 (as pyridoxal 5-phosphate)</td>
+						<td>25&nbsp;mg</td>
+						<td>1&nbsp;786 %</td>
+					</tr>
+					<tr>
+						<td>Magnesium (from magnesium bisglycinate)</td>
+						<td>20&nbsp;mg</td>
+						<td>5&nbsp;%</td>
+					</tr>
+					<tr>
+						<td>Coenzyme Q10</td>
+						<td>20&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td>Biotin</td>
+						<td>1&nbsp;000 mcg</td>
+						<td>2&nbsp;000 %</td>
+					</tr>
+					<tr>
+						<td>Vitamin B12 (as methylcobalamine)</td>
+						<td>500&nbsp;mcg</td>
+						<td>20&nbsp;000 %</td>
+					</tr>
+					<tr>
+						<td>Folate (as 5-methyltetrahydrofolate)</td>
+						<td>400&nbsp;mcg</td>
+						<td>200&nbsp;%</td>
+					</tr>
+
+					<tr>
+						<td colspan="3"
+							><div class="rhp">
+								<span>* Nutritional Reference Value</span>
+								<span>** Nutritional Reference Value is not established</span>
+							</div></td
+						>
+					</tr>
+				</tbody>
+			</table>
+			<p><b>Other ingredients:</b> Veg Capsule (HPMC). The product does not contain any other added substances.</p>
+		</div>
+		<!-- ____________________DÁVKOVÁNÍ A UPOZORNĚNÍ____________________ -->
+		<div slot="description-dosage" class="description-dosage">
+			<p>
+				<b>Recommended dosage:</b><br />
+				Take 2 capsules daily with food and water.
+			</p>
+			<p>
+				<b>Warning:</b><br />
+				For adults only. If you have a medical condition, are pregnant, nursing or trying to conceive, or are taking medication,
+				consult with a physician before taking this product! Keep out of reach of children. Dietary supplement. It is not
+				a substitute for a varied diet. Do not exceed the recommended daily dosage.
+			</p>
+			<p>
+				<b>Storage:</b><br />
+				Store in a cool, dry place.
+			</p>
+			<p>
+				<b>Made in EU</b>
+			</p>
+		</div>
+	</ProductTemplate>
+</IndexLayout>
+
+<style is:global>
+	:root {
+		--number-of-photos: 2;
+	}
+</style>

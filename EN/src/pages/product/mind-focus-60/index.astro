@@ -1,0 +1,272 @@
+---
+import IndexLayout from "../../../layouts/IndexLayout.astro";
+import ProductTemplate from "@components/product/product-template.astro";
+
+import { Image } from "astro:assets";
+import productImage1 from "@assets/images/products/mind-focus-60/mind-focus-60-fwc.webp";
+import productImage2 from "@assets/images/products/mind-focus-60/mind-focus-60-bws.webp";
+
+const alt = "NATIOS Mind Focus";
+const loading = "lazy";
+const productImageWidth = 1000;
+const pixelDensities = [1, 1.5, 2, 2.5, 3];
+const quality = 90;
+---
+
+<IndexLayout title="NATIOS Mind Focus">
+	<ProductTemplate>
+		<!-- _____________________________________________ -->
+		<!-- ____________________NÁZEV____________________ -->
+		<!-- _____________________________________________ -->
+		<h1 slot="product-name-h1">Mind Focus</h1>
+		<h2 slot="product-name-h2">60 vegan capsules</h2>
+
+		<!-- ________________________________________________________ -->
+		<!-- ____________________FOTKY VELKÉ DO 6____________________ -->
+		<!-- ________________________________________________________ -->
+		<div slot="large-image-1" class="large-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="large-image-2" class="large-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading={loading}
+			/>
+		</div>
+
+		<!-- ____________________________________________________________ -->
+		<!-- ____________________FOTKY NÁHLEDOVÉ DO 6____________________ -->
+		<!-- ____________________________________________________________ -->
+		<div slot="preview-image-1" class="preview-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="preview-image-2" class="preview-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<!-- ___________________________________________________________________________________ -->
+		<!-- ____________________SELECT MOŽNOSTI (možnost video a orher 1 2)____________________ -->
+		<!-- ___________________________________________________________________________________ -->
+		<span slot="select-description" class="select-description">Description</span>
+		<span slot="select-ingredients" class="select-ingredients">Ingredients</span>
+		<span slot="select-dosage" class="select-dosage">Dosage and warnings</span>
+
+		<!-- ____________________________________________________________________________________ -->
+		<!-- ____________________DESCRIPTION DIVY (možnost video a orher 1 2)____________________ -->
+		<!-- ____________________________________________________________________________________ -->
+		<div slot="description-description" class="description-description active">
+			<p>
+				Do you need to prepare for a difficult exam, boost your thinking, creativity or cognitive functions to perform
+				properly at work, or do you just want to have the memory you used to have? Mind Focus is a unique combination of
+				amino acids, herbs and other key ingredients designed to stimulate brain and nerve function. A potent <b
+					>combination of 6 herbal extracts and 4 ingredients</b
+				> that have been shown in various studies to have a positive effect on memory, concentration and focus and gives
+				your brain everything it needs.
+			</p>
+
+			<ul>
+				<li>The effective dose in 2 capsules</li>
+				<li>Caffeine free</li>
+				<li>Free from additives, indigestible and other potentially harmful substances</li>
+				<li>Vegan and GMO-free</li>
+			</ul>
+
+			<p class="no-padding"><b>For work</b></p>
+			<p>
+				Is your work mentally demanding? Natios Mind Focus is for anyone who needs to be focused and creative at work.
+			</p>
+			<p class="no-padding"><b>For studying</b></p>
+			<p>
+				Need to study for an exam or test? By supporting concentration and memory, Natio's Mind Focus is just what you
+				need.
+			</p>
+			<p class="no-padding"><b>For gamers</b></p>
+			<p>
+				Want to perform at your best? With Natios Mind Focus, you'll boost your mental performance, reflexes and
+				alertness.
+			</p>
+			<p class="no-padding"><b>6 scientifically proven herbal extracts </b></p>
+			<p>
+				NATIOS Mind Focus combines six potent herbal extracts tested to support cognitive function, memory, alertness or
+				concentration. However, the benefits of these herbs have been known for over 2000 years as they have been widely
+				used in traditional Chinese and Ayurvedic medicine. All of the herbs in this formula are <b
+					>standardised or highly concentrated extracts</b
+				> to ensure maximum efficacy.
+			</p>
+			<ul>
+				<li>Ginseng and Bacopa support a healthy memory</li>
+				<li>Bacopa aids concentration</li>
+				<li>Ginseng supports alertness</li>
+				<li>Ginseng, Gotu Kola and Bacopa support cognitive function</li>
+				<li>Bakopa and Rhodiola help reduce stress</li>
+				<li>Rhodiola for fatigue</li>
+				<li>Gotu Kola and Rhodiola support mental health</li>
+				<li>Ginseng and Rhodiola support emotional wellbeing</li>
+				<li>Black pepper enhances the mood</li>
+			</ul>
+			<p class="no-padding"><b>A complex of other effective ingredients</b></p>
+			<p>
+				In addition to the herbs, Mind Focus contains four other active ingredients. The first is <b>Citicoline</b> (stabilised
+				CDP-choline), a naturally occurring intermediate involved in synthesising phosphatidylcholine, the main component
+				of grey matter in brain tissue. Phosphatidylserine is another active ingredient that occurs naturally in high levels
+				in brain tissue. It also contains two essential amino acids, namely <b>L-theanine</b>, found almost exclusively
+				in green tea and highly beneficial, and <b>N-acetyl-L-tyrosine</b>, a fast-acting form of L-tyrosine, a widely
+				used amino acid. Finally, it also contains <b>Bioperine</b>, a standardised black pepper extract that enhances
+				the absorption and effectiveness of the other ingredients.
+			</p>
+		</div>
+		<!-- ____________________TABULKA____________________ -->
+		<div slot="description-ingredients" class="description-ingredients">
+			<table>
+				<thead>
+					<tr>
+						<th
+							><div class="dosage">
+								<span
+									><b>Serving size:</b> 2&nbsp;veg capsules<br />
+									<b>Contains:</b> 30&nbsp;servings</span
+								>
+							</div></th
+						>
+						<th>Amount Per Serving</th>
+						<th>%NRV*</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>Citicoline (CDP-Cholin)</td>
+						<td>400&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td>N-Acetyl L-Tyrosine</td>
+						<td>300&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td>L-Theanine</td>
+						<td>200&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td
+							>Panax Ginseng extract
+							<br />- standardized to 10&nbsp;% ginsenosides</td
+						>
+						<td>100&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td>Phosphatidylserine</td>
+						<td>100&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td
+							>Rhodiola Rosea extract
+							<br />- standardized to 3&nbsp;% rosavins and 1&nbsp;% salidroside</td
+						>
+						<td>100&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td
+							>Ginkgo Biloba extract
+							<br />- standardized to 24&nbsp;% flavonoids and 6&nbsp;% terpene lactones</td
+						>
+						<td>60&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td
+							>Gotu Kola 4:1 extract (Centella asiatica)
+							<br />- equivalent to 200&nbsp;mg of raw herb</td
+						>
+						<td>50&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td
+							>Brahmi 10:1 extract (Bacopa monnieri)
+							<br />- equivalent to 400&nbsp;mg of raw herb</td
+						>
+						<td>40&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td
+							>Black Pepper extract
+							<br />- Bioperine standardized to 95&nbsp;% piperine</td
+						>
+						<td>4&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td colspan="3"
+							><div class="rhp">
+								<span>* Nutritional Reference Value</span>
+								<span>** Nutritional Reference Value is not established</span>
+							</div></td
+						>
+					</tr>
+				</tbody>
+			</table>
+			<p><b>Other ingredients:</b> Veg Capsule (HPMC). The product does not contain any other added substances.</p>
+		</div>
+		<!-- ____________________DÁVKOVÁNÍ A UPOZORNĚNÍ____________________ -->
+		<div slot="description-dosage" class="description-dosage">
+			<p>
+				<b>Recommended dosage:</b><br />
+				Take 2 capsules in the morning on an empty stoamch or with food. Ideally 30 minutes before the required effect.
+			</p>
+			<p>
+				<b>Warning:</b><br />
+				For adults only. If you have a medical condition, are pregnant, nursing or trying to conceive, or are taking medication,
+				consult with a physician before taking this product! Keep out of reach of children. Dietary supplement. It is not
+				a substitute for a varied diet. Do not exceed the recommended daily dosage.
+			</p>
+			<p>
+				<b>Storage:</b><br />
+				Store in a cool, dry place.
+			</p>
+			<p>
+				<b>Made in EU</b>
+			</p>
+		</div>
+	</ProductTemplate>
+</IndexLayout>
+
+<style is:global>
+	:root {
+		--number-of-photos: 2;
+	}
+</style>

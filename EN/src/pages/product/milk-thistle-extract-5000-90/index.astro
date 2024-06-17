@@ -1,0 +1,197 @@
+---
+import IndexLayout from "../../../layouts/IndexLayout.astro";
+import ProductTemplate from "@components/product/product-template.astro";
+
+import { Image } from "astro:assets";
+import productImage1 from "@assets/images/products/milk-thistle-extract-5000-90/milk-thistle-extract-5000-90-fwc.webp";
+import productImage2 from "@assets/images/products/milk-thistle-extract-5000-90/milk-thistle-extract-5000-90-bws.webp";
+
+const alt = "NATIOS Milk Thistle Extract";
+const loading = "lazy";
+const productImageWidth = 1000;
+const pixelDensities = [1, 1.5, 2, 2.5, 3];
+const quality = 90;
+---
+
+<IndexLayout title="NATIOS Milk Thistle Extract">
+	<ProductTemplate>
+		<!-- _____________________________________________ -->
+		<!-- ____________________NÁZEV____________________ -->
+		<!-- _____________________________________________ -->
+		<h1 slot="product-name-h1">Milk Thistle Extra Strength Extract</h1>
+		<h2 slot="product-name-h2">5000 mg, 90 vegan capsules</h2>
+
+		<!-- ________________________________________________________ -->
+		<!-- ____________________FOTKY VELKÉ DO 6____________________ -->
+		<!-- ________________________________________________________ -->
+		<div slot="large-image-1" class="large-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="large-image-2" class="large-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading={loading}
+			/>
+		</div>
+
+		<!-- ____________________________________________________________ -->
+		<!-- ____________________FOTKY NÁHLEDOVÉ DO 6____________________ -->
+		<!-- ____________________________________________________________ -->
+		<div slot="preview-image-1" class="preview-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="preview-image-2" class="preview-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<!-- ___________________________________________________________________________________ -->
+		<!-- ____________________SELECT MOŽNOSTI (možnost video a orher 1 2)____________________ -->
+		<!-- ___________________________________________________________________________________ -->
+		<span slot="select-description" class="select-description">Description</span>
+		<span slot="select-ingredients" class="select-ingredients">Ingredients</span>
+		<span slot="select-dosage" class="select-dosage">Dosage and warnings</span>
+
+		<!-- ____________________________________________________________________________________ -->
+		<!-- ____________________DESCRIPTION DIVY (možnost video a orher 1 2)____________________ -->
+		<!-- ____________________________________________________________________________________ -->
+		<div slot="description-description" class="description-description active">
+			<p>
+				Milk Thistle is a well-known herb that traditionally supports good liver health. Its beneficial effects are
+				primarily due to the flavonolignans it contains, collectively known as <b>silymarin</b>.
+			</p>
+			<p>
+				Each vegan capsule contains the equivalent of 5000 mg of the raw herb. The seed extract is at a <b
+					>10:1 concentration</b
+				>, meaning that the 5000 mg of seeds provides 500 mg of pure and potent extract, ten times more potent than the
+				same amount of raw herb.
+			</p>
+			<ul>
+				<li>Standardised extract</li>
+				<li>No fillers</li>
+				<li>Free from preservatives and ethers</li>
+				<li>Vegan and GMO-free</li>
+			</ul>
+			<p class="no-padding"><b>What makes NATIOS Milk Thistle Extract different?</b></p>
+			<p>
+				When you use a multi-potent extract, you can expect many benefits. One is the guarantee of high purity because
+				instead of simply grinding the herb and then putting it in a capsule, the extract goes through additional,
+				controlled production steps. In addition, the higher potency allows you to reduce the capsule’s size and daily
+				dosage, which you will appreciate when taking it. All this while guaranteeing the same, if not greater, potency
+				than products containing raw herbs.
+			</p>
+			<ul>
+				<li>Liver and gallbladder function</li>
+				<li>Detoxification of the body</li>
+				<li>Healthy blood sugar levels</li>
+				<li>Antioxidant</li>
+				<li>Natural immunity</li>
+				<li>Healthy heart function</li>
+				<li>Support digestion</li>
+				<li>Physical and mental performance</li>
+			</ul>
+			<p class="no-padding"><b>Milk Thistle</b></p>
+			<p>
+				Milk Thistle (Silybum marianum) is a plant from the Asteraceae family. It grows naturally in the Mediterranean,
+				Asia Minor, Asia Forward, and the Canary Islands, but it has also become native to our country. It is used in
+				traditional and modern medicine for many problems typically related to liver health and digestive support. It is
+				most effective as an extract but can also be found in a pure version in capsules or in a chopped form for making
+				tea.
+			</p>
+		</div>
+		<!-- ____________________TABULKA____________________ -->
+		<div slot="description-ingredients" class="description-ingredients">
+			<table>
+				<thead>
+					<tr>
+						<th
+							><div class="dosage">
+								<span
+									><b>Serving size:</b> 1&nbsp;veg capsule<br />
+									<b>Contains:</b> 90&nbsp;servings</span
+								>
+							</div></th
+						>
+						<th>Amount Per Serving</th>
+						<th>%NRV*</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td
+							><b>Milk thistle 10:1 extract</b>
+							<i>(Silybum marianum)</i> (seeds)
+							<br />
+							- Equivalent to 5&nbsp;000&nbsp;mg of raw herb
+						</td>
+						<td>500&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td colspan="3"
+							><div class="rhp">
+								<span>* Nutritional Reference Value</span>
+								<span>** Nutritional Reference Value is not established</span>
+							</div></td
+						>
+					</tr>
+				</tbody>
+			</table>
+			<p><b>Other ingredients:</b> Veg Capsule (HPMC). The product does not contain any other added substances.</p>
+		</div>
+		<!-- ____________________DÁVKOVÁNÍ A UPOZORNĚNÍ____________________ -->
+		<div slot="description-dosage" class="description-dosage">
+			<p>
+				<b>Recommended dosage:</b><br />
+				Take 1 capsule dailz with water.
+			</p>
+			<p>
+				<b>Warning:</b><br />
+				For adults only. If you have a medical condition, are pregnant, nursing or trying to conceive, or are taking medication,
+				consult with a physician before taking this product! Keep out of reach of children. Dietary supplement. It is not
+				a substitute for a varied diet. Do not exceed the recommended daily dosage.
+			</p>
+			<p>
+				<b>Storage:</b><br />
+				Store in a cool, dry place.
+			</p>
+			<p>
+				<b>Made in EU</b>
+			</p>
+		</div>
+	</ProductTemplate>
+</IndexLayout>
+
+<style is:global>
+	:root {
+		--number-of-photos: 2;
+	}
+</style>

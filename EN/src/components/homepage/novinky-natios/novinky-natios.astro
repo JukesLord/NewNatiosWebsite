@@ -10,12 +10,16 @@ import HexagonSmallMobile from "@components/hexagons/natios-new-products/mobile-
 import ArrowLeftEmpty from "@components/arrows/arrowLeftEmpty.astro";
 import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 import { Image } from "astro:assets";
-import productImage1 from "@assets/images/products/Vitamin_C_Lipo_500_60/Vitamin_C_Lipo_500_60_front.webp";
-import productImage2 from "@assets/images/products/Maca_Extract_5000_90/Maca_Extract_5000_90_front.webp";
-import productImage3 from "@assets/images/products/Cordyceps_Extract_500_90/Cordyceps_Extract_500_90_front.webp";
-const alt1 = "Natios Liposomal Vitamin C";
-const alt2 = "Natios Maca Extract Extra Strength";
-const alt3 = "Natios Cordyceps Mushroom Extract";
+import productImage1 from "@assets/images/products/mind-focus-60/mind-focus-60-front.webp";
+import productImage2 from "@assets/images/products/activated-b-complex-100/activated-b-complex-100-front.webp";
+import productImage3 from "@assets/images/products/vitamin-d3-k2-5000-100/vitamin-d3-k2-5000-100-front.webp";
+import productImage4 from "@assets/images/products/acerola-500-90/acerola-500-90-front.webp";
+import productImage5 from "@assets/images/products/shilajit-500-90/shilajit-500-90-front.webp";
+const alt1 = "Natios Mind Focus";
+const alt2 = "Natios Activated B-Complex";
+const alt3 = "Natios Vitamin D3 & K2 (5000 IU & 200 mcg)";
+const alt4 = "Natios Acerola Komplex";
+const alt5 = "Natios Shilajit Extract";
 import MoreInfo from "@components/more-info.astro";
 
 const loading = "lazy";
@@ -26,7 +30,7 @@ const quality = 90;
 
 <section id="brand-news" class="brand-news">
 	<SectionHeader
-		headerText="New products"
+		headerText="Novinky"
 		marginTopMOB="3em"
 		marginTopPC=".25em"
 		paddingTopMOB="1em"
@@ -35,7 +39,7 @@ const quality = 90;
 		paddingBottomPC="3.15em"
 	/>
 
-	<SectionBackgroundText backgroundText="News" top="10%" left="00%" translateX="0" translateY="0" opacity="0.08" />
+	<SectionBackgroundText backgroundText="Novinky" top="10%" left="00%" translateX="0" translateY="0" opacity="0.08" />
 	<div class="brand-news-content">
 		<div class="brand-new-product-assets">
 			<div class="hexagon hexagon-large pc">
@@ -87,56 +91,107 @@ const quality = 90;
 						loading={loading}
 					/>
 				</div>
+				<div class="brand-new-product-image">
+					<Image
+						src={productImage4}
+						width={productImageWidth}
+						densities={productDensities}
+						alt={alt4}
+						quality={quality}
+						loading={loading}
+					/>
+				</div>
+				<div class="brand-new-product-image">
+					<Image
+						src={productImage5}
+						width={productImageWidth}
+						densities={productDensities}
+						alt={alt5}
+						quality={quality}
+						loading={loading}
+					/>
+				</div>
 			</div>
 		</div>
 		<div class="brand-new-product-texts">
 			<div class="brand-new-product-text">
 				<div class="text-animation-wrapper">
-					<h3 class="brand-new-product-heading">NATIOS Liposomal Vitamin C</h3>
+					<h3 class="brand-new-product-heading">NATIOS Mind Focus</h3>
 					<p class="brand-new-product-description">
-						This highly effective vitamin C in liposomal form will certainly help you not only to support your immune
-						system, but also to boost collagen production and, thanks to its antioxidant capabilities, help protect your
-						cells from free radicals.
+						Do you need to prepare for a difficult exam, boost your <b>thinking, creativity or cognitive functions</b> to
+						perform properly at work, or do you just want to have the memory you used to have? Mind Focus is a unique combination
+						of amino acids, herbs and other key ingredients designed to stimulate brain and nerve function. A potent <b
+							>combination of 6 herbal extracts and 4 ingredients</b
+						> that have been shown in various studies to have a positive effect on memory, concentration and focus and gives
+						your brain everything it needs.
 					</p>
-					<p class="brand-new-product-description">
-						Natios Vitamin C is manufactured in liposomal form and in addition to vitamin C, it also contains citrus
-						bioflavonoids, rutin and rose hip. This combination results in maximum potency and absorption, resulting in
-						a great bio-available vitamin C supplement.
-					</p>
-					<MoreInfo href="/product/vitamin-c-liposomal-500-60" marginBottom="2em" />
+					<p class="brand-new-product-description">Suitable for work, study or gamers.</p>
+					<MoreInfo href="/product/mind-focus-60" marginBottom="2em" />
 				</div>
 			</div>
 			<div class="brand-new-product-text">
 				<div class="text-animation-wrapper">
-					<h3 class="brand-new-product-heading">NATIOS Maca Extra Strength Extract</h3>
+					<h3 class="brand-new-product-heading">NATIOS Activated B-Complex</h3>
 					<p class="brand-new-product-description">
-						The extra strength of one Natios Maca capsule is suitable for everybody. Its effects are valued by mothers
-						of young and restless children, students before the exam period, as well as high-ranking managers facing
-						daily stress.
+						Natios Activated B-Complex is an ideal way to supplement B vitamins. It contains <b
+							>only the active and effective forms of the vitamins</b
+						>. The active forms are much easier for the body to use and absorb as they do not have to go through the
+						conversion process from inactive to active in the body, so they are 'pre-prepared' for absorption. The
+						complex contains a s<b>ynergistic blend of 16 ingredients</b>, including B vitamins, alpha-lipoic acid,
+						betaine, vitamin C, magnesium, PABA and coenzyme Q10. These ingredients enhance the effects of the
+						B-complex.
 					</p>
-					<p class="brand-new-product-description">
-						Maca is proven to have effects on physical and mental performance, the function of the hormonal system and,
-						last but not least, supports vitality and libido. Each vegan capsule contains the equivalent of 5000 mg of
-						raw herb.
-					</p>
-					<MoreInfo href="/product/maca-extract-5000-90" marginBottom="2em" />
+
+					<MoreInfo href="/product/activated-b-complex-100" marginBottom="2em" />
 				</div>
 			</div>
 			<div class="brand-new-product-text">
 				<div class="text-animation-wrapper">
-					<h3 class="brand-new-product-heading">NATIOS Cordyceps Mushroom Extract</h3>
+					<h3 class="brand-new-product-heading">NATIOS Vitamin D3 & K2 (5000&nbsp;IU & 200&nbsp;mcg)</h3>
 					<p class="brand-new-product-description">
-						Cordyceps sinensis is a parasitic fungus that has been used for centuries in traditional Chinese medicine as
-						an energy booster. This Cordyceps by Natios offers a very potent mycelium extract. Extraction is the most
-						optimal way to process mushrooms for health purposes. This is also why the vast majority of studies are
-						conducted with extracts and not with mushroom powder.
+						Natios Vitamin D3 & K2 provides a powerful combination of two essential vitamins that are key to maintaining <b
+							>bone health</b
+						> and boosting <b>immune function</b>. This supplement contains 5000 IU of vitamin D3 in each capsule,
+						ensuring your body's daily requirement is met. The vitamin K2 content creates a <b
+							>synergistic combination</b
+						> that greatly enhances effectiveness. Vitamin K2 plays a role in calcium metabolism, helping to direct calcium
+						to the parts of the body that really need it.
 					</p>
+
+					<MoreInfo href="/product/vitamin-d3-k2-5000-100" marginBottom="2em" />
+				</div>
+			</div>
+			<div class="brand-new-product-text">
+				<div class="text-animation-wrapper">
+					<h3 class="brand-new-product-heading">NATIOS Acerola Complex</h3>
 					<p class="brand-new-product-description">
-						The main active substances of vital mushrooms are polysaccharides. While the dried powder contains roughly
-						0.5–3&nbsp;% of polysaccharides, this Natios extract contains 40&nbsp;%. This extract is therefore up to 40
-						times more concentrated than the mushroom powder itself.
+						Acerola is one of <b>the best sources of natural vitamin C</b>, a water-soluble micronutrient known for its
+						beneficial effects on the immune system and protecting cells from oxidative stress. Our bodies cannot
+						produce vitamin C, so supplementation is essential, not only in winter. Acerola Complex contains a potent <b
+							>25% extract supplemented with rose hip and citrus bioflavonoids</b
+						> to increase absorption and overall effectiveness.
 					</p>
-					<MoreInfo href="/product/cordyceps-extract-500-90" marginBottom="2em" />
+
+					<MoreInfo href="/product/acerola-500-90" marginBottom="2em" />
+				</div>
+			</div>
+			<div class="brand-new-product-text">
+				<div class="text-animation-wrapper">
+					<h3 class="brand-new-product-heading">NATIOS Shilajit Extract</h3>
+					<p class="brand-new-product-description">
+						Shilajit is a dark-coloured natural substance used in Ayurveda for over 3,000 years and is now considered a
+						superfood. Shilajit (mummio) is a substance that means "<b>mountain conqueror and painkiller</b>" in
+						Sanskrit (an ancient Indian language). Shilajit contains more than 40 minerals and substances, the most
+						important of which is <b>fulvic acid</b>. As a result of the substances it contains, shilajit not only helps
+						ensure the proper functioning of the reproductive system but also benefits immunity, mental function, etc.
+					</p>
+
+					<p class="brand-new-product-description">
+						Natios Shilajit is a <b>50% standardised extract</b>. This means that you can be absolutely sure that each
+						capsule is providing your body with an effective amount of fulvic acid.
+					</p>
+
+					<MoreInfo href="/product/shilajit-500-90" marginBottom="2em" />
 				</div>
 			</div>
 		</div>

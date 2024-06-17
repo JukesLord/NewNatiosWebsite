@@ -1,0 +1,225 @@
+---
+import IndexLayout from "../../../layouts/IndexLayout.astro";
+import ProductTemplate from "@components/product/product-template.astro";
+
+import { Image } from "astro:assets";
+import productImage1 from "@assets/images/products/acerola-500-90/acerola-500-90-fwc.webp";
+import productImage2 from "@assets/images/products/acerola-500-90/acerola-500-90-bws.webp";
+
+const alt = "NATIOS Acerola Komplex";
+const loading = "lazy";
+const productImageWidth = 1000;
+const pixelDensities = [1, 1.5, 2, 2.5, 3];
+const quality = 90;
+---
+
+<IndexLayout title="NATIOS Acerola Komplex">
+	<ProductTemplate>
+		<!-- _____________________________________________ -->
+		<!-- ____________________NÁZEV____________________ -->
+		<!-- _____________________________________________ -->
+		<h1 slot="product-name-h1">Acerola Complex</h1>
+		<h2 slot="product-name-h2">500 mg, 90 vegan capsules</h2>
+
+		<!-- ________________________________________________________ -->
+		<!-- ____________________FOTKY VELKÉ DO 6____________________ -->
+		<!-- ________________________________________________________ -->
+		<div slot="large-image-1" class="large-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="large-image-2" class="large-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading={loading}
+			/>
+		</div>
+
+		<!-- ____________________________________________________________ -->
+		<!-- ____________________FOTKY NÁHLEDOVÉ DO 6____________________ -->
+		<!-- ____________________________________________________________ -->
+		<div slot="preview-image-1" class="preview-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="preview-image-2" class="preview-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<!-- ___________________________________________________________________________________ -->
+		<!-- ____________________SELECT MOŽNOSTI (možnost video a orher 1 2)____________________ -->
+		<!-- ___________________________________________________________________________________ -->
+		<span slot="select-description" class="select-description">Description</span>
+		<span slot="select-ingredients" class="select-ingredients">Ingredients</span>
+		<span slot="select-dosage" class="select-dosage">Dosage and warnings</span>
+
+		<!-- ____________________________________________________________________________________ -->
+		<!-- ____________________DESCRIPTION DIVY (možnost video a orher 1 2)____________________ -->
+		<!-- ____________________________________________________________________________________ -->
+		<div slot="description-description" class="description-description active">
+			<p>
+				Acerola is one of the best sources of natural vitamin C, a water-soluble micronutrient known for its beneficial
+				effects on the immune system and protecting cells from oxidative stress. Our bodies cannot produce vitamin C, so
+				supplementation is essential, not only in winter. Acerola Complex contains a potent 25% extract supplemented
+				with rose hip and citrus bioflavonoids to increase absorption and overall effectiveness.
+			</p>
+			<p>
+				Natios Acerola Complex contains a standardised extract of the acerola fruit. As a result, you can be absolutely
+				sure that you are providing your body with an effective amount of vitamin C with each capsule. The Natios brand
+				prides itself not only on its efficacy but also on the purity of its ingredients. Apart from the active
+				ingredients and the vegan capsule, there are no fillers, additives, polishes or preservatives.
+			</p>
+			<ul>
+				<li>125 mg vitamin C</li>
+				<li>25 mg rose hip</li>
+				<li>25 mg bioflavonoids</li>
+				<li>Standardised extract</li>
+				<li>Free from fillers</li>
+				<li>Free from preservatives and additives</li>
+				<li>Vegan and GMO-free</li>
+			</ul>
+			<p>
+				Each vegan capsule contains 25% acerola fruit extract, providing 125mg of vitamin C (156% of the recommended
+				daily allowance). But that's not all. There are also 25 mg of bioflavonoids and 25 mg of rose hips. This makes
+				our supplement much more effective than traditional pure vitamin C, while providing the body with more benefits
+				for overall health.
+			</p>
+			<ul>
+				<li>Vitamin C and Rose boost immune system function</li>
+				<li>Vitamin C and Rose are antioxidants</li>
+				<li>Vitamin C helps protect cells from oxidative stress</li>
+				<li>Vitamin C supports the proper formation of collagen</li>
+				<li>Vitamin C supports the function of blood vessels, bones, cartilage, gums, skin and teeth</li>
+				<li>Vitamin C supports healthy energy metabolism</li>
+				<li>Vitamin C helps maintain healthy neurological and psychological function</li>
+				<li>Vitamin C helps reduce fatigue and exhaustion</li>
+				<li>Vitamin C increases iron absorption</li>
+				<li>Rose Hip supports healthy bladder, kidney and respiratory function</li>
+			</ul>
+			<p class="no-padding"><b>Acerola</b></p>
+			<p>
+				Acerola is a plant native to the tropical regions of the Western Hemisphere. It produces cherry-like fruits with
+				a pleasant taste and is used in modern and folk medicine. The health benefits of acerola are mainly due to its
+				high vitamin C content. The vitamin C content of acerola is higher than that of oranges and strawberries; only
+				rose hips contain more. Another essential substance in acerola is polyphenols, which act as antioxidants in the
+				body.
+			</p>
+			<p class="no-padding"><b>Citrus bioflavonoids </b></p>
+			<p>
+				Any food that contains vitamin C also contains bioflavonoids. Bioflavonoids have antioxidant properties and are
+				essential for vitamin C absorption, which also act synergistically in the body. Although bioflavonoids are not
+				considered a vitamin, they are sometimes called vitamin P.
+			</p>
+			<p class="no-padding"><b>Rose Hips </b></p>
+			<p>
+				Rose hips (Rosa canina L.) are small fruits that contain up to 15 times more vitamin C than oranges. Anyone can
+				pick them up in the countryside as they are pretty common. Rose hips can be used to make tea, syrup or extract.
+			</p>
+		</div>
+		<!-- ____________________TABULKA____________________ -->
+		<div slot="description-ingredients" class="description-ingredients">
+			<table>
+				<thead>
+					<tr>
+						<th
+							><div class="dosage">
+								<span
+									><b>Serving size:</b> 1&nbsp;veg capsule<br />
+									<b>Contains:</b> 90&nbsp;servings</span
+								>
+							</div></th
+						>
+						<th>Amount Per Serving</th>
+						<th>%NRV*</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Acerola Fruit Extract 25% (Malpighia glabra)</td>
+						<td>500&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td class="padding-left">Vitamon C</td>
+						<td>125&nbsp;mg</td>
+						<td>156%</td>
+					</tr>
+
+					<tr>
+						<td>Rose Hips Powder</td>
+						<td>25&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td>Citrus Bioflavonoid Complex</td>
+						<td>25&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td colspan="3"
+							><div class="rhp">
+								<span>* Nutritional Reference Value</span>
+								<span>** Nutritional Reference Value is not established</span>
+							</div></td
+						>
+					</tr>
+				</tbody>
+			</table>
+			<p><b>Other ingredients:</b> Veg Capsule (HPMC). The product does not contain any other added substances.</p>
+		</div>
+		<!-- ____________________DÁVKOVÁNÍ A UPOZORNĚNÍ____________________ -->
+		<div slot="description-dosage" class="description-dosage">
+			<p>
+				<b>Recommended dosage:</b><br />
+				Take 1 capsule daily with water.
+			</p>
+			<p>
+				<b>Warning:</b><br />
+				For adults only. If you have a medical condition, are pregnant, nursing or trying to conceive, or are taking medication,
+				consult with a physician before taking this product! Keep out of reach of children. Dietary supplement. It is not
+				a substitute for a varied diet. Do not exceed the recommended daily dosage.
+			</p>
+			<p>
+				<b>Storage:</b><br />
+				Store in a cool, dry place.
+			</p>
+			<p>
+				<b>Made in EU</b>
+			</p>
+		</div>
+	</ProductTemplate>
+
+	<style is:global>
+		:root {
+			--number-of-photos: 2;
+		}
+	</style>
+</IndexLayout>

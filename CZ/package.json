@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/partytown": "^2.1.1",
     "astro": "^3.6.0",
     "autoprefixer": "^10.4.16",
     "jquery": "^3.7.1",
