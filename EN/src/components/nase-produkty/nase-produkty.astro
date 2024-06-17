@@ -612,22 +612,26 @@ const quality = 90;
 		}
 		minHeightNazvu();
 
-		/*observer*/
-		let options = {
-			root: null,
-			rootMargin: "0px",
-			threshold: 0.3,
-		};
-		let observer = new IntersectionObserver(function (entries) {
-			entries.forEach(function (entry) {
-				if (entry.isIntersecting) {
-					basicRozlozeniProduktu();
-					observer.unobserve(entry.target);
-				}
-			});
-		}, options);
+		if ($("section#hero").length > 0) {
+			/*observer*/
+			let options = {
+				root: null,
+				rootMargin: "0px",
+				threshold: 0.3,
+			};
+			let observer = new IntersectionObserver(function (entries) {
+				entries.forEach(function (entry) {
+					if (entry.isIntersecting) {
+						basicRozlozeniProduktu();
+						observer.unobserve(entry.target);
+					}
+				});
+			}, options);
 
-		observer.observe(document.querySelector(".our-products-list"));
+			observer.observe(document.querySelector(".our-products-list"));
+		} else {
+			basicRozlozeniProduktu();
+		}
 
 		function productShuffle() {
 			basicRozlozeniProduktu();
