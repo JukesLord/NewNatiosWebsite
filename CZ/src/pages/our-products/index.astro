@@ -5,6 +5,17 @@ import AsideNavigation from "@components/aside-navigation.astro";
 import SectionHeader from "@components/section-header.astro";
 ---
 
+<script is:inline>
+	document.addEventListener(
+		"astro:page-load",
+		function () {
+			$("body").removeClass();
+			$("body").addClass("our-products-page");
+		},
+		{ once: true }
+	);
+</script>
+
 <IndexLayout title="Natios produkty">
 	<section id="our-products" class="our-products">
 		<div class="section-header">
@@ -38,14 +49,3 @@ import SectionHeader from "@components/section-header.astro";
 		}
 	}
 </style>
-
-<script is:inline>
-	document.addEventListener(
-		"astro:page-load",
-		function () {
-			$("body").removeClass();
-			$("body").addClass("our-products-page");
-		},
-		{ once: true }
-	);
-</script>

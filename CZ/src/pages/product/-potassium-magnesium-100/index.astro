@@ -1,0 +1,253 @@
+---
+import IndexLayout from "../../../layouts/IndexLayout.astro";
+import ProductTemplate from "@components/product/product-template.astro";
+
+import { Image } from "astro:assets";
+import productImage1 from "@assets/images/products/potassium-magnesium-100/potassium-magnesium-100-fwc.webp";
+import productImage2 from "@assets/images/products/potassium-magnesium-100/potassium-magnesium-100-bws.webp";
+
+const alt = "NATIOS Potassium & Magnesium";
+const loading = "lazy";
+const productImageWidth = 1000;
+const pixelDensities = [1, 1.5, 2, 2.5, 3];
+const quality = 90;
+---
+
+<IndexLayout title="NATIOS Potassium & Magnesium">
+	<ProductTemplate>
+		<!-- _____________________________________________ -->
+		<!-- ____________________NÁZEV____________________ -->
+		<!-- _____________________________________________ -->
+		<h1 slot="product-name-h1">Potassium & Magnesium</h1>
+		<h2 slot="product-name-h2">Citrate & Malate, 100 veganských kapslí</h2>
+
+		<!-- ________________________________________________________ -->
+		<!-- ____________________FOTKY VELKÉ DO 6____________________ -->
+		<!-- ________________________________________________________ -->
+		<div slot="large-image-1" class="large-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="large-image-2" class="large-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading={loading}
+			/>
+		</div>
+
+		<!-- ____________________________________________________________ -->
+		<!-- ____________________FOTKY NÁHLEDOVÉ DO 6____________________ -->
+		<!-- ____________________________________________________________ -->
+		<div slot="preview-image-1" class="preview-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="preview-image-2" class="preview-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<!-- ___________________________________________________________________________________ -->
+		<!-- ____________________SELECT MOŽNOSTI (možnost video a orher 1 2)____________________ -->
+		<!-- ___________________________________________________________________________________ -->
+		<span slot="select-description" class="select-description">Popis</span>
+		<span slot="select-ingredients" class="select-ingredients">Složení</span>
+		<span slot="select-dosage" class="select-dosage">Dávkování a upozornění</span>
+
+		<!-- ____________________________________________________________________________________ -->
+		<!-- ____________________DESCRIPTION DIVY (možnost video a orher 1 2)____________________ -->
+		<!-- ____________________________________________________________________________________ -->
+		<div slot="description-description" class="description-description active">
+			<p>
+				Nejúčinnější, nejlépe vstřebatelné a nejšetrnější formy minerálů v jednom komplexu. Tento doplněk kombinuje
+				citrát draselný a malát hořečnatý, což jsou formy, které zajišťují <b
+					>maximální vstřebatelnost a šetrnost pro žaludek</b
+				>. Tento komplex je navíc obohacen o vitamín B6 ve své aktivní formě P-5-P. Každá veganská kapsle tohoto
+				komplexu obsahuje 100 mg draslíku, 50 mg hořčíku a 2 mg vitamínu B6.
+			</p>
+
+			<ul>
+				<li>Účinný komplex 3 látek</li>
+				<li>Nejlépe vstřebatelné formy</li>
+				<li>Bez příměsí, plnidel a éček</li>
+				<li>Vegan, bez lepku a GMO-free</li>
+			</ul>
+
+			<p class="no-padding"><b>Proč kombinovat draslík a hořčík?</b></p>
+			<p>
+				Draslík a hořčík <b>se vzájemně podporují</b> ve svých fyziologických funkcích, což může vézt k efektivnějšímu využití
+				těchto minerálů. Draslík pomáhá udržovat optimální <b>hladinu hořčíku v buňkách</b>, což je klíčové pro různé
+				buněčné procesy. Hořčík naopak podporuje <b>transport draslíku</b> přes buněčné membrány. Tímto synergickým efektem
+				se zvyšuje celková biologická dostupnost a účinnost obou minerálů. Tento komplex je také doplněný o vitamín B6.
+			</p>
+			<p class="no-padding"><b>Jaké jsou benefity komplexu?</b></p>
+			<p>
+				Draslík je důležitý zdraví nervů a přispívá k <b>regulaci krevního tlaku</b>. V neposlední řadě je však nezbytný
+				pro správnou funkci svalů, včetně toho nejdůležitějšího - <b>srdce</b>. Hořčík je taktéž velmi důležitý pro
+				zdravé fungování svalů a podporu nervové soustavy. Mimo to však taky podporuje energetický metabolismus, syntézu
+				bílkovin a zdraví kostí. Společně pak tyto minerály pomáhají udržovat elektolytickou rovnováhu.
+			</p>
+			<p>
+				Kombinace draslíku a hořčíku je proto ideální pro lidi, kteří chtějí podpořit své fyzické a mentální zdraví,
+				zvláště při zvýšené fyzické aktivitě nebo stresu.
+			</p>
+			<ul>
+				<li>Draslík a hořčík podporuji funkci svalů</li>
+				<li>Draslík pomáhá udržovat krevní tlak</li>
+				<li>Draslík, hořčík i B6 podporují nervovou soustavu</li>
+				<li>Hořčík a B6 podporují energetický metabolismus</li>
+				<li>Hořčík a B6 působí proti únavě a vyčerpání</li>
+				<li>Hořčík a B6 podporují psychické činnosti</li>
+			</ul>
+
+			<table class="compare">
+				<thead>
+					<tr>
+						<th colspan="2"><b>ROZDÍLY MEZI NATIOS KOMPLEXEM A BĚŽNÝM DRASLÍKEM</b></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><b>NATIOS Potasium & Magnesium Complex</b></td>
+						<td><b>Běžný draslík</b></td>
+					</tr>
+					<tr>
+						<td>Nejlepší forma citrát draselný </td>
+						<td>Méně účinné formy s potenciálními vedlejšími účinky </td>
+					</tr>
+					<tr>
+						<td>Doplněno o 333&nbsp;mg malátu hořečnatého </td>
+						<td>Bez hořčíku</td>
+					</tr>
+					<tr>
+						<td>Doplněno o 2&nbsp;mg vitamínu B6 jako P-5-P </td>
+						<td>Bez vitamínu B6 </td>
+					</tr>
+					<tr>
+						<td>Bez plnidel, příměsí a zbytečných éček</td>
+						<td>Plnidla a další látky usnadňující výrobu</td>
+					</tr>
+					<tr>
+						<td>Nízká cena </td>
+						<td>Nízká cena </td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p class="no-padding"><b>V čem jsou citrát draselný a malát hořečnatý nejlepší?</b></p>
+			<p>
+				Citrát draselný je <b>jednou z nejlépe vstřebatelných forem draslíku</b>. Tato forma je obzvláště šetrná k
+				trávicímu systému a <b>nezpůsobuje žaludeční potíže</b>, což je častý problém u jiných forem draslíku. Navíc,
+				citrát draselný je vhodný také pro jedince náchylné k ledvinovým kamenům.
+			</p>
+			<p>
+				Malát hořečnatý je forma hořčíku, která je známá svou <b
+					>vynikající vstřebatelností a vysokou biologickou dostupností</b
+				>. Na rozdíl od oxidů nebo síranů hořečnatých, které mohou způsobovat zažívací potíže a mají nižší míru
+				vstřebávání, je malát hořečnatý šetrný k žaludku a má až 80% vstřebatelnost. Oproti jiným formám je malát
+				primárně zaměřen na podporu energetického metabolismu, což jde ruku v ruce s účinky draslíku.
+			</p>
+		</div>
+		<!-- ____________________TABULKA____________________ -->
+		<div slot="description-ingredients" class="description-ingredients">
+			<table>
+				<thead>
+					<tr>
+						<th
+							><div class="dosage">
+								<span
+									><b>Velikost dávky:</b> 1&nbsp;veganská kapsle<br />
+									<b>Balení obsahuje:</b> 100&nbsp;dávek</span
+								>
+							</div></th
+						>
+						<th>Množství v 1 dávce</th>
+						<th>%&nbsp;RHP*</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td
+							><b>Draslík</b>
+							(z 277 mg citrátu draselného)</td
+						>
+						<td>100&nbsp;mg</td>
+						<td>5&nbsp;&</td>
+					</tr>
+					<tr>
+						<td
+							><b>Hořčík</b>
+							(z 333 mg malátu hořečnatého)</td
+						>
+						<td>50&nbsp;mg</td>
+						<td>13&nbsp;%</td>
+					</tr>
+					<tr>
+						<td><b>Vitamín B6</b> (P-5-P) </td>
+						<td>2&nbsp;mg</td>
+						<td>143&nbsp;%</td>
+					</tr>
+
+					<tr>
+						<td colspan="3"
+							><div class="rhp">
+								<span>* referenční hodnota příjmu u průměrné dospělé osoby</span>
+							</div></td
+						>
+					</tr>
+				</tbody>
+			</table>
+			<p><b>Další složky:</b> Veganská HPMC kapsle. Výrobek neobsahuje žádné další přidané látky (éčka).</p>
+		</div>
+		<!-- ____________________DÁVKOVÁNÍ A UPOZORNĚNÍ____________________ -->
+		<div slot="description-dosage" class="description-dosage">
+			<p>
+				<b>Doporučené dávkování:</b><br />
+				Jako doplněk stravy užívejte 1 až 2 veganské kapsle denně s vodou
+			</p>
+			<p>
+				<b>Upozornění:</b><br />
+				Pouze pro dospělé. Trpíte-li onemocněním, jste těhotná, kojíte, snažíte se otěhotnět nebo užíváte léky, poraďte se
+				před užitím tohoto přípravku s lékařem. Uchovávejte mimo dosah dětí. Není náhradou pestré stravy. Doplněk stravy.
+				Nepřekračujte doporučené denní dávkování.
+			</p>
+			<p>
+				<b>Skladování:</b><br />
+				Skladujte na chladném a suchém místě.
+			</p>
+			<p>
+				<b>Vyrobeno v EU</b>
+			</p>
+		</div>
+	</ProductTemplate>
+</IndexLayout>
+
+<style is:global>
+	:root {
+		--number-of-photos: 2;
+	}
+</style>

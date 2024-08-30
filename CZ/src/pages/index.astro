@@ -8,17 +8,6 @@ import OZnacceNatios from "@components/homepage/o-znacce-natios/o-znacce-natios.
 import AsideNavigation from "@components/aside-navigation.astro";
 ---
 
-<IndexLayout title="Natios - It's Better To Be The Best">
-	<Hero />
-	<VyhodyZnacky />
-	<NaseProduktyHome />
-	<NovinkyNatios />
-	<OZnacceNatios />
-	<AsideNavigation />
-</IndexLayout>
-
-<style></style>
-
 <script is:inline>
 	document.addEventListener(
 		"astro:page-load",
@@ -28,4 +17,14 @@ import AsideNavigation from "@components/aside-navigation.astro";
 		},
 		{ once: true }
 	);
+	$("body").addClass("homepage");
 </script>
+
+<IndexLayout title="Natios - It's Better To Be The Best">
+	<Hero />
+	<VyhodyZnacky />
+	<NaseProduktyHome />
+	<NovinkyNatios />
+	<OZnacceNatios />
+	<AsideNavigation />
+</IndexLayout>

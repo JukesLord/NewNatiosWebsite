@@ -3,33 +3,31 @@ import SectionHeader from "@components/section-header.astro";
 import SectionBackgroundText from "@components/section-background-text.astro";
 import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 import { Image } from "astro:assets";
+import activatedBComplex from "@assets/images/products/activated-b-complex-100/activated-b-complex-100-front.webp";
+import acerolaComplex from "@assets/images/products/acerola-500-90/acerola-500-90-front.webp";
 import ashwagandhaExtract from "@assets/images/products/Ashwagandha_Extract_5000_90/Ashwagandha_Extracy_5000_90_front.webp";
 import cordycepsExtract from "@assets/images/products/Cordyceps_Extract_500_90/Cordyceps_Extract_500_90_front.webp";
 import electrolyteLemon from "@assets/images/products/Electrolyte_Lemon_600/Electrolyte_Lemon_600_crop.webp";
 import electrolyteRaspberry from "@assets/images/products/Electrolyte_Raspberry_600/Electrolyte_Raspberry_600_crop.webp";
 import fenugreekAndBlessedExtract from "@assets/images/products/Fenugreek_Blessed_2000_120/Fenugreek_Blessed_2000_120_front.webp";
+import chagaExtract from "@assets/images/products/chaga-extract-500-90/chaga-extract-500-90-front.webp";
 import lionsManeExtract from "@assets/images/products/Lions_Extract_500_90/Lions_Extract_500_90_front.webp";
 import macaExtract from "@assets/images/products/Maca_Extract_5000_90/Maca_Extract_5000_90_front.webp";
 import magnesiumBisglycinate from "@assets/images/products/Magnesium_Bisglycinate_1000_90/Magnesium_Bisglycinate_1000_90_front.webp";
-
 import magnesiumLThreonate from "@assets/images/products/Magnesium_Lthreonate_800_100/Magnesium_Lthreonate_800_100_front.webp";
 import magnesiumMalate from "@assets/images/products/Magnesium_Malate_1000_90/Magnesium_Malate_1000_90_front.webp";
+import milkThistleExtract from "@assets/images/products/milk-thistle-extract-5000-90/milk-thistle-extract-5000-90-front.webp";
+import mindFocus from "@assets/images/products/mind-focus-60/mind-focus-60-front.webp";
 import moringaExtract from "@assets/images/products/Moringa_Extract_2000_90/Moringa_Extract_2000_90_front.webp";
 import nAcetylCysteine from "@assets/images/products/NAC_800_90/NAC_800_90_front.webp";
 import omegaPremium from "@assets/images/products/Omega_Premium_1000_100/Omega_Premium_1000_100_front.webp";
+import reishiExtract from "@assets/images/products/reishi-extract-500-90/reishi-extract-500-90-front.webp";
+import shilajitExtract from "@assets/images/products/shilajit-500-90/shilajit-500-90-front.webp";
 import vitaminCLipo from "@assets/images/products/Vitamin_C_Lipo_500_60/Vitamin_C_Lipo_500_60_front.webp";
+import vitaminD3K2_2000 from "@assets/images/products/vitamin-d3-k2-2000-100/vitamin-d3-k2-2000-100-front.webp";
+import vitaminD3K2_5000 from "@assets/images/products/vitamin-d3-k2-5000-100/vitamin-d3-k2-5000-100-front.webp";
 import vitaminD5000 from "@assets/images/products/Vitamin_D_5000_250/Vitamin_D_5000_250_front.webp";
 import zincComplex from "@assets/images/products/Zinc_Complex_25_100/Zinc_Complex_25_100_front.webp";
-
-import acerolaComplex from "@assets/images/products/acerola-500-90/acerola-500-90-front.webp";
-import shilajitExtract from "@assets/images/products/shilajit-500-90/shilajit-500-90-front.webp";
-import milkThistleExtract from "@assets/images/products/milk-thistle-extract-5000-90/milk-thistle-extract-5000-90-front.webp";
-import reishiExtract from "@assets/images/products/reishi-extract-500-90/reishi-extract-500-90-front.webp";
-import chagaExtract from "@assets/images/products/chaga-extract-500-90/chaga-extract-500-90-front.webp";
-import mindFocus from "@assets/images/products/mind-focus-60/mind-focus-60-front.webp";
-import activatedBComplex from "@assets/images/products/activated-b-complex-100/activated-b-complex-100-front.webp";
-import vitaminD3K2_5000 from "@assets/images/products/vitamin-d3-k2-5000-100/vitamin-d3-k2-5000-100-front.webp";
-import vitaminD3K2_2000 from "@assets/images/products/vitamin-d3-k2-2000-100/vitamin-d3-k2-2000-100-front.webp";
 
 const loading = "lazy";
 const productImageWidth = 148;
@@ -42,6 +40,9 @@ const quality = 90;
 	<div class="our-products-filters">
 		<div class="our-products-filter active" id="all">
 			<span>All</span>
+		</div>
+		<div class="our-products-filter" id="bestseller">
+			<span>Bestsellers</span>
 		</div>
 		<div class="our-products-filter" id="mineral">
 			<span>Minerals</span>
@@ -56,63 +57,34 @@ const quality = 90;
 			<span>Other</span>
 		</div>
 	</div>
-	<div class="our-products-list all">
-		<a href="/product/magnesium-bisglycinate-1000-90" class="our-product mineral">
+	<div class="our-products-list">
+		<a href="/product/acerola-500-90" class="our-product vitamin extract">
 			<div class="product-image">
 				<Image
-					src={magnesiumBisglycinate}
+					src={acerolaComplex}
 					width={productImageWidth}
 					densities={pixelDensities}
-					alt={"NATIOS Magnesium Bisglycinate"}
+					alt={"NATIOS Acerola Complex"}
 					quality={quality}
 					loading={loading}
 				/>
 			</div>
-			<div class="product-name">Magnesium Bisglycinate</div>
+			<div class="product-name">Acerola Complex</div>
 		</a>
-		<a href="/product/vitamin-c-liposomal-500-60" class="our-product vitamin">
+		<a href="/product/activated-b-complex-100" class="our-product vitamin">
 			<div class="product-image">
 				<Image
-					src={vitaminCLipo}
+					src={activatedBComplex}
 					width={productImageWidth}
 					densities={pixelDensities}
-					alt={"NATIOS Vitamin C Liposomal"}
+					alt={"NATIOS Activated B-Complex"}
 					quality={quality}
 					loading={loading}
 				/>
 			</div>
-			<div class="product-name">Liposomal Vitamin C</div>
+			<div class="product-name">Activated B-Complex</div>
 		</a>
-
-		<a href="/product/magnesium-malate-1000-90" class="our-product mineral">
-			<div class="product-image">
-				<Image
-					src={magnesiumMalate}
-					width={productImageWidth}
-					densities={pixelDensities}
-					alt={"NATIOS Magnesium Malate"}
-					quality={quality}
-					loading={loading}
-				/>
-			</div>
-			<div class="product-name">Magnesium Malate</div>
-		</a>
-
-		<a href="/product/fenugreek-and-blessed-2000-120" class="our-product extract">
-			<div class="product-image">
-				<Image
-					src={fenugreekAndBlessedExtract}
-					width={productImageWidth}
-					densities={pixelDensities}
-					alt={"NATIOS Fenugreek and Blessed Thistle Extract"}
-					quality={quality}
-					loading={loading}
-				/>
-			</div>
-			<div class="product-name">Fenugreek & Blessed Thistle</div>
-		</a>
-
-		<a href="/product/ashwagandha-extract-5000-90" class="our-product extract">
+		<a href="/product/ashwagandha-extract-5000-90" class="our-product bestseller extract" bestseller-value="4">
 			<div class="product-image">
 				<Image
 					src={ashwagandhaExtract}
@@ -125,48 +97,6 @@ const quality = 90;
 			</div>
 			<div class="product-name">Ashwagandha Extract</div>
 		</a>
-
-		<a href="/product/vitamin-d-5000-250" class="our-product vitamin">
-			<div class="product-image">
-				<Image
-					src={vitaminD5000}
-					width={productImageWidth}
-					densities={pixelDensities}
-					alt={"NATIOS Vitamin D3 5000 IU"}
-					quality={quality}
-					loading={loading}
-				/>
-			</div>
-			<div class="product-name">Vitamin D3 5000 IU</div>
-		</a>
-		<a href="/product/zinc-complex-25-100" class="our-product mineral">
-			<div class="product-image">
-				<Image
-					src={zincComplex}
-					width={productImageWidth}
-					densities={pixelDensities}
-					alt={"NATIOS Zinc Complex"}
-					quality={quality}
-					loading={loading}
-				/>
-			</div>
-			<div class="product-name">Zinc Complex</div>
-		</a>
-
-		<a href="/product/omega-premium-1000-100" class="our-product other">
-			<div class="product-image">
-				<Image
-					src={omegaPremium}
-					width={productImageWidth}
-					densities={pixelDensities}
-					alt={"NATIOS Omega Premium Fish Oil"}
-					quality={quality}
-					loading={loading}
-				/>
-			</div>
-			<div class="product-name">Omega Premium Fish Oil</div>
-		</a>
-
 		<a href="/product/cordyceps-extract-500-90" class="our-product extract">
 			<div class="product-image">
 				<Image
@@ -181,74 +111,6 @@ const quality = 90;
 			<div class="product-name">Cordyceps Extract</div>
 		</a>
 
-		<a href="/product/lions-mane-extract-500-90" class="our-product extract">
-			<div class="product-image">
-				<Image
-					src={lionsManeExtract}
-					width={productImageWidth}
-					densities={pixelDensities}
-					alt={"NATIOS Lions Mane Extract"}
-					quality={quality}
-					loading={loading}
-				/>
-			</div>
-			<div class="product-name">Lion's Mane Extract</div>
-		</a>
-		<a href="/product/magnesium-l-threonate-800-100" class="our-product mineral">
-			<div class="product-image">
-				<Image
-					src={magnesiumLThreonate}
-					width={productImageWidth}
-					densities={pixelDensities}
-					alt={"NATIOS Magnesium L-Threonate"}
-					quality={quality}
-					loading={loading}
-				/>
-			</div>
-			<div class="product-name">Magnesium L-Threonate</div>
-		</a>
-
-		<a href="/product/n-acetyl-cysteine-800-90" class="our-product other">
-			<div class="product-image">
-				<Image
-					src={nAcetylCysteine}
-					width={productImageWidth}
-					densities={pixelDensities}
-					alt={"NATIOS N-Acetyl Cysteine (NAC)"}
-					quality={quality}
-					loading={loading}
-				/>
-			</div>
-			<div class="product-name">N-Acetyl Cysteine</div>
-		</a>
-
-		<a href="/product/maca-extract-5000-90" class="our-product extract">
-			<div class="product-image">
-				<Image
-					src={macaExtract}
-					width={productImageWidth}
-					densities={pixelDensities}
-					alt={"NATIOS Maca Extract"}
-					quality={quality}
-					loading={loading}
-				/>
-			</div>
-			<div class="product-name">Maca Extract</div>
-		</a>
-
-		<a href="/product/moringa-extract-2000-90" class="our-product extract">
-			<div class="product-image">
-				<Image
-					src={moringaExtract}
-					width={productImageWidth}
-					densities={pixelDensities}
-					alt={"NATIOS Moringa Extract"}
-					quality={quality}
-					loading={loading}
-				/>
-			</div>
-			<div class="product-name">Moringa Extract</div>
-		</a>
 		<a href="/product/electrolyte-lemon-600" class="our-product mineral other">
 			<div class="product-image">
 				<Image
@@ -275,61 +137,18 @@ const quality = 90;
 			</div>
 			<div class="product-name">Electrolyte Complex Malina</div>
 		</a>
-
-		<a href="/product/acerola-500-90" class="our-product vitamin extract">
+		<a href="/product/fenugreek-and-blessed-2000-120" class="our-product bestseller extract" bestseller-value="3">
 			<div class="product-image">
 				<Image
-					src={acerolaComplex}
+					src={fenugreekAndBlessedExtract}
 					width={productImageWidth}
 					densities={pixelDensities}
-					alt={"NATIOS Acerola Complex"}
+					alt={"NATIOS Fenugreek and Blessed Thistle Extract"}
 					quality={quality}
 					loading={loading}
 				/>
 			</div>
-			<div class="product-name">Acerola Complex</div>
-		</a>
-
-		<a href="/product/shilajit-500-90" class="our-product extract">
-			<div class="product-image">
-				<Image
-					src={shilajitExtract}
-					width={productImageWidth}
-					densities={pixelDensities}
-					alt={"NATIOS Shilajit Extract"}
-					quality={quality}
-					loading={loading}
-				/>
-			</div>
-			<div class="product-name">Shilajit Extract</div>
-		</a>
-
-		<a href="/product/milk-thistle-extract-5000-90" class="our-product extract">
-			<div class="product-image">
-				<Image
-					src={milkThistleExtract}
-					width={productImageWidth}
-					densities={pixelDensities}
-					alt={"NATIOS Milk Thistle Extract"}
-					quality={quality}
-					loading={loading}
-				/>
-			</div>
-			<div class="product-name">Milk Thistle Extract</div>
-		</a>
-
-		<a href="/product/reishi-extract-500-90" class="our-product extract">
-			<div class="product-image">
-				<Image
-					src={reishiExtract}
-					width={productImageWidth}
-					densities={pixelDensities}
-					alt={"NATIOS Reishi Extract"}
-					quality={quality}
-					loading={loading}
-				/>
-			</div>
-			<div class="product-name">Reishi Extract</div>
+			<div class="product-name">Fenugreek & Blessed Thistle</div>
 		</a>
 
 		<a href="/product/chaga-extract-500-90" class="our-product extract">
@@ -345,7 +164,84 @@ const quality = 90;
 			</div>
 			<div class="product-name">Chaga Extract</div>
 		</a>
-
+		<a href="/product/lions-mane-extract-500-90" class="our-product extract">
+			<div class="product-image">
+				<Image
+					src={lionsManeExtract}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Lions Mane Extract"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Lion's Mane Extract</div>
+		</a>
+		<a href="/product/maca-extract-5000-90" class="our-product bestseller extract">
+			<div class="product-image">
+				<Image
+					src={macaExtract}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Maca Extract"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Maca Extract</div>
+		</a>
+		<a href="/product/magnesium-bisglycinate-1000-90" class="our-product bestseller mineral" bestseller-value="1">
+			<div class="product-image">
+				<Image
+					src={magnesiumBisglycinate}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Magnesium Bisglycinate"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Magnesium Bisglycinate</div>
+		</a>
+		<a href="/product/magnesium-l-threonate-800-100" class="our-product mineral">
+			<div class="product-image">
+				<Image
+					src={magnesiumLThreonate}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Magnesium L-Threonate"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Magnesium L-Threonate</div>
+		</a>
+		<a href="/product/magnesium-malate-1000-90" class="our-product bestseller mineral" bestseller-value="2">
+			<div class="product-image">
+				<Image
+					src={magnesiumMalate}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Magnesium Malate"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Magnesium Malate</div>
+		</a>
+		<a href="/product/milk-thistle-extract-5000-90" class="our-product extract">
+			<div class="product-image">
+				<Image
+					src={milkThistleExtract}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Milk Thistle Extract"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Milk Thistle Extract</div>
+		</a>
 		<a href="/product/mind-focus-60" class="our-product other">
 			<div class="product-image">
 				<Image
@@ -359,21 +255,111 @@ const quality = 90;
 			</div>
 			<div class="product-name">Mind Focus</div>
 		</a>
-
-		<a href="/product/activated-b-complex-100" class="our-product vitamin">
+		<a href="/product/moringa-extract-2000-90" class="our-product extract">
 			<div class="product-image">
 				<Image
-					src={activatedBComplex}
+					src={moringaExtract}
 					width={productImageWidth}
 					densities={pixelDensities}
-					alt={"NATIOS Activated B-Complex"}
+					alt={"NATIOS Moringa Extract"}
 					quality={quality}
 					loading={loading}
 				/>
 			</div>
-			<div class="product-name">Activated B-Complex</div>
+			<div class="product-name">Moringa Extract</div>
+		</a>
+		<a href="/product/n-acetyl-cysteine-800-90" class="our-product other">
+			<div class="product-image">
+				<Image
+					src={nAcetylCysteine}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS N-Acetyl Cysteine (NAC)"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">N-Acetyl Cysteine</div>
+		</a>
+		<a href="/product/omega-premium-1000-100" class="our-product bestseller other" bestseller-value="6">
+			<div class="product-image">
+				<Image
+					src={omegaPremium}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Omega Premium Fish Oil"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Omega Premium Fish Oil</div>
+		</a>
+		<a href="/product/reishi-extract-500-90" class="our-product extract">
+			<div class="product-image">
+				<Image
+					src={reishiExtract}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Reishi Extract"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Reishi Extract</div>
+		</a>
+		<a href="/product/shilajit-500-90" class="our-product extract">
+			<div class="product-image">
+				<Image
+					src={shilajitExtract}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Shilajit Extract"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Shilajit Extract</div>
+		</a>
+		<a href="/product/vitamin-c-liposomal-500-60" class="our-product bestseller vitamin" bestseller-value="5">
+			<div class="product-image">
+				<Image
+					src={vitaminCLipo}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Vitamin C Liposomal"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Vitamin C Liposomal</div>
 		</a>
 
+		<a href="/product/vitamin-d-5000-250" class="our-product vitamin">
+			<div class="product-image">
+				<Image
+					src={vitaminD5000}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Vitamin D3 5000 IU"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Vitamin D3 5000 IU</div>
+		</a>
+		<a href="/product/vitamin-d3-k2-2000-100" class="our-product vitamin">
+			<div class="product-image">
+				<Image
+					src={vitaminD3K2_2000}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Vitamin D3 + K2 2000 IU & 75 mcg"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Vitamin D3 + K2 (2000&nbsp;IU & 75&nbsp;mcg)</div>
+		</a>
 		<a href="/product/vitamin-d3-k2-5000-100" class="our-product vitamin">
 			<div class="product-image">
 				<Image
@@ -388,18 +374,18 @@ const quality = 90;
 			<div class="product-name">Vitamin D3 & K2 (5000&nbsp;& 200&nbsp;mcg)</div>
 		</a>
 
-		<a href="/product/vitamin-d3-k2-2000-100" class="our-product vitamin">
+		<a href="/product/zinc-complex-25-100" class="our-product bestseller mineral" bestseller-value="7">
 			<div class="product-image">
 				<Image
-					src={vitaminD3K2_2000}
+					src={zincComplex}
 					width={productImageWidth}
 					densities={pixelDensities}
-					alt={"NATIOS Vitamin D3 + K2 2000 IU & 75 mcg"}
+					alt={"NATIOS Zinc Complex"}
 					quality={quality}
 					loading={loading}
 				/>
 			</div>
-			<div class="product-name">Vitamin D3 + K2 (2000&nbsp;IU & 75&nbsp;mcg)</div>
+			<div class="product-name">Zinc Complex</div>
 		</a>
 
 		<div class="show-all-products">
@@ -681,8 +667,26 @@ const quality = 90;
 		let ourProducts = $(".our-product");
 		let ourProductsFilters = $(".our-products-filter");
 		let ourProductsFilterMain = $(".our-products-filters");
-		let activeFilter = "all";
-		let prevoiusFilter = "all";
+
+		let activeFilter = "";
+		let prevoiusFilter = "";
+
+		if ($("body").hasClass("homepage")) {
+			activeFilter = "bestseller";
+			prevoiusFilter = "bestseller";
+			$("#all").hide();
+			$("#bestseller").addClass("active");
+			$(".our-products-list").addClass("bestseller");
+			console.log("test");
+		} else {
+			activeFilter = "all";
+			prevoiusFilter = "all";
+			$("#all").addClass("active");
+			$("#bestseller").hide();
+			$(".our-products-list").addClass("all");
+			console.log("test-2");
+		}
+
 		let ourProductsList = $(".our-products-list");
 
 		let gridWidth;
@@ -759,7 +763,7 @@ const quality = 90;
 			let observer = new IntersectionObserver(function (entries) {
 				entries.forEach(function (entry) {
 					if (entry.isIntersecting) {
-						basicRozlozeniProduktu();
+						productShuffle();
 						observer.unobserve(entry.target);
 					}
 				});
@@ -780,8 +784,16 @@ const quality = 90;
 
 			let activeProducts = ourProductsList.children("." + activeFilter);
 
+			if (activeFilter === "bestseller") {
+				// Sort activeProducts based on bestseller-value attribute
+				activeProducts = activeProducts.sort(function (a, b) {
+					return $(a).attr("bestseller-value") - $(b).attr("bestseller-value");
+				});
+			}
+
 			activeProducts.each(function (index) {
 				let x = (index % gridWidth) * 100;
+
 				let y = Math.floor(index / gridWidth) * 100;
 
 				$(this).css("transform", "translate(" + x + "%, " + y + "%)");
@@ -804,6 +816,11 @@ const quality = 90;
 			ourProducts.each(function (index) {
 				let x = (index % gridWidth) * 100;
 				let y = Math.floor(index / gridWidth) * 100;
+				if ($("body").hasClass("homepage")) {
+					let limitedIndex = Math.min(index, 7);
+					y = Math.floor(limitedIndex / gridWidth) * 100;
+				}
+
 				$(this).css("transform", "translate(" + x + "%, " + y + "%)");
 			});
 		}
