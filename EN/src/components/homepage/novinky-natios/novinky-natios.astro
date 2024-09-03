@@ -10,16 +10,19 @@ import HexagonSmallMobile from "@components/hexagons/natios-new-products/mobile-
 import ArrowLeftEmpty from "@components/arrows/arrowLeftEmpty.astro";
 import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 import { Image } from "astro:assets";
-import productImage1 from "@assets/images/products/mind-focus-60/mind-focus-60-front.webp";
-import productImage2 from "@assets/images/products/activated-b-complex-100/activated-b-complex-100-front.webp";
-import productImage3 from "@assets/images/products/vitamin-d3-k2-5000-100/vitamin-d3-k2-5000-100-front.webp";
-import productImage4 from "@assets/images/products/acerola-500-90/acerola-500-90-front.webp";
-import productImage5 from "@assets/images/products/shilajit-500-90/shilajit-500-90-front.webp";
-const alt1 = "Natios Mind Focus";
-const alt2 = "Natios Activated B-Complex";
-const alt3 = "Natios Vitamin D3 & K2 (5000 IU & 200 mcg)";
-const alt4 = "Natios Acerola Komplex";
-const alt5 = "Natios Shilajit Extract";
+import productImage1 from "@assets/images/products/calcium-chelated-complex-200-100/calcium-chelated-complex-200-100-front.webp";
+import productImage2 from "@assets/images/products/krill-oil-astaxanthin-500-60/krill-oil-astaxanthin-500-60-front.webp";
+import productImage3 from "@assets/images/products/betaglucan-500-90/betaglucan-500-90-front.webp";
+import productImage4 from "@assets/images/products/potassium-magnesium-100/potassium-magnesium-100-front.webp";
+import productImage5 from "@assets/images/products/glycine-1000-100/glycine-1000-100-front.webp";
+import productImage6 from "@assets/images/products/taurine-1000-100/taurine-1000-100-front.webp";
+
+const alt1 = "NATIOS Calcium Chelated Complex";
+const alt2 = "NATIOS Krill Oil Astaxanthin";
+const alt3 = "NATIOS Betaglucan";
+const alt4 = "NATIOS Potassium & Magnesium";
+const alt5 = "NATIOS Glycine Extra Strength";
+const alt6 = "NATIOS Taurine Extra Strength";
 import MoreInfo from "@components/more-info.astro";
 
 const loading = "lazy";
@@ -30,7 +33,7 @@ const quality = 90;
 
 <section id="brand-news" class="brand-news">
 	<SectionHeader
-		headerText="New products"
+		headerText="New Products"
 		marginTopMOB="3em"
 		marginTopPC=".25em"
 		paddingTopMOB="1em"
@@ -40,7 +43,7 @@ const quality = 90;
 	/>
 
 	<SectionBackgroundText
-		backgroundText="New products"
+		backgroundText="New Products"
 		top="10%"
 		left="00%"
 		translateX="0"
@@ -118,87 +121,115 @@ const quality = 90;
 						loading={loading}
 					/>
 				</div>
+				<div class="brand-new-product-image">
+					<Image
+						src={productImage6}
+						width={productImageWidth}
+						densities={productDensities}
+						alt={alt6}
+						quality={quality}
+						loading={loading}
+					/>
+				</div>
 			</div>
 		</div>
 		<div class="brand-new-product-texts">
 			<div class="brand-new-product-text">
 				<div class="text-animation-wrapper">
-					<h3 class="brand-new-product-heading">NATIOS Mind Focus</h3>
+					<h3 class="brand-new-product-heading">NATIOS Calcium Chelated Complex</h3>
 					<p class="brand-new-product-description">
-						Do you need to prepare for a difficult exam, boost your <b>thinking, creativity or cognitive functions</b> to
-						perform properly at work, or do you just want to have the memory you used to have? Mind Focus is a unique combination
-						of amino acids, herbs and other key ingredients designed to stimulate brain and nerve function. A potent <b
-							>combination of 6 herbal extracts and 4 ingredients</b
-						> that have been shown in various studies to have a positive effect on memory, concentration and focus and gives
-						your brain everything it needs.
+						The most effective, best absorbable and gentlest form for the stomach - <b>calcium bisglycinate</b>. Calcium
+						is widely known to support the health of bones and teeth, but it also supports, for example, muscle
+						activity, normal blood clotting and the transmission of nerve signals.
 					</p>
-					<p class="brand-new-product-description">Suitable for work, study or gamers.</p>
-					<MoreInfo href="/product/mind-focus-60" marginBottom="2em" />
+					<p class="brand-new-product-description">
+						Each capsule of this complex contains <b>200&nbsp;mg of elemental calcium</b>, which is further supplemented
+						with <b>vitamins D3 and K2</b> in the form of MK-7.
+					</p>
+
+					<MoreInfo href="/product/calcium-chelated-complex-200-100" marginBottom="2em" />
 				</div>
 			</div>
 			<div class="brand-new-product-text">
 				<div class="text-animation-wrapper">
-					<h3 class="brand-new-product-heading">NATIOS Activated B-Complex</h3>
+					<h3 class="brand-new-product-heading">NATIOS Krill Oil</h3>
 					<p class="brand-new-product-description">
-						Natios Activated B-Complex is an ideal way to supplement B vitamins. It contains <b
-							>only the active and effective forms of the vitamins</b
-						>. The active forms are much easier for the body to use and absorb as they do not have to go through the
-						conversion process from inactive to active in the body, so they are 'pre-prepared' for absorption. The
-						complex contains a s<b>ynergistic blend of 16 ingredients</b>, including B vitamins, alpha-lipoic acid,
-						betaine, vitamin C, magnesium, PABA and coenzyme Q10. These ingredients enhance the effects of the
-						B-complex.
+						Krill oil from Antarctic krill is a great way to support not only heart health, but also nervous system
+						function, antioxidant protection and eye health. This shellfish oil is rich in omega-3 fatty acids,
+						astaxanthin, choline and phospholipids. Thanks to this combination of naturally occurring substances, <b
+							>maximum bioavailability and effectiveness are guaranteed</b
+						>.
 					</p>
-
-					<MoreInfo href="/product/activated-b-complex-100" marginBottom="2em" />
+					<p class="brand-new-product-description">
+						Natios krill oil is produced with maximum emphasis on environmental sustainability and quality. It does not
+						contain any additives, fillers, preservatives or other unnecessary substances.
+					</p>
+					<MoreInfo href="/product/krill-oil-astaxanthin-500-60" marginBottom="2em" />
 				</div>
 			</div>
 			<div class="brand-new-product-text">
 				<div class="text-animation-wrapper">
-					<h3 class="brand-new-product-heading">NATIOS Vitamin D3 & K2 (5000&nbsp;IU & 200&nbsp;mcg)</h3>
+					<h3 class="brand-new-product-heading">NATIOS Betaglucan</h3>
 					<p class="brand-new-product-description">
-						Natios Vitamin D3 & K2 provides a powerful combination of two essential vitamins that are key to maintaining <b
-							>bone health</b
-						> and boosting <b>immune function</b>. This supplement contains 5000 IU of vitamin D3 in each capsule,
-						ensuring your body's daily requirement is met. The vitamin K2 content creates a <b
-							>synergistic combination</b
-						> that greatly enhances effectiveness. Vitamin K2 plays a role in calcium metabolism, helping to direct calcium
-						to the parts of the body that really need it.
+						A unique food supplement that contains effective betaglucans and is supplemented with Camu Camu fruits with
+						a naturally high content of vitamin&nbsp;C. Natios Betaglucan is standardized to a minimum 80% content of
+						1,3-1,6 betaglucans, which are obtained by modern methods from brewer's yeast <i>Saccharomyces cerevisiae</i
+						>. No other substances, such as fillers or preservatives, are used in the production of this product. The
+						product does not contain gluten or other allergens and is also suitable for vegans.
 					</p>
-
-					<MoreInfo href="/product/vitamin-d3-k2-5000-100" marginBottom="2em" />
+					<MoreInfo href="/product/betaglucan-500-90" marginBottom="2em" />
 				</div>
 			</div>
 			<div class="brand-new-product-text">
 				<div class="text-animation-wrapper">
-					<h3 class="brand-new-product-heading">NATIOS Acerola Complex</h3>
+					<h3 class="brand-new-product-heading">NATIOS Potassium & Magnesium</h3>
 					<p class="brand-new-product-description">
-						Acerola is one of <b>the best sources of natural vitamin C</b>, a water-soluble micronutrient known for its
-						beneficial effects on the immune system and protecting cells from oxidative stress. Our bodies cannot
-						produce vitamin C, so supplementation is essential, not only in winter. Acerola Complex contains a potent <b
-							>25% extract supplemented with rose hip and citrus bioflavonoids</b
-						> to increase absorption and overall effectiveness.
+						The most effective, best absorbable and gentlest forms of minerals in one complex. This supplement combines
+						potassium citrate and magnesium malate, which are forms that ensure <b
+							>maximum absorption and gentleness on the stomach</b
+						>. This complex is additionally enriched with vitamin B6 in its active form P-5-P. Each vegan capsule of
+						this complex contains 100&nbsp;mg of potassium, 50&nbsp;mg of magnesium and 2&nbsp;mg of vitamin B6.
 					</p>
-
-					<MoreInfo href="/product/acerola-500-90" marginBottom="2em" />
+					<MoreInfo href="/product/potassium-magnesium-100" marginBottom="2em" />
 				</div>
 			</div>
 			<div class="brand-new-product-text">
 				<div class="text-animation-wrapper">
-					<h3 class="brand-new-product-heading">NATIOS Shilajit Extract</h3>
-					<p class="brand-new-product-description">
-						Shilajit is a dark-coloured natural substance used in Ayurveda for over 3,000 years and is now considered a
-						superfood. Shilajit (mummio) is a substance that means "<b>mountain conqueror and painkiller</b>" in
-						Sanskrit (an ancient Indian language). Shilajit contains more than 40 minerals and substances, the most
-						important of which is <b>fulvic acid</b>. As a result of the substances it contains, shilajit not only helps
-						ensure the proper functioning of the reproductive system but also benefits immunity, mental function, etc.
+					<h3 class="brand-new-product-heading">NATIOS Glycine Extra Strength</h3>
+					<p class="new-product-description">
+						Glycine is the simplest amino acid found in the human body. In the human body, glycine plays a key role in
+						several important processes. Each vegan capsule contains 1000&nbsp;mg of pure glycine without the use of
+						fillers, additives or preservatives.
+					</p>
+					<p class="new-product-description">
+						Glycine is found naturally in various types of food, especially protein-rich foods such as meat, fish, eggs,
+						legumes, soy, and dairy products. A high content of glycine can also be found in gelatin or collagen. It is
+						a non-essential amino acid, which means that the body can synthesize glycine on its own. However,
+						supplementation is especially suitable for those who want to use its <b>benefits to the maximum</b> or for people
+						with low protein intake or liver disease.
 					</p>
 
-					<p class="brand-new-product-description">
-						Natios Shilajit is a <b>50% standardised extract</b>. This means that you can be absolutely sure that each
-						capsule is providing your body with an effective amount of fulvic acid.
+					<MoreInfo href="/product/glycine-1000-100" marginBottom="2em" />
+				</div>
+			</div>
+			<div class="brand-new-product-text">
+				<div class="text-animation-wrapper">
+					<h3 class="brand-new-product-heading">NATIOS Taurine Extra Strength</h3>
+					<p class="new-product-description">
+						Taurine is an amino acid found in many tissues in the body, especially the <b
+							>heart, brain, muscles and eyes</b
+						>. It is considered a semi-essential amino acid, which means that under normal conditions the body can
+						synthesize taurine on its own from other amino acids. However, in certain situations such as rapid growth,
+						high physical stress, disease or specific metabolic disorders, the need for taurine may be higher than what
+						the body can produce on its own.
+					</p>
+					<p class="new-product-description">
+						Taurine is present in various animal foods such as meat, fish and seafood. Since taurine does not occur
+						naturally in plant foods, vegetarians and vegans may have lower levels of taurine if their diet is not
+						optimized.
 					</p>
 
-					<MoreInfo href="/product/shilajit-500-90" marginBottom="2em" />
+					<MoreInfo href="/product/taurine-1000-100" marginBottom="2em" />
 				</div>
 			</div>
 		</div>

@@ -1,0 +1,235 @@
+---
+import IndexLayout from "../../../layouts/IndexLayout.astro";
+import ProductTemplate from "@components/product/product-template.astro";
+
+import { Image } from "astro:assets";
+import productImage1 from "@assets/images/products/krill-oil-astaxanthin-500-60/krill-oil-astaxanthin-500-60-fwc.webp";
+import productImage2 from "@assets/images/products/krill-oil-astaxanthin-500-60/krill-oil-astaxanthin-500-60-bws.webp";
+
+const alt = "NATIOS Krill Oil";
+const loading = "lazy";
+const productImageWidth = 1000;
+const pixelDensities = [1, 1.5, 2, 2.5, 3];
+const quality = 90;
+---
+
+<IndexLayout title="NATIOS Krill Oil">
+	<ProductTemplate>
+		<!-- _____________________________________________ -->
+		<!-- ____________________NÁZEV____________________ -->
+		<!-- _____________________________________________ -->
+		<h1 slot="product-name-h1">Krill Oil + Choline & Astaxanthin</h1>
+		<h2 slot="product-name-h2">500 mg, 60 softgel capsules</h2>
+
+		<!-- ________________________________________________________ -->
+		<!-- ____________________FOTKY VELKÉ DO 6____________________ -->
+		<!-- ________________________________________________________ -->
+		<div slot="large-image-1" class="large-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="large-image-2" class="large-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading={loading}
+			/>
+		</div>
+
+		<!-- ____________________________________________________________ -->
+		<!-- ____________________FOTKY NÁHLEDOVÉ DO 6____________________ -->
+		<!-- ____________________________________________________________ -->
+		<div slot="preview-image-1" class="preview-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="preview-image-2" class="preview-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<!-- ___________________________________________________________________________________ -->
+		<!-- ____________________SELECT MOŽNOSTI (možnost video a orher 1 2)____________________ -->
+		<!-- ___________________________________________________________________________________ -->
+		<span slot="select-description" class="select-description">Description</span>
+		<span slot="select-ingredients" class="select-ingredients">Ingredients</span>
+		<span slot="select-dosage" class="select-dosage">Dosage and warnings</span>
+
+		<!-- ____________________________________________________________________________________ -->
+		<!-- ____________________DESCRIPTION DIVY (možnost video a orher 1 2)____________________ -->
+		<!-- ____________________________________________________________________________________ -->
+		<div slot="description-description" class="description-description active">
+			<p>
+				Krill oil from Antarctic krill is a great way to support not only heart health, but also nervous system
+				function, antioxidant protection and eye health. This shellfish oil is rich in omega-3 fatty acids, astaxanthin,
+				choline and phospholipids. Thanks to this combination of naturally occurring substances, <b
+					>maximum bioavailability and effectiveness are guaranteed</b
+				>.
+			</p>
+			<p>
+				Natios krill oil is produced with maximum emphasis on environmental sustainability and quality. It does not
+				contain any additives, fillers, preservatives or other unnecessary substances.
+			</p>
+
+			<ul>
+				<li>Sustainable Antarctic Fisheries</li>
+				<li>Astaxanthin, choline and phospholipids</li>
+				<li>Contains no artificial additives or indigestible substances</li>
+				<li>Gluten-free and GMO-free</li>
+			</ul>
+
+			<p class="no-padding"><b>What makes NATIOS different from others?</b></p>
+			<p>
+				Antarctic krill is considered one of the <b>greenest sources of marine omega-3</b> fatty acids, but only on the condition
+				that the long-term sustainability of the Southern Ocean ecosystem is taken into account during its extraction process.
+				NATIOS does not only pay attention to maximum quality, but they also thinks about the future, which is why the krill
+				oil in this product is obtained by the Norwegian company Aker BioMarine, whose reduced fishing is currently <b
+					>rated as the most sustainable worldwide</b
+				>. This is also evidenced by the fact that their fishery is the only one to receive an 'A' rating from the
+				Sustainable Fisheries Partnership.
+			</p>
+
+			<p class="no-padding"><b>Benefits of Krill Oil</b></p>
+			<p>
+				Krill Oil contains the omega&nbsp;3 fatty acids EPA (eicosapentaenoic acid) and DHA (docosahexaenoic acid),
+				which with sufficient intake have positive effects mainly on the overall health of the heart, brain and vision.
+			</p>
+
+			<p>
+				EPA and DHA in krill oil are bound to <b>phospholipids</b>, thanks to which they have <b
+					>maximum bioavailability</b
+				>. In addition, phospholipids also play a critical role in the structure and function of cell membranes. Krill
+				oil also contains choline, which supports the health of the cardiovascular system and is used in the synthesis
+				of acetylcholine - neurotransmitter. This is especially important for the healthy functioning of the nervous
+				system.
+			</p>
+			<ul>
+				<li>EPA and DHA support heart activity</li>
+				<li>DHA and choline support brain activity</li>
+				<li>DHA supports eye health</li>
+				<li>EPA and DHA help normal blood pressure</li>
+				<li>EPA and DHA help maintain normal triglyceride levels</li>
+				<li>DHA contributes to the development of the eyes of the fetus in the body of the mother and infants</li>
+			</ul>
+		</div>
+		<!-- ____________________TABULKA____________________ -->
+		<div slot="description-ingredients" class="description-ingredients">
+			<table>
+				<thead>
+					<tr>
+						<th
+							><div class="dosage">
+								<span
+									><b>Serving size:</b> 2&nbsp;softgel capsules<br />
+									<b>Contains:</b> 30&nbsp;servings</span
+								>
+							</div></th
+						>
+						<th>Amount Per Serving</th>
+						<th>%NRV*</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Krill oil (<i>Euphausia superba</i>)</td>
+						<td>1000&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td class="padding-left">Omega 3 fatty acids:</td>
+						<td>220&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td class="padding-left">- of which EPA (eicosapentaenoic acid)</td>
+						<td>120&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td class="padding-left">- of which DHA (docosahexaenoic acid) </td>
+						<td>26&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td class="padding-left">Phospholipids</td>
+						<td>400&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td class="padding-left">Choline</td>
+						<td>50&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td class="padding-left">Astaxanthin</td>
+						<td>100&nbsp;mcg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td colspan="3"
+							><div class="rhp">
+								<span>* Nutritional Reference Value</span>
+								<span>** Nutritional Reference Value is not established</span>
+							</div></td
+						>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				<b>Other ingredients:</b> Softgel capsule (beef gelatin, glycerol and water). Contains <b>crustaceans</b> (krill).
+				The product does not contain any other added substances.
+			</p>
+		</div>
+		<!-- ____________________DÁVKOVÁNÍ A UPOZORNĚNÍ____________________ -->
+		<div slot="description-dosage" class="description-dosage">
+			<p>
+				<b>Recommended dosage:</b><br />
+				As a dietary supplement, take 2 softgel capsules daily with food and water.
+			</p>
+			<p>
+				<b>Warning:</b><br />
+
+				For adults only. If you have a medical condition, are pregnant, nursing or trying to conceive, or are taking
+				medication, consult with a physician before taking this product! Keep out of reach of children. Dietary
+				supplement. It is not a substitute for a varied diet. Do not exceed the recommended daily dosage.
+			</p>
+			<p>
+				<b>Storage:</b><br />
+				Store in a cool, dry place.
+			</p>
+			<p>
+				<b>Made in EU</b>
+			</p>
+		</div>
+	</ProductTemplate>
+</IndexLayout>
+
+<style is:global>
+	:root {
+		--number-of-photos: 2;
+	}
+</style>

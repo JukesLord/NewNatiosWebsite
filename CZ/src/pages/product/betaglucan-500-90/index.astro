@@ -1,0 +1,173 @@
+---
+import IndexLayout from "../../../layouts/IndexLayout.astro";
+import ProductTemplate from "@components/product/product-template.astro";
+
+import { Image } from "astro:assets";
+import productImage1 from "@assets/images/products/betaglucan-500-90/betaglucan-500-90-fwc.webp";
+import productImage2 from "@assets/images/products/betaglucan-500-90/betaglucan-500-90-bws.webp";
+
+const alt = "NATIOS Betaglucan";
+const loading = "lazy";
+const productImageWidth = 1000;
+const pixelDensities = [1, 1.5, 2, 2.5, 3];
+const quality = 90;
+---
+
+<IndexLayout title="NATIOS Betaglucan">
+	<ProductTemplate>
+		<!-- _____________________________________________ -->
+		<!-- ____________________NÁZEV____________________ -->
+		<!-- _____________________________________________ -->
+		<h1 slot="product-name-h1">Betaglucan 80%</h1>
+		<h2 slot="product-name-h2">500&nbsp;mg, 90 veganských kapslí</h2>
+
+		<!-- ________________________________________________________ -->
+		<!-- ____________________FOTKY VELKÉ DO 6____________________ -->
+		<!-- ________________________________________________________ -->
+		<div slot="large-image-1" class="large-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="large-image-2" class="large-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading={loading}
+			/>
+		</div>
+
+		<!-- ____________________________________________________________ -->
+		<!-- ____________________FOTKY NÁHLEDOVÉ DO 6____________________ -->
+		<!-- ____________________________________________________________ -->
+		<div slot="preview-image-1" class="preview-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="preview-image-2" class="preview-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<!-- ___________________________________________________________________________________ -->
+		<!-- ____________________SELECT MOŽNOSTI (možnost video a orher 1 2)____________________ -->
+		<!-- ___________________________________________________________________________________ -->
+		<span slot="select-description" class="select-description">Popis</span>
+		<span slot="select-ingredients" class="select-ingredients">Složení</span>
+		<span slot="select-dosage" class="select-dosage">Dávkování a upozornění</span>
+
+		<!-- ____________________________________________________________________________________ -->
+		<!-- ____________________DESCRIPTION DIVY (možnost video a orher 1 2)____________________ -->
+		<!-- ____________________________________________________________________________________ -->
+		<div slot="description-description" class="description-description active">
+			<p>
+				Jedinečný doplněk stravy, který obsahuje účinné betaglukany a je doplněn o plody Camu Camu s přirozeně vysokým
+				obsahem vitaminu&nbsp;C. Natios Betaglucan je standardizovaný na minimálně 80% obsah 1,3-1,6 betaglukanů, které
+				jsou moderními způsoby získávány z pivních kvasnic <i>Saccharomyces cerevisiae</i>. Při výrobě tohoto produktu
+				nejsou použité žádné jiné látky, jako například plnidla či konzervanty. Produkt neobsahuje lepek ani jiné
+				alergeny a je vhodný také pro vegany.
+			</p>
+
+			<ul>
+				<li>Standardizováno na 80% obsah betaglukanů</li>
+				<li>Neobsahuje žádné příměsi, nestravitelné látky ani éčka</li>
+				<li>Vegan, bez lepku a GMO-free</li>
+			</ul>
+		</div>
+		<!-- ____________________TABULKA____________________ -->
+		<div slot="description-ingredients" class="description-ingredients">
+			<table>
+				<thead>
+					<tr>
+						<th
+							><div class="dosage">
+								<span
+									><b>Velikost dávky:</b> 1&nbsp;veganská kapsle<br />
+									<b>Balení obsahuje:</b> 90&nbsp;dávek</span
+								>
+							</div></th
+						>
+						<th>Množství v 1 dávce</th>
+						<th>%&nbsp;RHP*</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td
+							>Betaglukan 80% z kvasinek (<i>Saccharomyces cerevisae</i>)
+							<br />- ekvivalent 400&nbsp;mg β-(1,3)(1,6)-D-glukanu</td
+						>
+						<td>500&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td
+							>Camu Camu 4:1 extrakt z plodu (<i>Myrciaria dubia</i>)
+							<br />- ekvivalent 50&nbsp;mg surového plodu</td
+						>
+						<td>12,5&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td colspan="3"
+							><div class="rhp">
+								<span>* referenční hodnota příjmu u průměrné dospělé osoby</span>
+								<span>** denní referenční hodnota příjmu není stanovena</span>
+							</div></td
+						>
+					</tr>
+				</tbody>
+			</table>
+			<p><b>Další složky:</b> Veganská HPMC kapsle. Výrobek neobsahuje žádné další přidané látky (éčka).</p>
+		</div>
+		<!-- ____________________DÁVKOVÁNÍ A UPOZORNĚNÍ____________________ -->
+		<div slot="description-dosage" class="description-dosage">
+			<p>
+				<b>Doporučené dávkování:</b><br />
+				Jako doplněk stravy užívejte 1 kapsli denně s vodou.
+			</p>
+			<p>
+				<b>Upozornění:</b><br />
+				Pouze pro dospělé. Trpíte-li onemocněním, jste těhotná, kojíte, snažíte se otěhotnět nebo užíváte léky, poraďte se
+				před užitím tohoto přípravku s lékařem. Uchovávejte mimo dosah dětí. Není náhradou pestré stravy. Doplněk stravy.
+				Nepřekračujte doporučené denní dávkování.
+			</p>
+			<p>
+				<b>Skladování:</b><br />
+				Skladujte na chladném a suchém místě.
+			</p>
+			<p>
+				<b>Vyrobeno v EU</b>
+			</p>
+		</div>
+	</ProductTemplate>
+</IndexLayout>
+
+<style is:global>
+	:root {
+		--number-of-photos: 2;
+	}
+</style>

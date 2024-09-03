@@ -29,6 +29,14 @@ import vitaminD3K2_5000 from "@assets/images/products/vitamin-d3-k2-5000-100/vit
 import vitaminD5000 from "@assets/images/products/Vitamin_D_5000_250/Vitamin_D_5000_250_front.webp";
 import zincComplex from "@assets/images/products/Zinc_Complex_25_100/Zinc_Complex_25_100_front.webp";
 
+import betaGlucan from "@assets/images/products/betaglucan-500-90/betaglucan-500-90-front.webp";
+import calciumChelated from "@assets/images/products/calcium-chelated-complex-200-100/calcium-chelated-complex-200-100-front.webp";
+import glycine from "@assets/images/products/glycine-1000-100/glycine-1000-100-front.webp";
+import krillOil from "@assets/images/products/krill-oil-astaxanthin-500-60/krill-oil-astaxanthin-500-60-front.webp";
+import potassiumMagnesium from "@assets/images/products/potassium-magnesium-100/potassium-magnesium-100-front.webp";
+import rutin from "@assets/images/products/rutin-500-100/rutin-500-100-front.webp";
+import taurin from "@assets/images/products/taurine-1000-100/taurine-1000-100-front.webp";
+
 const loading = "lazy";
 const productImageWidth = 148;
 const pixelDensities = [1, 1.5, 2, 2.5, 3];
@@ -97,6 +105,35 @@ const quality = 90;
 			</div>
 			<div class="product-name">Ashwagandha Extract</div>
 		</a>
+
+		<a href="/product/betaglucan-500-90" class="our-product other">
+			<div class="product-image">
+				<Image
+					src={betaGlucan}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Betaglucan"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Betaglucan</div>
+		</a>
+
+		<a href="/product/calcium-chelated-complex-200-100" class="our-product mineral">
+			<div class="product-image">
+				<Image
+					src={calciumChelated}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Calcium Chelated Complex"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Calcium Chelated Complex</div>
+		</a>
+
 		<a href="/product/cordyceps-extract-500-90" class="our-product extract">
 			<div class="product-image">
 				<Image
@@ -124,6 +161,7 @@ const quality = 90;
 			</div>
 			<div class="product-name">Electrolyte Complex Citrón</div>
 		</a>
+
 		<a href="/product/electrolyte-raspberry-600" class="our-product mineral other">
 			<div class="product-image">
 				<Image
@@ -137,6 +175,7 @@ const quality = 90;
 			</div>
 			<div class="product-name">Electrolyte Complex Malina</div>
 		</a>
+
 		<a href="/product/fenugreek-and-blessed-2000-120" class="our-product bestseller extract" bestseller-value="3">
 			<div class="product-image">
 				<Image
@@ -149,6 +188,20 @@ const quality = 90;
 				/>
 			</div>
 			<div class="product-name">Fenugreek & Blessed Thistle</div>
+		</a>
+
+		<a href="/product/glycine-1000-100" class="our-product other">
+			<div class="product-image">
+				<Image
+					src={glycine}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Glycine"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Glycine</div>
 		</a>
 
 		<a href="/product/chaga-extract-500-90" class="our-product extract">
@@ -164,6 +217,21 @@ const quality = 90;
 			</div>
 			<div class="product-name">Chaga Extract</div>
 		</a>
+
+		<a href="/product/krill-oil-astaxanthin-500-60" class="our-product other">
+			<div class="product-image">
+				<Image
+					src={krillOil}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Krill Oil with Astaxanthin"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Krill Oil</div>
+		</a>
+
 		<a href="/product/lions-mane-extract-500-90" class="our-product extract">
 			<div class="product-image">
 				<Image
@@ -294,6 +362,21 @@ const quality = 90;
 			</div>
 			<div class="product-name">Omega Premium Fish Oil</div>
 		</a>
+
+		<a href="/product/potassium-magnesium-100" class="our-product mineral">
+			<div class="product-image">
+				<Image
+					src={potassiumMagnesium}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Potassium Magnesium"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Potassium Magnesium</div>
+		</a>
+
 		<a href="/product/reishi-extract-500-90" class="our-product extract">
 			<div class="product-image">
 				<Image
@@ -307,6 +390,21 @@ const quality = 90;
 			</div>
 			<div class="product-name">Reishi Extract</div>
 		</a>
+
+		<a href="/product/rutin-500-100" class="our-product other">
+			<div class="product-image">
+				<Image
+					src={rutin}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Rutin"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Rutin</div>
+		</a>
+
 		<a href="/product/shilajit-500-90" class="our-product extract">
 			<div class="product-image">
 				<Image
@@ -320,6 +418,21 @@ const quality = 90;
 			</div>
 			<div class="product-name">Shilajit Extract</div>
 		</a>
+
+		<a href="/product/taurine-1000-100" class="our-product other">
+			<div class="product-image">
+				<Image
+					src={taurin}
+					width={productImageWidth}
+					densities={pixelDensities}
+					alt={"NATIOS Taurine"}
+					quality={quality}
+					loading={loading}
+				/>
+			</div>
+			<div class="product-name">Taurine</div>
+		</a>
+
 		<a href="/product/vitamin-c-liposomal-500-60" class="our-product bestseller vitamin" bestseller-value="5">
 			<div class="product-image">
 				<Image

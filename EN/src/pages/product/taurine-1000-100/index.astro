@@ -3,23 +3,23 @@ import IndexLayout from "../../../layouts/IndexLayout.astro";
 import ProductTemplate from "@components/product/product-template.astro";
 
 import { Image } from "astro:assets";
-import productImage1 from "@assets/images/products/glycine-1000-100/glycine-1000-100-fwc.webp";
-import productImage2 from "@assets/images/products/glycine-1000-100/glycine-1000-100-bws.webp";
+import productImage1 from "@assets/images/products/taurine-1000-100/taurine-1000-100-fwc.webp";
+import productImage2 from "@assets/images/products/taurine-1000-100/taurine-1000-100-bws.webp";
 
-const alt = "NATIOS Glycine";
+const alt = "NATIOS Taurine";
 const loading = "lazy";
 const productImageWidth = 1000;
 const pixelDensities = [1, 1.5, 2, 2.5, 3];
 const quality = 90;
 ---
 
-<IndexLayout title="NATIOS Glycine">
+<IndexLayout title="NATIOS Taurine">
 	<ProductTemplate>
 		<!-- _____________________________________________ -->
 		<!-- ____________________NÁZEV____________________ -->
 		<!-- _____________________________________________ -->
-		<h1 slot="product-name-h1">Glycine Extra Strength</h1>
-		<h2 slot="product-name-h2">1000 mg, 100 veganských kapslí</h2>
+		<h1 slot="product-name-h1">Taurine Extra Strength</h1>
+		<h2 slot="product-name-h2">1000 mg, 100 vegan capsules</h2>
 
 		<!-- ________________________________________________________ -->
 		<!-- ____________________FOTKY VELKÉ DO 6____________________ -->
@@ -74,31 +74,31 @@ const quality = 90;
 		<!-- ___________________________________________________________________________________ -->
 		<!-- ____________________SELECT MOŽNOSTI (možnost video a orher 1 2)____________________ -->
 		<!-- ___________________________________________________________________________________ -->
-		<span slot="select-description" class="select-description">Popis</span>
-		<span slot="select-ingredients" class="select-ingredients">Složení</span>
-		<span slot="select-dosage" class="select-dosage">Dávkování a upozornění</span>
+		<span slot="select-description" class="select-description">Description</span>
+		<span slot="select-ingredients" class="select-ingredients">Ingredients</span>
+		<span slot="select-dosage" class="select-dosage">Dosage and warnings</span>
 
 		<!-- ____________________________________________________________________________________ -->
 		<!-- ____________________DESCRIPTION DIVY (možnost video a orher 1 2)____________________ -->
 		<!-- ____________________________________________________________________________________ -->
 		<div slot="description-description" class="description-description active">
 			<p>
-				Glycin je nejjednodušší aminokyselina nacházející se v lidském těle. V lidském těle hraje glycin klíčovou roli v
-				několika důlěžitých procesech. Každá veganská kapsle obsahuje 1000&nbsp;mg čistého glycinu bez použití plnidel,
-				příměsí či konzervantů.
+				Taurine is an amino acid found in many tissues in the body, especially the <b>heart, brain, muscles and eyes</b
+				>. It is considered a semi-essential amino acid, which means that under normal conditions the body can
+				synthesize taurine on its own from other amino acids. However, in certain situations such as rapid growth, high
+				physical stress, disease or specific metabolic disorders, the need for taurine may be higher than what the body
+				can produce on its own.
 			</p>
 			<p>
-				Glycin se přirozeně nachází v různých typech potravin, zejména v potravinách bohatých na bílkoviny, jako je
-				maso, ryby, vejce, luštěniny, sója a mléčné výrobky. Vysoký obsah glycinu lze také nalézt v želatině či
-				kolagenu. Jedná se o neesenciální aminokyselinu, což znamená, že tělo si glycin dokáže syntetizovat samo.
-				Suplementace je však vhodná především pro ty, kteří chtějí využít jeho <b>benefity na maximum</b> nebo pro osoby
-				s nízkým příjmem bílkovin či onemocněním jater.
+				Taurine is present in various animal foods such as meat, fish and seafood. Since taurine does not occur
+				naturally in plant foods, vegetarians and vegans may have lower levels of taurine if their diet is not
+				optimized.
 			</p>
 
 			<ul>
-				<li>1000&nbsp;mg glycinu v každé kapsli</li>
-				<li>Neobsahuje žádné příměsi, nestravitelné látky ani éčka</li>
-				<li>Vegan, bez lepku a GMO-free</li>
+				<li>1000&nbsp;mg of taurine in each capsule</li>
+				<li>Contains no artificial additives or indigestible substances</li>
+				<li>Vegan, gluten-free and GMO-free</li>
 			</ul>
 		</div>
 		<!-- ____________________TABULKA____________________ -->
@@ -109,18 +109,18 @@ const quality = 90;
 						<th
 							><div class="dosage">
 								<span
-									><b>Velikost dávky:</b> 1&nbsp;veganské kapsle<br />
-									<b>Balení obsahuje:</b> 100&nbsp;dávek</span
+									><b>Serving size:</b> 1&nbsp;vegan capsule<br />
+									<b>Contains:</b> 100&nbsp;servings</span
 								>
 							</div></th
 						>
-						<th>Množství v 1 dávce</th>
-						<th>%&nbsp;RHP*</th>
+						<th>Amount Per Serving</th>
+						<th>%NRV*</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td>Glycin (L-glycin) </td>
+						<td>Taurine</td>
 						<td>1000&nbsp;mg</td>
 						<td>**</td>
 					</tr>
@@ -128,33 +128,34 @@ const quality = 90;
 					<tr>
 						<td colspan="3"
 							><div class="rhp">
-								<span>* referenční hodnota příjmu u průměrné dospělé osoby</span>
-								<span>** denní referenční hodnota příjmu není stanovena</span>
+								<span>* Nutritional Reference Value</span>
+								<span>** Nutritional Reference Value is not established</span>
 							</div></td
 						>
 					</tr>
 				</tbody>
 			</table>
-			<p><b>Další složky:</b> Veganská HPMC kapsle. Výrobek neobsahuje žádné další přidané látky (éčka).</p>
+			<p><b>Other ingredients:</b> Veg Capsule (HPMC). The product does not contain any other added substances.</p>
 		</div>
 		<!-- ____________________DÁVKOVÁNÍ A UPOZORNĚNÍ____________________ -->
 		<div slot="description-dosage" class="description-dosage">
 			<p>
-				<b>Doporučené dávkování:</b><br />
-				Jako doplněk stravy užívejte 1 až 3 kapsle denně, nejlépe nalačno a před spaním.
+				<b>Recommended dosage:</b><br />
+				As a dietary supplement, take 1 to 2 capsules daily, preferably on an empty stomach.
 			</p>
 			<p>
-				<b>Upozornění:</b><br />
-				Pouze pro dospělé. Trpíte-li onemocněním, jste těhotná, kojíte, snažíte se otěhotnět nebo užíváte léky, poraďte se
-				před užitím tohoto přípravku s lékařem. Uchovávejte mimo dosah dětí. Není náhradou pestré stravy. Doplněk stravy.
-				Nepřekračujte doporučené denní dávkování.
+				<b>Warning:</b><br />
+
+				For adults only. If you have a medical condition, are pregnant, nursing or trying to conceive, or are taking
+				medication, consult with a physician before taking this product! Keep out of reach of children. Dietary
+				supplement. It is not a substitute for a varied diet. Do not exceed the recommended daily dosage.
 			</p>
 			<p>
-				<b>Skladování:</b><br />
-				Skladujte na chladném a suchém místě.
+				<b>Storage:</b><br />
+				Store in a cool, dry place.
 			</p>
 			<p>
-				<b>Vyrobeno v EU</b>
+				<b>Made in EU</b>
 			</p>
 		</div>
 	</ProductTemplate>

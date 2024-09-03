@@ -10,16 +10,19 @@ import HexagonSmallMobile from "@components/hexagons/natios-new-products/mobile-
 import ArrowLeftEmpty from "@components/arrows/arrowLeftEmpty.astro";
 import ArrowRightEmpty from "@components/arrows/arrowRightEmpty.astro";
 import { Image } from "astro:assets";
-import productImage1 from "@assets/images/products/mind-focus-60/mind-focus-60-front.webp";
-import productImage2 from "@assets/images/products/activated-b-complex-100/activated-b-complex-100-front.webp";
-import productImage3 from "@assets/images/products/vitamin-d3-k2-5000-100/vitamin-d3-k2-5000-100-front.webp";
-import productImage4 from "@assets/images/products/acerola-500-90/acerola-500-90-front.webp";
-import productImage5 from "@assets/images/products/shilajit-500-90/shilajit-500-90-front.webp";
-const alt1 = "Natios Mind Focus";
-const alt2 = "Natios Activated B-Complex";
-const alt3 = "Natios Vitamin D3 & K2 (5000 IU & 200 mcg)";
-const alt4 = "Natios Acerola Komplex";
-const alt5 = "Natios Shilajit Extract";
+import productImage1 from "@assets/images/products/calcium-chelated-complex-200-100/calcium-chelated-complex-200-100-front.webp";
+import productImage2 from "@assets/images/products/krill-oil-astaxanthin-500-60/krill-oil-astaxanthin-500-60-front.webp";
+import productImage3 from "@assets/images/products/betaglucan-500-90/betaglucan-500-90-front.webp";
+import productImage4 from "@assets/images/products/potassium-magnesium-100/potassium-magnesium-100-front.webp";
+import productImage5 from "@assets/images/products/glycine-1000-100/glycine-1000-100-front.webp";
+import productImage6 from "@assets/images/products/taurine-1000-100/taurine-1000-100-front.webp";
+
+const alt1 = "NATIOS Calcium Chelated Complex";
+const alt2 = "NATIOS Krill Oil Astaxanthin";
+const alt3 = "NATIOS Betaglucan";
+const alt4 = "NATIOS Potassium & Magnesium";
+const alt5 = "NATIOS Glycine Extra Strength";
+const alt6 = "NATIOS Taurine Extra Strength";
 import MoreInfo from "@components/more-info.astro";
 
 const loading = "lazy";
@@ -111,82 +114,116 @@ const quality = 90;
 						loading={loading}
 					/>
 				</div>
+				<div class="brand-new-product-image">
+					<Image
+						src={productImage6}
+						width={productImageWidth}
+						densities={productDensities}
+						alt={alt6}
+						quality={quality}
+						loading={loading}
+					/>
+				</div>
 			</div>
 		</div>
 		<div class="brand-new-product-texts">
 			<div class="brand-new-product-text">
 				<div class="text-animation-wrapper">
-					<h3 class="brand-new-product-heading">NATIOS Mind Focus</h3>
+					<h3 class="brand-new-product-heading">NATIOS Calcium Chelated Complex</h3>
 					<p class="brand-new-product-description">
-						Potřebujete se připravit na těžkou zkoušku nebo chcete podpořit své <b
-							>myšlení, kreativitu nebo kognitivní funkce</b
-						> pro správný pracovní výkon, eventuálně jen toužíte mít paměť jako dříve? Mind focus představuje nebývalou kombinaci
-						aminokyselin, bylin a dalších důležitých složek využívaných pro podporu mozkové a nervové činnosti. Efektivní
-						<b>kombinace 6 bylinných extraktů a 4 složek</b>, u kterých výzkumy potvrzují pozitivní účinky na paměť,
-						koncentraci, soustředění zajistí vašemu mozku vše, co potřebuje.
-					</p>
-					<p class="brand-new-product-description">Vhodný do práce, ke studiu nebo pro hráče.</p>
-					<MoreInfo href="/product/mind-focus-60" marginBottom="2em" />
-				</div>
-			</div>
-			<div class="brand-new-product-text">
-				<div class="text-animation-wrapper">
-					<h3 class="brand-new-product-heading">NATIOS Activated B-Complex</h3>
-					<p class="brand-new-product-description">
-						Natios Activated B-Complex představuje ideální způsob, jak doplňovat vitamíny skupiny B. Obsahuje <b
-							>pouze aktivní a účinné formy vitamínů</b
-						>. Aktivní formy jsou pro tělo mnohem snadněji využitelné a vstřebatelné, jelikož v těle nemusí procházet
-						procesem přeměny z neaktivní formy na aktivní, jsou tedy „předpřipraveny“ pro absorpci. Tento komplex
-						obsahuje <b>synergickou směs 16 složek</b>. Krom běžných vitamínů B je doplněn také o kyselinu
-						alfa-lipoovou, betain, vitamín C, hořčík, PABA a koezym Q10. Díky těmto složkám jsou účinky B-komplexu ještě
-						posíleny.
-					</p>
-					<MoreInfo href="/product/activated-b-complex-100" marginBottom="2em" />
-				</div>
-			</div>
-			<div class="brand-new-product-text">
-				<div class="text-animation-wrapper">
-					<h3 class="brand-new-product-heading">NATIOS Vitamin D3 & K2 (5000&nbsp;IU & 200&nbsp;mcg)</h3>
-					<p class="brand-new-product-description">
-						Natios Vitamin D3 & K2 nabízí silnou kombinaci dvou důležitých vitamínů, které jsou klíčové nejen pro
-						udržení <b>zdraví kostí</b>, ale také pro posílení funkce <b>imunitního systému</b>. Tento doplněk obsahuje
-						5000&nbsp;IU vitamínu D3 v každé kapsli a zajišťuje tak uspokojení každodenní potřeby vašeho těla. Díky
-						obsahu vitamínu K2 vzniká <b>synergická kombinace</b>, která výrazně navyšuje účinnost. Vitamin K2 hraje
-						roli v metabolismu vápníku, díky čemuž pomáhá směrovat vápník do částí těla, které ho opravdu potřebují.
-					</p>
-					<MoreInfo href="/product/vitamin-d3-k2-5000-100" marginBottom="2em" />
-				</div>
-			</div>
-			<div class="brand-new-product-text">
-				<div class="text-animation-wrapper">
-					<h3 class="brand-new-product-heading">NATIOS Acerola Komplex</h3>
-					<p class="brand-new-product-description">
-						Acerola je jedním z <b>nejlepších zdrojů přírodního vitamínu C</b>. Vitamin C je ve vodě rozpustná
-						mikroživina, která je velmi dobře známá pro své pozitivní účinky na imunitní systém a ochranu buněk před
-						oxidativním stresem. Vitamín C si tělo neumí vytvořit samo, proto je jeho suplementace velmi důležitá, a to
-						nejen v zimním období. Acerola komplex obsahuje <b
-							>silný 25% extrakt doplněný o růži šípkovou a citrusové bioflavonoidy</b
-						>, díky čemuž je posíleno vstřebávání a celková účinnost.
-					</p>
-					<MoreInfo href="/product/acerola-500-90" marginBottom="2em" />
-				</div>
-			</div>
-			<div class="brand-new-product-text">
-				<div class="text-animation-wrapper">
-					<h3 class="brand-new-product-heading">NATIOS Shilajit Extract</h3>
-					<p class="brand-new-product-description">
-						Shilajit představuje přírodní substanci tmavé barvy, která je v ájurvédě používána více než 3 000 let a dnes
-						je považována za superpotravinu. Shilajit (mumio) je látka, která v sanskrtu (starověkém indickém jazyku)
-						znamená „<b>horský dobyvatel a zabíječ bolesti</b>". Shilajit obsahuje více než 40 minerálů a látek, za
-						nejvýznamnější se považuje <b>kyselina fulvová</b>. Díky obsaženým látkám jde o produkt, která pomáhá
-						zajistit nejen normální funkci reprodukčního systému, ale působí pozitivně i na imunitu, duševní činnost aj.
+						Nejúčinnější, nejlépe vstřebatelná a nejšetrnější forma pro žaludek, to je <b>bisglycinát vápenatý</b>. O
+						vápníku je všeobecně známo, že podporuje zdraví kostí a zubů, podporuje však také například činnost svalů,
+						normální srážlivost krve či přenos nervových signálů.
 					</p>
 					<p class="brand-new-product-description">
-						Natios Shilajit je obsažen ve formě <b>50% standardizovaného extraktu</b>. Díky tomu si můžete být
-						stoprocentně jisti, že s každou kapslí dodáváte svému tělu účinné množství kyseliny fulvové.
+						Každá kapsle tohoto komplexu obsahuje <b>200&nbsp;mg elementárního vápníku</b>, který je dále doplněn o <b
+							>vitamíny D3 a K2</b
+						> ve formě MK‑7.
 					</p>
 
-					<MoreInfo href="/product/shilajit-500-90" marginBottom="2em" />
+					<MoreInfo href="/product/calcium-chelated-complex-200-100" marginBottom="2em" />
+				</div>
+			</div>
+			<div class="brand-new-product-text">
+				<div class="text-animation-wrapper">
+					<h3 class="brand-new-product-heading">NATIOS Krill Oil</h3>
+					<p class="brand-new-product-description">
+						Krill oil z antarktického krillu je skvělý způsob jak podpořit nejen <b>zdraví srdce</b>, ale také funkce
+						nervové soustavy, antioxidační ochranu a zdraví očí. Tento olej z korýšů je bohatý na omega-3 mastné
+						kyseliny, astaxanthin, cholin a fosfolipidy. Díky této kombinaci přirozeně obsažených látek je zaručena <b
+							>maximální biologická dostupnost a účinnost</b
+						>.
+					</p>
+					<p class="brand-new-product-description">
+						Krillový olej značky Natios je vyráběn s maximálním důrazem na udržitelnost životního prostředí a kvalitu.
+						Neobsahuje žádné příměsi, plnidla, konzervanty či jiné zbytečné látky.
+					</p>
+					<MoreInfo href="/product/krill-oil-astaxanthin-500-60" marginBottom="2em" />
+				</div>
+			</div>
+			<div class="brand-new-product-text">
+				<div class="text-animation-wrapper">
+					<h3 class="brand-new-product-heading">NATIOS Betaglucan</h3>
+					<p class="brand-new-product-description">
+						Jedinečný doplněk stravy, který obsahuje účinné betaglukany a je doplněn o plody Camu Camu s přirozeně
+						vysokým obsahem vitaminu&nbsp;C. Natios Betaglucan je standardizovaný na minimálně 80% obsah 1,3-1,6
+						betaglukanů, které jsou moderními způsoby získávány z pivních kvasnic <i>Saccharomyces cerevisiae</i>. Při
+						výrobě tohoto produktu nejsou použité žádné jiné látky, jako například plnidla či konzervanty. Produkt
+						neobsahuje lepek ani jiné alergeny a je vhodný také pro vegany.
+					</p>
+					<MoreInfo href="/product/betaglucan-500-90" marginBottom="2em" />
+				</div>
+			</div>
+			<div class="brand-new-product-text">
+				<div class="text-animation-wrapper">
+					<h3 class="brand-new-product-heading">NATIOS Potassium & Magnesium</h3>
+					<p class="brand-new-product-description">
+						Nejúčinnější, nejlépe vstřebatelné a nejšetrnější formy minerálů v jednom komplexu. Tento doplněk kombinuje
+						citrát draselný a malát hořečnatý, což jsou formy, které zajišťují <b
+							>maximální vstřebatelnost a šetrnost pro žaludek</b
+						>. Tento komplex je navíc obohacen o vitamín B6 ve své aktivní formě P-5-P. Každá veganská kapsle tohoto
+						komplexu obsahuje 100&nbsp;mg draslíku, 50&nbsp;mg hořčíku a 2&nbsp;mg vitamínu B6.
+					</p>
+					<MoreInfo href="/product/potassium-magnesium-100" marginBottom="2em" />
+				</div>
+			</div>
+			<div class="brand-new-product-text">
+				<div class="text-animation-wrapper">
+					<h3 class="brand-new-product-heading">NATIOS Glycine Extra Strength</h3>
+					<p class="new-product-description">
+						Glycin je nejjednodušší aminokyselina nacházející se v lidském těle. V lidském těle hraje glycin klíčovou
+						roli v několika důležitých procesech. Každá veganská kapsle obsahuje 1000&nbsp;mg čistého glycinu bez
+						použití plnidel, příměsí či konzervantů.
+					</p>
+					<p class="new-product-description">
+						Glycin se přirozeně nachází v různých typech potravin, zejména v potravinách bohatých na bílkoviny, jako je
+						maso, ryby, vejce, luštěniny, sója a mléčné výrobky. Vysoký obsah glycinu lze také nalézt v želatině či
+						kolagenu. Jedná se o neesenciální aminokyselinu, což znamená, že tělo si glycin dokáže syntetizovat samo.
+						Suplementace je však vhodná především pro ty, kteří chtějí využít jeho <b>benefity na maximum</b> nebo pro osoby
+						s nízkým příjmem bílkovin či onemocněním jater.
+					</p>
+
+					<MoreInfo href="/product/glycine-1000-100" marginBottom="2em" />
+				</div>
+			</div>
+			<div class="brand-new-product-text">
+				<div class="text-animation-wrapper">
+					<h3 class="brand-new-product-heading">NATIOS Taurine Extra Strength</h3>
+					<p class="new-product-description">
+						Taurin je aminokyselina, která se nachází v mnoha tkáních v těle, zejména v <b
+							>srdci, mozku, svalech a očích</b
+						>. Je považován za semi-esenciální aminokyselinu, což znamená, že za normálních podmínek si tělo dokáže
+						taurin syntetizovat samo z jiných aminokyselin. Nicméně v určitých situacích, jako je rychlý růst, vysoký
+						fyzický stres, onemocnění nebo specifické metabolické poruchy, může být potřeba taurinu vyšší než to, co si
+						tělo dokáže samo vyrobit.
+					</p>
+					<p class="new-product-description">
+						Taurin je přítomen v různých živočišných potravinách, jako jsou maso, ryby či mořské plody. Vzhledem k tomu,
+						že se taurin přirozeně nevyskytuje v rostlinných potravinách, vegetariáni a vegani mohou mít nižší hladiny
+						taurinu, pokud jejich strava není optimalizovaná.
+					</p>
+
+					<MoreInfo href="/product/taurine-1000-100" marginBottom="2em" />
 				</div>
 			</div>
 		</div>

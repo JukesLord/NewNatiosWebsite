@@ -1,0 +1,174 @@
+---
+import IndexLayout from "../../../layouts/IndexLayout.astro";
+import ProductTemplate from "@components/product/product-template.astro";
+
+import { Image } from "astro:assets";
+import productImage1 from "@assets/images/products/betaglucan-500-90/betaglucan-500-90-fwc.webp";
+import productImage2 from "@assets/images/products/betaglucan-500-90/betaglucan-500-90-bws.webp";
+
+const alt = "NATIOS Betaglucan";
+const loading = "lazy";
+const productImageWidth = 1000;
+const pixelDensities = [1, 1.5, 2, 2.5, 3];
+const quality = 90;
+---
+
+<IndexLayout title="NATIOS Betaglucan">
+	<ProductTemplate>
+		<!-- _____________________________________________ -->
+		<!-- ____________________NÁZEV____________________ -->
+		<!-- _____________________________________________ -->
+		<h1 slot="product-name-h1">Betaglucan 80%</h1>
+		<h2 slot="product-name-h2">500&nbsp;mg, 90 vegan capsules</h2>
+
+		<!-- ________________________________________________________ -->
+		<!-- ____________________FOTKY VELKÉ DO 6____________________ -->
+		<!-- ________________________________________________________ -->
+		<div slot="large-image-1" class="large-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="large-image-2" class="large-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading={loading}
+			/>
+		</div>
+
+		<!-- ____________________________________________________________ -->
+		<!-- ____________________FOTKY NÁHLEDOVÉ DO 6____________________ -->
+		<!-- ____________________________________________________________ -->
+		<div slot="preview-image-1" class="preview-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="preview-image-2" class="preview-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<!-- ___________________________________________________________________________________ -->
+		<!-- ____________________SELECT MOŽNOSTI (možnost video a orher 1 2)____________________ -->
+		<!-- ___________________________________________________________________________________ -->
+		<span slot="select-description" class="select-description">Description</span>
+		<span slot="select-ingredients" class="select-ingredients">Ingredients</span>
+		<span slot="select-dosage" class="select-dosage">Dosage and warnings</span>
+
+		<!-- ____________________________________________________________________________________ -->
+		<!-- ____________________DESCRIPTION DIVY (možnost video a orher 1 2)____________________ -->
+		<!-- ____________________________________________________________________________________ -->
+		<div slot="description-description" class="description-description active">
+			<p>
+				A unique food supplement that contains effective betaglucans and is supplemented with Camu Camu fruits with a
+				naturally high content of vitamin&nbsp;C. Natios Betaglucan is standardized to a minimum 80% content of 1,3-1,6
+				betaglucans, which are obtained by modern methods from brewer's yeast <i>Saccharomyces cerevisiae</i>. No other
+				substances, such as fillers or preservatives, are used in the production of this product. The product does not
+				contain gluten or other allergens and is also suitable for vegans.
+			</p>
+
+			<ul>
+				<li>Standardized to 80% beta-glucan content</li>
+				<li>Contains no artificial additives or indigestible substances</li>
+				<li>Vegan, Gluten and GMO free</li>
+			</ul>
+		</div>
+		<!-- ____________________TABULKA____________________ -->
+		<div slot="description-ingredients" class="description-ingredients">
+			<table>
+				<thead>
+					<tr>
+						<th
+							><div class="dosage">
+								<span
+									><b>Serving size:</b> 1&nbsp;veg capsule<br />
+									<b>Contains:</b> 90&nbsp;servings</span
+								>
+							</div></th
+						>
+						<th>Amount Per Serving</th>
+						<th>%NRV*</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td
+							>Betaglucan 80% from yeast (<i>Saccharomyces cerevisae</i>)
+							<br />- equivalent to 400&nbsp;mg β-(1,3)(1,6)-D-glucan</td
+						>
+						<td>500&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td
+							>Camu Camu 4:1 fruit extract (<i>Myrciaria dubia</i>)
+							<br />- equivalent to 50&nbsp;mg of raw fruit</td
+						>
+						<td>12,5&nbsp;mg</td>
+						<td>**</td>
+					</tr>
+
+					<tr>
+						<td colspan="3"
+							><div class="rhp">
+								<span>* Nutritional Reference Value</span>
+								<span>** Nutritional Reference Value is not established</span>
+							</div></td
+						>
+					</tr>
+				</tbody>
+			</table>
+			<p><b>Other ingredients:</b> Veg Capsule (HPMC). The product does not contain any other added substances.</p>
+		</div>
+		<!-- ____________________DÁVKOVÁNÍ A UPOZORNĚNÍ____________________ -->
+		<div slot="description-dosage" class="description-dosage">
+			<p>
+				<b>Recommended dosage:</b><br />
+				As a dietary supplement, take 1 capsule daily with water.
+			</p>
+			<p>
+				<b>Warning:</b><br />
+
+				For adults only. If you have a medical condition, are pregnant, nursing or trying to conceive, or are taking
+				medication, consult with a physician before taking this product! Keep out of reach of children. Dietary
+				supplement. It is not a substitute for a varied diet. Do not exceed the recommended daily dosage.
+			</p>
+			<p>
+				<b>Storage:</b><br />
+				Store in a cool, dry place.
+			</p>
+			<p>
+				<b>Made in EU</b>
+			</p>
+		</div>
+	</ProductTemplate>
+</IndexLayout>
+
+<style is:global>
+	:root {
+		--number-of-photos: 2;
+	}
+</style>

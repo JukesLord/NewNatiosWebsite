@@ -1,0 +1,256 @@
+---
+import IndexLayout from "../../../layouts/IndexLayout.astro";
+import ProductTemplate from "@components/product/product-template.astro";
+
+import { Image } from "astro:assets";
+import productImage1 from "@assets/images/products/calcium-chelated-complex-200-100/calcium-chelated-complex-200-100-fwc.webp";
+import productImage2 from "@assets/images/products/calcium-chelated-complex-200-100/calcium-chelated-complex-200-100-bws.webp";
+
+const alt = "NATIOS Calcium Complex";
+const loading = "lazy";
+const productImageWidth = 1000;
+const pixelDensities = [1, 1.5, 2, 2.5, 3];
+const quality = 90;
+---
+
+<IndexLayout title="NATIOS Calcium Chelated Complex">
+	<ProductTemplate>
+		<!-- _____________________________________________ -->
+		<!-- ____________________NÁZEV____________________ -->
+		<!-- _____________________________________________ -->
+		<h1 slot="product-name-h1">NATIOS Calcium Chelated Complex</h1>
+		<h2 slot="product-name-h2">200&nbsp;mg + Vitamin D3 & K2, 100 capsules</h2>
+
+		<!-- ________________________________________________________ -->
+		<!-- ____________________FOTKY VELKÉ DO 6____________________ -->
+		<!-- ________________________________________________________ -->
+		<div slot="large-image-1" class="large-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="large-image-2" class="large-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading={loading}
+			/>
+		</div>
+
+		<!-- ____________________________________________________________ -->
+		<!-- ____________________FOTKY NÁHLEDOVÉ DO 6____________________ -->
+		<!-- ____________________________________________________________ -->
+		<div slot="preview-image-1" class="preview-image active">
+			<Image
+				src={productImage1}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<div slot="preview-image-2" class="preview-image">
+			<Image
+				src={productImage2}
+				width={productImageWidth}
+				alt={alt}
+				quality={quality}
+				densities={pixelDensities}
+				loading="eager"
+			/>
+		</div>
+
+		<!-- ___________________________________________________________________________________ -->
+		<!-- ____________________SELECT MOŽNOSTI (možnost video a orher 1 2)____________________ -->
+		<!-- ___________________________________________________________________________________ -->
+		<span slot="select-description" class="select-description">Description</span>
+		<span slot="select-ingredients" class="select-ingredients">Ingredients</span>
+		<span slot="select-dosage" class="select-dosage">Dosage and warnings</span>
+
+		<!-- ____________________________________________________________________________________ -->
+		<!-- ____________________DESCRIPTION DIVY (možnost video a orher 1 2)____________________ -->
+		<!-- ____________________________________________________________________________________ -->
+		<div slot="description-description" class="description-description active">
+			<p>
+				The most effective, best absorbable and gentlest form for the stomach - <b>calcium bisglycinate</b>. Calcium is
+				widely known to support the health of bones and teeth, but it also supports, for example, muscle activity,
+				normal blood clotting and the transmission of nerve signals.
+			</p>
+			<p>
+				Each capsule of this complex contains <b>200&nbsp;mg of elemental calcium</b>, which is further supplemented
+				with <b>vitamins D3 and K2</b> in the form of MK-7.
+			</p>
+
+			<ul>
+				<li>Best absorbable form</li>
+				<li>Supplemented with Vitamins D3 and K2 (MK‑7)</li>
+				<li>Contains no artificial additives or indigestible substances</li>
+				<li>Gluten-free and GMO-free</li>
+			</ul>
+
+			<p class="no-padding"><b>What makes NATIOS different from others?</b></p>
+			<p>
+				The Calcium bisglycinate contained is an unrivaled form of calcium that ensures maximum absorption without any
+				side effects. Calcium is also supplemented with vitamin D3, which not only supports bone health, but also
+				directly helps increase calcium absorption. The last beneficial component in this complex is vitamin K2 in the
+				form of MK-7, which helps direct calcium from the blood to where it is needed, i.e. mainly to the bones.
+			</p>
+			<p>
+				In addition, this complex is produced in maximum purity. Therefore, it does not contain any fillers,
+				preservatives or other ingredients that facilitate production.
+			</p>
+			<p class="no-padding"><b>What are the benefits??</b></p>
+			<p>
+				Calcium is an important mineral for maintaining normal bone health. People suffering from osteoporosis, elderly
+				people and women in menopause have an increased need for this mineral.
+			</p>
+
+			<ul>
+				<li>Calcium, D3 and K2 maintain bone health</li>
+				<li>Calcium supports dental health</li>
+				<li>D3 supports the immune system</li>
+				<li>Calcium supports nerve transmission</li>
+				<li>Calcium and D3 support muscle activity</li>
+				<li>Calcium supports digestive enzymes</li>
+				<li>D3 supports calcium absorption</li>
+				<li>Calcium and K2 maintain normal blood clotting</li>
+			</ul>
+			<table class="compare">
+				<thead>
+					<tr>
+						<th colspan="2"><b>DIFFERENCES BETWEEN NATIOS COMPLEX AND REGULAR CALCIUM</b></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><b>NATIOS Chelated Calcium Complex </b></td>
+						<td><b>Common calcium</b></td>
+					</tr>
+					<tr>
+						<td>The most absorbable form of calcium bisglycinate</td>
+						<td>Calcium carbonate or citrate</td>
+					</tr>
+					<tr>
+						<td>Supplemented with 200 IU of vitamin D3 </td>
+						<td>Without Vitamin D3 </td>
+					</tr>
+					<tr>
+						<td>Supplemented with 10&nbsp;μg of vitamin K2 as MK‑7 </td>
+						<td>Without Vitamin K2 </td>
+					</tr>
+					<tr>
+						<td>No side effects </td>
+						<td>Some forms may cause nausea </td>
+					</tr>
+					<tr>
+						<td>Without fillers, admixtures and unnecessary e's </td>
+						<td>Fillers and other substances facilitating production </td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="no-padding"><b>What is calcium bisglycinate the best at?</b></p>
+			<p>
+				The Calcium Bisglycinate contained is almost incomparable to other forms. This form is not only extremely gentle
+				on the digestive system, but it is also the <b>best absorbable form</b>. The two most commonly offered forms are
+				calcium citrate and calcium carbonate.
+			</p>
+			<p>
+				Both bisglycinate and calcium citrate are two forms that are gentle on the digestive system, but bisglycinate is <b
+					>up to 180% more absorbable</b
+				>. So your system will use almost twice as much calcium from the same dose. As for carbonate, it is an
+				alternative form of calcium, but it is not as bioavailable as compared to bisglycinate. In addition, stomach
+				acids are needed for its absorption, which can be a problem for some people due to lower production of these
+				acids.
+			</p>
+			<p>
+				It is also possible to encounter calcium lactate or gluconate. These are high-quality forms that are well
+				tolerated and have an absorbability close to that of bisglycinate. The problem, however, is their elemental
+				calcium content. Calcium bisglycinate contains <b>20% elemental calcium</b>, whereas these two forms are around
+				10% and thus it is necessary to use twice the amount.
+			</p>
+		</div>
+		<!-- ____________________TABULKA____________________ -->
+		<div slot="description-ingredients" class="description-ingredients">
+			<table>
+				<thead>
+					<tr>
+						<th
+							><div class="dosage">
+								<span
+									><b>Serving size:</b> 1&nbsp;capsule<br />
+									<b>Contains:</b> 100&nbsp;servings</span
+								>
+							</div></th
+						>
+						<th>Amount Per Serving</th>
+						<th>%NRV*</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><b>Calcium</b> (from 1053&nbsp;mg Calcium Bisglycinate)</td>
+						<td>200&nbsp;mg</td>
+						<td>25&nbsp;%</td>
+					</tr>
+					<tr>
+						<td><b>Vitamin D3</b> (from Lanolin) (as cholekalciferol)</td>
+						<td>2,5&nbsp;mcg / 200&nbsp;IU</td>
+						<td>50&nbsp;%</td>
+					</tr>
+					<tr>
+						<td><b>Vitamin K2</b> (as Menaquinonine-7) (MK-7) (MenaQ7®) (from chickpea)</td>
+						<td>10&nbsp;mcg</td>
+						<td>13&nbsp;%</td>
+					</tr>
+
+					<tr>
+						<td colspan="3"
+							><div class="rhp">
+								<span>* Nutritional Reference Value</span>
+							</div></td
+						>
+					</tr>
+				</tbody>
+			</table>
+			<p><b>Other ingredients:</b> Veg Capsule (HPMC). The product does not contain any other added substances.</p>
+		</div>
+		<!-- ____________________DÁVKOVÁNÍ A UPOZORNĚNÍ____________________ -->
+		<div slot="description-dosage" class="description-dosage">
+			<p>
+				<b>Recommended dosage:</b><br />
+				As a dietary supplement take 1 to 2 capsules daily.
+			</p>
+			<p>
+				<b>Warning:</b><br />
+
+				For adults only. If you have a medical condition, are pregnant, nursing or trying to conceive, or are taking
+				medication, consult with a physician before taking this product! Keep out of reach of children. Dietary
+				supplement. It is not a substitute for a varied diet. Do not exceed the recommended daily dosage.
+			</p>
+			<p>
+				<b>Storage:</b><br />
+				Store in a cool, dry place.
+			</p>
+			<p>
+				<b>Made in EU</b>
+			</p>
+		</div>
+	</ProductTemplate>
+</IndexLayout>
+
+<style is:global>
+	:root {
+		--number-of-photos: 2;
+	}
+</style>
